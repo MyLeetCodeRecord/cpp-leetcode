@@ -28,7 +28,6 @@ public:
                 matrix[r][c] = matrix[c][r];
                 matrix[c][r] = tmp;
             }
-            cout<<endl;
         }
     }
     void rotate(vector<vector<int>>& matrix) {
