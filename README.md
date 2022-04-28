@@ -30,3 +30,5 @@
 > 🎶&nbsp; [倾城](https://c.y.qq.com/base/fcgi-bin/u?__=yqO6CMKOOmLX) &emsp; Hacken唱什么都很好听...但又不是最好听
 > 
 > 🎵&nbsp; [每天爱你多一些](https://c.y.qq.com/base/fcgi-bin/u?__=qFqpko) &emsp; 而每过一天每一天这醉者
+> 
+> 🎶&nbsp; [夕阳无限好](https://c.y.qq.com/base/fcgi-bin/u?__=IsQY4X) &emsp; 好风景多的是, 夕阳平常事. 然而每天眼见的, 永远不相似🌇
