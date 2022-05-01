@@ -11,18 +11,15 @@ public:
         unordered_set<char> st;
         int ans = 0;
         int left = 0;
-        int right = 1;
+        int right = 0;
         while(right < s.size()){
-            if(st.find(s[right]) == st.end()){
-                right++;
-                st.insert(s[right]);
-                continue;
+            // 扩大右窗口
+            st.insert(s[right++]);
+            // 缩小左窗口
+            while(st.find(s[right])!=st.end()){
+                st.erase(s[left++]);
             }
-            while(s[left]!=s[right]){
-                left++;
-                st.erase(s[left]);
-            }
-            ans = max(ans, right-left);
+            ans = max(ans, right-left+1);
         }
         return ans;
     }
