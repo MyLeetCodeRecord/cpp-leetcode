@@ -4,8 +4,8 @@
 
 |       |MON⭐|TUE|WED|THU|FRI|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC  |[1305. 两棵二叉搜索树中的所有元素🧡](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/1305.%E4%B8%A4%E6%A3%B5%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0.cpp)|[~~591. 标签验证器🧡~~](https://leetcode-cn.com/problems/tag-validator/)|   |   |   |   |   |
-|KEYWORD|`inorder` `归并`|`string`|   |   |   |   |   |
+|TOPIC  |[1305. 两棵二叉搜索树中的所有元素🧡](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/1305.%E4%B8%A4%E6%A3%B5%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0.cpp)|[~~591. 标签验证器~~](https://leetcode-cn.com/problems/tag-validator/)|[927. 重新排列日志文件💚]()|[1823. 找出游戏的获胜者🧡]()|   |   |   |
+|KEYWORD|`inorder` `归并`|`string`|`string``sort`|`math`|   |   |   |
 |TOPIC  |   |   |   |   |   |   |   |
 |KEYWORD|   |   |   |   |   |   |   |
 
@@ -21,6 +21,9 @@
 |  ---   |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TOPIC   |   |   |   |`DFS`|最小差值|双周赛|`滑动窗口`|
 |NOTE    |   |   |   |[图的DFS](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20DFS.md)|[LC908](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/908.%E6%9C%80%E5%B0%8F%E5%B7%AE%E5%80%BC-i.cpp)<br>[LC910](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/910.%E6%9C%80%E5%B0%8F%E5%B7%AE%E5%80%BC-ii.cpp)|   |[滑动窗口](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)|
+|FEEDBACK|   |   |   |   |   |   |   |
+|TOPIC   |   |   |   |`约瑟夫环`||||
+|NOTE    |   |   |   |[约瑟夫环]()||||
 |FEEDBACK|   |   |   |   |   |   |   |
 > ⭐ start index : 4/28  
 > 
