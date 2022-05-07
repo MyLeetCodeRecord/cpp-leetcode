@@ -23,7 +23,7 @@
 |NOTE    |   |   |   |[图的DFS](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20DFS.md)|[LC908](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/908.%E6%9C%80%E5%B0%8F%E5%B7%AE%E5%80%BC-i.cpp)<br>[LC910](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/910.%E6%9C%80%E5%B0%8F%E5%B7%AE%E5%80%BC-ii.cpp)|   |[`滑动窗口`](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)|
 |FEEDBACK|   |   |   |   |   |   |   |
 |TOPIC   |   |   |`约瑟夫环`|`Trie`|`dp`|`BFS`||
-|NOTE    |   |   |[约瑟夫环](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC1823.%20%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85.md)|[前缀树](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20Trie.md)|[简单dp]()|||
+|NOTE    |   |   |[约瑟夫环](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC1823.%20%E6%89%BE%E5%87%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E8%8E%B7%E8%83%9C%E8%80%85.md)|[前缀树](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20Trie.md)|[简单dp](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20DP.md)|[多源BFS](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20BFS.md)||
 |FEEDBACK|   |   |   |   |   |   |   |
 > ⭐ start index : 4/28  
 > 
@@ -40,4 +40,4 @@
 > 
 > 🎶&nbsp; [黄昏的声音](https://c.y.qq.com/base/fcgi-bin/u?__=u0Lzl4w) &emsp; 🌆没有灰暗
 > 
-> 🎵&nbsp; 
+> 🎵&nbsp; [季候风](https://c.y.qq.com/base/fcgi-bin/u?__=d1qdCO) &emsp; 代了Monica和Richard...
