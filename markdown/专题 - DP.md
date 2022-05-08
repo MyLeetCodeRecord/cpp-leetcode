@@ -15,7 +15,7 @@
 > 假设枚举中间分界点 j, j左侧不做拆分(j), 右侧可以拆分(dp[j])
 > 每个 j 作为分界点的最大乘积 max(j*(i-j), j*dp[i-j]) 作为dp[i]的一个候选
 
-##### [LC6058. 统计打字方案数]()
+##### [LC6058. 统计打字方案数](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC6058.%20%E7%BB%9F%E8%AE%A1%E6%89%93%E5%AD%97%E6%96%B9%E6%A1%88%E6%95%B0.md)
 > 周赛第三题
 >
 > 为`{7,9}`和`others`设计两个递推公式
