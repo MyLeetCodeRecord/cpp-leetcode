@@ -9,3 +9,8 @@
 [LC720. 词典中最长的单词](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC720.%20%E8%AF%8D%E5%85%B8%E9%87%8C%E6%9C%80%E9%95%BF%E7%9A%84%E5%8D%95%E8%AF%8D.md)
 
 [LC421. 数组中两个数的最大异或值](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC421.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E5%BC%82%E6%88%96%E5%80%BC.md)
+
+[LC472. 连接词]()
+
+
+[LC648. 单词替换]()
