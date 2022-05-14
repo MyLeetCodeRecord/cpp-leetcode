@@ -35,6 +35,7 @@ public:
     
     // 带通配符的search
     bool dfs_search(string word, int cur,TrieNode* t){
+        // 递归终点
         if(cur == word.size())
             return t->isEnd;
         // 是通配符"."
