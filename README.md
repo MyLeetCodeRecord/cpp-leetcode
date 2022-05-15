@@ -8,7 +8,7 @@
 |KEYWORD|`inorder`<br>`归并`|`string`|`string` `sort`|`math`|`滑动窗口`|`queue`|`BFS`|
 |TOPIC  |[📌442. 数组中重复的元素🧡](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC422.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E6%8D%AE.md)|[📌942. 增减字符串匹配💚](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC942.%20%E5%A2%9E%E5%87%8F%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D.md)|   |[449. 序列化和反序列化二叉搜索树🧡](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/449.%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.cpp)|[~~LC944. 删列造序💚~~](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/944.%E5%88%A0%E5%88%97%E9%80%A0%E5%BA%8F.cpp)|[01.05. 一次编辑🧡](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/01.05.%20%E4%B8%80%E6%AC%A1%E7%BC%96%E8%BE%91.md)||
 |KEYWORD|`原地交换`<br>`原地hash`|`贪心`|   |`BST`|`matrix`|`双指针` `dp`|   |
-|TOPIC  |[812. 最大三角形面积💚]()|   |   |   |   |   |   |
+|TOPIC  |[812. 最大三角形面积💚](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC812.%20%E6%9C%80%E5%A4%A7%E4%B8%89%E8%A7%92%E5%BD%A2%E9%9D%A2%E7%A7%AF.md)|   |   |   |   |   |   |
 |KEYWORD|`math`|   |   |   |   |   |   |
 
 > ⭐ start index   
@@ -51,3 +51,7 @@
 > 🎶&nbsp; [无条件](https://c.y.qq.com/base/fcgi-bin/u?__=tZTUR) &emsp; 与你进退也共鸣
 >
 > 🎵&nbsp; [最爱](https://c.y.qq.com/base/fcgi-bin/u?__=njJ2ufu) &emsp; 好美啊...
+> 
+> 🎶&nbsp; [朋友别哭](https://c.y.qq.com/base/fcgi-bin/u?__=c3bMI) &emsp; 还有奶茶蛋糕烧烤火锅小龙虾🍺
+> 
+> 🎵&nbsp; [你的浅笑](https://c.y.qq.com/base/fcgi-bin/u?__=6zkUD) &emsp; 还有你的浅笑?...😅
