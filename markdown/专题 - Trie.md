@@ -12,5 +12,4 @@
 
 [LC472. 连接词](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC472.%20%E8%BF%9E%E6%8E%A5%E8%AF%8D.md)
 
-
 [LC648. 单词替换](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC648.%20%E5%8D%95%E8%AF%8D%E6%9B%BF%E6%8D%A2.md)
