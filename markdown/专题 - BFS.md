@@ -16,6 +16,6 @@
 >
 > 与单元BFS的差别在于, 相当于引入超级源点(S), 在初始化`queue`时, 存储BFS所有起点(上图中的0)
 
-###### [LC542. 01矩阵](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/542.01-%E7%9F%A9%E9%98%B5.cpp)
+###### [LC542. 01矩阵](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/workspace/542.01-%E7%9F%A9%E9%98%B5.cpp)
 
-###### [LC1162. 地图分析](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/1162.%E5%9C%B0%E5%9B%BE%E5%88%86%E6%9E%90.cpp)
+###### [LC1162. 地图分析](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/workspace/1162.%E5%9C%B0%E5%9B%BE%E5%88%86%E6%9E%90.cpp)
