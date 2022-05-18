@@ -31,8 +31,8 @@
 |NOTE    |   |[`滑动窗口 day2`](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)|[`滑动窗口 day3`](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)|[分治法](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%88%86%E6%B2%BB%E6%B3%95.md)|[01.05. 一次编辑](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/01.05.%20%E4%B8%80%E6%AC%A1%E7%BC%96%E8%BE%91.md)|[前缀树](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E6%A0%91.md)|[第四题: 统计区间中的整数数目](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC6066.%20%E7%BB%9F%E8%AE%A1%E5%8C%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E6%95%B4%E6%95%B0%E6%95%B0%E7%9B%AE.md)|
 |FEEDBACK|   |   |   |   |   |   |   |
 |TOPIC   |`interval`|`interval`|`matrix` `BST`|   |   |   |   |
-|NOTE    |[区间问题](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|[区间问题](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|[LC74. 搜索二维矩阵]()<br> [LC240. 搜索二维矩阵Ⅱ](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC240.%20%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5%E2%85%A1.md)|   |   |   |   |
-|FEEDBACK|   |区间覆盖为主|具有BST特征的搜索|   |   |   |   |
+|NOTE    |[区间问题](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|[区间问题](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|[矩阵搜索](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E7%9F%A9%E9%98%B5%E6%90%9C%E7%B4%A2.md)|   |   |   |   |
+|FEEDBACK|   |区间覆盖为主|二分 or BST|   |   |   |   |
 
 > ⭐ start index : 4/28  
 > 
