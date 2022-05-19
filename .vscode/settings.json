@@ -9,6 +9,8 @@
         "initializer_list": "cpp",
         "utility": "cpp",
         "deque": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "cmath": "cpp",
+        "cstdlib": "cpp"
     }
 }
