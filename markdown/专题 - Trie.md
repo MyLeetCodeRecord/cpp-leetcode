@@ -15,3 +15,5 @@
 [LC648. 单词替换](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC648.%20%E5%8D%95%E8%AF%8D%E6%9B%BF%E6%8D%A2.md)
 
 [LC758. 字符串中的加粗单词](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/workspace/758.%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8A%A0%E7%B2%97%E5%8D%95%E8%AF%8D.cpp)
+
+[LC616. 给字符串添加加粗标签](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/workspace/616.给字符串添加加粗标签.cpp)
