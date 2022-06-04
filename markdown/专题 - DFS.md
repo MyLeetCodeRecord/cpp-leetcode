@@ -21,3 +21,12 @@
 > 代码随想录上的不列举了, 再做的时候再说
 
 [LC79. 单词回溯](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC79.%20%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2.md)
+
+
+[LC112. 路径总和](../workspace/112.%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.cpp)
+
+[LC113. 路径总和Ⅱ](../workspace/113.%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C-ii.cpp)
+
+> 这个问题已经建立在一棵存在的二叉树上, 不需要再考虑针对回溯如何建立一棵树的问题, 可以直接看成一个树的DFS问题
+> 
+> 注意路径可能是非正数, 因此不能用`sum>=targetSum`来剪枝或者作为return条件
