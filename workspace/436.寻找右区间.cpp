@@ -8,12 +8,12 @@
 class Solution {
 public:
     vector<int> findRightInterval(vector<vector<int>>& intervals) {
-        // start[i] <-> i
+        // 建立interval到index的映射
         map<int, int> mp;
         int index = 0;
-        for(auto interval: intervals)
+        for(auto interval: intervals){
             mp[interval[0]] = index++;
-        
+        }
         vector<int> result;
         for(auto interval: intervals) {
             auto it = mp.lower_bound(interval[1]);
