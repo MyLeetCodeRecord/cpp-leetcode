@@ -41,7 +41,7 @@
 > 
 > 🎵&nbsp; [葡萄成熟时](https://c.y.qq.com/base/fcgi-bin/u?__=LTEf4t) &emsp; 从错误里吸收...的也太多了
 >
->
+> 🎶&nbsp; [Don't let the sun catch you crying](https://c.y.qq.com/base/fcgi-bin/u?__=EUyqKPp7OVWn) &emsp; Don't forget that love's a game
 
 #### HISTORY
 
