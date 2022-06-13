@@ -1,4 +1,4 @@
-#### Weekly
+#### Weekly 1
 
 ##### 1. 极大极小游戏 (9min)
 > [题目](https://leetcode.cn/problems/min-max-game/)
