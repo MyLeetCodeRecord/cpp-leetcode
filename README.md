@@ -14,6 +14,7 @@
 |KEYWORD|`sort`|   |   |   |   |   |   |
 |NOTE   |如果问最小交换次数🤔|   |   |   |   |   |   |
 
+
 > ⭐ start index   
 > 
 > 📌 hard for me        
