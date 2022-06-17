@@ -10,8 +10,8 @@
 |TOPIC  |   |[875.爱吃香蕉的珂珂🧡](/workspace/875.%E7%88%B1%E5%90%83%E9%A6%99%E8%95%89%E7%9A%84%E7%8F%82%E7%8F%82.cpp)|    |   |   |   |[890.查找和替换模式🧡](/workspace/890.%E6%9F%A5%E6%89%BE%E5%92%8C%E6%9B%BF%E6%8D%A2%E6%A8%A1%E5%BC%8F.cpp)|
 |KEYWORD|   |`二分法`|  |   |   |   |`map` `set`|
 |NOTE   |   |   |   |   |   |   |双射去看题解|
-|TOPIC  |[1051.高度检查器💚](/workspace/1051.%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8.cpp)|[498.对角线遍历🧡](/workspace/498.%E5%AF%B9%E8%A7%92%E7%BA%BF%E9%81%8D%E5%8E%86.cpp)|   |   |   |   |   |
-|KEYWORD|`sort`|`matrix`|   |   |   |   |   |
+|TOPIC  |[1051.高度检查器💚](/workspace/1051.%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8.cpp)|[498.对角线遍历🧡](/workspace/498.%E5%AF%B9%E8%A7%92%E7%BA%BF%E9%81%8D%E5%8E%86.cpp)|   |   |[1089.复写零💚](/workspace/1089.%E5%A4%8D%E5%86%99%E9%9B%B6.cpp)|   |   |
+|KEYWORD|`sort`|`matrix`|   |   |`array`|   |   |
 |NOTE   |如果问最小交换次数🤔|   |   |   |   |   |   |
 
 
@@ -31,8 +31,8 @@
 |TOPIC   |`random`|`二分法`|📅|📅|📅|双周赛|周赛|
 |NOTE    |[随机数](/markdown/%E4%B8%93%E9%A2%98%20-%20random.md)|[二分法](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%BA%8C%E5%88%86%E6%B3%95.md)|   |   |   |[Biweek 1](./record/June-Biweek-1.md)|[Weekly 2](./record/June-Weekly-2.md)|
 |FEEDBACK|   |   |   |   |   |两题|两题|
-|TOPIC   |todo:前缀和|   |   |   |   |    |    |
-|NOTE    |   |   |   |   |   |    |    |
+|TOPIC   |todo:前缀和|   |   |   |`dp`|    |    |
+|NOTE    |   |   |   |   |[LC91.解码方法](./workspace/91.%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95.cpp)|    |    |
 |FEEDBACK|   |   |   |   |   |    |    |
 
 
@@ -53,7 +53,8 @@
 > 🎶&nbsp; [Don't let the sun catch you crying](https://c.y.qq.com/base/fcgi-bin/u?__=EUyqKPp7OVWn) &emsp; Don't forget that love's a game
 >
 > 🎵&nbsp; [编织](https://c.y.qq.com/base/fcgi-bin/u?__=4RHpdwG) 编织 使成为故事
-
+>
+>
 
 #### HISTORY
 
