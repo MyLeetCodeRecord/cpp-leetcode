@@ -1,21 +1,15 @@
 ### 动态规划
 
-##### 1. 简单DP
-##### [LC746. 使用最小花费爬楼梯](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/workspace/746.%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF.cpp)
+#### 1. 一维DP
+##### [LC746. 使用最小花费爬楼梯](/workspace/746.%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF.cpp)
 <img src="https://img-blog.csdnimg.cn/2021010621363669.png">
 
-
-##### [LC63. 不同路径Ⅱ](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
-> 注意对第0行和第0列的初始化
-> <img src="https://img-blog.csdnimg.cn/20210104114513928.png">
-
-
-##### [LC343. 整数拆分](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/workspace/343.%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.cpp)
+##### [LC343. 整数拆分](/workspace/343.%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.cpp)
 > dp[i]是拆分 i 能得到的最大乘积
 > 假设枚举中间分界点 j, j左侧不做拆分(j), 右侧可以拆分(dp[j])
 > 每个 j 作为分界点的最大乘积 max(j*(i-j), j*dp[i-j]) 作为dp[i]的一个候选
 
-##### [LC6058. 统计打字方案数](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/LC6058.%20%E7%BB%9F%E8%AE%A1%E6%89%93%E5%AD%97%E6%96%B9%E6%A1%88%E6%95%B0.md)
+##### [LC6058. 统计打字方案数](/markdown/LC6058.%20%E7%BB%9F%E8%AE%A1%E6%89%93%E5%AD%97%E6%96%B9%E6%A1%88%E6%95%B0.md)
 > 周赛第三题
 >
 > 为`{7,9}`和`others`设计两个递推公式
@@ -39,3 +33,19 @@
 > <img src="./../appendix/LC91.png">
 > 
 > 如果使用`dp`, 区分`单个字符映射字母`和`与前一个字符组合一起映射字母`两种情况即可
+
+
+
+#### 2. 矩阵DP
+##### [LC62. 不同路径](/workspace/62.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.cpp)
+
+##### [LC63. 不同路径Ⅱ](/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
+> 注意对第0行和第0列的初始化
+> <img src="https://img-blog.csdnimg.cn/20210104114513928.png">
+
+##### [LC64. 最小路径和](/workspace/64.%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C.cpp)
+
+
+
+#### 3. 可以是dp
+##### [LC376. 摆动序列](/workspace/376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.cpp)

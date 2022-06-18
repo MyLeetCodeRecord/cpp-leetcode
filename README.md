@@ -31,8 +31,8 @@
 |TOPIC   |`random`|`二分法`|📅|📅|📅|双周赛|周赛|
 |NOTE    |[随机数](/markdown/%E4%B8%93%E9%A2%98%20-%20random.md)|[二分法](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%BA%8C%E5%88%86%E6%B3%95.md)|   |   |   |[Biweek 1](./record/June-Biweek-1.md)|[Weekly 2](./record/June-Weekly-2.md)|
 |FEEDBACK|   |   |   |   |   |两题|两题|
-|TOPIC   |todo:前缀和|   |   |   |`dp`|    |    |
-|NOTE    |   |   |   |   |[LC91.解码方法](./workspace/91.%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95.cpp)|    |    |
+|TOPIC   |todo:前缀和|   |   |   |`dp`|`dp`|    |
+|NOTE    |   |   |   |   |[LC91.解码方法](./workspace/91.%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95.cpp)|[343. 整数拆分](/workspace/343.%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.cpp)<br/>[LC376.摆动序列](/workspace/376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.cpp)<br/>[0-1背包](/markdown/%E4%B8%93%E9%A2%98%20-%200-1%E8%83%8C%E5%8C%85.md)|    |
 |FEEDBACK|   |   |   |   |   |    |    |
 
 
@@ -54,7 +54,7 @@
 >
 > 🎵&nbsp; [编织](https://c.y.qq.com/base/fcgi-bin/u?__=4RHpdwG) 编织 使成为故事
 >
->
+> 🎶&nbsp; [梦幻的笑容](https://c.y.qq.com/base/fcgi-bin/u?__=oP1gbC) 如花香这样浓..
 
 #### HISTORY
 
