@@ -14,7 +14,7 @@ public:
         if(obstacleGrid[0][0]==1 || obstacleGrid[m-1][n-1]==1)
             return 0;
         vector<vector<int> > dp(m, vector<int>(n, 0));
-        // 对于第0行和第0列进行初始化, 如果
+        // 对于第0行和第0列进行初始化
         dp[0][0] = 1;
         for(int i=0; i<m; i++){
             if(obstacleGrid[i][0]==1)
