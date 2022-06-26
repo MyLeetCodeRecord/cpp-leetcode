@@ -13,6 +13,9 @@
 |TOPIC  |[1051.高度检查器💚](/workspace/1051.%E9%AB%98%E5%BA%A6%E6%A3%80%E6%9F%A5%E5%99%A8.cpp)|[498.对角线遍历🧡](/workspace/498.%E5%AF%B9%E8%A7%92%E7%BA%BF%E9%81%8D%E5%8E%86.cpp)|   |   |[1089.复写零💚](/workspace/1089.%E5%A4%8D%E5%86%99%E9%9B%B6.cpp)|   |   |
 |KEYWORD|`sort`|`matrix`|   |   |`array`|   |   |
 |NOTE   |如果问最小交换次数🤔|   |   |   |   |   |   |
+|TOPIC|   |   |[513.找树左下角的值](https://leetcode.cn/problems/find-bottom-left-tree-value/)|   |   |[515. 在每个树行中找最大值](https://leetcode.cn/problems/find-largest-value-in-each-tree-row/)|[剑指offer91. 粉刷房子](https://leetcode.cn/problems/JEj789/)|
+|KEYWORD|   |   |`BFS` `layerOrder`|   |   |`BFS` `layerOrder`|`dp`|
+|NOTE|   |   |   |   |   |   |   |
 
 
 > ⭐ start index   
@@ -34,7 +37,7 @@
 |TOPIC   |todo:前缀和|   |   |   |`dp`|`dp`|    |
 |NOTE    |   |   |   |   |[LC91.解码方法](./workspace/91.%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95.cpp)|[343. 整数拆分](/workspace/343.%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.cpp)<br/>[LC376.摆动序列](/workspace/376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.cpp)<br/>[0-1背包](/markdown/%E4%B8%93%E9%A2%98%20-%200-1%E8%83%8C%E5%8C%85.md)|[Weekly 3](/record/June-Weekly-3.md)|
 |FEEDBACK|   |   |   |   |   |双周赛|周赛|
-|TOPIC   |   |   |   |   |   |[Biweek 2](/record/June-Biweek-2.md)<br>[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|[Weekly4](record/June-Weekly-4.md|
+|TOPIC   |   |   |   |   |   |[Biweek 2](/record/June-Biweek-2.md)<br>[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|[Weekly4](record/June-Weekly-4.md)|
 |NOTE    |   |   |   |   |   |    |    |
 |FEEDBACK|   |   |   |   |   |    |    |
 
