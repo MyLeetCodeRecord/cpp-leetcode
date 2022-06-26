@@ -24,7 +24,6 @@
 > 
 > [7 ... 7] **7  7  7**
 
-
 ##### [LC91. 解码方法](/workspace/91.%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95.cpp)
 > 第一道坎是`dp` or `backtrack`
 > 
@@ -47,5 +46,27 @@
 
 
 
-#### 3. 可以是dp
+#### 3. 二维DP
+
+##### [剑指offer91. 粉刷房子](https://leetcode.cn/problems/JEj789/)
+```CPP
+// 可以直接用costs作为dp数组, 不用其它空间
+int minCost(vector<vector<int>>& costs) {
+    int n = costs.size();
+    vector<vector<int> > dp(n, vector<int>(3, 0));
+    dp[0][0] = costs[0][0];
+    dp[0][1] = costs[0][1];
+    dp[0][2] = costs[0][2];
+    for(int i=1; i<n; i++){
+        dp[i][0] = costs[i][0] + min(dp[i-1][1], dp[i-1][2]);
+        dp[i][1] = costs[i][1] + min(dp[i-1][0], dp[i-1][2]);
+        dp[i][2] = costs[i][2] + min(dp[i-1][0], dp[i-1][1]);
+    }
+    return min(dp[n-1][0], min(dp[n-1][1], dp[n-1][2]));
+}
+```
+
+
+
+#### 4. 可以是dp
 ##### [LC376. 摆动序列](/workspace/376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.cpp)
