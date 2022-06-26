@@ -1,8 +1,6 @@
-### Biweek 2
-
 #### Biweek 2
 
-#### 1. 统计星号
+#### [1. 统计星号](https://leetcode.cn/problems/count-asterisks/)
 
 > 设置`flag`标记是否将"*"计入
 ```CPP
@@ -25,10 +23,9 @@ int countAsterisks(string s) {
 ```
 
 
-
-##### 2. 统计无向图中无法互相到达点对数
+##### [2. 统计无向图中无法互相到达点对数](https://leetcode.cn/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/)
 > 总体上求连通分量个数及size
-> 实现上如果用[并查集](../markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)会超时, 所以要用BFS...
+> 实现上如果用[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)会超时, 所以要用BFS...
 
 ```CPP
 vector<vector<int> > e;
@@ -70,11 +67,9 @@ long long countPairs(int n, vector<vector<int>>& edges) {
 ```
 
 
+##### [3. 操作后的最大异或和](https://leetcode.cn/problems/maximum-xor-after-operations/)
 
-##### 3. 操作后的最大异或和()
-
-![LC6105](../appendix/LC6105.png)
-
+![LC6105](/appendix/LC6105.png)
 ```CPP
 int maximumXOR(vector<int>& nums) {
     // 有1的bit位上结果可取1

@@ -10,12 +10,13 @@
 > 
 > 比如上周歪打正着的`完全背包`, 以及这周昨天做过、但是没看出来的[子数组最大和](../workspace/53.%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C.cpp)...
 > 
-> 最后, 勉强没掉太多分还是挺好的
+> 勉强没掉太多分还是挺好的
 
 
-##### 1. 
+##### [1. 判断矩阵是否是一个X矩阵](https://leetcode.cn/problems/check-if-matrix-is-x-matrix/)
 
-##### 2. 统计放置房子的方式数
+
+##### [2. 统计放置房子的方式数](https://leetcode.cn/problems/count-number-of-ways-to-place-houses/)
 
 > 先用`回溯`做了一下, 发现`n=1000`的用例超时, 但是发现答案满足`4, 9, 25, ...`, 也就是<kbd>Fibonacci数组的平方</kbd>
 > 
@@ -26,7 +27,6 @@
 >  - 两层放置方案相互独立, ans[i] = dp[i]*dp[i]
 > 
 > 注意对`1e9+7`取余, 别罚时
-
 
 ```CPP
 int countHousePlacements(int n) {
@@ -46,7 +46,7 @@ int countHousePlacements(int n) {
 }
 ```
 
-##### 3. 拼接数组的最大分数
+##### [3. 拼接数组的最大分数](https://leetcode.cn/problems/maximum-score-of-spliced-array/)
 > 是对两个数组的`diff`求`最大子数组和`
 > 
 > `nums2-nums1`所求得的最大子数组和与`cumSum1`相加, `nums1-nums2`所求得的最大子数组和与`cumSum2`相加
@@ -77,9 +77,3 @@ int maxSubArray(vector<int>& nums) {
     return ans;
 }
 ```
-
-先把53和第三题做了
-
-然后补本周笔记
-
-最后补上周笔记
