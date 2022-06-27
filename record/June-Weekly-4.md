@@ -47,9 +47,11 @@ int countHousePlacements(int n) {
 ```
 
 ##### [3. 拼接数组的最大分数](https://leetcode.cn/problems/maximum-score-of-spliced-array/)
-> 是对两个数组的`diff`求`最大子数组和`
+> 是对两个数组的`diff`求[LC53. 最大子数组和](/workspace/53.%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C.cpp)
 > 
 > `nums2-nums1`所求得的最大子数组和与`cumSum1`相加, `nums1-nums2`所求得的最大子数组和与`cumSum2`相加
+>
+>![LC5229](/appendix/LC5229.png)
 
 ```CPP
 int maximumsSplicedArray(vector<int>& nums1, vector<int>& nums2) {
