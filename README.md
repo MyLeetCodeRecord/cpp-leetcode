@@ -4,8 +4,8 @@
 
 |       |MON|TUE|WED|THU|FRI⭐|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC  |   |   |   |   |   |   |   |
-|KEYWORD|   |   |   |   |   |   |   |
+|TOPIC  |   |   |   |   |[📌241.为运算表达式设计优先级🧡](/workspace/241.%E4%B8%BA%E8%BF%90%E7%AE%97%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%85%88%E7%BA%A7.cpp)|[📌871.最低加油次数💔](/workspace/871.%E6%9C%80%E4%BD%8E%E5%8A%A0%E6%B2%B9%E6%AC%A1%E6%95%B0.cpp)|   |
+|KEYWORD|`DFS` `分治法`|`priority queue`|   |   |   |   |   |
 |NOTE   |   |   |   |   |   |   |   |
 
 
@@ -30,23 +30,9 @@
 
 
 #### PLAYLIST
-> 🎶&nbsp; [爱一个上一课](https://c.y.qq.com/base/fcgi-bin/u?__=R05uFR) &emsp; 光影总算照亮过, 想开心如何懒惰
+> 🎶&nbsp;  &emsp;
 > 
-> 🎵&nbsp; [寂寞便找我](https://c.y.qq.com/base/fcgi-bin/u?__=HhZpEEH) &emsp; 多于想看你
-> 
-> 🎶&nbsp; [帮我欺骗我](https://c.y.qq.com/base/fcgi-bin/u?__=lK9FWEJIOgvT) &emsp; 好爱左右啊...
-> 
-> 🎵&nbsp; [葡萄成熟时](https://c.y.qq.com/base/fcgi-bin/u?__=LTEf4t) &emsp; 从错误里吸收...的也太多了
->
-> 🎶&nbsp; [Don't let the sun catch you crying](https://c.y.qq.com/base/fcgi-bin/u?__=EUyqKPp7OVWn) &emsp; Don't forget that love's a game
->
-> 🎵&nbsp; [编织](https://c.y.qq.com/base/fcgi-bin/u?__=4RHpdwG) &emsp; 编织 使成为故事
->
-> 🎶&nbsp; [梦幻的笑容](https://c.y.qq.com/base/fcgi-bin/u?__=oP1gbC) &emsp; 如花香这样浓..
->
-> 🎵&nbsp; [唐人街](https://c.y.qq.com/base/fcgi-bin/u?__=ePsGi2) &emsp; Wyman好会写...好会写
-> 
-> 🎶&nbsp; [再等几天](https://c.y.qq.com/base/fcgi-bin/u?__=djslz4E) &emsp; 大球场⚽
+> 🎵&nbsp;  &emsp; 
 
 #### HISTORY
 
