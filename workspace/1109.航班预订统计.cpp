@@ -15,12 +15,13 @@ public:
             if(book[1] < n)
                 diff[(book[1]-1)+1] -= book[2];
         }
+        // 如果不创建额外空间prefixSum可以直接覆盖在diff上
         vector<int> prefixSum(n, 0);
         prefixSum[0] = diff[0];
         for(int i=1; i<n; i++){
-            diff[i] = diff[i-1]+diff[i];
+            prefixSum[i] = prefixSum[i-1]+diff[i];
         }
-        return diff;
+        return prefixSum;
     }
 };
 // @lc code=end
