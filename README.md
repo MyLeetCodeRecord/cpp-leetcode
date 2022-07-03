@@ -19,8 +19,8 @@
 
 |        |MON|TUE|WED|THU|FRI|SAT⭐|SUN|
 |  ---   |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC   |   |   |   |   |   |`前缀和` <br/> `差分`|`二维前缀和`|
-|NOTE    |   |   |   |   |   |[专题-前缀和](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md) <br/> [专题-差分](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B7%AE%E5%88%86.md)|[专题-前缀和](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md#%E4%BA%8C%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C)|
+|TOPIC   |   |   |   |   |   |`前缀和` <br/> `差分`|`二维前缀和` <br/> `周赛`|
+|NOTE    |   |   |   |   |   |[专题-前缀和](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md) <br/> [专题-差分](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B7%AE%E5%88%86.md)|[专题-前缀和](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md#%E4%BA%8C%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C) <br/> [Weekly 1](/record/July-Weekly-1.md)|
 |FEEDBACK|   |   |   |   |   |   |   |
 
 
