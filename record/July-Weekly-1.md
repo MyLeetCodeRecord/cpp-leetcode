@@ -1,9 +1,7 @@
 #### Weekly 1
 
 ##### 1. 解密消息
-> [题目](https://leetcode.cn/problems/decode-the-message/)
->
-> 简单的`hash`问题
+> [题目](https://leetcode.cn/problems/decode-the-message/) - 简单的`hash`问题
 
 ```CPP
 string decodeMessage(string key, string message) {
@@ -26,7 +24,7 @@ string decodeMessage(string key, string message) {
 
 ##### 2. 螺旋矩阵Ⅳ
 
-> [题目](https://leetcode.cn/problems/spiral-matrix-iv/)
+> [题目](https://leetcode.cn/problems/spiral-matrix-iv/) - `matrix`
 > 
 > 与[LC54. 螺旋矩阵](https://leetcode.cn/problems/spiral-matrix/)和[LC59. 螺旋矩阵Ⅱ](https://leetcode.cn/problems/spiral-matrix-ii)是同一道题, 熟能生巧...
 >
