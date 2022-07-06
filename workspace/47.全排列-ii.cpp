@@ -16,7 +16,7 @@ public:
         }
         // 全排列中for循环从0开始, 但是要保证不重复使用, 并且要去重
         for(int i=0; i<nums.size(); i++){
-            // 如果前一个not used, 不需要去重
+            // 同一层去重: 如果前一个not used, 不需要去重
             if(i>0 && !used[i-1] && nums[i]==nums[i-1])
                 continue;
             if(!used[i]){
