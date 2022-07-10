@@ -25,9 +25,9 @@
 |TOPIC   |   |   |   |   |   |`前缀和` <br/> `差分`|`二维前缀和` <br/> `周赛`|
 |NOTE    |   |   |   |   |[专题-前缀和](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md) <br/> [专题-差分](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B7%AE%E5%88%86.md)|[专题-前缀和](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md#%E4%BA%8C%E7%BB%B4%E5%89%8D%E7%BC%80%E5%92%8C) <br/> [Weekly 1](/record/July-Weekly-1.md)|
 |FEEDBACK|   |   |   |   |   |   |   |
-|TOPIC|   |   |`全排列` <br/> `next_permutation`|   |   |   |   |
-|NOTE |   |   |[专题-全排列](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%85%A8%E6%8E%92%E5%88%97.md)|    |   |   |   |
-|FEEDBACK|   |   |注意区分`next_permutation`和`回溯法`两类问题|   |   |   |   |
+|TOPIC|   |   |`全排列` <br/> `next_permutation`|   |   |   |`dp`|
+|NOTE |   |   |[专题-全排列](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%85%A8%E6%8E%92%E5%88%97.md)|    |   |   |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|
+|FEEDBACK|   |   |注意区分`next_permutation`和`回溯法`两类问题|   |   |   |TODO:有空可以补个周赛|
 
 
 > ⭐ start index : 6/1
@@ -39,6 +39,9 @@
 > 🎶&nbsp; [季候风](https://c.y.qq.com/base/fcgi-bin/u?__=d1qdCO)  &emsp; 缠绵时要推开, 双手却无用
 > 
 > 🎵&nbsp; [你的浅笑](https://c.y.qq.com/base/fcgi-bin/u?__=6zkUD) &emsp; Sinner打球好安静...
+> 
+> 🎶&nbsp; [唱一首好歌](https://c.y.qq.com/base/fcgi-bin/u?__=2XYeI7CGfNKc) &emsp; 清风轻吹过, 如一首新的歌🏞️
+> 
 
 #### HISTORY
 
