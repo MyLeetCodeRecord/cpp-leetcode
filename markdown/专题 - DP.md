@@ -35,8 +35,9 @@
 
 
 
-#### 2. 矩阵DP
+#### 2. 矩阵DP / 路径问题
 ##### [LC62. 不同路径](/workspace/62.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.cpp)
+![](/appendix/LC62.png)
 
 ##### [LC63. 不同路径Ⅱ](/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
 > 注意对第0行和第0列的初始化
