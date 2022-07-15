@@ -28,8 +28,8 @@
 |TOPIC|📅|📅|`全排列` <br/> `next_permutation`|📅|📅|📅|`dp`|
 |NOTE |   |   |[专题-全排列](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%85%A8%E6%8E%92%E5%88%97.md)|    |   |   |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|
 |FEEDBACK|   |   |注意区分`next_permutation`和`回溯法`两类问题|   |   |   |TODO:有空可以补个周赛|
-|TOPIC   |`dp`|📅|`dp`|   |   |   |   |
-|NOTE    |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|   |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|   |   |   |   |
+|TOPIC   |`dp`|📅|`dp`|`并查集`|   |   |   |
+|NOTE    |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|   |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|[并查集]()|   |   |   |
 |FEEDBACK|   |   |done|   |   |   |   |
 
 
