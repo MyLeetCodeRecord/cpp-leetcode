@@ -29,8 +29,8 @@
 |NOTE |   |   |[专题-全排列](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%85%A8%E6%8E%92%E5%88%97.md)|    |   |   |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|
 |FEEDBACK|   |   |区分`next_permutation`和`回溯法`两类问题|   |   |   |TODO:有空可以补个周赛|
 |TOPIC   |`dp`|📅|`dp`|`并查集`|   |   |   |
-|NOTE    |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|   |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|   |[DP-打家劫舍](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E5%BC%BA%E7%9B%97%E9%97%AE%E9%A2%98.md)<br/>|[DP-股票问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)|
-|FEEDBACK|   |   |done|7/16|待续...踢球⚽|   |   |
+|NOTE    |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|   |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|[DP-打家劫舍](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E5%BC%BA%E7%9B%97%E9%97%AE%E9%A2%98.md)<br/>|[DP-股票问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)|[DP-股票问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
+|FEEDBACK|   |   |done|7/16|   |待续...踢球⚽|done|   |
 
 
 > ⭐ start index : 7/1
@@ -47,7 +47,7 @@
 > 
 > 🎵&nbsp; [Alan Medley 87](https://c.y.qq.com/base/fcgi-bin/u?__=yeo4QEf) &emsp; 抖腿抖腿🎉
 >
-> 🎶&nbsp; [时光倒流二十年](https://c.y.qq.com/base/fcgi-bin/u?__=E8241h) &emsp; 本来在畅想二十年前什么样子...结果没有Covid19有Sars?...
+> 🎶&nbsp; [时光倒流二十年](https://c.y.qq.com/base/fcgi-bin/u?__=E8241h) &emsp; 
 
 
 
