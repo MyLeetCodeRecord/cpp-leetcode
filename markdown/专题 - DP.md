@@ -69,5 +69,8 @@ int minCost(vector<vector<int>>& costs) {
 
 
 
-#### 4. 可以是dp
+#### 4. 状态DP
+##### [股票问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
+
 ##### [LC376. 摆动序列](/workspace/376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.cpp)
+![LC376](/appendix/LC376.png)
