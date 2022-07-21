@@ -13,11 +13,13 @@
 > 
 > 最终结果往往为`dp[m][n]`
 
-##### [LC1143. 最长公共子序列](/workspace/1143.%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97.cpp)
+##### [LC1143. 最长公共子序列](https://leetcode.cn/problems/uncrossed-lines)
 
 > 题目描述: https://leetcode.cn/problems/longest-common-subsequence/
 >
 > `dp[i][j]`不要求严格以`text1[i-1]`和`text2[j-1]`结尾
+>
+> 相同的题目有[LC1035. 不相交的线](/workspace/1035.%E4%B8%8D%E7%9B%B8%E4%BA%A4%E7%9A%84%E7%BA%BF.cpp)
 
 ```CPP
 vector<vector<int> > dp(m+1, vector<int>(n+1, 0)); // 注意错开一位
@@ -134,7 +136,7 @@ return dp[m][n];
 > 
 > `dp[i][j]`表示`s1[:i]`和`s2[:j]`能够组成`s3[:i+j+1]`
 > 
-> 事实上要证明**存在性**, **交叠**并不重要, 只是字符比较问题
+> 事实上要证明**存在性**, **交叠**并不重要, 只是结尾字符比较问题
 
 ```CPP
 bool isInterleave(string s1, string s2, string s3) {
@@ -157,6 +159,111 @@ bool isInterleave(string s1, string s2, string s3) {
                 dp[i][j] = true;
             if(s2[j-1]==s3[k] && dp[i][j-1]==true)
                 dp[i][j] = true;
+        }
+    }
+    return dp[m][n];
+}
+```
+
+
+##### [LC115. 不同的子序列](/workspace/115.%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97.cpp)
+
+> 题目描述: https://leetcode.cn/problems/distinct-subsequences/
+> 
+> `dp[i][j]`表示`s[:i]`的子序列中等于`t[:j]`的个数
+> - 如果`s[i-1]==t[j-1]`, `dp[i][j] = dp[i-1][j-1] + dp[i-1][j]`
+> - 如果`s[i-1]!=t[j-1]`, `dp[i][j] = dp[i-1][j]`
+
+```CPP
+vector<vector<uint64_t> > dp(m+1, vector<uint64_t>(n+1, 0));
+for(int i=0; i<=m; i++){
+    dp[i][0] = 1;
+}
+for(int i=1; i<=m; i++){
+    for(int j=1; j<=n; j++){
+        if(s[i-1] == t[j-1])
+            dp[i][j] = dp[i-1][j-1] + dp[i-1][j];
+        else
+            dp[i][j] = dp[i-1][j];
+    }
+}
+return dp[m][n];
+```
+
+
+##### [LC727. 最小窗口子序列](https://leetcode.cn/problems/minimum-window-subsequence)
+
+> 又是没有会员的一天呢, 题目就是找到字符串s中包含字符串t的最短Substring(连续)
+> 
+> `dp[i][j]`表示`s[:i]`包含`t[:j]`的最短Substring长度, 注意Substring需要**严格以s[i]结尾**
+
+```CPP
+vector<vector<int>> dp(m, vector<int>(m, INT_MAX));
+for(int i=0; i<=m; i++){
+    dp[i][0] = 0;
+}
+int ans = INT_MAX;
+for(int i=1; i<=m; i++){
+    for(int j=1; j<=n; j++){
+        if(s[i-1]==t[j-1])
+            dp[i][j] = dp[i-1][j-1] + 1;
+        else
+            dp[i][j] = dp[i-1][j] + 1;
+    }
+    ans = min(ans, dp[i][n]);
+}
+return (ans==INT_MAX) ? "" : ans;
+```
+
+
+##### [LC583. 两个字符串的删除操作](/workspace/583.%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C.cpp)
+
+> 题目描述: https://leetcode.cn/problems/delete-operation-for-two-strings
+> 
+> 简化的[编辑距离](/workspace/72.%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB.cpp)问题
+
+```CPP
+vector<vector<int> > dp(m+1, vector<int>(n+1, 0));
+for(int i=1; i<=m; i++)
+    dp[i][0] = i;
+for(int j=1; j<=n; j++)
+    dp[0][j] = j;
+for(int i=1; i<=m; i++){
+    for(int j=1; j<=n; j++){
+        if(word1[i-1] == word2[j-1])
+            dp[i][j] = dp[i-1][j-1];
+        else
+            dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + 1;
+    }
+}
+return dp[m][n];
+```
+
+
+##### [LC712. 两个字符串的最小ASCII删除和](/workspace/712.%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%8Fascii%E5%88%A0%E9%99%A4%E5%92%8C.cpp)
+
+> 题目描述: https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/
+> 
+> "转换一下, 这个题目就是求公共子串, 要求这些公共子串的ASCII值最大"
+> - 如果`s[i-1]==s[j-1]`, `dp[i][j] = dp[i-1][j-1]`
+> (~~但我觉得也可以取自`min(dp[i-1][j]+s1[i-1], dp[i][j-1]+s2[j-1])+1`?~~)
+> 
+> - 如果`s[i-1]!=s[j-1]`, `dp[i][j] = min(dp[i-1][j]+s1[i-1], dp[i][j-1]+s2[j-1])`
+```CPP
+int minimumDeleteSum(string s1, string s2) {
+    int m = s1.size();
+    int n = s2.size();
+    vector<vector<int> > dp(m+1, vector<int>(n+1, 0));
+    for(int i=1; i<=m; i++)
+        dp[i][0] += dp[i-1][0] + s1[i-1];
+    for(int j=1; j<=n; j++)
+        dp[0][j] += dp[0][j-1] + s2[j-1];
+    for(int i=1; i<=m; i++){
+        for(int j=1; j<=n; j++){
+            if(s1[i-1]==s2[j-1])
+                dp[i][j] = dp[i-1][j-1];
+            else
+                dp[i][j] = min(dp[i-1][j]+s1[i-1], dp[i][j-1]+s2[j-1]);
         }
     }
     return dp[m][n];

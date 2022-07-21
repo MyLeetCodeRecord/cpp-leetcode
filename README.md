@@ -35,8 +35,8 @@
 |NOTE    |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|   |[DP-路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|[DP-打家劫舍](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E5%BC%BA%E7%9B%97%E9%97%AE%E9%A2%98.md)<br/>|[DP-股票问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)|[DP-股票问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
 |FEEDBACK|   |   |done|7/16|   |待续...踢球⚽|done<br>又是没周赛的一周呢|
 |TOPIC   |`dp`|   |   |   |   |   |   |
-|NOTE    |[DP-行使权力](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%A1%8C%E4%BD%BF%E6%9D%83%E5%8A%9B.md)|[DP-非相邻转移](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E9%9D%9E%E7%9B%B8%E9%82%BB%E8%BD%AC%E7%A7%BB.md)|[DP-双序列](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E5%8F%8C%E5%BA%8F%E5%88%97.md)|   |   |   |   |
-|FEEDBACK|也转化为**状态**|   |最短超序列挺有意思|   |   |   |   |
+|NOTE    |[DP-行使权力](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%A1%8C%E4%BD%BF%E6%9D%83%E5%8A%9B.md)|[DP-非相邻转移](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E9%9D%9E%E7%9B%B8%E9%82%BB%E8%BD%AC%E7%A7%BB.md)|[DP-双序列](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E5%8F%8C%E5%BA%8F%E5%88%97.md)|[DP-双序列](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E5%8F%8C%E5%BA%8F%E5%88%97.md)|   |   |   |
+|FEEDBACK|也转化为**状态**|   |最短超序列挺有意思|teams崩了, mentor也OOF...|   |   |   |
 
 
 
