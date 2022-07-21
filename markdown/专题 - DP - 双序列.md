@@ -269,3 +269,52 @@ int minimumDeleteSum(string s1, string s2) {
     return dp[m][n];
 }
 ```
+
+
+##### [1312. 让字符串变成回文串的最少插入次数](/workspace/1312.%E8%AE%A9%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%90%E4%B8%BA%E5%9B%9E%E6%96%87%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%91%E6%8F%92%E5%85%A5%E6%AC%A1%E6%95%B0.cpp)
+
+> 题目描述: https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/
+> 
+> 这道题状态转移很容易想到, 难点在于dp数组如何构建(循环如何定义)
+> 
+> `dp[i][j]`表示让s[i:j]变成回文串的最少插入次数
+> 
+> 一个基本的要求是`dp[i][j]`一定由更小区间的`dp[i+x][j-y]`转移得到
+
+```CPP
+int minInsertions(string s) {
+    int n = s.size();
+    vector<vector<int> > dp(n, vector<int>(n, 0));
+    for(int i=n-1; i>=0; i--){
+        for(int j=i+1; j<n; j++){
+            if(s[i] == s[j]){
+                dp[i][j] = dp[i+1][j-1];
+            }
+            else{
+                dp[i][j] = min(dp[i+1][j], dp[i][j-1]) + 1;
+            }
+        }
+    }
+    return dp[0][n-1];
+}
+```
+
+> 这道题也可以借助`LCS`, 求字符串s及逆序字符串t的最长公共子序列长度, 要删除的次数即为`n-LCS`
+
+```CPP
+int minInsertions(string s) {
+    string t = s;
+    reverse(s.begin(), s.end());
+    int n = s.size();
+    vector<vector<int> > dp(n+1, vector<int>(n+1, 0));
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            if(s[i-1] == t[j-1])
+                dp[i][j] = dp[i-1][j-1]+1;
+            else
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+        }
+    }
+    return n - dp[n][n];
+}
+```
