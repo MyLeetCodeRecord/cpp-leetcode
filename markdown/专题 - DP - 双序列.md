@@ -4,16 +4,17 @@
 > - 最长公共子序列
 > - 最短公共超级序列(Supersequence)
 > - 编辑距离...
-> 
+
 > 解题思路:
 > 
-> `dp[i][j]`表示s[:i]和t[:j]子问题的最优解
+> `dp[i][j]`表示`s[:i]`和`t[:j]`子问题的最优解
 > 
-> `dp[i][j]`往往是从`dp[i-1][j]`、`dp[i][j-1]`、`dp[i-1][j-1]`转移而来
+> `dp[i][j]`往往是从`dp[i-1][j]`、`dp[i][j-1]`、`dp[i-1][j-1]`有选择地转移而来
 > 
 > 最终结果往往为`dp[m][n]`
 
-##### [LC1143. 最长公共子序列](https://leetcode.cn/problems/uncrossed-lines)
+
+##### [LC1143. 最长公共子序列](/workspace/1143.%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97.cpp)
 
 > 题目描述: https://leetcode.cn/problems/longest-common-subsequence/
 >
@@ -34,6 +35,7 @@ for(int i=1; i<=m; i++){
 return dp[m][n];
 ```
 
+
 ##### [LC1092. 最短公共超序列](/workspace/1092.%E6%9C%80%E7%9F%AD%E5%85%AC%E5%85%B1%E8%B6%85%E5%BA%8F%E5%88%97.cpp)
 
 > 题目描述: https://leetcode.cn/problems/shortest-common-supersequence/
@@ -46,9 +48,13 @@ return dp[m][n];
 > 
 > 如果`s[i]!=s[j]` => 两个字符都应该加入最短公共超序列 => `dp[i][j]=min(dp[i-1][j], dp[i][j-1]) + 1`
 > 
-> 同时要使用二维`vector<vector<string> > ans`来记录超序列内容
+> 同时要使用二维`vector<vector<string>> ans`来记录超序列内容
 > 
 > 然后发现记录长度的`dp[i][j]`数组并没有意义, 只使用`ans[i][j]`即可
+> 
+> 但其实上面这种做法也可以反向构建SuperSequence, 这样就不会超时了
+> 
+> ![LC1092](/appendix/LC1092.png)
 
 ```CPP
 string shortestCommonSupersequence(string str1, string str2) {
@@ -77,7 +83,7 @@ string shortestCommonSupersequence(string str1, string str2) {
 }
 ```
 
-> 正确的解法是先构建`LCS`(最短公共子序列), 再借助`LCS`构建超序列
+> 正确的解法是先构建`LCS`(最短公共子序列), 再在`LCS`的基础上补充字符, 构建超序列
 
 ```CPP
 string shortestCommonSupersequence(string str1, string str2) {
@@ -107,9 +113,10 @@ string shortestCommonSupersequence(string str1, string str2) {
 ##### [LC72. 编辑距离](/workspace/72.%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB.cpp)
 
 > 题目描述: https://leetcode.cn/problems/edit-distance
-> 相等 => `dp[i][j] = dp[i-1][j-1]`
 > 
-> 不相等 => 修改/添加/删除 => `dp[i][j] = 1 + min(dp[i-1][j-1], min(dp[i-1][j], dp[i][j-1]))`
+> `s[i-1]==t[i-1]` => 不做操作 => `dp[i][j] = dp[i-1][j-1]`
+> 
+> `s[i-1]!=t[i-1]` => 修改/添加/删除 => `dp[i][j] = 1 + min(dp[i-1][j-1], min(dp[i-1][j], dp[i][j-1]))`
 
 ```CPP
 vector<vector<int>> dp(m+1, vector<int>(n+1, 0));
@@ -122,7 +129,7 @@ for(int i=1; i<=m; i++){
         if(word1[i-1]==word2[j-1])
             dp[i][j] = dp[i-1][j-1];
         else
-            // 替换 => dp[i-1][j-1]+1
+            // 修改 => dp[i-1][j-1]+1
             dp[i][j] = min(dp[i-1][j-1], min(dp[i-1][j], dp[i][j-1])) + 1;
     }
 }
@@ -134,7 +141,7 @@ return dp[m][n];
 
 > 题目描述: https://leetcode.cn/problems/interleaving-string
 > 
-> `dp[i][j]`表示`s1[:i]`和`s2[:j]`能够组成`s3[:i+j+1]`
+> `dp[i][j]`表示`s1[:i]`和`s2[:j]`能否组成`s3[:i+j+1]`
 > 
 > 事实上要证明**存在性**, **交叠**并不重要, 只是结尾字符比较问题
 
@@ -277,7 +284,7 @@ int minimumDeleteSum(string s1, string s2) {
 > 
 > 这道题状态转移很容易想到, 难点在于dp数组如何构建(循环如何定义)
 > 
-> `dp[i][j]`表示让s[i:j]变成回文串的最少插入次数
+> `dp[i][j]`表示让`s[i:j]`变成回文串的最少插入次数
 > 
 > 一个基本的要求是`dp[i][j]`一定由更小区间的`dp[i+x][j-y]`转移得到
 
