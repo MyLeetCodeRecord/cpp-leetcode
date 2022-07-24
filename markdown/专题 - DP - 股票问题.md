@@ -44,9 +44,9 @@ int maxProfit(vector<int>& prices) {
 
 ##### [LC188. 买卖股票的最佳时机Ⅳ](/workspace/188.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-iv.cpp)
 
-> [题目](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/)
+> [题目](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/): 最多可以买卖k次
 > 
-> 做了上面的[LC123](/workspace/123.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-iii.cpp), 这道题就不难了, 把交易次数从2次改为k次, 也就是引入一个`for(k)`
+> 做了上面的[LC123. 买卖股票的最佳时机Ⅲ](/workspace/123.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA-iii.cpp), 这道题就不难了, 把交易次数从2次改为k次, 也就是引入一个`for(k)`
 >
 > 注意: 状态0是没有前一个状态的, 要单独处理
 
