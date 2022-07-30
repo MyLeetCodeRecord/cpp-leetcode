@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 偶数->偶数位置不需要代价, 奇数到奇数位置不需要代价
+    // 偶数->偶数位置不需要代价, 奇数->奇数位置不需要代价
     // 偶数位置evenCnt与奇数位数oddCnt比较, 更少的一个就是移动次数
     int minCostToMoveChips(vector<int>& position) {
         int oddCnt = 0;

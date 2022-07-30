@@ -7,13 +7,15 @@
 |TOPIC  |   |   |   |   |[📌241.为运算表达式设计优先级🧡](/workspace/241.%E4%B8%BA%E8%BF%90%E7%AE%97%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%85%88%E7%BA%A7.cpp)|[📌871.最低加油次数💔](/workspace/871.%E6%9C%80%E4%BD%8E%E5%8A%A0%E6%B2%B9%E6%AC%A1%E6%95%B0.cpp)|[📌556.下一个更大元素Ⅲ🧡](/workspace/556.%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0-iii.cpp)|
 |KEYWORD|   |   |   |   |`DFS`<br>`分治法`|`priority queue`|`next_permutation`|
 |NOTE   |   |   |   |   |   |   |~~todo: 手写全排列..写过忘了~~<br/>[专题-全排列](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%85%A8%E6%8E%92%E5%88%97.md)|
-|TOPIC|[1200.最小绝对差💚](/workspace/1200.%E6%9C%80%E5%B0%8F%E7%BB%9D%E5%AF%B9%E5%B7%AE.cpp)|[📌729.我的日程安排表Ⅰ🧡](/workspace/729.%E6%88%91%E7%9A%84%E6%97%A5%E7%A8%8B%E5%AE%89%E6%8E%92%E8%A1%A8-i.cpp)|   |[648.单词替换🧡](/workspace/648.%E5%8D%95%E8%AF%8D%E6%9B%BF%E6%8D%A2.cpp)|[📌1217.玩筹码💚](/workspace/1217.%E7%8E%A9%E7%AD%B9%E7%A0%81.cpp)|[📌873.最长的斐波那契子序列的长度🧡](/markdown/LC873.%20%E6%9C%80%E9%95%BF%E7%9A%84%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E5%AD%90%E5%BA%8F%E5%88%97%E7%9A%84%E9%95%BF%E5%BA%A6.md)|
-|KEYWORD|`sort`|todo: `TreeMap`|   |`Trie`|`math`|`dp`|   |
-|NOTE   |   |暴力求解占坑..|困难题唯唯诺诺|Review一下[前缀树](/markdown/%E4%B8%93%E9%A2%98%20-%20Trie.md)|   |好难啊...|   |
-|TOPIC  |   |   |   |   |   |   |   |
-|KEYWORD|   |   |   |   |   |   |   |
-|NOTE   |   |   |   |   |   |   |   |
-
+|TOPIC|[1200.最小绝对差💚](/workspace/1200.%E6%9C%80%E5%B0%8F%E7%BB%9D%E5%AF%B9%E5%B7%AE.cpp)|[📌729.我的日程安排表Ⅰ🧡](/workspace/729.%E6%88%91%E7%9A%84%E6%97%A5%E7%A8%8B%E5%AE%89%E6%8E%92%E8%A1%A8-i.cpp)|   |[648.单词替换🧡](/workspace/648.%E5%8D%95%E8%AF%8D%E6%9B%BF%E6%8D%A2.cpp)|[📌1217.玩筹码💚](/workspace/1217.%E7%8E%A9%E7%AD%B9%E7%A0%81.cpp)|[📌873.最长的斐波那契子序列的长度🧡](/markdown/LC873.%20%E6%9C%80%E9%95%BF%E7%9A%84%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E5%AD%90%E5%BA%8F%E5%88%97%E7%9A%84%E9%95%BF%E5%BA%A6.md)|❌|
+|KEYWORD|`sort`|todo: `TreeMap`|   |`Trie`|`math`|`dp`|`dp`|
+|NOTE   |   |暴力求解占坑..|困难题唯唯诺诺|Review一下[前缀树](/markdown/%E4%B8%93%E9%A2%98%20-%20Trie.md)|   |好难啊...|下次做|
+|TOPIC  |[676.实现一个魔法字典🧡](/workspace/676.%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%AD%94%E6%B3%95%E5%AD%97%E5%85%B8.cpp)|[1252.奇数值单元格的数目💚](/workspace/1252.%E5%A5%87%E6%95%B0%E5%80%BC%E5%8D%95%E5%85%83%E6%A0%BC%E7%9A%84%E6%95%B0%E7%9B%AE.cpp)|[📌735.行星碰撞🧡](/workspace/735.%E8%A1%8C%E6%98%9F%E7%A2%B0%E6%92%9E.cpp)|   |[LC558. 四叉树交集](/workspace/558.%E5%9B%9B%E5%8F%89%E6%A0%91%E4%BA%A4%E9%9B%86.cpp)|[剑指offer41.滑动窗口的平均值](https://leetcode.cn/problems/length-of-longest-fibonacci-subsequence)|   |
+|KEYWORD|`Trie` `DFS`|`matrix` `math`|`stack`|   |`recursive`|`queue`|   |
+|NOTE   |DFS实现search|   |栈模拟|   |[427.建立四叉树🧡](/workspace/427.%E5%BB%BA%E7%AB%8B%E5%9B%9B%E5%8F%89%E6%A0%91.cpp)|   |   |
+|TOPIC  |   |[1260.二维网格迁移💚](https://leetcode.cn/problems/shift-2d-grid/)
+|KEYWORD|   |`matrix`|
+|NOTE   |   |   |
 
 > ⭐ start index   
 > 
