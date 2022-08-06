@@ -16,13 +16,13 @@
 
 
 #### ACWING BASIC 🦄
-|        |MON|TUE|WED|THU|FRI|SAT|SUN|
+|        |MON|TUE|WED|THU|FRI⭐|SAT|SUN|
 |  ---   |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC   |   |   |   |   |`quicksort` `mergesort`|`二分`|   |
-|NOTE    |   |   |   |   |[Section 1](/acwing/第一讲)|   |   |
+|TOPIC   |📅|📅|📅|📅|`quicksort` `mergesort`|`二分`|   |
+|NOTE    |   |   |   |   |[Section 1](/acwing/Section%201/)|[acwing-二分](/markdown/acwing%20-%20%E4%BA%8C%E5%88%86%E6%B3%95.md)|   |
 |FEEDBACK|   |   |   |   |   |   |   |
 
-> ⭐ start index : 7/1
+> ⭐ start index : 8/5
 > 
 > 📅 absent
 
