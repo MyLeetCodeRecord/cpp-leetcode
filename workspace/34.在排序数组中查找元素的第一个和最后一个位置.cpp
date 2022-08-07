@@ -7,35 +7,33 @@
 // @lc code=start
 class Solution {
 public:
-    // 二分的两种策略-找到左边界和右边界
+    // acwing - 二分法模板
+    int binary_search_left(vector<int> q, int l, int r, int target){
+        while(l<r){
+            int mid = (l+r)/2;
+            if(q[mid] < target)
+                l = mid+1;
+            else
+                r = mid;
+        }
+        return l;
+    }
+    int binary_search_right(vector<int> q, int l, int r, int target){
+        while(l<r){
+            int mid = (l+r+1)/2;
+            if(q[mid] > target)
+                r = mid-1;
+            else
+                l = mid;
+        }
+        return r;
+    }
     vector<int> searchRange(vector<int>& nums, int target) {
-        int left = 0;
-        int right = nums.size()-1;
-        bool exist = false;
-        // 左边界
-        while(left<=right){
-            int mid = (right-left)/2 + left;
-            if(nums[mid]>=target){
-                right = mid-1;
-                if(nums[mid]==target)
-                    exist = true;
-            }
-            else
-                left = mid+1;
-        }
-        int ans1 = exist ? left : -1;
-        // 右边界
-        left = 0;
-        right = nums.size()-1;
-        while(left<=right){
-            int mid = (right-left)/2 + left;
-            if(nums[mid]<=target)
-                left = mid+1;
-            else
-                right = mid-1;
-        }
-        int ans2 = exist ? right : -1;
-        return {ans1, ans2};
+        int leftEnd = binary_search_left(nums, 0, nums.size()-1, target);
+        if(leftEnd >= nums.size() ||nums[leftEnd] != target)
+            return {-1, -1};
+        int rightEnd = binary_search_right(nums, 0, nums.size()-1, target);
+        return {leftEnd, rightEnd};
     }
 };
 // @lc code=end

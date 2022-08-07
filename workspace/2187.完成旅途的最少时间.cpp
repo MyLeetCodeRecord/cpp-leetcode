@@ -7,25 +7,22 @@
 // @lc code=start
 class Solution {
 public:
-    // 对时间 t 进行二分查找, 找到满足条件的最小 t
+    // 对时间t进行二分查找
     long long minimumTime(vector<int>& time, int totalTrips) {
-        sort(time.begin(), time.end());
-        long long left = 0;
-        long long right = 1e14;
-        while(left <= right){
-            long long mid = (right-left)/2 + left;
-            // 找最左侧target, 就要在"=="的情况下收缩右边界
+        long long l = 0;
+        long long r = 1e14+10;
+        while(l<r){
+            long long mid = (l+r)/2;
             long long cnt = 0;
-            for(int t: time)
+            for(int t: time){
                 cnt += mid/t;
-            if(cnt >= totalTrips){
-                right = mid-1;
             }
-            else{
-                left = mid + 1;
-            }
+            if(cnt < totalTrips)
+                l = mid+1;
+            else
+                r = mid;
         }
-        return left;
+        return l;
     }
 };
 // @lc code=end
