@@ -76,8 +76,8 @@ int q[N], tmp[N];
 long long mergesort(int q[], int l, int r){
     if(l <= r)
         return 0;
-    int mid = (l+r)/2;
     // 递归
+    int mid = (l+r)/2;
     long long sum = mergesort(q, l, mid) + mergesort(q, mid+1, r);
     // 合并
     int idx = l;
