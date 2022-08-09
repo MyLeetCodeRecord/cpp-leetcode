@@ -11,6 +11,9 @@
         "deque": "cpp",
         "functional": "cpp",
         "cmath": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "iostream": "cpp",
+        "cstdio": "cpp",
+        "ostream": "cpp"
     }
 }

@@ -10,21 +10,21 @@ public:
     // letters有序
     char nextGreatestLetter(vector<char>& letters, char target) {
         // 提前处理target是last one的情况
-        if(target >= letters[letters.size()-1])
+        if(target >= letters.back())
             return letters[0];
         // 二分, 注意是对下标二分
-        int left = 0;
-        int right = letters.size()-1;
-        while(left<=right){
-            int mid = (right-left)/2+left;
-            if(letters[mid] <= target){
-                left = mid + 1;
-            }
-            else{
-                right = mid - 1;
-            }
+        int l = 0;
+        int r = letters.size()-1;
+        while(l < r){
+            int mid = (l+r+1)/2;
+            if(letters[mid] > target)
+                r = mid-1;
+            else
+                l = mid;
         }
-        return letters[left];
+        while(l<letters.size() && letters[l]<=target)
+            l++;
+        return letters[l];
     }
 };
 // @lc code=end

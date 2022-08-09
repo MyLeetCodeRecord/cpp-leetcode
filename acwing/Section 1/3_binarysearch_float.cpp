@@ -17,6 +17,10 @@ int binary_search(double n, double l, double r){
     return l;
 }
 
+// 如果起始n<1, 令初始r=n, 直接使用mid*mid>=n判断会有问题, 比如0.01的二次方根是0.1>0.01 【只影响代码”启动”, 不影响二分本质】
+// 解决方法是初始化起始的r=max(1,n), 或者直接取数据边界(e.g. 10000)也可以
+// 求奇数方根时, 负数并不影响代码运行(不影响在二分数轴上左右的归属)
+
 int main(){
     cin>>n;
     printf("%lf\n", binary_search(n, -10000.0, 10000.0));
