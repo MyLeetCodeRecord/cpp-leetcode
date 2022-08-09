@@ -172,11 +172,11 @@ cout<<prefixSum[r] - prefixSum[l-1]<<endl;
 ```CPP
 // 二维前缀和可以对齐
 int a[N][N], prefixSum[N][N];
-// 构造
+// 构建
 for(int i=1; i<=n; i++){
     for(int j=1; j<=m; j++){
         scanf("%d", &a[i][j]);
-        prefixSum[i][j] = prefixSum[i-1][j] + prefixSum[i][j-1] - prefixSum[i-1][j-1];
+        prefixSum[i][j] = a[i][j] + prefixSum[i-1][j] + prefixSum[i][j-1] - prefixSum[i-1][j-1];
     }
 }
 // 使用: 对于(x1,y1), (x2,y2)区域和的查询
@@ -185,7 +185,6 @@ prefixSum[x2][y2]-prefixSum[x1-1][y2]-prefixSum[x2][y1-1]+prefixSum[x1-1][y1-1];
 
 ##### 9. difference
 ```CPP
-const int N = 100010;
 int a[N], diff[N];
 void diff_operation(int l, int r, int c){
     diff[l] += c;
@@ -215,7 +214,6 @@ int main(){
 
 ##### 10. difference(二维)
 ```CPP
-const int N = 100010;
 int a[N][N], diff[N][N];
 void diff_operation(int x1, int y1, int x2, int y2, int c){
     diff[x1][y1] += c;
