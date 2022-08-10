@@ -35,6 +35,8 @@
 > 🎶&nbsp; [小说人生](https://c.y.qq.com/base/fcgi-bin/u?__=X9sernA)  &emsp; 上次看小说是在...
 > 
 > 🎵&nbsp; [心淡](https://c.y.qq.com/base/fcgi-bin/u?__=2eFo4X)  &emsp; 
+>
+> 🎶&nbsp; [花火](https://c.y.qq.com/base/fcgi-bin/u?__=LHcDkOa)  &emsp; 长路若太短 花火生命更短
 
 #### HISTORY
 
