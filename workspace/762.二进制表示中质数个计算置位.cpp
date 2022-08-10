@@ -29,7 +29,7 @@ public:
             int n = i;
             int cnt = 0;
             while(n != 0){
-                n -= lowbit(n);     // 使用lowbit时n的变化
+                n -= lowbit(n);     // 使用lowbit计数1
                 cnt++;
             }
             ans += prime_32[cnt];
