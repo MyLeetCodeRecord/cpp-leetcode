@@ -1,7 +1,7 @@
 #include <cstdio>
 using namespace std;
 
-const int N = 1000010;
+const int N = 100010;
 int n;
 int q[N], tmp[N];   // 需要一个额外空间tmp用来合并, tmp[]是分段使用的, 所以一个就够了
 

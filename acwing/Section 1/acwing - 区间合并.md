@@ -19,14 +19,13 @@ bool cmp(PII l, PII r){
 
 ```CPP
 typedef pair<int,int> PII;
-vector<PII> intervals;
+vector<PII> intervals, ans;
 
 // 按区间左端点(开始时间)排序
 bool cmp(pair<int,int> l, pair<int,int> r){
     return l.first < r.first;
 }
 vector<PII> intervalMerge(vector<PII> intervals){
-    vector<PII> ans;
     sort(intervals.begin(), intervals.end(), cmp);  // 默认排序也可以
     PII curInterval = intervals[0]; // curInterval当前维护区间, 也可以初始化为(-∞,-∞)
     for(int i=0; i<intervals.size(); i++){
