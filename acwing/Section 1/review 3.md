@@ -10,7 +10,7 @@ for(int i=1; i<=n; i++){
 cout<<prefixSum[r] - prefixSum[l-1]<<endl;
 ```
 
-##### 2. prefix(二维)
+##### 2. prefixSum(二维)
 ```CPP
 int a[N][N], prefixSum[N][N];
 // 构建前缀和
@@ -102,7 +102,7 @@ int main(){
         // 右端点逐个右移
         mp[A[i]]++;
         // 左端点持续右移
-        while(j<n && mp[A[i]]>1){
+        while(j<i && mp[A[i]]>1){
             mp[A[j++]]--;
         }
         ans = max(ans, i-j+1);
@@ -149,12 +149,12 @@ int main(){
     int idxA = 0;
     for(int j=0; j<m; j++){
         scanf("%d", &bElement);
-        if(bElement==A[idxA])
+        if(bElement == A[idxA])
             idxA++;
         if(idxA == n)
             break;
     }
-    if(idxA==n)
+    if(idxA == n)
         cout<<"Yes"<<endl;
     else
         cout<<"No"<<endl;
