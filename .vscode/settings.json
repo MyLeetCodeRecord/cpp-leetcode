@@ -14,6 +14,7 @@
         "cstdlib": "cpp",
         "iostream": "cpp",
         "cstdio": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "set": "cpp"
     }
 }
