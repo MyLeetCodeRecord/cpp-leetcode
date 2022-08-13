@@ -11,6 +11,11 @@
 > `next[j]`记录的是最长匹配后缀的开始位置
 > 
 > ![KMP-next数组](/appendix/acwing-KMP-next.png)
+>
+> `next[]`数组的求解
+> - 模板串从下标1开始记录, 
+> - next[i]从2开始计算, 因为next[1]=0即可(无路可退)
+> 
 
 ```CPP
 #include <iostream>
