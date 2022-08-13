@@ -32,6 +32,7 @@ public:
         int ans = 0;
         for (int k = 30; k >= 0; k--) {
             int cur = (num >> k) & 1;
+            // 下面的cur=0和cur=1不需要分开讨论, 可以用cur和not_cur统一表示, 详见acwing_6.cpp
             // num的当前位为0, 则应该向Trie的1的方向搜索, 这样可以获得高位异或为1的贪心结果
             if(cur == 0){
                 // 存在与cur异或为1的分支 => 移位+1
@@ -73,4 +74,3 @@ public:
     }
 };
 // @lc code=end
-
