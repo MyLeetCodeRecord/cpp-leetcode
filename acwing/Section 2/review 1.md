@@ -115,6 +115,7 @@ int main(){
 ##### 4. 单调队列 - 滑动窗口内的最小值
 ```CPP
 const int N = 1000010;
+int a[N];
 int q[N], h, t;
 
 void init(){

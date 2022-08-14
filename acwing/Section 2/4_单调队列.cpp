@@ -8,7 +8,7 @@ using namespace std;
 const int N = 1000010;
 int a[N];
 
-// 模拟队列
+// 单调队列, 存储下标
 int q[N];
 int h = 0, t = -1;
 

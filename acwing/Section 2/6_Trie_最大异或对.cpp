@@ -16,26 +16,27 @@ void insert(int x){
     // 所有叶节点都在第32层
     for(int i=30; i>=0; i--){
         int cur = (x>>i) & 1;
-        if(t->child[cur]==NULL)
+        if(t->child[cur] == NULL)
             t->child[cur] = new TrieNode();
         t = t->child[cur];
     }
 }
 int search(int x){
     TrieNode* t = trie;
-    int xor = 0;
+    int Xor = 0;
     for(int i=30; i>=0; i--){
-        int cur = (x>>i) & i;
-        if(t->child[~cur]!=NULL){
-            t = t->child[~cur];
-            xor = xor*2+1;
+        int cur = (x>>i) & 1;
+        int not_cur = (cur==0) ? 1 : 0;
+        if(t->child[not_cur] != NULL){
+            t = t->child[not_cur];
+            Xor = Xor*2+1;
         }
         else{
-            t = t->child[~cur];
-            xor = xor*2;
+            t = t->child[cur];
+            Xor = Xor*2;
         }
     }
-    return xor;
+    return Xor;
 }
 int main(){
     int n, x;
@@ -44,8 +45,9 @@ int main(){
     int ans = 0;
     for(int i=0; i<n; i++){
         scanf("%d", &x);
-        ans = max(ans, search(x));
         insert(x);
+        ans = max(ans, search(x));
     }
+    printf("%d", ans);
     return 0;
 }
