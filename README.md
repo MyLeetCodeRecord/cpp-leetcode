@@ -36,6 +36,11 @@
 > 🎵&nbsp; [心淡](https://c.y.qq.com/base/fcgi-bin/u?__=2eFo4X)  &emsp; 
 >
 > 🎶&nbsp; [花火](https://c.y.qq.com/base/fcgi-bin/u?__=LHcDkOa)  &emsp; 长路若太短 花火生命更短
+>
+> 🎵&nbsp; [曾经](https://c.y.qq.com/base/fcgi-bin/u?__=47YPnyw)  &emsp; 曾想跟你过每一天
+> 
+> 🎶&nbsp; [不见不散](https://c.y.qq.com/base/fcgi-bin/u?__=Pw7ikfR)  &emsp; 啦啦啦啦
+
 
 #### HISTORY
 
