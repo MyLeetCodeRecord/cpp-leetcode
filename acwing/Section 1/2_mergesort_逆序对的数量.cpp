@@ -23,7 +23,7 @@ long long mergeSort(int q[], int l, int r){
             tmp[idx++] = q[j++];
             sum += mid-i+1;
         }
-        else{
+        else{ 
             tmp[idx++] = q[i++];
         }
     }

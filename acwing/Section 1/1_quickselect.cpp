@@ -2,6 +2,13 @@
 #include <cstdio>
 using namespace std;
 
+/* 快速选择(第k小的数)
+ * 在快速排序的基础上
+ * 1. 如果`k<size(Left)`, 递归左边, 找第k小的数
+ * 2. 如果`k>size(Left)`, 递归右边, 找第k-size(Left)的数
+ *    size(Left) = i or j - l + 1
+ */
+
 const int N = 100010;
 int n, k;
 int q[N];
@@ -18,10 +25,10 @@ int quickselect(int q[], int k, int l, int r){
         if(i < j)
             swap(q[i], q[j]);
     }
-    int leftCnt = j - l + 1;
+    int leftCnt = j - l + 1;    // 这里要注意: i不一定等于j
     // 选一边递归
     if(leftCnt >= k)
-        quickselect(q, k, l, j);
+        return quickselect(q, k, l, j);
     else
         return quickselect(q, k-leftCnt, j+1, r);
 }
