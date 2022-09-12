@@ -6,9 +6,9 @@ const int N = 100010;
 const int Q = 10010;
 int arr[N];
 int query[Q];
-int n, q, k;
+int n, q;
 
-// 两个二分模板求左、右端点, 左侧端点求解后得到的是第一个大于等于x的数的位置, 判断是否等于x即可解决无解
+// 两个二分模板求左、右端点, 左侧端点求解后得到的是第一个大于等于x的数的位置, 判断是否等于x即可解决“无解”
 
 // 左侧端点
 int binary_search_left(int q[], int l, int r, int target){
@@ -21,7 +21,7 @@ int binary_search_left(int q[], int l, int r, int target){
     }
     return l;
 }
-// 右侧端点
+// 右侧端点 (这里的+1可以用[1,1]+target=1来进行判断)
 int binary_search_right(int q[], int l, int r, int target){
     while(l<r){
         int mid = (l+r+1)/2;
