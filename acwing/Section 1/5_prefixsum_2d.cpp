@@ -15,6 +15,7 @@ int main(){
     for(int i=1; i<=n; i++){
         for(int j=1; j<=m; j++){
             scanf("%d", &a[i][j]);
+            // 前置知识已经具备
             prefixSum[i][j] = a[i][j] + prefixSum[i-1][j] + prefixSum[i][j-1] - prefixSum[i-1][j-1];
         }
     }

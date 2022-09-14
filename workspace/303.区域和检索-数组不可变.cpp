@@ -6,25 +6,18 @@
 
 // @lc code=start
 class NumArray {
-private:
-    vector<int> prefixSum;
 public:
+    vector<int> prefixSum;
     NumArray(vector<int>& nums) {
-        prefixSum.resize(nums.size());
+        prefixSum.resize(nums.size()+1);
         fill(prefixSum.begin(), prefixSum.end(), 0);
-        prefixSum[0] = nums[0];
-        for(int i=1; i<nums.size(); i++){
-            prefixSum[i] = prefixSum[i-1]+nums[i];
+        for(int i=1; i<=nums.size(); i++){
+            prefixSum[i] = prefixSum[i-1]+nums[i-1];
         }
     }
     
     int sumRange(int left, int right) {
-        if(right>=prefixSum.size())
-            return prefixSum.back();
-        if(left==0)
-            return prefixSum[right];
-        else
-            return prefixSum[right]-prefixSum[left-1];
+        return prefixSum[right+1]-prefixSum[left];
     }
 };
 // @lc code=end

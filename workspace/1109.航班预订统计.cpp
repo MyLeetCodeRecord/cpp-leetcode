@@ -7,21 +7,23 @@
 // @lc code=start
 class Solution {
 public:
+    // 一维差分
+    void diff_operation(vector<int>& diff, int l, int r, int c){
+        diff[l] += c;
+        diff[r+1] -= c;
+    }
     vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
-        // 计算差分
-        vector<int> diff(n, 0);
+        // 没有错位, 但是对n位置的右边界+1会越界
+        vector<int> diff(n+1, 0);
         for(vector<int> book: bookings){
-            diff[book[0]-1] += book[2];
-            if(book[1] < n)
-                diff[(book[1]-1)+1] -= book[2];
+            diff_operation(diff, book[0]-1, book[1]-1, book[2]);
         }
-        // 如果不创建额外空间prefixSum可以直接覆盖在diff上
-        vector<int> prefixSum(n, 0);
-        prefixSum[0] = diff[0];
+        vector<int> ans(n);
+        ans[0] = diff[0];
         for(int i=1; i<n; i++){
-            prefixSum[i] = prefixSum[i-1]+diff[i];
+            ans[i] = diff[i] + ans[i-1];
         }
-        return prefixSum;
+        return ans;
     }
 };
 // @lc code=end

@@ -23,7 +23,7 @@ void quicksort(int q[], int l, int r){
 ```CPP
 int quickselect(int q[], int k, int l, int r){
     if(l >= r)
-        return l;
+        return q[l];
     int x = q[(l+r)/2];
     int i = l - 1;
     int j = r + 1;
@@ -34,7 +34,7 @@ int quickselect(int q[], int k, int l, int r){
             swap(q[i], q[j]);
     }
     int leftCnt = j - l + 1;
-    if(leftCnt <= k)
+    if(leftCnt >= k)
         return quickselect(q, k, l, j);
     else
         return quickselect(q, k-leftCnt, j+1, r);
@@ -68,8 +68,8 @@ void mergesort(int q[], int l, int r){
     while(j<=r)
         tmp[idx++] = q[j++];
     // 复制回q[]
-    for(int i=l; i<=r; i++)
-        q[i] = tmp[i];
+    for(int a=l; a<=r; a++)
+        q[a] = tmp[a];
 }
 ```
 
@@ -99,6 +99,7 @@ long long mergesort(int q[], int l, int r){
         tmp[idx++] = q[j++];
     for(int i=l; i<=r; i++)
         q[i] = tmp[i];
+    return sum;
 }
 ```
 

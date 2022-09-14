@@ -15,6 +15,9 @@
         "iostream": "cpp",
         "cstdio": "cpp",
         "ostream": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "algorithm": "cpp",
+        "__bit_reference": "cpp",
+        "__split_buffer": "cpp"
     }
 }
