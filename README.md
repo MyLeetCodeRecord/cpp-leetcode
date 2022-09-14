@@ -1,41 +1,23 @@
 # cpp-leetcode
 
-#### LEETCODE DAILY 8️⃣
-
-|       |MON|TUE|WED|THU|FRI⭐|SAT|SUN|
-|  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC  |
-|KEYWORD|
-|NOTE   |
-
-> ⭐ start index   
-> 
-> 📌 hard for me        
-> 
-> 💚🧡💔 difficulty
-
-
 #### ACWING BASIC 🦄
-|        |MON|TUE|WED|THU|FRI⭐|SAT|SUN|
+|        |MON|TUE|WED⭐|THU|FRI|SAT|SUN|
 |  ---   |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC   |📅|📅|📅|📅|`quicksort` `mergesort`|`二分`|`前缀和` `差分`|
-|NOTE    |   |   |   |   |[Section 1](/acwing/Section%201/)|[acwing-二分](/markdown/acwing%20-%20%E4%BA%8C%E5%88%86%E6%B3%95.md)<br/>[二分法(除折叠)](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%BA%8C%E5%88%86%E6%B3%95.md)|[前缀和&差分](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md)|
-|FEEDBACK|   |   |   |   |   |[review 1](/acwing/Section%201/review%201.md)|[review 2](/acwing/Section%201/review%202.md)|
-|TOPIC   |📅|`bit`|`离散化`<br/>`区间合并`<br/>`linked list`|`stack`<br/>`queue`<br/>`单调栈`<br/>`单调队列`|
-|NOTE    |   |[位运算](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%BD%8D%E8%BF%90%E7%AE%97.md)|[离散化](/acwing/Section%201/acwing%20-%20%E7%A6%BB%E6%95%A3%E5%8C%96.md)<br/>[区间合并](/acwing/Section%201/acwing%20-%20%E5%8C%BA%E9%97%B4%E5%90%88%E5%B9%B6.md)|[单调队列](/acwing/Section%202/acwing%20-%20单调队列.md)|
-|FEEDBACK|   |[review 3](/acwing/Section%201/review%203.md)|[review 4](/acwing/Section%201/review%204.md)|   |
-
-> ⭐ start index : 8/5
+|TOPIC   |   |   |`前缀和`<br/>`差分`|   |   |   |   |
+|NOTE    |   |   |[前缀和](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md)<br/>[差分](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B7%AE%E5%88%86.md)|
+|FEEDBACK|
+> ⭐ start index : 9/14
 > 
 > 📅 absent
 
 
 #### PLAYLIST
-> 🎶&nbsp; [小说人生](https://c.y.qq.com/base/fcgi-bin/u?__=X9sernA)  &emsp; 上次看小说是在...
+> 🎶&nbsp; [到此一游](https://i.y.qq.com/v8/playsong.html?songid=205394442&songtype=0#webchat_redirect) &emsp; Hubert...
 > 
-> 🎵&nbsp; [心淡](https://c.y.qq.com/base/fcgi-bin/u?__=2eFo4X)  &emsp; 
+> 🎵&nbsp; [禁色](https://c.y.qq.com/base/fcgi-bin/u?__=CxfKng) &emsp; DUO
 >
-> 🎶&nbsp; [花火](https://c.y.qq.com/base/fcgi-bin/u?__=LHcDkOa)  &emsp; 长路若太短 花火生命更短
+> 🎶&nbsp; 
+
 
 #### HISTORY
 
@@ -44,3 +26,5 @@
 ##### [LEETCODE DAILY 6️⃣](/record/2022-06.md)
 
 ##### [LEETCODE DAILY 7️⃣](/record/2022-07.md)
+
+##### [LEETCODE DAILY 8️⃣](/record/2022-08.md)
