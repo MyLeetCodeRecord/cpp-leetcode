@@ -159,8 +159,8 @@ binary_search_float(n, -max(abs(n), 1.0), max(abs(n), 1.0));
 int q[N], prefixSum[N];
 
 for(int i=1; i<=n; i++){
-    scanf("%d", &a[i]);
-    prefixSum[i] = a[i] + prefixSum[i-1];
+    scanf("%d", &q[i]);
+    prefixSum[i] = q[i] + prefixSum[i-1];
 }
 
 cout<<prefixSum[r]-prefixSum[l-1]<<endl;
@@ -207,7 +207,7 @@ int main(){
 ##### 10. difference(二维)
 ```CPP
 int a[N][N], diff[N][N];
-void diff(int x1, int y1, int x2, int y2, int c){
+void diff_operation_2d(int x1, int y1, int x2, int y2, int c){
     diff[x1][y1] += c;
     diff[x1][y2+1] -= c;
     diff[x2+1][y1] -= c;
@@ -217,13 +217,13 @@ int main(){
     for(int i=1; i<=n; i++){
         for(int j=1; j<=m; j++){
             scanf("%d", &a[i][j]);
-            diff_operation(i, j, i, j, a[i][j]);
+            diff_operation_2d(i, j, i, j, a[i][j]);
         }
     }
     int x1, y1, x2, y2, c;
     for(int i=0; i<q; i++){
         scanf("%d %d %d %d %d", &x1, &y1, &x2, &y2, &c);
-        diff_operation(x1, y1, x2, y2, c);
+        diff_operation_2d(x1, y1, x2, y2, c);
     }
     // 求二维prefixSum
     for(int i=1; i<=n; i++){

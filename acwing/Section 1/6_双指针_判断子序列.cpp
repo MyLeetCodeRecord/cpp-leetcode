@@ -15,7 +15,7 @@ int main(){
         scanf("%d", &bElement);
         if(bElement==A[idxA])
             idxA++;
-        if(idxA == n)
+        if(idxA == n)   // 提前终止(一方面是时间因素, 另一方面A[]末尾有0填充, 会出现错误)
             break;
     }
     if(idxA==n)

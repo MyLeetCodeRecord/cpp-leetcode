@@ -151,3 +151,107 @@ int main(){
     return 0;
 }
 ```
+
+##### 7. 前缀和
+```CPP
+const int N = 100010;
+int q[N], prefixSum[N]; // 都错开一位
+int n, l, r;
+
+int main(){
+    for(int i=1; i<=n; i++){
+        scanf("%d", &q[i]);
+        prefixSum[i] = q[i] + prefixSum[i-1];
+    }
+    for(int i=0; i<q; i++){
+        scanf("%d %d", l, r);
+        cout<<prefixSum[r] - prefixSum[l-1]<<endl;
+    }
+    return 0;
+}
+```
+
+##### 8. 前缀和(二维)
+```CPP
+const int N = 10010;
+int a[N][N], prefix[N][N];
+int n, q, x1, y1, x2, y2;
+
+int main(){
+    cin>>n>>q;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            scanf("%d", &a[i][j]);
+            prefixSum[i][j] = a[i][j] + prefixSum[i-1][j] + prefixSum[i][j-1] - prefixSum[i-1][j-1];
+        }
+    }
+    for(int i=0; i<q; i++){
+        scanf("%d %d %d %d", &x1, &x2, &x3, &x4);
+        printf("%d\n", prefixSum[x2][y2]-prefixSum[x2][y1-1]-prefixSum[x1-1][y2]+prefixSum[x1-1][y1-1]);
+    }
+    return 0;
+}
+```
+
+##### 9. difference
+```CPP
+int a[N], diff[N];
+int n, q, l, r, c;
+
+void diff_operation(int l, int r, int c){
+    diff[l] += c;
+    diff[r+1] -= c;
+}
+int main(){
+    cin>>n>>q;
+    for(int i=1; i<=n; i++){
+        scanf("%d", &a[i]);
+        diff_operation(i, i, a[i]); //diff[]的"初始化"
+    }
+    for(int i=0; i<q; i++){
+        scanf("%d %d %d", &l, &r, &c);
+        diff_operation(l, r, c);
+    }
+    // diff[]求前缀和写入a[] (此时a[]没有数值作用, 只是承载作用)
+    for(int i=1; i<=n; i++){
+        a[i] = diff[i] + a[i-1];
+        print("%d ", a[i]);
+    }
+    return 0;
+}
+```
+
+##### 10. difference(二维)
+```CPP
+int a[N][N], diff[N][N];
+int n, m, q, x1, y1, x2, y2, c;
+
+void diff_operation_2d(int x1, int y1, int x2, int y2){
+    diff[x1][y1] += c;
+    diff[x1][y2+1] -= c;
+    diff[x2+1][y1] -= c;
+    diff[x2+1][y2+1] += c;
+}
+int main(){
+    cin>>n>>m>>q;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=m; j++){
+            scanf("%d", &a[i][j]);
+            diff_operation_2d(i, j, i, j, a[i][j]);
+        }
+    }
+    for(int i=0; i<q; i++){
+        scanf("%d %d %d %d %d", &x1, &x2, &x3, &x4, &c);
+        diff_operation_2d(x1, y1, x2, y2, c);
+    }
+    // diff[][]求前缀和写入a[][] (此时a[][]没有数值作用, 只是承载作用)
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=m; j++){
+            a[i][j] = diff[i][j] + a[i-1][j] + a[i][j-1] - a[i-1][j-1];
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```

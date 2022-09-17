@@ -8,31 +8,35 @@
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        vector<vector<int> > ans;
-        if(nums.size()<3)
-            return ans;
         sort(nums.begin(), nums.end());
-        for(int i=0; i<nums.size()-2; i++){
-            int sum = nums[i];
+        vector<vector<int> > ans;
+        for(int i=0; i+2<nums.size(); i++){
             int left = i+1;
             int right = nums.size()-1;
             while(left < right){
-                sum = nums[i] + nums[left] + nums[right];
+                int sum = nums[left]+nums[right]+nums[i];   // 减少重复计算
                 if(sum == 0){
-                    while(left<right-1 && nums[right-1]==nums[right])
-                        right--;
-                    while(left+1<right && nums[left+1]==nums[left])
+                    ans.push_back({nums[i], nums[left], nums[right]});
+                    while(left<right && nums[left]==nums[left+1])   // 去重
                         left++;
-                    ans.push_back({nums[i],nums[left++],nums[right--]});
+                    while(left<right && nums[right]==nums[right-1]) // 去重
+                        right--;
+                    left++;
+                    right--;
                 }
                 else if(sum > 0){
+                    while(left<right && nums[right]==nums[right-1]) // 去重
+                        right--;
                     right--;
                 }
                 else{
+                    while(left<right && nums[left]==nums[left+1])   // 去重
+                        left++;
                     left++;
                 }
             }
-            while(i<nums.size()-2 && nums[i] == nums[i+1])
+            // 对i也要去重
+            while(i<nums.size()-1 && nums[i]==nums[i+1])
                 i++;
         }
         return ans;
