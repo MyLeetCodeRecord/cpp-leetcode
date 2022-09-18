@@ -9,9 +9,9 @@ sort(vi.begin(), vi.end());
 vi.erase(unique(vi.begin(), vi.end()), vi.end());
 ```
 
-> [unique()](https://blog.csdn.net/hhmy77/article/details/82902389): 去重, 但不删除元素, 原数组剩余位置未被修改
+> [unique()](https://blog.csdn.net/hhmy77/article/details/82902389): 去重, 但不删除元素, 原数组剩余位置元素未被修改
 > 
-> `unique`, `sort`接受的是迭代器，操作对象也是迭代器，而不是容器本身。所以这些函数执行时是无法添加或删除容器元素的
+> `unique`, `sort`接受的是迭代器, 操作对象也是迭代器, 而不是容器本身, 所以这些函数执行时是无法添加或删除容器元素的
 > 
 > 因此要在取`unique`后返回的迭代器基础上, 继续`erase`末尾元素
 ```CPP
