@@ -11,6 +11,7 @@ vector<PII> intervals;
 bool cmp(pair<int,int> l, pair<int,int> r){
     return l.first < r.first;
 }
+// 区间合并
 vector<PII> intervalMerge(vector<PII> intervals){
     vector<PII> ans;
     sort(intervals.begin(), intervals.end(), cmp);  // 默认排序也可以
