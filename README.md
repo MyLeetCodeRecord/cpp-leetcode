@@ -8,7 +8,7 @@
 |FEEDBACK|   |   |   |复习差分|   |   |   |
 |TOPIC   |``|   |   |   |   |   |   |
 |NOTE    |   |   |   |   |   |   |   |
-|FEEDBACK|   |   |   |   |   |   |   |
+|FEEDBACK|复习离散化&位运算|   |   |   |   |   |   |
 
 > ⭐ start index : 9/14
 > 

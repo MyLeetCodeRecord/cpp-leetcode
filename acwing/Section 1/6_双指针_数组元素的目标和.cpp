@@ -12,12 +12,14 @@ int main(){
         scanf("%d", &A[i]);
     for(int j=0; j<m; j++)
         scanf("%d", &B[j]);
-    for(int i=0, j=m; i<n, j>=0; i++){
+    for(int i=0, j=m-1; i<n, j>=0; i++){
         while(j>=0 && A[i]+B[j]>x){
             j--;
         }
-        if(A[i]+B[j]==x)
+        if(A[i]+B[j]==x){
             printf("%d %d", i, j);
+            break;
+        }
     }
     return 0;
 }
