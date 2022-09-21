@@ -33,7 +33,8 @@ int main(){
             cout<<(isEmpty()?"YES":"NO")<<endl;
         }
         else{
-            cout<<sk[top-1]<<endl;
+            if(top!=0)
+                cout<<sk[top-1]<<endl;
         }
     }
     return 0;
