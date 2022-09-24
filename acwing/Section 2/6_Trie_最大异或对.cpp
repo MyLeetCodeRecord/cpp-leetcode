@@ -26,12 +26,13 @@ int search(int x){
     int xor = 0;
     for(int i=30; i>=0; i--){
         int cur = (x>>i) & i;
-        if(t->child[~cur]!=NULL){
-            t = t->child[~cur];
+        int not_cur = (cur==0) ? 1 : 0;
+        if(t->child[not_cur]!=NULL){
+            t = t->child[not_cur];
             xor = xor*2+1;
         }
         else{
-            t = t->child[~cur];
+            t = t->child[cur];
             xor = xor*2;
         }
     }
@@ -47,5 +48,6 @@ int main(){
         ans = max(ans, search(x));
         insert(x);
     }
+    printf("%d", ans);
     return 0;
 }

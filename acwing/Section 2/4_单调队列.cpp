@@ -12,7 +12,7 @@ using namespace std;
  *    “比你年轻(新加进队列的)又比你强(更满足条件), 你就永远没有出头之日”
  *    - 维护: (连续)删除队尾大于新元素的值, 加入新元素
  *    - 查找min/max: 返回单调队列队首head
- *    - 复杂度: O(1)就可以取出min/ma
+ *    - 复杂度: O(1)就可以取出min/max
  */
 
 const int N = 1000010;
@@ -35,7 +35,7 @@ int main(){
         // 检查 head 是不是滑出了窗口
         if(h<=t && i - q[h] + 1 > k)
             h++;
-        // 弹出"older & worse"队尾元素mm,
+        // 弹出"older & worse"队尾元素
         while(h<=t && a[i] <= a[q[t]])
             t--;
         // 插入当前元素(无论如何都需要插入)

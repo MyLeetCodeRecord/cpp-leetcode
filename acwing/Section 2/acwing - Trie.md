@@ -1,6 +1,6 @@
 #### Trie
 
-> 前缀树: 高效地存储和查找**字符串集合**的数据结构
+> 前缀树: 高效地*存储*和*查找***字符串集合**的数据结构
 > - [acwing-Trie](/acwing/Section%202/6_Trie.cpp)
 > - [acwing-最大异或对](/acwing/Section%202/6_Trie_最大异或对.cpp)
 
@@ -10,7 +10,7 @@ struct TrieNode{
     TrieNode* child[26];
     // 根据需要选择
     bool isEnd;
-    int time;
+    int time;       // !!!
     string word;
     TrieNode(){
         for(int i=0; i<26; i++)
