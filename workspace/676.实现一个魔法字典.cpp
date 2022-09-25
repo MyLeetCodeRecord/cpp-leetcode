@@ -46,7 +46,7 @@ public:
                         return true;
                 }
                 // 修改
-                else if(changed==0 && t->child[i] != NULL && dfs_search(word, changed+1, cur+1, t->child[i]))
+                else if(changed==0 && dfs_search(word, changed+1, cur+1, t->child[i]))
                     return true;
             }
         }
