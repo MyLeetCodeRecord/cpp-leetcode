@@ -40,6 +40,7 @@ int main(){
         p[i] = p[i-1]*P;    // unsigned long long 溢出就等同于取模
         h[i] = h[i-1]*P + str[i];
     }
+    // Step2: hash[l:r] = h[r] - h[l-1]*p[r-l+1]
     for(int i=0; i<m; i++){
         int l1, r1, l2, r2;
         scanf("%d %d %d %d", &l1, &r1, &l2, &r2);
