@@ -10,17 +10,26 @@
 
 ##### 方法一: 链表法
 ###### (1) 存储结构
-> `hash_table`
+> 整体用链表实现, `e[]`和`nxt[]`类似[数组模拟链表](/acwing/Section%202/1_linkedlist.cpp)的实现, `hash_table[]`存储每个hash值对应链表的指针
+> 
+> 哈希表大小`N`取一个合理的质数
+
 ```CPP
 const int N = 100003;
 int hash_table[N], e[N], nxt[N], idx;
 ```
+
 > 并且需要将`hash_table[]`初始化为-1, 这样采用**头插法**也能保证链表的末尾为`-1`
 
 ```CPP
 #include <cstring>
 memset(hash, -1, sizeof hash);  // hash值初始化为-1
 ```
+
+> 补充: C++负数取余
+> 
+> e.g. C++中(-10 % 3)=-1, 而不是2
+> 因此可以使用`(x % N + N) % N`来获得正数余数
 
 ###### (2) 插入元素
 > 先定位到`hash_table`下标, 然后用[数组模拟链表](/acwing/Section%202/1_linkedlist.cpp)的方式创建新结点, 插入到`hash_table[h]`对应链表的头部
@@ -39,7 +48,7 @@ void insert(int x){
 ###### (3) 查找元素
 > **头插法**保证了链表末尾元素是`-1`
 > 
-> 如果没想清楚也可以`memset(nxt, -1, sizeof nxt);`
+> 如果没想清楚也可以初始化`nxt[]` => `memset(nxt, -1, sizeof nxt);`
 
 ```CPP
 bool find(int x){

@@ -16,7 +16,7 @@ void insert(int x){
 }
 // 找到位置, 遍历链表
 bool find(int x){
-    int h = (x % N + N) % N;
+    int h = (x % N + N) % N;   //C++中(-10 % 3)=-1, 而不是2
     int start = hash_table[h];
     while(start!=-1){
         if(e[start]==x)
