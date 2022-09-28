@@ -30,14 +30,14 @@ vi.erase(unique(vi), vi.end());
 ```
 
 ##### 2. 二分查找离散化的值
-> 在无重复有序数组中查找target, 使用左侧/右侧端点模板都可以, 下面是左端点模板
+> 在**无重复有序数组**中查找target, 使用左侧/右侧端点模板都可以, 下面是左端点模板
 ```CPP
 int find(int target){
     int l = 0;
-    int r = vi.size()-1;    // 去重后的size
+    int r = vi.size()-1;    // 去重(erase)后的size
     while(l < r){
         int mid = (r-l)/2+l;
-        if(vi[mid] > target)
+        if(vi[mid] < target)
             l = mid+1;
         else
             r = mid;

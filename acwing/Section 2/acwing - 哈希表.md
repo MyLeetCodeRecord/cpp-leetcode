@@ -23,7 +23,7 @@ int hash_table[N], e[N], nxt[N], idx;
 
 ```CPP
 #include <cstring>
-memset(hash, -1, sizeof hash);  // hash值初始化为-1
+memset(hash_table, -1, sizeof hash_table);  // hash值初始化为-1
 ```
 
 > 补充: C++负数取余
@@ -71,7 +71,7 @@ bool find(int x){
 using namespace std;
 
 const int N = 100003;
-int hash_table[N], e[N], nxt[N], idx;
+int hash_table[N], e[N], nxt[N], idx=0;
 
 void insert(int x){
     int h = (x % N + N) % N;
