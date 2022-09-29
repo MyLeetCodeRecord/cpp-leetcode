@@ -120,7 +120,8 @@ down(k);
 using namespace std;
 
 const int N = 100010;
-int heap[N], ph[N], hp[N], _size=0; // ph: pointer->heap; hp: heap->pointer
+int heap[N], ph[N], hp[N];  // ph: pointer->heap; hp: heap->pointer
+int _size = 0, idx = 0;     // idx: 第"k"个插入的数
 
 void heap_swap(int a, int b){
     swap(ph[hp[a]], ph[hp[b]]);
@@ -146,7 +147,6 @@ void up(int k){
 }
 int main(){
     int n;
-    int idx = 0;    // 第"k"个插入的数
     scanf("%d", &n);
     for(int i=0; i<n; i++){
         string op;
@@ -166,7 +166,7 @@ int main(){
         }
         // 删除min
         else if(op=="DM"){
-            heap_swap(1, _size);
+            heap_swap(1, _size);  // 注意: 由于涉及ph和hp, 所有位置变动的操作都必须用heap_swap()
             _size--;
             down(1);
         }

@@ -8,7 +8,8 @@ unordered_map<char, int> priority{{'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}};
 stack<int> numSk;
 stack<char> symbolSk;
 
-void eval(){
+// 最好不要用eval(), 在leetcode里和stl冲突
+void calc_eval(){
     auto b = numSk.top();   numSk.pop();
     auto a = numSk.top();   numSk.pop();
     auto symbol = symbolSk.top(); symbolSk.pop();
@@ -44,18 +45,18 @@ int main(){
         }
         else if(c == ')'){
             while(symbolSk.top()!='(')
-                eval();
+                calc_eval();
             symbolSk.pop();
         }
         else{
             while(!symbolSk.empty() && priority[symbolSk.top()] >= priority[c])
-                eval();
+                calc_eval();
             symbolSk.push(c);
         }
     }
     // 剩余计算
     while(!symbolSk.empty())
-        eval();
+        calc_eval();
     cout<<numSk.top()<<endl;
     return 0;
 }

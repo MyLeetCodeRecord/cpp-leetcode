@@ -10,8 +10,8 @@
 |NOTE    |[链表/双指针](/markdown/%E4%B8%93%E9%A2%98%20-%20%E9%93%BE%E8%A1%A8.md)|[静态单链表](/acwing/Section%202/1_linkedlist.cpp)<br/>[静态双向链表](/acwing/Section%202/1_bilinkedlist.cpp)|[中缀表达式求值](/acwing/Section%202/2_stack_%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC.cpp)|[单调队列](/acwing/Section%202/4_%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.cpp)|[单调栈](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8D%95%E8%B0%83%E6%A0%88.md)|[Trie](/acwing/Section%202/acwing%20-%20Trie.md)|[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|
 |FEEDBACK|复习离散化<br/>&位运算|数组模拟链表|[LC227(没括号)](/workspace/227.%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97%E5%99%A8-ii.cpp)|~~明天补一下相关题目~~|复习单调队列|~~Trie还没看dfs~~||
 |TOPIC   |`hash`|`heap`|`heap`|||||
-|NOTE    |[链表法](/acwing/Section%202/acwing%20-%20%E5%93%88%E5%B8%8C%E8%A1%A8.md)<br/>[字符串hash](/acwing/Section%202/acwing%20-%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%89%8D%E7%BC%80%E5%93%88%E5%B8%8C.md)|[堆排序](/acwing/Section%202/acwing%20-%20堆.md)|[模拟堆](/acwing/Section%202/acwing%20-%20%E5%A0%86.md)|||||
-|FEEDBACK|复习[离散化](/acwing/Section%201/acwing%20-%20%E7%A6%BB%E6%95%A3%E5%8C%96.md)|注意堆的**O(n)初始化**|如果要索引`第k个插入`, 需要自定义`heap_swap()`|||||
+|NOTE    |[链表法](/acwing/Section%202/acwing%20-%20%E5%93%88%E5%B8%8C%E8%A1%A8.md)<br/>[字符串hash](/acwing/Section%202/acwing%20-%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%89%8D%E7%BC%80%E5%93%88%E5%B8%8C.md)|[堆排序](/acwing/Section%202/acwing%20-%20堆.md)|[模拟堆](/acwing/Section%202/acwing%20-%20%E5%A0%86.md)|[]()||||
+|FEEDBACK|复习[离散化](/acwing/Section%201/acwing%20-%20%E7%A6%BB%E6%95%A3%E5%8C%96.md)|注意堆的**O(n)初始化**|索引`第k个插入`要自定义`heap_swap()`|第二章撒花🎉||||
 
 > ⭐ start index : 9/14
 > 
