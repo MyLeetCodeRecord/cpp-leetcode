@@ -64,7 +64,7 @@ int maxSum(vector<vector<int>>& grid) {
 
 ```CPP
     int minimizeXor(int num1, int num2) {
-        // Step1: num2中 1 的个数
+        // Step1: num2 中 1 的个数
         int cnt = 0;
         while(num2!=0){
             if(num2 % 2==1)
@@ -72,14 +72,14 @@ int maxSum(vector<vector<int>>& grid) {
             num2 /= 2;
         }
         int ans = 0;
-        // 从高位开始获取num1中的1 => "抹掉"
+        // Step2: 从高位开始获取num1中的1 => "抹掉"
         for(int i=29; cnt>0 && i>=0; i--){
             if((num1>>i) & 1){
                 ans -= (1<<i);  // 减
                 cnt--;
             }
         }
-        // cnt>0则从低位开始 => 改1
+        // Step3: cnt>0则从低位开始 => 改1
         for(int i=0; cnt>0 && i<=29; i++){
             if(!((num1>>i) & 1)){
                 ans += (1<<i);  // 加
@@ -93,5 +93,50 @@ int maxSum(vector<vector<int>>& grid) {
     }
 ```
 
-##### 4. [对字母串可执行的最大删除数](https://leetcode.cn/problems/maximum-deletions-on-a-string/)
-> todo
+##### 4. [对字母串可执行的最大删除数](https://leetcode.cn/problems/maximum-deletions-on-a-string/): `dp`+`字符串前缀哈希`
+> 每次操作结束后, 剩下的还是一个子字符串, 进行同样的操作 => 子问题 => `dp`
+> 
+> `dp[i]`: 对s[i:]执行操作的最大删除次数 => i应该从后往前遍历操作的最大次数 => 答案为`dp[1]`
+> 
+> ![LC2430-3](/appendix/LC2430-3.png)
+> 
+> 比较是否相同 => `字符串前缀哈希`
+> 
+> ![LC2430-2](/appendix/LC2430-2.png)
+
+```CPP
+// 字符串前缀哈希
+typedef unsigned long long ULL;
+
+const int N = 4010, P = 131;
+ULL h[N], p[N];
+
+class Solution {
+public:
+    ULL getHash(int l, int r){
+        return h[r] - h[l-1] * p[r-l+1];
+    }
+    int deleteString(string s) {
+        // Step 1: 字符串前缀哈希
+        int n = s.size();
+        p[0] = 1;
+        for(int i=1; i<=n; i++){
+            p[i] = p[i-1]*P;
+            h[i] = h[i-1]*P + s[i-1];
+        }
+        // Step 2: dp[], 从1开始
+        // dp[i]: 对从i到末尾的字符串执行删除的最大删除次数, i应该从后往前遍历
+        vector<int> dp(n+2);
+        // i是左侧start, j是长度
+        for(int i=n; i>0; i--){
+            dp[i] = 1;  // 初始化为1, 表示最差情况一次删掉整个字符串
+            for(int j=1; i+2*j-1 <= n; j++){
+                if(getHash(i, i+j-1) == getHash(i+j, i+2*j-1)){
+                    dp[i] = max(dp[i], dp[i+j] + 1); 
+                }
+            }
+        }
+        return dp[1];
+    }
+};
+```
