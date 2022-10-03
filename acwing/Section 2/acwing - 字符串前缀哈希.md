@@ -1,4 +1,7 @@
 #### 字符串(前缀)哈希法
+> 题目: 
+> 
+> [LC2430. 对字母串可执行的最大删除数](https://leetcode.cn/problems/maximum-deletions-on-a-string/): [Oct Weekly 1](/record/Oct-Weekly-1.md)第四题, (频繁)比较子串是否相等
 
 ```CPP
 str = "ABCABCDEFG"`
