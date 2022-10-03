@@ -6,8 +6,8 @@ using namespace std;
 
 /* BFS最短路径长度 
  * - 为什么用BFS而不是DFS?  因为要求最短路径长度, 而不是可达性, 可达性的话BFS/DFS都可以
- * - 为什么设置d[][]?      因为d[][]=-1可以表示不可达, 一旦d[][]被赋其它值, 则后续BFS不会找到”更短“; 
- *                       但是用一个记录层数的变量也可以, 需要每次要清空整层(每次while中清空queue)
+ * - 为什么设置d[][]?      因为d[][]=-1可以表示不可达, d[][]一旦被赋其它值, 后续BFS不会找到”更短“; 
+ *                       用一个记录层数的变量也可以, 需要每次要清空整层(每次while中清空queue)
  */
 
 typedef pair<int, int> PII;  // 用坐标(x,y)表示Node
@@ -23,14 +23,15 @@ int BFS(){
     queue<PII> q;
     q.push({0, 0});
     memset(d, -1, sizeof d);
-    d[0][0] = 0;
+    d[0][0] = 0;    // 起点距离设为0
     while(!q.empty()){
         PII cur = q.front();
         q.pop();
         for(int i=0; i<4; i++){
             int nextX = cur.first + direction[i][0];
             int nextY = cur.second + direction[i][1];
-            if(nextX>=0 && nextX<n && nextY>=0 && nextY<m && g[nextX][nextY]==0 && d[nextX][nextY]==-1){
+            if(nextX>=0 && nextX<n && nextY>=0 && nextY<m 
+                        && g[nextX][nextY]==0 && d[nextX][nextY]==-1){  // 这里的d[nextX][nextY]==-1是一种防止循环访问的检查
                 d[nextX][nextY] = d[cur.first][cur.second] + 1;
                 q.push({nextX, nextY});
             }

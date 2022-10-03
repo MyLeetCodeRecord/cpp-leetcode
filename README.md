@@ -21,11 +21,11 @@
 #### ACWING BASIC 🦄
 |        |⭐MON|TUE|WED|THU|FRI|SAT|SUN|
 |  ---   |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC   |   |||||||
-|KEYWORD |   |||||||
-|NOTE    |   |||||||
+|TOPIC   |[Acwing845. 八数码](/acwing/Section%203/2_%E5%85%AB%E6%95%B0%E7%A0%81.cpp)<br/>[Acwing846. 树的重心](/acwing/Section%203/3_%E6%A0%91%E7%9A%84%E9%87%8D%E5%BF%83.cpp)<br/>[Acwing847. 图中点的层次](/acwing/Section%203/4_%E5%9B%BE%E4%B8%AD%E7%82%B9%E7%9A%84%E5%B1%82%E6%AC%A1_BFS.cpp)|||||||
+|KEYWORD |`graph BFS`<br/>`graph DFS`|||||||
+|NOTE    |八数码: 把每种矩阵排列当成一个节点, 用string存储|||||||
 
-> ⭐ start index : 10/1
+> ⭐ start index : 10/3
 > 
 > 📅 absent
 

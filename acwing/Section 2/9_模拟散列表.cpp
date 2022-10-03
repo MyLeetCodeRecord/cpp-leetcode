@@ -28,6 +28,7 @@ bool find(int x){
 int main(){
     int n;
     scanf("%d", &n);
+    // 初始化所有头节点为-1(与图的邻接表存储同理)
     memset(hash_table, -1, sizeof hash_table);
     for(int i=0; i<n; i++){
         char op[2];
