@@ -25,8 +25,7 @@ void insert(int a, int b){
 }
 void TopoSeq(){
     queue<int> q;
-
-    // 加入入度为0的点
+    // 初始化: 加入入度为0的点
     for(int i=1; i<=n; i++){
         if(indegree[i]==0)
             q.push(i);

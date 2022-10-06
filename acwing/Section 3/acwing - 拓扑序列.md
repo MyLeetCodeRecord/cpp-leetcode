@@ -1,5 +1,10 @@
 #### 有向图的拓扑序列 (BFS)
-
+> 相关题目:
+> - [LC207. 课程表](/workspace/207.%E8%AF%BE%E7%A8%8B%E8%A1%A8.cpp): 检查存在性, 即`ans.size()==n`
+> 
+> - [LC210. 课程表II](/workspace/210.%E8%AF%BE%E7%A8%8B%E8%A1%A8-ii.cpp): 返回可能的拓扑序列, 即`ans`本身
+> 
+> 补充: Leetcode中的邻接表
 ##### 1. 思路
 > 有向图的拓扑序列是[`BFS`](/acwing/Section%203/4_%E5%9B%BE%E4%B8%AD%E7%82%B9%E7%9A%84%E5%B1%82%E6%AC%A1_BFS.cpp)的一个应用
 > 
