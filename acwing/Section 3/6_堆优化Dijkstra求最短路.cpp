@@ -7,9 +7,9 @@ using namespace std;
 
 typedef pair<int, int> PII; // {距离, 结点编号}, 从而令优先队列使用距离排序
 
-const int N = 100010, M = 200010;  // 稀疏图 => 邻接表
+const int N = 150010;  // 稀疏图 => 邻接表
 int n, m;
-int h[N], e[M], nxt[M], w[M], idx=0;
+int h[N], e[N], nxt[N], w[N], idx=0;
 int dist[N];    // dist[u]: 当前1->u的最短距离
 bool st[N];
 

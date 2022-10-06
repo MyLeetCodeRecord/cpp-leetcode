@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    /* Topology - BFS, 邻接表表示, 统计入度
+    /* Topology - BFS, 邻接表(vector<vector<int>>)表示, 统计入度
      * [a, b]: b->a的有向边
      * Acwing: https://www.acwing.com/activity/content/code/content/4433750/
      */
@@ -33,6 +33,7 @@ public:
         return ans.size()==edges.size();
     }
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        // vector<vector<int> > 组织的邻接表
         vector<vector<int>> edges(numCourses);
         vector<int> indegree(numCourses, 0);
         for(vector<int> pre: prerequisites){

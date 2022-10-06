@@ -22,7 +22,7 @@ int Dijkstra(){
             }
         }
         st[t] = true;
-        // 用当前最短 t 更新其它not set的结点dist
+        // 用当前最短距离的t, 更新其它not set的结点dist
         for(int u=1; u<=n; u++){
             if(g[t][u] < INF && dist[t] + g[t][u] < dist[u]){
                 dist[u] = dist[t]+g[t][u];
