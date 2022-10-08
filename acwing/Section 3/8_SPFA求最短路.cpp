@@ -9,7 +9,7 @@ const int N = 100010;  // 稀疏图 => 邻接表
 int n, m;
 int h[N], e[N], nxt[N], w[N], idx=0;
 int dist[N];    // dist[u]: 当前1->u的最短距离
-bool st[N];     // st[u]: 标记u是否在queue中
+bool inQ[N];     // inQ[u]: 记录u是否在queue中, queue没有find()
 
 void insert(int a, int b, int d){
     e[idx] = b;
@@ -20,20 +20,22 @@ void insert(int a, int b, int d){
 int SPFA(){
     memset(dist, 0x3f, sizeof dist);
     dist[1] = 0;
+
     queue<int> q;
     q.push(1);
-    st[1] = true;
+    inQ[1] = true;
+
     while(!q.empty()){
         int cur = q.front();
         q.pop();
-        st[cur] = false;
+        inQ[cur] = false;
         for(int i=h[cur]; i!=-1; i=nxt[i]){
             int j = e[i];
             if(dist[j] > dist[cur] + w[i]){
                 dist[j] = dist[cur] + w[i];
-                if(!st[j]){
+                if(!inQ[j]){
                     q.push(j);
-                    st[j] = true;
+                    inQ[j] = true;
                 }
             }
         }
@@ -52,6 +54,6 @@ int main(){
         scanf("%d %d %d", &a, &b, &d);
         insert(a, b, d);
     }
-    cout<<SPFA()<<endl;
+    SPFA();
     return 0;
 }
