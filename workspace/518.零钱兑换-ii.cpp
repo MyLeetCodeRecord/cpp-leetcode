@@ -13,7 +13,7 @@ public:
         dp[0] = 1;
         for(int i=0; i<coins.size(); i++){
             for(int j=coins[i]; j<=amount; j++){
-                dp[j] += dp[j-coins[i]];
+                dp[j] += dp[j-coins[i]];    // 组合数量
             }
         }
         return dp[amount];

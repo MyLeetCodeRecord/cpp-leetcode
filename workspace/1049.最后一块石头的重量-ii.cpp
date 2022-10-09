@@ -20,6 +20,7 @@ public:
                 dp[j] = max(dp[j], dp[j-stones[i]]+stones[i]);
             }
         }
+        // 注意这里不能用 2*C 代替sum
         return sum - 2*dp[C];
     }
 };
