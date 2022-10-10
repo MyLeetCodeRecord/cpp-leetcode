@@ -4,14 +4,16 @@
 > 
 > [宫水三叶-路径问题总结](https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485580&idx=1&sn=84c99a0a8ab7b543c3678db577309b97&chksm=fd9ca393caeb2a859fafb0cb12683669ed1a0086cb22e1eaaa9ec323e033ab2cf3a77dfc5561&cur_album_id=1773144264147812354&scene=189#wechat_redirect)
 >
-> 大神竟然也在ms养老, 所以三叶大神alias是什么呢 (🤪
+> 大神竟然也在ms养老, 所以三叶大神alias是什么呢 🤪
 
 ![路径问题](/appendix/LC62.png)
 
 
 #### 第一类: 路径数量
+
 ##### [LC62. 不同路径](/workspace/62.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.cpp)
 > 题目描述: https://leetcode.cn/problems/unique-paths
+> 
 > 初始化`row 0`和`col 0`, 然后进行状态转移
 
 
@@ -28,7 +30,8 @@
 > 题目多加了一层限制 - 路径长度能整除 k => dp多加一维表示路径长度对k的余数(0～k-1),  即`dp[m][n][k]`
 
 ---
-#### 路径和
+
+#### 第二类: 路径和
 
 ##### [LC64. 最小路径和](/workspace/64.%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C.cpp)
 > 题目描述: https://leetcode.cn/problems/minimum-path-sum
@@ -108,9 +111,11 @@ int minFallingPathSum(vector<vector<int>>& grid) {
 ![小结](/appendix/路径问题.png)
 
 
----
 
-下面这几道题注意关注哪些**变化维度**作为dp的维度(比如start, maxMove), 不变的参数(比如终点)不作为dp维度。
+---
+#### 其它
+
+下面这几道题注意关注哪些**变化维度**作为`dp`的维度(比如`start`, `maxMove`), 不变的参数(比如终点)不作为dp维度。
 
 ##### [LC1575. 统计所有可行路径](/workspace/1575.%E7%BB%9F%E8%AE%A1%E6%89%80%E6%9C%89%E5%8F%AF%E8%A1%8C%E8%B7%AF%E5%BE%84.cpp)
 
