@@ -30,16 +30,16 @@ public:
                 dp[getIndex(m-1, y, n)][move] += 1;
             }
         }
-        
         // 状态转移
         for(int move=1; move<=maxMove; move++){
-            // 状态转移第二维只使用[move-1], 所以idx顺序(或者展开成(x,y))不重要
+            // 状态转移第二维只使用上一轮的[move-1], 所以idx顺序(或者展开成(x,y))不重要
             for(int idx=0; idx<m*n; idx++){
                 int x = parseIndex(idx, n)[0];
                 int y = parseIndex(idx, n)[1];
                 for(int d=0; d<4; d++){
                     int nextX = x+directions[d][0];
                     int nextY = y+directions[d][1];
+                    // 这里不要把边界线上的位置排除掉, 因为可以重复访问, 只是限制了步数maxMove
                     if(nextX>=0 && nextX<m && nextY>=0 && nextY<n){
                         dp[idx][move] += dp[getIndex(nextX, nextY, n)][move-1];
                         dp[idx][move] %= 1000000007;

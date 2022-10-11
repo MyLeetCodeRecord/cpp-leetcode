@@ -114,12 +114,10 @@ int numberOfPaths(vector<vector<int>>& grid, int k) {
     for(int i=1; i<m; i++){
         for(int j=1; j<n; j++){
             for(int a=0; a<k; a++){
-                int third;
+                int third = (a + grid[i][j]) % k;
                 // 上->下
-                third = (a + grid[i][j]) % k;
                 dp[i][j][third] += dp[i-1][j][a];
                 // 左->右
-                third = (a + grid[i][j]) % k;
                 dp[i][j][third] += dp[i][j-1][a];
                 dp[i][j][third] %= 1000000007;
             }

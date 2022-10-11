@@ -8,20 +8,17 @@
 class Solution {
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
-        // 每次只用到下面一行, 因此可以将dp[][]的第一个维度减少到 2
         int n = triangle.size();
-        if(n==1)
-            return triangle[0][0];
-        vector<vector<int> > dp(2, vector<int>(n, 0));
-        for(int j=0; j<n; j++)
-            dp[0][j] = triangle[n-1][j];
-        for(int layer=1; layer<n; layer++){
-            for(int j=0; j<n-layer; j++){
-                dp[1][j] = triangle[n-1-layer][j] + min(dp[0][j], dp[0][j+1]);
-            }
-            dp[0] = dp[1];
+        vector<vector<int> > dp(n, vector<int>(n, 0));
+        for(int j=0; j<n; j++){
+            dp[n-1][j] = triangle.back()[j];
         }
-        return dp[1][0];
+        for(int i=n-2; i>=0; i--){
+            for(int j=0; j<=i; j++){
+                dp[i][j] = min(dp[i+1][j], dp[i+1][j+1]) + triangle[i][j];
+            }
+        }
+        return dp[0][0];
     }
 };
 // @lc code=end
