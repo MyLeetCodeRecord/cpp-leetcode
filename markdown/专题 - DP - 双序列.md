@@ -125,7 +125,7 @@ for(int j=1; j<=n; j++)
 for(int i=1; i<=m; i++)
     dp[i][0] = i;
 for(int i=1; i<=m; i++){
-    for(int j=1; j<=n; j++)
+    for(int j=1; j<=n; j++){
         if(word1[i-1]==word2[j-1])
             dp[i][j] = dp[i-1][j-1];
         else
@@ -135,6 +135,8 @@ for(int i=1; i<=m; i++){
 }
 return dp[m][n];
 ```
+
+##### [Acwing899. 编辑距离](/acwing/)
 
 
 ##### [LC97. 交错字符串](/workspace/97.%E4%BA%A4%E9%94%99%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)
