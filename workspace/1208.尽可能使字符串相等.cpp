@@ -18,7 +18,7 @@ public:
             right++;
             // 收缩左窗口
             while(maxCost < 0){
-                maxCost += abs(s[left] - t[left]); // 释放一个cost
+                maxCost += abs(s[left] - t[left]);  // 释放一个cost
                 left++;
             }
             ans = max(ans, right-left);

@@ -7,6 +7,29 @@
 // @lc code=start
 class Solution {
 public:
+    // 贪心
+    int longestSubsequence(string s, int k) {
+        int ans = 0;
+        int sum = 0;
+        for(int i=s.size()-1; i>=0; i--){
+            if(s[i]=='0')
+                ans += 1;
+            else if(s[i]=='1'){
+                if(sum + pow(2, ans) > k)
+                    continue;
+                else{
+                    sum += pow(2, ans);
+                    ans += 1;
+                }
+            }
+        }
+        return  ans;
+    }
+};
+/* 
+class Solution {
+public:
+    // 滑动窗口
     int trans(int n){
         int tmp = n;
         int k = 0;
@@ -37,5 +60,6 @@ public:
         return ans;
     }
 };
+*/
 // @lc code=end
 

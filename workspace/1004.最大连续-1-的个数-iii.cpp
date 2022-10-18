@@ -7,20 +7,19 @@
 // @lc code=start
 class Solution {
 public:
+    // 保持窗口内最多有k个0, 问这样的数组最长长度是多少?
     int longestOnes(vector<int>& nums, int k) {
+        int ans = min(k, (int)nums.size());
         int left = 0;
         int right = 0;
-        int ans = k;
+        int zeroNum = 0;
         while(right < nums.size()){
-            // 扩大右边界, right位置为0时k--
-            k -= (nums[right++]==0);
-            // 收缩左边界, 直到k非负
-            while(k < 0){
-                if(nums[left]==0)
-                    k++;
-                left++;
+            // 扩大右边界
+            zeroNum += (nums[right++]==0);
+            // 收缩左边界
+            while(zeroNum > k){
+                zeroNum -= (nums[left++]==0);
             }
-            // 此时k=0
             ans = max(ans, right-left);
         }
         return ans;

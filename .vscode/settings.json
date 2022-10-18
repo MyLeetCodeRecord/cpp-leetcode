@@ -18,6 +18,7 @@
         "set": "cpp",
         "algorithm": "cpp",
         "__bit_reference": "cpp",
-        "__split_buffer": "cpp"
+        "__split_buffer": "cpp",
+        "__hash_table": "cpp"
     }
 }
