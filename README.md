@@ -12,9 +12,9 @@
 |TOPIC   |💔cv卡<br/>❗️复习[路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)|[1790. 交换一次使两个字符串相等💚](/workspace/1790.%E4%BB%85%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BA%A4%E6%8D%A2%E8%83%BD%E5%90%A6%E4%BD%BF%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E7%AD%89.cpp)<br/>[1301. 最大得分的路径数目](/workspace/1301.%E6%9C%80%E5%A4%A7%E5%BE%97%E5%88%86%E7%9A%84%E8%B7%AF%E5%BE%84%E6%95%B0%E7%9B%AE.cpp)|[817. 链表组件🧡](/workspace/817.%E9%93%BE%E8%A1%A8%E7%BB%84%E4%BB%B6.cpp)|||[1441. 用栈操作构建数组💚](/workspace/1441.%E7%94%A8%E6%A0%88%E6%93%8D%E4%BD%9C%E6%9E%84%E5%BB%BA%E6%95%B0%E7%BB%84.cpp)|[886. 可能的二分法🧡](/workspace/886.%E5%8F%AF%E8%83%BD%E7%9A%84%E4%BA%8C%E5%88%86%E6%B3%95.cpp)|
 |KEYWORD |`dp`<br/>`路径问题`|`dp`<br/>`路径问题`|`set`<br/>`linkedlist`|||`stack`|`并查集`<br/>`滑动窗口` `双指针`|
 |FEEDBACK|   |持续todo: 看一下上周每日一题|求链表的连续部分||||[🍬周赛](/record/Oct-Weekly-3.md)就奖励你做几道滑窗吧|
-|TOPIC   |[904. 水果成篮🧡](/workspace/904.%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE.cpp)|[滑动窗口](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)<br/>💔cv卡|
-|KEYWORD |`滑动窗口`<br/>`双指针`|`滑动窗口`<br/>`双指针`|
-|FEEDBACK|||
+|TOPIC   |[904. 水果成篮🧡](/workspace/904.%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE.cpp)|[滑动窗口](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)<br/>💔cv卡|[1700. 无法吃午餐的学生数量💚](/workspace/1700.%E6%97%A0%E6%B3%95%E5%90%83%E5%8D%88%E9%A4%90%E7%9A%84%E5%AD%A6%E7%94%9F%E6%95%B0%E9%87%8F.cpp)|
+|KEYWORD |`滑动窗口`<br/>`双指针`|`滑动窗口`<br/>`双指针`|`双指针`|
+|FEEDBACK|||这代码写的真好看呢|
 
 > ⭐ start index
 > 
