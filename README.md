@@ -32,9 +32,9 @@
 |TOPIC   |📅|[多重背包](/markdown/%E4%B8%93%E9%A2%98%20-%20%E8%83%8C%E5%8C%85%20-%20%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85.md)|[分组背包](/acwing/Section%205/1_%E5%88%86%E7%BB%84%E8%83%8C%E5%8C%85.cpp)|[线性dp](/acwing/Section%205/acwing%20-%20%E7%BA%BF%E6%80%A7dp.md)|[编辑距离](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E5%8F%8C%E5%BA%8F%E5%88%97.md)|[数位dp](/acwing/Section%205/acwing%20-%20%E6%95%B0%E4%BD%8Ddp.md)||
 |KEYWORD ||`dp` `多重背包`|`分组背包`|`dp`|`dp`|`dp` `数位dp`||
 |NOTE    ||||||打卡翻车现场||
-|TOPIC   |📅|||||||
-|KEYWORD ||||||||
-|NOTE    ||||||||
+|TOPIC   |📅|📅|[review 1](/acwing/Section%205/review%201.md)|📅|[review 2](/acwing/Section%205/review%202.md)|||
+|KEYWORD |||`dp`||`状压dp`||
+|NOTE    ||||||[b站](https://www.bilibili.com/video/BV1cv411b7EG/?spm_id_from=333.337.search-card.all.click&vd_source=e60de8162f155cdd464b9f11c355e633)||
 
 > ⭐ start index : 10/3
 > 
@@ -55,6 +55,11 @@
 > 🎶&nbsp; [合久必婚](https://c.y.qq.com/base/fcgi-bin/u?__=HLgM54G) &emsp; 回家也都想得到拥抱🫂
 > 
 > 🎵&nbsp; [春秋](https://c.y.qq.com/base/fcgi-bin/u?__=O48S4D) &emsp; 
+> 
+> 🎶&nbsp; [抱拥这分钟](https://c.y.qq.com/base/fcgi-bin/u?__=xsE6G4) &emsp; 
+> 
+> 🎵&nbsp; [春秋](https://c.y.qq.com/base/fcgi-bin/u?__=5wO1qOW) &emsp; 
+
 
 #### HISTORY
 ##### [LEETCODE DAILY 5️⃣](/record/2022-05.md)
