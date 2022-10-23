@@ -92,42 +92,47 @@ cout<<dp[m][0]<<endl;
 ```CPP
 #include <cstdio>
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 const int N = 12, M = 1<<N;
-vector<int> state[M];   // 2^11种状态
-int dp[N][M];
-bool st[N];     //
+long long dp[N][M];
+bool st[N];
 
 int main(){
-    while(cin>>n>>m){
-        for(int i=0; i< 1<<n; i++){
+    int n, m;
+    while(cin>>n>>m, n||m){
+        // 预处理, 检查所有状态合法性, 即有没有连续奇数个0
+        for(int i=0; i<(1<<n); i++){
+            st[i] = true;
             int cnt = 0;
-            bool is_valid = true;
             for(int j=0; j<n; j++){
-                if(i >> j & 1){
+                if(i>>j & 1){
                     if(cnt & 1){
-                        is_valid = false;
+                        st[i] = false;
                         break;
                     }
-                    cnt = 0;
                 }
-                else
+                else{
                     cnt++;
+                }
             }
             if(cnt & 1)
-                is_valid = false;
-            st[i] = is_valid;
+                st[i] = false;
         }
-        for( int i=0; i<1<<n; i++){
-            state[i].clear();
-            for(int j=0; j<1<<n; j++){
-                if((i & j)==0 && st[i|j])
-                    state[i].push_back(j);
-            }
-        }
+        // 状态初始化
         memset(dp, 0, sizeof dp);
         dp[0][0] = 1;
+        // 状态转移
+        for(int i=1; i<=m; i++){
+            for(int j=0; j<(1<<n); j++){
+                for(int k=0; k<(1<<n); k++){
+                    if((j&k)==0 && st[j|k]==true)
+                        dp[i][j] += dp[i-1][k];
+                }
+            }
+        }
+        cout<<dp[m][0]<<endl;
     }
     return 0;
 }

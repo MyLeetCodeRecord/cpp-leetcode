@@ -41,7 +41,7 @@ vector<int> findArray(vector<int> & pref){
 > 
 > 以'b'为例, 当处理完'a'之后, 不只s中有b, t(stack)中也可能有b
 > 
-> - 先输出`t(stack)`中所有的'b'(重复出栈操作)  ❗️ 但不代表t中就没有b了 比如t="... b b c b", 前面两个b无法被输出, 这是对a贪心、不可避免的consequence
+> - 先输出`t(stack)`栈顶所有的'b'(重复出栈操作)  ❗️ 但不代表t中就没有b了 比如t="... b b c b", 前面两个b无法被输出, 这是对a贪心、不可避免的consequence
 > 
 > - 再处理所有字符串s中的'b'
 > 
@@ -50,43 +50,45 @@ vector<int> findArray(vector<int> & pref){
 > 最后当s为空, 按序弹出`t(stack)`中所有元素即可
 
 ```CPP
-string robotWithString(string s) {
-    string ans = "";    // output
-    string t = "";      // t (stack)
-    vector<int> pos(26, -1);    // 每个字符最后一次出现的位置
-    for(int i=0; i<s.size(); i++){
-        pos[s[i]-'a'] = i;
-    }
-    int k = 0;          // s上的指针, 因为s是从左向右、不回头行进的
-    for(int i=0; i<26; i++){    // 依次处理26个字母
-        char ch = 'a'+i;
-        while(t.size() > 0 && t.back() <= ch){
-            ans += t.back();
-            t.pop_back();
+class Solution {
+public:
+    string robotWithString(string s) {
+        string ans = "";    // output
+        string t = "";      // t (stack)
+        vector<int> pos(26, -1);    // 每个字符最后一次出现的位置
+        for(int i=0; i<s.size(); i++){
+            pos[s[i]-'a'] = i;
         }
-        while(k<=pos[i]){       // 表示字符串里还有ch存在
-            if(s[k]==ch)
-                ans += ch;
-            else
-                t += s[k];
-            k++;
-            // 这里可以直接输出当前ch, 或者放到t(stack)中等下一轮输出
+        int k = 0;          // s上的指针, 因为s是从左向右、不回头行进的
+        for(int i=0; i<26; i++){    // 依次处理26个字母
+            char ch = 'a'+i;
+            while(t.size() > 0 && t.back() <= ch){
+                ans += t.back();
+                t.pop_back();
+            }
+            while(k<=pos[i]){       // 表示字符串s里还有ch存在
+                if(s[k]==ch)
+                    ans += ch;
+                else
+                    t += s[k];
+                k++;
+                // 这里可以直接输出当前ch, 或者放到t(stack)中等下一轮输出
+            }
         }
+        // 弹出栈中剩余元素
+        reverse(t.begin(), t.end());
+        return ans + t;
     }
-    reverse(t.begin(), t.end());
-    return ans + t;
-}
+};
 ```
 
 
 ##### [4. 矩阵中和能被 K 整除的路径](https://leetcode.cn/problems/paths-in-matrix-whose-sum-is-divisible-by-k/)
-> 首先要用dp, 路径条数可以用二维`dp[i][j]`表示到`(i,j)`的路径条数
-> 
-> [路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)
+> 首先[路径问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.md)要用dp, 路径条数可以用二维`dp[i][j]`表示到`(i,j)`的路径条数
 > 
 > 题目多加了一层限制 - 路径长度能整除 k => dp多加一维表示路径长度对k的余数(0～k-1),  即`dp[m][n][k]`
 > 
-> 复杂度`O(m * n * k)` <= 5*10^4*50 < `10^6`
+> 复杂度`O(m * n * k)` <= `5*10^4*50` < `10^7`
 
 ```CPP
 int numberOfPaths(vector<vector<int>>& grid, int k) {
