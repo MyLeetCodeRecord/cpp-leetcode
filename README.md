@@ -34,7 +34,7 @@
 |NOTE    ||||||打卡翻车现场||
 |TOPIC   |📅|📅|[review 1](/acwing/Section%205/review%201.md)|📅|[review 2](/acwing/Section%205/review%202.md)|||
 |KEYWORD |||`dp`||`状压dp`||
-|NOTE    ||||||[b站](https://www.bilibili.com/video/BV1cv411b7EG/?spm_id_from=333.337.search-card.all.click&vd_source=e60de8162f155cdd464b9f11c355e633)||
+|NOTE    |||||[b站](https://www.bilibili.com/video/BV1cv411b7EG/?spm_id_from=333.337.search-card.all.click&vd_source=e60de8162f155cdd464b9f11c355e633)||
 
 > ⭐ start index : 10/3
 > 
@@ -54,7 +54,7 @@
 > 
 > 🎶&nbsp; [合久必婚](https://c.y.qq.com/base/fcgi-bin/u?__=HLgM54G) &emsp; 回家也都想得到拥抱🫂
 > 
-> 🎵&nbsp; [春秋](https://c.y.qq.com/base/fcgi-bin/u?__=O48S4D) &emsp; 
+> 🎵&nbsp; [春秋](https://c.y.qq.com/base/fcgi-bin/u?__=O48S4D) &emsp; 不够剧情延续故事
 > 
 > 🎶&nbsp; [抱拥这分钟](https://c.y.qq.com/base/fcgi-bin/u?__=xsE6G4) &emsp; 忘记世界这分钟 跌进了这爱的裂缝
 > 
