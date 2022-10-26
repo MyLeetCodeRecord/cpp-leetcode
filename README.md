@@ -15,7 +15,10 @@
 |TOPIC   |[904. 水果成篮🧡](/workspace/904.%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE.cpp)|[滑动窗口](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)<br/>💔cv卡|[1700. 无法吃午餐的学生数量💚](/workspace/1700.%E6%97%A0%E6%B3%95%E5%90%83%E5%8D%88%E9%A4%90%E7%9A%84%E5%AD%A6%E7%94%9F%E6%95%B0%E9%87%8F.cpp)||||[1768. 交替合并字符串💚](https://leetcode.cn/problems/merge-strings-alternately/)|
 |KEYWORD |`滑动窗口`<br/>`双指针`|`滑动窗口`<br/>`双指针`|`双指针`||||`dp` `中位数贪心`|
 |FEEDBACK|||这代码写的真好看呢||||[🍬周赛](/record/Oct-Weekly-4.md)|
-|TOPIC   |[📌915. 分割数组🧡](/workspace/915.%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84.cpp)|
+|TOPIC   |[📌915. 分割数组🧡](/workspace/915.%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84.cpp)|[📌934. 最短的桥🧡](/workspace/934.%E6%9C%80%E7%9F%AD%E7%9A%84%E6%A1%A5.cpp)|
+|KEYWORD |`两次遍历`|`DFS`<br/>`多源BFS`|
+|FEEDBACK||`BFS`可以从点/集合出发|
+
 > ⭐ start index
 > 
 > 📌 hard for me
@@ -35,10 +38,10 @@
 |NOTE   ||二进制优化➡️`0-1背包`|每个背包选一个或不选|||打卡翻车现场||
 |TOPIC  |📅|📅|[review 1](/acwing/Section%205/review%201.md)|📅|[review 2](/acwing/Section%205/review%202.md)||📅|
 |KEYWORD|||`dp`||`状压dp`|`状压dp`||
-|NOTE   ||||||[b站](https://www.bilibili.com/video/BV1cv411b7EG/?spm_id_from=333.337.search-card.all.click&vd_source=e60de8162f155cdd464b9f11c355e633)|周赛了...|
-|TOPIC  ||
-|KEYWORD||
-|NOTE   ||
+|NOTE   |||||[蒙德里安的梦想](/acwing/Section%205/acwing%20-%20%E7%8A%B6%E5%8E%8Bdp.md)|[b站-蒙德里安](https://www.bilibili.com/video/BV1cv411b7EG/?spm_id_from=333.337.search-card.all.click&vd_source=e60de8162f155cdd464b9f11c355e633)|周赛了...|
+|TOPIC  |📅|复习[蒙德里安](/acwing/Section%205/acwing%20-%20%E7%8A%B6%E5%8E%8Bdp.md)<br/>[最短Hamilton距离](/acwing/Section%205/acwing%20-%20%E7%8A%B6%E5%8E%8Bdp.md)|
+|KEYWORD||`状压dp`|
+|NOTE   ||旅行商问题|
 > ⭐ start index : 10/3
 > 
 > 📅 absent

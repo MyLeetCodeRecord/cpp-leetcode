@@ -1,6 +1,7 @@
 #### Weekly 1
 
 ##### 1. 解密消息
+
 > [题目](https://leetcode.cn/problems/decode-the-message/) - 简单的`hash`问题
 
 ```CPP
@@ -74,9 +75,10 @@ vector<vector<int>> spiralMatrix(int m, int n, ListNode* head) {
 
 
 ##### 3. 知道秘密的人数
+
 > [题目](https://leetcode.cn/problems/number-of-people-aware-of-a-secret/) - `动态规划`
 >
-> dp[j]: 第j天新增的人数, 其值为`delay~forget`范围内的dp[i]之和
+> `dp[j]`: 第j天新增的人数, 其值为`delay~forget`范围内的`dp[i]`之和
 >
 > 最后在时刻 n 倒推`forget`范围内的新增人数之和, 即为ans
 
