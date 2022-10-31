@@ -1,6 +1,6 @@
 # cpp-leetcode
 
-#### LEETCODE DAILY 1️⃣1️⃣
+#### LEETCODE DAILY 🔟➕1️⃣
 |       |MON|TUE⭐|WED|THU|FRI|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TOPIC  |   |
