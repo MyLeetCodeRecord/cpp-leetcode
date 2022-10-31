@@ -2,6 +2,9 @@
 `vi.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
 
 
+##### string
+`substr(start)`: 从`start`截取到末尾
+
 ##### queue
 `que.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
 
