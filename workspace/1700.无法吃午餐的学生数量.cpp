@@ -8,23 +8,16 @@
 class Solution {
 public:
     int countStudents(vector<int>& students, vector<int>& sandwiches) {
-        int q_pointer = 0;
-        int s_pointer = 0;
-        int dislike = 0;
-        while(q_pointer != students.size()){
-            if(dislike == sandwiches.size() - s_pointer)
+        int cnt[2];
+        for (int student : students)
+            cnt[student]++;
+        for (int sandwich : sandwiches) {   // 消耗学生, 直到没有人喜欢栈顶sandwiches则看剩多少
+            if (cnt[sandwich] > 0) 
+                cnt[sandwich]--;
+            else
                 break;
-            if(students[q_pointer]==sandwiches[s_pointer]){
-                q_pointer++;
-                s_pointer++;
-                dislike = 0;
-            }
-            else{
-                dislike++;
-                students.push_back(students[q_pointer++]);
-            }
         }
-        return dislike;
+        return cnt[0] + cnt[1];
     }
 };
 // @lc code=end
