@@ -15,9 +15,12 @@
 |TOPIC   |[904. 水果成篮🧡](/workspace/904.%E6%B0%B4%E6%9E%9C%E6%88%90%E7%AF%AE.cpp)|[滑动窗口](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)<br/>💔cv卡|[1700. 无法吃午餐的学生数量💚](/workspace/1700.%E6%97%A0%E6%B3%95%E5%90%83%E5%8D%88%E9%A4%90%E7%9A%84%E5%AD%A6%E7%94%9F%E6%95%B0%E9%87%8F.cpp)||||[1768. 交替合并字符串💚](https://leetcode.cn/problems/merge-strings-alternately/)|
 |KEYWORD |`滑动窗口`<br/>`双指针`|`滑动窗口`<br/>`双指针`|`双指针`||||`dp` `中位数贪心`|
 |FEEDBACK|||这代码写的真好看呢||||[🍬周赛](/record/Oct-Weekly-4.md)|
-|TOPIC   |[📌915. 分割数组🧡](/workspace/915.%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84.cpp)|[📌934. 最短的桥🧡](/workspace/934.%E6%9C%80%E7%9F%AD%E7%9A%84%E6%A1%A5.cpp)|
-|KEYWORD |`两次遍历`|`DFS`<br/>`多源BFS`|
+|TOPIC   |[📌915. 分割数组🧡](/workspace/915.%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84.cpp)|[📌934. 最短的桥🧡](/workspace/934.%E6%9C%80%E7%9F%AD%E7%9A%84%E6%A1%A5.cpp)|💔cv卡|[1822. 数组元素积的符号💚](https://leetcode.cn/problems/sign-of-the-product-of-an-array/)|[](/workspace/907.%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC%E4%B9%8B%E5%92%8C.cpp)
+|KEYWORD |`两次遍历`|`DFS`<br/>`多源BFS`||`math`|
 |FEEDBACK||`BFS`可以从点/集合出发|
+|TOPIC  |[481. 神奇字符串](/workspace/481.%E7%A5%9E%E5%A5%87%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)|
+|KEYWORD|`双指针`|
+|NOTE   |🔟有徽章咯|
 
 > ⭐ start index
 > 
@@ -42,9 +45,7 @@
 |TOPIC  |📅|复习[蒙德里安](/acwing/Section%205/acwing%20-%20%E7%8A%B6%E5%8E%8Bdp.md)<br/>[最短Hamilton距离](/acwing/Section%205/acwing%20-%20%E7%8A%B6%E5%8E%8Bdp.md)|[没有上司的误会](/acwing/Section%205/acwing%20-%20%E6%A0%91%E7%8A%B6dp.md)|📅|复习[单调栈](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8D%95%E8%B0%83%E6%A0%88.md)<br/>[单调队列](/acwing/Section%202/acwing%20-%20%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.md)
 |KEYWORD||`状压dp`|`树状dp`||`单调栈`<br/>`单调队列`|
 |NOTE   ||旅行商问题|复习[图的邻接表存储](/acwing/Section%203/acwing%20-%20%E5%9B%BE%E7%9A%84%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%AD%98%E5%82%A8.md)|
-|TOPIC  |[481. 神奇字符串](/workspace/481.%E7%A5%9E%E5%A5%87%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)|
-|KEYWORD|`双指针`|
-|NOTE   ||
+
 > ⭐ start index : 10/3
 > 
 > 📅 absent
