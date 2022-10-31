@@ -19,6 +19,8 @@
         "algorithm": "cpp",
         "__bit_reference": "cpp",
         "__split_buffer": "cpp",
-        "__hash_table": "cpp"
+        "__hash_table": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }

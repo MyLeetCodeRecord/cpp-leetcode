@@ -18,7 +18,7 @@ int main(){
         if(sk.empty())
             printf("-1 ");
         else
-            printf("%d ", sk.top())
+            printf("%d ", sk.top());
         sk.push(cur);
     }
     return 0;
