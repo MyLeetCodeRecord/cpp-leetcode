@@ -6,6 +6,7 @@
 using namespace std;
 
 typedef pair<int, int> PII;
+// 按右端点排序
 bool static cmp(PII l, PII r){
     if(l.second == r.second)
         return l.first < r.first;

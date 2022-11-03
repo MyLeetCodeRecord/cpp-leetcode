@@ -13,11 +13,11 @@ public:
     }
     int findMinArrowShots(vector<vector<int>>& points) {
         sort(points.begin(), points.end(), cmp);
-        int end = points[0][1];
-        int cnt = 1;
+        int ed = INT_MIN;
+        int cnt = 0;
         for(int i=0; i<points.size(); i++){
-            if(points[i][0] > end){
-                end = points[i][1];
+            if(points[i][0] > ed){
+                ed = points[i][1];
                 cnt++;
             }
         }
