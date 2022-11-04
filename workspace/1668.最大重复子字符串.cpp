@@ -13,6 +13,7 @@ public:
     int maxRepeating(string sequence, string word) {
         string key = word;
         int cnt = 0;
+        // 检查存在性即可 => find(k*key)
         while (sequence.find(key) != string::npos) {
             key += word;  // 扩充用于搜索的key, 相当于将key重复k次
             cnt++;

@@ -19,7 +19,8 @@ public:
         for(int x=0; x<=50; x++){
             for(int y=0; y<=50; y++){
                 int signal = 0;
-                for (auto &&tower : towers) {
+                // !!! 这里的 & 会节省十几倍的时间...
+                for (vector<int> &tower : towers) {
                     // 注意这里是圆形, 而且尽量用平方值进行比较, 得到可达性
                     int squaredDistance = (tower[0]-x)*(tower[0]-x) + (tower[1]-y)*(tower[1]-y);
                     if (squaredDistance <= radius * radius) {
