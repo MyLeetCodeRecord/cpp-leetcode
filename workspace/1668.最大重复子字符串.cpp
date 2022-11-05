@@ -9,7 +9,8 @@ class Solution {
 public:
     /* 注意到字符串长度不超过 100
      * 直接从大到小枚举 word 的重复次数 k, 判断 word 重复该次数后是否是 sequence 的子串
-     * 是则直接返回当前的重复次数 k */
+     * 是则直接返回当前的重复次数 k
+     */
     int maxRepeating(string sequence, string word) {
         string key = word;
         int cnt = 0;

@@ -29,27 +29,33 @@ int averageValue(vector<int>& nums) {
 ```CPP
 vector<vector<string>> mostPopularCreator(vector<string>& creators, vector<string>& ids, vector<int>& views) {
     int n = creators.size();
-    unordered_map<string, long long> creator_mp;
-    unordered_map<string, int> video_mp;
+    unordered_map<string, long long> creators_mp;
+    unordered_map<string, int> videos_mp;    // 上个方案里把第二个int字段, 保存成pair<string,int>, 但通过idx就可以索引到views和ids
+    // Step 1: creators_mp - 记录每个Creator的累积播放量, videos_mp - 记录每个Creator的最大播放量的作品idx
     for(int i=0; i<n; i++){
-        creator_mp[creators[i]] += views[i];
-        if(video_mp.find(creators[i]) == video_mp.end()){
-            video_mp[creators[i]] = i;
+        creators_mp[creators[i]] += views[i];
+        if(videos_mp.find(creators[i]) == videos_mp.end()){
+            videos_mp[creators[i]] = i;
         }
         else{
-            int t = video_mp[creators[i]];
+            int t = videos_mp[creators[i]];
+            // 更新作者creators[i]最受欢迎的作品
+            // 规则1: 播放量更大; 规则2: id字典序更小
             if((views[i] > views[t]) || (views[i]==views[t] && ids[i]<ids[t]))
-                video_mp[creators[i]] = i;
+                videos_mp[creators[i]] = i;
         }
     }
-    long long maxClick = -1;
-    for(unordered_map<string, long long>::iterator it=creator_mp.begin(); it!=creator_mp.end(); it++){
+    // Step 2: 记录最大的作者累积播放量
+    long long maxClick = -1;      // 有些case可能播放量为0
+    for(unordered_map<string, long long>::iterator it=creators_mp.begin(); it!=creators_mp.end(); it++){
         maxClick = max(maxClick, it->second);
     }
+    // Step 3: 等于maxClick的作者, 将ta的作品信息保存到ans, 这里用idx去索引作品ID
     vector<vector<string>> ans;
-    for(unordered_map<string, long long>::iterator it=creator_mp.begin(); it!=creator_mp.end(); it++){
-        if(it->second == maxClick)
-            ans.push_back({it->first, ids[video_mp[it->first]]});
+    for(unordered_map<string, long long>::iterator it=creators_mp.begin(); it!=creators_mp.end(); it++){
+        if(it->second == maxClick){
+            ans.push_back({it->first, ids[videos_mp[it->first]]});
+        }
     }
     return ans;
 }
@@ -85,7 +91,7 @@ vector<int> getBits(long long n){
         bits.push_back(n%10);
         n /= 10;
     }
-    bits.resize(13);
+    bits.resize(13);                // 因为可能涉及最高位进位, 如果没有resize会超过vector索引范围
     return bits;
 }
 long long makeIntegerBeautiful(long long n, int target) {
@@ -94,9 +100,8 @@ long long makeIntegerBeautiful(long long n, int target) {
     vector<int> bits = getBits(n);  // 记录每一位, 进位也要记录下来!
     if(sum <= target)
         return 0;
-    // 下面如果用更新后的bits[]来求更新后的n, 会更清晰一些...
     int idx = 0;
-    long long base = 1;
+    long long base = 1;             // 注意用long long
     while(sum > target){
         sum = sum - bits[idx] + 1;
         n += (base * (10-bits[idx]));   // 进位后的值, 或者最后用更新后的bits来求新的n
