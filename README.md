@@ -24,7 +24,7 @@
 |NOTE   |   |   |很像[打家劫舍III](/workspace/337.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D-iii.cpp)|右端点排序|左端点排序|左端点排序|   |
 |TOPIC  |[Huffman树](/acwing/Section%206/4_%E5%90%88%E5%B9%B6%E7%9F%B3%E5%AD%90.cpp)<br/>[排队打水](/acwing/Section%206/5_%E6%8E%92%E9%98%9F%E6%89%93%E6%B0%B4.cpp)<br/>[中位数贪心](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%B8%AD%E4%BD%8D%E6%95%B0%E8%B4%AA%E5%BF%83.md)|
 |KEYWORD|`贪心`<br/>`Huffman`<br/>`中位数贪心`|
-|NOTE   |复习[区间](/acwing/Section%206/review%202.md)
+|NOTE   |复习[区间](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|
 
 > ⭐ start index : 11/1
 > 
