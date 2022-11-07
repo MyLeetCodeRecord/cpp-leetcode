@@ -21,10 +21,10 @@ int main(){
     for(int i=0; i<n; i++){
         scanf("%d %d", &intervals[i].first, &intervals[i].second);
     }
-    sort(intervals, intervals+n, cmp);
+    sort(intervals.begin(), intervals.end(), cmp);
     int cnt = 0;
     int ed = INT_MIN;
-    for(int i=0; i<n; i++){
+    for(int i=0; i<intervals.size(); i++){
         if(intervals[i].first > ed){
             ed = intervals[i].second;
             cnt++;
@@ -52,20 +52,19 @@ PII intervals[N];
 int main(){
     int n;
     scanf("%d", &n);
-    for(int i=0; i<n; i++){
-        scanf("%d %d", &intervals[i].first, &intervals[i].second);
+    for(int i=0 i<n; i++){
+        scanf("%d %d", &intervals[i].first,intervals[i].second);
     }
-    sort(intervals, intervals+n);
-    priority_queue<int, vector<int>, greater<int>> heap;  // 记录maxR
+    sort(intervals,intervals+n);
+    priority_queue<int, vector<int>, greater<int>> maxR_pq;
     for(int i=0; i<n; i++){
         PII cur = intervals[i];
-        if(!heap.empty() && cur.first > heap.top()){
+        if(!maxR_pq.empty() && cur.first > maxR_pq.top()){
             heap.pop();
             heap.push(cur.second);
         }
-        else{
+        else
             heap.push(cur.second);
-        }
     }
     cout<<heap.size()<<endl;
     return 0;

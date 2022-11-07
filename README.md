@@ -21,7 +21,10 @@
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TOPIC  |   |复习[背包](/acwing/Section%205/review%203.md)|[滑雪](/acwing/Section%205/7_%E6%BB%91%E9%9B%AA.cpp)|[区间选点](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4%20-%20%E5%8C%BA%E9%97%B4%E4%B8%8D%E7%9B%B8%E4%BA%A4%E9%80%89%E6%8B%A9.md)|[区间分组](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4%20-%20%E5%8C%BA%E9%97%B4%E5%88%86%E7%BB%84.md)|[区间覆盖](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4%20-%20%E5%8C%BA%E9%97%B4%E8%A6%86%E7%9B%96.md)|📅|
 |KEYWORD|   |`背包`|`递归`<br/>`记忆化搜索`|`区间` `贪心`|`区间` `贪心`|`区间` `贪心`|   |
-|NOTE   |   |   |很像[打家劫舍III](/workspace/337.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D-iii.cpp)|左端点排序|右端点排序|左端点排序|   |
+|NOTE   |   |   |很像[打家劫舍III](/workspace/337.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D-iii.cpp)|右端点排序|左端点排序|左端点排序|   |
+|TOPIC  |[Huffman树](/acwing/Section%206/4_%E5%90%88%E5%B9%B6%E7%9F%B3%E5%AD%90.cpp)<br/>[排队打水](/acwing/Section%206/5_%E6%8E%92%E9%98%9F%E6%89%93%E6%B0%B4.cpp)<br/>[中位数贪心](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%B8%AD%E4%BD%8D%E6%95%B0%E8%B4%AA%E5%BF%83.md)|
+|KEYWORD|`贪心`<br/>`Huffman`<br/>`中位数贪心`|
+|NOTE   |复习[区间](/acwing/Section%206/review%202.md)
 
 > ⭐ start index : 11/1
 > 
@@ -30,7 +33,7 @@
 <br/>
 
 #### PLAYLIST
-> 🎵&nbsp; [望爱](https://c.y.qq.com/base/fcgi-bin/u?__=ZElLIi7) &emsp; 
+> 🎵&nbsp; [望爱](https://c.y.qq.com/base/fcgi-bin/u?__=ZElLIi7) &emsp; Slient night tonight
 > 
 > 🎶&nbsp;  &emsp; 
 

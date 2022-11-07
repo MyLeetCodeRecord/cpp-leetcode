@@ -15,7 +15,7 @@ public:
             ans.push_back(path);
             return ;
         }
-        // 树的横向是数字对应的所有字符
+        // 树的横向是当前数字digits[cur]对应的所有字符
         for(int i=0; i<dict[digits[cur]-'0'].size(); i++){
             path += dict[digits[cur]-'0'].substr(i,1);
             backtrack(digits, cur+1);

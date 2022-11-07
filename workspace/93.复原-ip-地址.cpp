@@ -7,37 +7,30 @@
 // @lc code=start
 class Solution {
 public:
+    bool isLegal(string sub){
+        if(sub.size()>1 && sub[0]=='0')   // 不能有前导零
+            return false;
+        if(stoi(sub)>255)
+            return false;
+        return true;
+    }
     vector<string> ans;
-    string path;
-    int done = 0;
+    vector<string> path;
     void backtrack(string s, int cur){
-        if(done>=4 || cur==s.size()){
-            if(done==4 && cur==s.size()){
-                ans.push_back(path.substr(0, path.size()-1));
+        if(path.size()==4 || cur==s.size()){
+            if(path.size()==4 && cur==s.size()){
+                ans.push_back(path[0]+"."+path[1]+"."+path[2]+"."+path[3]);
             }
             return ;
         }
-        for(int i=cur; i<s.size() && i<cur+3; i++){ // 简单剪枝: 不检查长度大于3的子串
+        for(int i=cur; i<s.size() && i<cur+3; i++){
             string sub = s.substr(cur, i-cur+1);
-            if(isLegal(sub)){
-                string tmp = path;
-                path += (sub+".");
-                done++;
+            if(isLegal(sub) && path.size()<4){
+                path.push_back(sub);
                 backtrack(s, i+1);
-                path = tmp;
-                done--;
+                path.pop_back();
             }
         }
-    }
-    bool isLegal(string s){
-        if(s.size()==0 || s.size()>3)
-            return false;
-        // 首 0 情况处理
-        if(s.size()>1 && s[0]=='0')
-            return false;
-        if(stoi(s)>=0 && stoi(s)<=255)
-            return true;
-        return false;
     }
     vector<string> restoreIpAddresses(string s) {
         backtrack(s, 0);
