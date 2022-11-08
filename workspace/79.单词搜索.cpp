@@ -6,44 +6,37 @@
 
 // @lc code=start
 class Solution {
-private:
-    int direction[4][2] = {{-1,0}, {1,0}, {0,1}, {0,-1}};
-    int m, n;
 public:
-    vector<string> ans;
-    string path;
-    void backtrack(vector<vector<char> >& board, vector<vector<bool> >& visit, int row, int col, string word, int cur){
-        if(board[row][col] != word[cur]){
-            return ;
-        }
-        if(cur == word.size()-1){   // 注意如果用cur要放在cur判断后面, 建议直接用path.size()
-            ans.push_back(path);
-            return ;
-        }
-        visit[row][col] = true;
+    int direction[4][2] = {{0,1}, {0,-1}, {1,0}, {-1,0}};
+    bool backtrack(vector<vector<char>>& board, int r, int c, string& word, int cur){
+        if(cur == word.size())
+            return true;
+        if (r < 0 || r >= board.size() || c < 0 || c >= board[0].size()) 
+            return false;
+        if(board[r][c] != word[cur])
+            return false;
+        board[r][c] = '.';
         for(int d=0; d<4; d++){
-            int nextR = row + direction[d][0];
-            int nextC = col + direction[d][1];
-            if(nextR>=0 && nextR<m && nextC>=0 && nextC<n){
-                if(visit[nextR][nextC] == false){   // 注意不能重复使用
-                    path += board[nextR][nextC];
-                    backtrack(board, visit, nextR, nextC, word, cur+1);
-                    path = path.substr(0, path.size()-1);
-                }
-            }
+            int x = r + direction[d][0];
+            int y = c + direction[d][1];
+            // 如果在这里就check x,y合法性的话, [["a"]] "a" 这种case过不了
+            // 或者可以if(board[r][c]!=word[cur]) return false; 然后if(cur==word.size()-1) return true;
+            if(backtrack(board, x, y, word, cur+1))
+                return true;
         }
-        visit[row][col] = false;
+        board[r][c] = word[cur];
+        return false;
     }
     bool exist(vector<vector<char>>& board, string word) {
-        m = board.size();
-        n = board[0].size();
-        vector<vector<bool> > visit(m, vector<bool>(n, false));
+        int m = board.size();
+        int n = board[0].size();
         for(int i=0; i<m; i++){
             for(int j=0; j<n; j++){
-                backtrack(board, visit, i, j, word, 0);
+                if(backtrack(board, i, j, word, 0))
+                    return true;
             }
         }
-        return ans.size() > 0;
+        return false;
     }
 };
 // @lc code=end
