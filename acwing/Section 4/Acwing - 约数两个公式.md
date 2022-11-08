@@ -48,4 +48,49 @@ int main(){
 
 ##### 2. 约数总和
 
+> 同样先进行[质因数分解](/acwing/Section%204/1_%E5%88%86%E8%A7%A3%E8%B4%A8%E5%9B%A0%E6%95%B0.cpp), 然后套用公式
 
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+// 一项: Pi^0 + Pi^1 + Pi^2 + ... +Pi^ai
+long long getOneItem(int p, int a){
+    int i = 0;
+    long long ans = 1;
+    while(i<a){
+        ans = p*ans + 1;
+        ans %= 1000000007;
+        i++;
+    }
+    return ans;
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    unordered_map<int, int> mp;  // prime2freq
+    for(int i=0; i<n; i++){
+        int x;
+        scanf("%d", &x);
+        for(int i=2; i<=x/i; i++){
+            // 分解质因数, 每次除尽
+            while(x%i==0){
+                mp[i]++;
+                x /= i;
+            }
+        }
+        if(x > 1)
+            mp[x]++;
+    }
+    // 约数总和公式
+    long long sum = 1;
+    for(unordered_map<int, int>::iterator it=mp.begin(); it!=mp.end(); it++){
+        sum *= getOneItem(it->first, it->second);
+        sum %= 1000000007;
+    }
+    cout<<sum<<endl;
+    return 0;
+}
+```
