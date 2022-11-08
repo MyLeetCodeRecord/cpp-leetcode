@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // dp[i]是拆分 i 能得到的最大乘积
+    // dp[i]是拆分 i 能得到的最大乘积, 注意至少切分一次(`k>=2`)
     // 假设枚举中间分界点 j, j左侧不做拆分(j), 右侧可以拆分(dp[j])
     // 每个 j 作为分界点的最大乘积 max(j*(i-j), j*dp[i-j]) 作为dp[i]的一个候选
     int integerBreak(int n) {
