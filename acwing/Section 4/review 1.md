@@ -130,7 +130,94 @@ int main(){
 ```
 
 
-##### 5. 最大公约数 - 辗转相除法
+##### 5. 约数个数
+> **Step 1**: 质因数分解 ➡️ 乘积的质因数 = 对每个数进行分解, 用`map`累计集合
+> 
+> **Step 2**: `ans = (a1+1) * ···  * (ak+1)`
+
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    unordered_map<int, int> mp;
+    for(int i=0; i<n; i++){
+        int x;
+        scanf("%d", &x);
+        // 对x进行质因数分解
+        for(int j=2; j<=x/j; j++){
+            // 除尽为止
+            while(x%j==0){
+                mp[j]++;
+                x /= j;
+            }
+        }
+        if(x > 1)
+            mp[x]++;
+    }
+    long long ans = 1;
+    for(unordered_map<int,int>::iterator it=mp.begin(); it!=mp.end(); it++){
+        ans = ans*(1+it->second);
+        ans %= 1000000007;
+    }
+    cout<<ans<<endl;
+    return 0;
+}
+```
+
+
+##### 6. 约数之和
+> **Step 1**: 分解质因数
+> 
+> **Step 2**: `ans = (P1^0+P1^1+···+P1^a1) * (P2^0+P2^1+···+P2^a2) * ··· * (Pk^0+Pk^1+···+Pk^ak)`
+
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+long long calcOneItem(int p, int a){
+    long long ans = 1;
+    for(int i=0; i<a; i++){
+        ans = p*ans+1;
+        ans %= 1000000007;
+    }
+    return ans;
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    unordered_map<int, int> mp;
+    for(int i=0; i<n; i++){
+        int x;
+        scanf("%d", &x);
+        // 对x进行质因数分解
+        for(int j=2; j<=x/j; j++){
+            // 除尽为止
+            while(x % j == 0){
+                mp[j]++;
+                x /= j;
+            }
+        }
+        if(x > 1)
+            mp[x]++;
+    }
+    long long ans = 1;
+    for(unordered_map<int, int>::iterator it=mp.begin(); it!=mp.end(); it++){
+        ans *= calcOneItem(it->first, it->second);
+        ans %= 1000000007;
+    }
+    cout<<ans<<endl;
+    return 0;
+}
+```
+
+##### 7. 最大公约数 - 辗转相除法
 
 ```CPP
 #include <cstdio>
