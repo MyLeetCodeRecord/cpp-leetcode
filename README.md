@@ -20,11 +20,11 @@
 |       |MON|TUE⭐|WED|THU|FRI|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TOPIC  |   |复习[背包](/acwing/Section%205/review%203.md)|[滑雪](/acwing/Section%205/7_%E6%BB%91%E9%9B%AA.cpp)|[区间选点](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4%20-%20%E5%8C%BA%E9%97%B4%E4%B8%8D%E7%9B%B8%E4%BA%A4%E9%80%89%E6%8B%A9.md)|[区间分组](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4%20-%20%E5%8C%BA%E9%97%B4%E5%88%86%E7%BB%84.md)|[区间覆盖](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4%20-%20%E5%8C%BA%E9%97%B4%E8%A6%86%E7%9B%96.md)|📅|
-|KEYWORD|   |`背包`|`递归`<br/>`记忆化搜索`|`区间` `贪心`|`区间` `贪心`|`区间` `贪心`|   |
+|KEYWORD|   |`背包`|`递归`<br/>`记忆化搜索`|`区间`<br/>`贪心`|`区间`<br/>`贪心`|`区间`<br/>`贪心`|   |
 |NOTE   |   |   |很像[打家劫舍III](/workspace/337.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D-iii.cpp)|右端点排序|左端点排序|左端点排序|   |
 |TOPIC  |[Huffman树](/acwing/Section%206/4_%E5%90%88%E5%B9%B6%E7%9F%B3%E5%AD%90.cpp)<br/>[排队打水](/acwing/Section%206/5_%E6%8E%92%E9%98%9F%E6%89%93%E6%B0%B4.cpp)<br/>[中位数贪心](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%B8%AD%E4%BD%8D%E6%95%B0%E8%B4%AA%E5%BF%83.md)<br/>[耍杂技的牛](/acwing/Section%206/Acwing%20-%20%E8%80%8D%E6%9D%82%E6%8A%80%E7%9A%84%E7%89%9B%20-%20%E6%8E%A8%E5%85%AC%E5%BC%8F.md)|[筛质数](/acwing/Section%204/Acwing%20-%20%E7%AD%9B%E8%B4%A8%E6%95%B0.md)<br/>[分解质因数](/acwing/Section%204/1_%E5%88%86%E8%A7%A3%E8%B4%A8%E5%9B%A0%E6%95%B0.cpp)<br/>[约数](/acwing/Section%204/Acwing%20-%20%E7%BA%A6%E6%95%B0%E4%B8%A4%E4%B8%AA%E5%85%AC%E5%BC%8F.md)|[约数两个公式](/acwing/Section%204/Acwing%20-%20%E7%BA%A6%E6%95%B0%E4%B8%A4%E4%B8%AA%E5%85%AC%E5%BC%8F.md)|[容斥原理](/acwing/Section%204/Acwing%20-%20%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86.md)<br/>[欧拉函数](/acwing/Section%204/3_%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0.cpp)|[快速幂](/acwing/Section%204/Acwing%20-%20%E5%BF%AB%E9%80%9F%E5%B9%82.md)
 |KEYWORD|`贪心`<br/>`Huffman`<br/>`中位数贪心`|`math`<br/>`质数`<br/>`约数`|`math`<br/>`质数`<br/>`约数`|`容斥原理`|`快速幂`|
-|NOTE   |复习[区间](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|   |复习[math](/acwing/Section%204/review%201.md)|
+|NOTE   |复习[区间](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|   |复习[math](/acwing/Section%204/review%201.md)|复习[多重背包的二进制优化](/acwing/Section%205/1_%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85_%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BC%98%E5%8C%96.cpp)|
 
 > ⭐ start index : 11/1
 > 

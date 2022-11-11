@@ -9,8 +9,9 @@
 > 
 > **Step 1**: 先预处理出 $a^{2^0} mod P$, $a^{2^1} mod P$, $a^{2^2} mod P$, ... , $a^{2^{\log_2k}}$
 > 
-> **Step 2**: 将指数处理成二进制形式, e.g. `26=11010` ➡️
- $a^{26} = a^{2^1} * a^{2^3} * a^{2^5}$
+> **Step 2**: 将指数处理成二进制形式, e.g. `26=11010` ➡️ $a^{26} = a^{2^1} * a^{2^3} * a^{2^5}$
+
+ ##### 迭代写法
 ```CPP
 // 非递归方式实现快速幂
 int quickPow(int a, int n){
@@ -26,6 +27,7 @@ int quickPow(int a, int n){
 ```
 
 
+##### 2. 递归写法
 ```CPP
 // 递归方式计算快速幂 (不考虑mod大素数)
 int quickPow(int a, int n){
@@ -35,5 +37,39 @@ int quickPow(int a, int n){
         return a * quickPow(n-1);
     else
         return quickPow(n/2) ** 2;
+}
+```
+
+
+##### [Acwing875. 快速幂](/acwing/Section%204/4_%E5%BF%AB%E9%80%9F%E5%B9%82.cpp)
+
+```CPP
+#include <cstdio>
+#include <iostream>
+using namespace std;
+
+int quickPow(int a, int n, int mod){
+    long long ans = 1;
+    while(n != 0){
+        // 二进制为1时, 计当前位
+        if(n & 1){
+            ans *= a;
+            ans %= mod;
+        }
+        // 注意这里也要对a^k做mod处理
+        a = (long long)a * a % mod;     // 7^1, 7^2, 7^4 ...
+        n >>= 1;
+    }
+    return ans % mod;
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        int a, b, p;
+        scanf("%d %d %d", &a, &b, &p);
+        cout<<quickPow(a, b, p)<<endl;
+    }
+    return 0;
 }
 ```
