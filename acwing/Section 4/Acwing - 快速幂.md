@@ -1,4 +1,5 @@
 #### 快速幂
+
 > 快速幂能够使用`O(logn)`的时间复杂度计算乘方
 > 
 > ![快速幂](/appendix/acwing-%E5%BF%AB%E9%80%9F%E5%B9%82.png)
@@ -34,9 +35,9 @@ int quickPow(int a, int n){
     if(n==0)
         return 1;
     if(n % 2 == 1)
-        return a * quickPow(n-1);
+        return a * quickPow(a, n-1);
     else
-        return quickPow(n/2) ** 2;
+        return quickPow(a, n/2) ** 2;
 }
 ```
 
