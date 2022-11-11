@@ -41,7 +41,7 @@ int quickPow(int a, int n){
 ```
 
 
-##### [Acwing875. 快速幂](/acwing/Section%204/4_%E5%BF%AB%E9%80%9F%E5%B9%82.cpp)
+##### [Acwing875. 快速幂](/acwing/Section%204/4_%E5%BF%AB%E9%80%9F%E5%B9%82.cpp): `a ^ b mod p`
 
 ```CPP
 #include <cstdio>
