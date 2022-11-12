@@ -16,12 +16,12 @@
 ```CPP
 // 非递归方式实现快速幂
 int quickPow(int a, int n){
-    int ans = 1;
+    long long ans = 1;
     while(n != 0){
         if(n & 1)       // 如果n的当前末位为1
             ans *= a;   // ans乘上当前的a
         a *= a;         // a自乘
-        n >>= 1;        // n往右移一位,表示除以2
+        n >>= 1;        // n往右移一位, 表示除以2
     }
     return ans;
 }
@@ -36,8 +36,10 @@ int quickPow(int a, int n){
         return 1;
     if(n % 2 == 1)
         return a * quickPow(a, n-1);
-    else
-        return quickPow(a, n/2) ** 2;
+    else{
+        long long half = quickPow(a, n/2);
+        return half ** 2;
+    }
 }
 ```
 

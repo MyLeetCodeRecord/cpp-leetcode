@@ -222,3 +222,104 @@ int main(){
     return 0;
 }
 ```
+
+##### 8. 欧拉函数
+```CPP
+#include <cstdio>
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        int x;
+        scanf("%d", &x);
+        long long ans = x;
+        for(int j=2; j<=x/j; j++){
+            if(x % j == 0){
+                ans = ans / j * (j-1);
+                while(x % j == 0){
+                    x /= j;
+                }
+            }
+        }
+        if(x > 1)
+            ans = ans / x * (x-1);
+        cout<<ans<<endl;
+    }
+    return 0;
+}
+```
+
+##### 9. 快速幂
+```CPP
+#include <cstdio>
+#include <iostream>
+using namespace std;
+
+// 迭代
+int quickPow(int a, int n, int mod){
+    long long ans = 1;
+    while(n != 0){
+        if(n & 1){      // 如果n的当前末位为1
+            ans *= a;   // ans乘上当前的a
+            ans %= mod;
+        }
+        a = a * a % mod;// a自乘
+        n >>= 1;        // n往右移一位, 表示除以2
+    }
+    return ans;
+}
+// 递归
+int quickPow(int a, int n, int mod){
+    if(n==0)
+        return 1;
+    if(n & 1)
+        return (long long)a * quickPow(a, n-1, mod) % mod;
+    else{
+        long long half = quickPow(a, n/2, mod);
+        return (half * half) % mod;
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        int a, b, p;
+        scanf("%d %d %d", &a, &b, &p);
+        cout<<quickPow(a, b, p)<<endl;
+    }
+    return 0;
+}
+```
+
+
+##### 10. 组合数 - 小范围
+```CPP
+#include <cstdio>
+#include <iostream>
+using namespace std;
+
+const int N = 2010;
+int dp[N][N];
+
+void calcCombination(){
+    for(int i=1; i<N; i++){
+        dp[i][0] = 1;
+        for(int j=1; j<=i; j++){
+            dp[i][j] = dp[i-1][j-1] + dp[i-1][j-1];
+        }
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    calcCombination(n);
+    for(int i=0; i<n; i++){
+        scanf("%d %d", &a, &b);
+        
+    }
+    return 0;
+}
+```
