@@ -81,7 +81,7 @@ int minCost(vector<vector<int>>& costs) {
 ```
 
 
-#### 4. 状态DP
+#### 4. 状态转移DP
 
 ##### [股票问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
 
@@ -89,3 +89,11 @@ int minCost(vector<vector<int>>& costs) {
 > 题目描述: https://leetcode.cn/problems/wiggle-subsequence
 > 
 > ![LC376](/appendix/LC376.png)
+
+
+##### [LC790. 多米诺和托米诺平铺](/workspace/790.%E5%A4%9A%E7%B1%B3%E8%AF%BA%E5%92%8C%E6%89%98%E7%B1%B3%E8%AF%BA%E5%B9%B3%E9%93%BA.cpp)
+> 官方题解这个图画的挺好的, 状态要想全, `00`和`11`是两种情况
+> 
+> ![LC790](/appendix/LC790.png)
+> 
+> 另外, 对多次加法要进行多层取模
