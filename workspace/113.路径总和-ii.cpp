@@ -11,6 +11,7 @@ public:
     vector<int> path;
     int sum = 0;
     void backtracking(TreeNode* root, int targetSum){
+        // 到达叶子结点
         if(root->left==NULL && root->right==NULL){
             if(targetSum==sum){
                 ans.push_back(path);
@@ -33,7 +34,6 @@ public:
             sum -= root->right->val;
         }
     }
-
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
         if(root == NULL)
             return ans;
