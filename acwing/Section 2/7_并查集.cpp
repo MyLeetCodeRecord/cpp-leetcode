@@ -12,7 +12,7 @@ void init_ufs(int n){
 }
 int find_ufs(int u){
     if(u != father[u])
-        father[u] = find_ufs(father[u]);
+        father[u] = find_ufs(father[u]);  // 路径压缩
     return father[u];
 }
 void union_ufs(int u, int v){

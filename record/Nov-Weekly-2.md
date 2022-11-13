@@ -1,9 +1,9 @@
 #### Weekly 2 - No. 317 - `3*, rank 1321`
 
-- [x] [温度转换](https://leetcode.cn/problems/convert-the-temperature/): 加减法
+##### 1. [温度转换](https://leetcode.cn/problems/convert-the-temperature/): 加减法
 
 
-- [x] [6234. 最小公倍数为 K 的子数组数目](https://leetcode.cn/problems/number-of-subarrays-with-lcm-equal-to-k/)
+##### 2. [6234. 最小公倍数为 K 的子数组数目](https://leetcode.cn/problems/number-of-subarrays-with-lcm-equal-to-k/)
 
 > 这题的数据范围`1000`, 看起来就能`暴力`
 > 
@@ -65,13 +65,18 @@ int subarrayLCM(vector<int>& nums, int k) {
 ```
 
 
-- [x] [逐层排序二叉树所需的最少操作数目](https://leetcode.cn/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level/)
+##### 3. [逐层排序二叉树所需的最少操作数目](https://leetcode.cn/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level/)
+
+###### 直接交换
 
 > 读一遍题就可以发现上**每次遍历一整个layer**的`层序遍历(BFS)`
 > 
-> 先写一下我的写法, 看了灵神和y总的视频, 都是`环图`求的最小交换次数...但我是"直接放到正确位置"的做法
+> 遇到不匹配的, 交换一次放到指定位置, 直到指针扫完整个列表, **需要注意的是发生交换的话, 指针不能后移**
 > 
-> 然后继续百度, "使数组有序的最小交换次数", 发现没什么特别的, 就是遇到不匹配的, 交换一次放到指定位置, 直到指针扫完整个列表, **需要注意的是发生交换的话, 指针不能后移**
+> 看了灵神和y总的视频, 都是`置换环/环图`来求最小交换次数, 具体实现可以用并查集...但做周赛的时候用的是"直接交换回正确位置"的做法, 也都过了
+> 
+> 其实, 交换只发生在每个组(一个环里的所有节点作为一个组)当中, 交换次数还是等于`circle_size-1`...所以两种方法应该是**等价的**
+
 ```CPP
 // 交换代码: 不匹配则交换, 使数组有序
 for(int i=0; i<layer.size(); ){
@@ -102,7 +107,7 @@ for(map<int, int>::iterator it=mp.begin(); it!=mp.end(); it++){
 }
 ```
 
-> **完整实现**
+> **直接交换(模拟交换过程)的完整实现**
 ```CPP
 int layerOrder(TreeNode* root){
     int ans = 0;
@@ -147,5 +152,67 @@ int layerOrder(TreeNode* root){
 }
 int minimumOperations(TreeNode* root) {
     return layerOrder(root);
+}
+```
+
+###### 置换环 - 并查集记录环的大小
+> ![置换环](/appendix/%E7%BD%AE%E6%8D%A2%E7%8E%AF.jpg)
+> 
+> 使用`并查集`求得每个集合的`cnt`, `cnt-1`即为本集合中所需的交换次数
+> 
+> todo吧 摆烂
+
+
+##### 4. [不重叠回文子字符串的最大数目](https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings/)
+
+###### **Step 1**: 构建回文子串 - `递归`, `dp`
+```CPP
+vector<vector<bool> > isHW(n+1, vector<bool>(n+1, false));
+for(int len=1; len<=n; len++){
+    for(int i=1; i+len-1<=n; i++){
+        int j = i + len - 1;
+        if(len == 1)
+            isHW[i][j] = true;
+        else if(s[i-1]==s[j-1] && (len==2 || isHW[i+1][j-1]))
+            isHW[i][j] = true;
+    }
+}
+```
+###### **Step 2**: `dp`求不重叠回文子串的最大数目
+```CPP
+vector<int> dp(n+1);
+for(int i=1; i<=n; i++){
+    dp[i] = dp[i-1];
+    for(int j=i-k; j>0; j--){
+        if(isHW[j+1][i])
+            dp[i] = max(dp[i], dp[j] + 1);
+    }
+}
+return dp[n];
+```
+
+###### 完整实现
+```CPP
+int maxPalindromes(string s, int k) {
+    int n = s.size();
+    vector<vector<bool> > isHW(n+1, vector<bool>(n+1, false));
+    for(int len=1; len<=n; len++){
+        for(int i=1; i+len-1<=n; i++){
+            int j = i + len - 1;
+            if(len == 1)
+                isHW[i][j] = true;
+            else if(s[i-1]==s[j-1] && (len==2 || isHW[i+1][j-1]))
+                isHW[i][j] = true;
+        }
+    }
+    vector<int> dp(n+1, 0);
+    for(int i=1; i<=n; i++){
+        dp[i] = dp[i-1];
+        for(int j=i-k; j>=0; j--){
+            if(isHW[j+1][i]==true)
+                dp[i] = max(dp[i], dp[j] + 1);
+        }
+    }
+    return dp[n];
 }
 ```
