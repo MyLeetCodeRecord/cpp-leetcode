@@ -1,114 +1,145 @@
-#### Weekly 1
-##### 1. [可被3整出的偶数的平均值](https://leetcode.cn/problems/average-value-of-even-numbers-that-are-divisible-by-three/): `math`
+#### Weekly 1 - No.316
 
-> 思路: `能被3整除的偶数` <-> `能被6整除`
+##### 1. [对数组执行操作](https://leetcode.cn/problems/apply-operations-to-an-array/): `模拟` + `双指针`
+
+> 第一步`模拟`, 修改数组值; 第二步将非0元素移动到前面, 0放到末尾
 > 
-> 注意事项
-> - 分母`cnt`可能为0
-> - 向下取整
-
+> 移动过程:
+> - 新开一个数组空间很简单
+> - 不创建额外空间就用`双指针`, 和新建空间的双指针写法其实是一样的...
 ```CPP
-int averageValue(vector<int>& nums) {
-    int ans = 0;
-    int cnt = 0;
-    for(int n: nums){
-        if(n % 6==0){
-            ans += n;
-            cnt++;
+vector<int> applyOperations(vector<int>& nums) {
+    for(int i=0; i<nums.size()-1; i++){
+        if(nums[i] == nums[i+1]){
+            nums[i] += nums[i+1];
+            nums[i+1] = 0;
         }
     }
-    if(cnt == 0)
-        return 0;
-    return floor(ans/cnt);
+    int i = 0, j = 0;
+    while(j<nums.size()){
+        if(nums[j]==0)
+            j++;
+        else
+            nums[i++] = nums[j++];
+    }
+    while(i<nums.size())
+        nums[i++] = 0;
+    return nums;
 }
 ```
 
-##### 2. [最流行的视频创作者](https://leetcode.cn/problems/most-popular-video-creator/): `map`
-> 写着写着就乱了...先整理好思路, 想清楚每个`map`要记录什么
+
+##### 2. [长度为K子数组中的最大和](https://leetcode.cn/problems/maximum-sum-of-distinct-subarrays-with-length-k/): `固定尺寸的滑动窗口` + `map`
+
+> 首先`len`和`K`都是`10e5`, "每次滑动窗口后重新统计窗口内是否有重复元素"的暴力做法肯定不可以
+> 
+> 窗口每移动一位, 变化的只有窗口左右两个元素, 左出右进, 这样就可以忽略统计窗口内`K`个元素出现频次的重复性工作了
+> 
+> ![LC6230](/appendix/LC6230.png)
+> 
+> `Tips`: 在python里可以直接用`for _in, _out in zip(nums[k-1:], nums)`维护**左出右进**的对应关系
+
+> 实现思路:
+> - **Step 0**: 用`map`记录每个元素出现频次, 并用`sum`维护窗口内的和, `cnt`记录窗口内频次=1的元素个数(也可以用`mp.erase()`和`mp.size()`取代`cnt`)
+> 
+> - **Step 1**: 先加进`K`个元素, 作为起点
+>   - 记录`mp[nums[i]]`, 并统计互不相同元素`cnt`
+> 
+> - **Step 2**: 滑动窗口(更新`mp`, `cnt`, `sum`)
+>   - 左边`mp[nums[l]]--; sum-=nums[l];`, 如果`mp[nums[l]]==0`, `cnt--`
+>   - 右边`mp[nums[r]]++; sum+=nums[r];`, 如果`mp[nums[r]]==1`, `cnt++`
 
 ```CPP
-vector<vector<string>> mostPopularCreator(vector<string>& creators, vector<string>& ids, vector<int>& views) {
-    int n = creators.size();
-    unordered_map<string, long long> creators_mp;
-    unordered_map<string, int> videos_mp;    // 上个方案里把第二个int字段, 保存成pair<string,int>, 但通过idx就可以索引到views和ids
-    // Step 1: creators_mp - 记录每个Creator的累积播放量, videos_mp - 记录每个Creator的最大播放量的作品idx
-    for(int i=0; i<n; i++){
-        creators_mp[creators[i]] += views[i];
-        if(videos_mp.find(creators[i]) == videos_mp.end()){
-            videos_mp[creators[i]] = i;
+long long maximumSubarraySum(vector<int>& nums, int k) {
+    unordered_map<int, int> mp;
+    long long ans = 0;
+    long long sum = 0;
+    for(int i=0; i<k; i++){
+        mp[nums[i]]++;
+        sum += nums[i];
+    }
+    if(mp.size()==k)
+        ans = max(ans, sum);
+    for(int l=0; l+k<nums.size(); l++){
+        int r = l+k;
+        sum -= nums[l];
+        mp[nums[l]]--;
+        if(mp[nums[l]]==0){
+            mp.erase(nums[l]);
+        }
+        sum += nums[r];
+        mp[nums[r]]++;
+        if(mp.size() == k)
+            ans = max(ans, sum);
+    }
+    return ans;
+}
+```
+
+
+##### 3. [雇佣 K 位工人的总代价](https://leetcode.cn/problems/total-cost-to-hire-k-workers/)
+
+> 需要的操作
+> - **长期、动态维护最小值**
+> - 去掉最小值
+> - 加入新元素
+> 
+> ➡️ `堆(priority_queue)`
+> 
+> ❗️维护堆的时候要注意, 有些元素已经使用过了, 要保证两个`priority_queue`中始终有`candidates`个`unused`元素, 并且要注意不要`out of index`
+> 
+> 如果两个堆中最小值相等, 题目要求取`id`更小的, 其实就是优先选择`heap1`中的元素
+
+```CPP
+typedef pair<int, int> PII;
+long long totalCost(vector<int>& costs, int k, int candidates) {
+    int n = costs.size();
+    long long ans = 0;
+    vector<bool> chosen(n, false);
+    priority_queue<PII, vector<PII>, greater<PII>> heap1;
+    priority_queue<PII, vector<PII>, greater<PII>> heap2;
+    int left = 0;
+    int right = n-1;
+    // 初始化两个heap
+    for(int i=0; i<candidates; i++){
+        heap1.push({costs[i], i});
+        left++;
+        heap2.push({costs[costs.size()-1-i], costs.size()-1-i});
+        right--;
+    }
+    // 雇佣 k 个工人
+    while(k > 0){
+        k--;
+        int popped = -1;
+        // 如果heap1的top更小, 或者两个堆顶元素相同, 优先弹出heap1
+        if(!heap1.empty() && heap1.top().first <= heap2.top().first){
+            ans += costs[heap1.top().second];
+            popped = heap1.top().second;
+            heap1.pop();
         }
         else{
-            int t = videos_mp[creators[i]];
-            // 更新作者creators[i]最受欢迎的作品
-            // 规则1: 播放量更大; 规则2: id字典序更小
-            if((views[i] > views[t]) || (views[i]==views[t] && ids[i]<ids[t]))
-                videos_mp[creators[i]] = i;
+            ans += costs[heap2.top().second];
+            popped = heap2.top().second;
+            heap2.pop();
         }
-    }
-    // Step 2: 记录最大的作者累积播放量
-    long long maxClick = -1;      // 有些case可能播放量为0
-    for(unordered_map<string, long long>::iterator it=creators_mp.begin(); it!=creators_mp.end(); it++){
-        maxClick = max(maxClick, it->second);
-    }
-    // Step 3: 等于maxClick的作者, 将ta的作品信息保存到ans, 这里用idx去索引作品ID
-    vector<vector<string>> ans;
-    for(unordered_map<string, long long>::iterator it=creators_mp.begin(); it!=creators_mp.end(); it++){
-        if(it->second == maxClick){
-            ans.push_back({it->first, ids[videos_mp[it->first]]});
+        // 标记这个员工被选中过
+        chosen[popped] = true;
+        // 额外处理heap1.top() == heap2.top()相等
+        if(popped == heap2.top().second){
+            heap2.pop();
+        }
+        // 维护两个heap的size==candidates, 直到到超过边界
+        while(left < n && heap1.size() < candidates){
+            if(left < n && !chosen[left])
+                heap1.push({costs[left], left});
+            left++;
+        }
+        while(right >= 0 && heap2.size() < candidates){
+            if(right >= 0 && !chosen[right])
+                heap2.push({costs[right], right});
+            right--;
         }
     }
     return ans;
-}
-```
-
-##### 3. [美丽整数的最小增量](https://leetcode.cn/problems/minimum-addition-to-make-integer-beautiful/)
-> 先观察case
-> 
-> - `16, 6  => 20`
-> - `467, 6 => 470 => 500`
-> - `8, 2 => 10`
-> 
-> 发现`+1`就是使
-> - 每个位置增大(这不是我们的目的)
-> - or 进位(当前bit置0, 下一位+1), 所以这就是`一步`操作
-> 
-> 基本思路: 不断`进位`(有意义的+1), 就可能使数位和`sum`变小
-> 
-> 比如`467 -> 470 -> 500 -> 1000`
-
-```CPP
-int getBitSum(long long n){
-    int ans = 0;
-    while(n!=0){
-        ans += n%10;
-        n /= 10;
-    }
-    return ans;
-}
-vector<int> getBits(long long n){
-    vector<int> bits;
-    while(n!=0){
-        bits.push_back(n%10);
-        n /= 10;
-    }
-    bits.resize(13);                // 因为可能涉及最高位进位, 如果没有resize会超过vector索引范围
-    return bits;
-}
-long long makeIntegerBeautiful(long long n, int target) {
-    long long n_origin = n;
-    int sum = getBitSum(n);
-    vector<int> bits = getBits(n);  // 记录每一位, 进位也要记录下来!
-    if(sum <= target)
-        return 0;
-    int idx = 0;
-    long long base = 1;             // 注意用long long
-    while(sum > target){
-        sum = sum - bits[idx] + 1;
-        n += (base * (10-bits[idx]));   // 进位后的值, 或者最后用更新后的bits来求新的n
-        bits[idx+1] += 1;           // 将进位也记录到bits上
-        idx++;
-        base *= 10;
-    }
-    return n - n_origin;
 }
 ```
