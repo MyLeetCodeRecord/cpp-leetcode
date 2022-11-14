@@ -11,7 +11,7 @@
 > **复杂度**: 假设有m个集合, 则一共有`2^m-1`个项 (对应`2^m-1`种选法)
 
 
-##### [Acwing980. 能被整除的数🧡](/acwing/Section%204/3_%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86_%E8%83%BD%E8%A2%AB%E6%95%B4%E9%99%A4%E7%9A%84%E6%95%B0.cpp)
+##### [Acwing980. 能被整除的数](/acwing/Section%204/3_%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86_%E8%83%BD%E8%A2%AB%E6%95%B4%E9%99%A4%E7%9A%84%E6%95%B0.cpp)
 
 ```CPP
 #include <cstdio>
@@ -29,28 +29,28 @@ int main(){
     }
     // 容斥原理
     long long ans = 0;
+    // 用二进制表示集合性质(第j位为1表示能整除primes[j], 为0表示不能整除primes[j])
     for(int i=1; i<(1<<m); i++){
-        int cnt = 0;        // 二进制状态 i 中 1 的个数
+        int cnt = 0;        // 二进制状态 i 中 1 的个数, 公式一项为cnt个集合的交集
         long long t = 1;    // 乘积 = 容斥原理中的交集
         for(int j=0; j<m; j++){
             if(i >> j & 1){
                 cnt++;
                 t *= prime[j];
-                if(t > n){  // 大于n的数不能被n整除
+                if(t > n){  // 大于n的数不能被n整除, 退出即可
                     t = -1;
                     break;
                 }
             }
         }
-        if(t == -1){
+        // 状态i下, 如果取交集的个数cnt为奇数, 则系数为+; cnt为偶数, 则系数为-
+        // |某cnt个集合的交集| = n / 乘积t
+        if(t == -1)
             continue;
-        }
-        else if(cnt & 1){
+        else if(cnt & 1)
             ans += n/t;
-        }
-        else{
+        else
             ans -= n/t;
-        }
     }
     cout<<ans<<endl;
     return 0;
@@ -58,7 +58,7 @@ int main(){
 ```
 
 
-##### [LC223. 矩形面积💚](/workspace/223.%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF.cpp)
+##### [LC223. 矩形面积](/workspace/223.%E7%9F%A9%E5%BD%A2%E9%9D%A2%E7%A7%AF.cpp)
 
 > 如果正向很难判断, 就做反向判断(无重叠情况)
 > 
@@ -71,7 +71,7 @@ int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, i
     int area1 = (ax2-ax1) * (ay2-ay1);
     int area2 = (bx2-bx1) * (by2-by1);
     // 无重叠更好判断
-    if(ay1>=by2 || by1>= ay2 || ax2<=bx1 || bx2<=ax1){
+    if(ay1>=by2 || by1>=ay2 || ax2<=bx1 || bx2<=ax1){
         return area1 + area2;
     }
     else{
@@ -81,7 +81,7 @@ int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, i
 }
 ```
 
-##### [Acwing873. 欧拉函数🧡](/acwing/Section%204/3_%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0.cpp)
+##### [Acwing873. 欧拉函数](/acwing/Section%204/3_%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0.cpp)
 
 > ![欧拉函数](/appendix/acwing-%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0.png)
 > 
@@ -102,7 +102,7 @@ int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, i
 #include <iostream>
 using namespace std;
 
-/* 欧拉函数: 用公式做*/
+/* 欧拉函数: 用公式做, 但是推导需要容斥原理 */
 int main(){
     int n;
     scanf("%d", &n);

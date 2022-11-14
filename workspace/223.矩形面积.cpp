@@ -11,7 +11,7 @@ public:
         int area1 = (ax2-ax1) * (ay2-ay1);
         int area2 = (bx2-bx1) * (by2-by1);
         // 无重叠更好判断
-        if(ay1>=by2 || by1>= ay2 || ax2<=bx1 || bx2<=ax1){
+        if(ay1>=by2 || by1>=ay2 || ax2<=bx1 || bx2<=ax1){
             return area1 + area2;
         }
         else{
