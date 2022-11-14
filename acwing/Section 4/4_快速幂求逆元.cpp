@@ -4,7 +4,7 @@ using namespace std;
 
 /* 费马小定理...
  * 也没听懂反正就是 a·a^(p-2) = 1 mod P
- * 答案是 a^(p-2), 复习一下快速幂
+ * 答案是 a^(p-2) % p, 复习一下快速幂
  */
 
 int quickPow(int a, int n, int mod){
@@ -24,11 +24,10 @@ int main(){
     for(int i=0; i<n; i++){
         int a, p;
         scanf("%d %d", &a, &p);
-        int a_reverse = quickPow(a, p-2, p);
-        if(a % p == 0)
-            printf("impossible\n");
+        if(a % p != 0)
+            cout<<quickPow(a, p-2, p)<<endl;
         else
-            printf("%d\n", a_reverse);
+            cout<<"impossible"<<endl;
     }
     return 0;
 }

@@ -11,20 +11,32 @@
 >
 > 递归(状态转移)公式: `C(a, b) = C(a-1, b-1) + C(a-1, b)`
 
-##### [Acwing886. 求组合数II](/acwing/Section%204/)
+
+##### [Acwing886. 求组合数II](/acwing/Section%204/5_%E6%B1%82%E7%BB%84%E5%90%88%E6%95%B0II.cpp)
 
 > `a`和`b`的数据范围是`0<=b<=a<100000`, 直接状态转移会超时, 需要进行**预处理**
 > 
 > `C(a, b) = (a!) / [(a-b)! * (b!)]`
 > 
-> `(a-b)!`和`b!`可以用**逆元**(费马小定理, $a^{-2}$)
+> **预处理**: 首先要提前计算好`a!`, `(a-b)!`, `b!`
+> 
+> 分母中的阶乘`(a-b)!`和`b!`可以用**逆元**(费马小定理, $a^{-2}$)表示
+> 
+> 要用到[快速幂求逆元](/acwing/Section%204/Acwing%20-%20%E5%BF%AB%E9%80%9F%E5%B9%82.md), 即`infact(a) = quickPow(a, p-2, p)`
+
+```CPP
+for(int i=1; i<N; i++){
+    fact[i] = (long long)fact[i-1] * i % MOD;
+    infact[i] = (long long)infact[i-1] * quickPow(i, MOD-2, MOD) % MOD;
+}
+```
 
 ```CPP
 #include <cstdio>
 #include <iostream>
 using namespace std;
 
-const int N = 1000010;
+const int N = 100010;
 const int MOD = 1000000007;
 int fact[N], infact[N];
 

@@ -277,8 +277,36 @@ int quickPow(int a, int n, int mod){
 }
 ```
 
-##### 11. 能被整除的数 - 容斥原理
+##### 11. 快速幂求逆元 - `quickPow(a, p-2, p)`
+```CPP
+int quickPow(int a, int n, int mod){
+    long long ans = 1;
+    while(n != 0){
+        if(n & 1){
+            ans = ans * a % mod;
+        }
+        a = (long long)a * a % mod;
+        n >>= 1;
+    }
+    return ans;
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        int a, p;
+        scanf("%d %d", &a, &p);
+        // 互质才有乘法逆元
+        if(a % p != 0)
+            cout<<quickPow(a, p-2, p)<<endl;
+        else
+            cout<<"impossible"<<endl;
+    }
+    return 0;
+}
+```
 
+##### 12. 能被整除的数 - 容斥原理
 ```CPP
 #include <cstdio>
 #include <iostream>
@@ -293,11 +321,12 @@ int main(){
     for(int i=0; i<m; i++){
         scanf("%d", &prime[i]);
     }
+    // 容斥原理
     long long ans = 0;
-    // 1<<m = 10...0(m个0), 所以不取等号
-    for(int i=0; i<(1<<m); i++){
-        int cnt = 0;
-        long long t = 1;
+    // 用二进制表示集合性质(第j位为1表示能整除primes[j], 为0表示不能整除primes[j])
+    for(int i=1; i<(1<<m); i++){
+        int cnt = 0;        // 二进制状态 i 中 1 的个数
+        long long t = 1;    // 乘积 = 容斥原理中的交集
         for(int j=0; j<m; j++){
             if(i >> j & 1){
                 cnt++;
@@ -308,15 +337,90 @@ int main(){
                 }
             }
         }
-        // 统计个数
-        if(t==-1)
+        if(t == -1){
             continue;
-        else if(cnt & 1)
+        }
+        else if(cnt & 1){
             ans += n/t;
-        else
+        }
+        else{
             ans -= n/t;
+        }
     }
     cout<<ans<<endl;
+    return 0;
+}
+```
+
+##### 13. 组合数I
+```CPP
+#include <cstdio>
+#include <iostream>
+using namespace std;
+
+const int N = 2010;
+int dp[N][N];
+
+void calcCombination(){
+    for(int i=0; i<N; i++){
+        dp[i][0] = 1;
+        for(int j=1; j<=i; j++){
+            dp[i][j] = dp[i-1][j] + dp[i-1][j-1];
+            dp[i][j] %= 1000000007;
+        }
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    calcCombination();
+    for(int i=0; i<n; i++){
+        int a, b;
+        scanf("%d %d", &a, &b);
+        cout<<dp[a][b]<<endl;
+    }
+    return 0;
+}
+```
+
+##### 14. 组合数II - `C(a,b)=a!` + 乘法逆元
+```CPP
+#include <cstdio>
+#include <iostream>
+using namespace std;
+
+const int N = 100010;
+const int MOD = 1000000007;
+int fact[N], infact[N];
+
+int quickPow(int a, int n, int mod){
+    long long ans = 1;
+    while(n!=0){
+        if(n & 1)
+            ans = ans * a % mod;
+        a = (long long)a * a % mod;
+        n >>= 1;
+    }
+    return ans;
+}
+void prepareFact(){
+    fact[0] = 1;
+    infact[0] = 1;
+    for(int i=1; i<N; i++){
+        fact[i] = (long long)fact[i-1] * i % MOD;
+        infact[i] = (long long)infact[i-1] * quickPow(i, MOD-2, MOD) % MOD;
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    prepareFact();
+    for(int i=0; i<n; i++){
+        int a, b;
+        scanf("%d %d", &a, &b);
+        long long ans = (long long)fact[a] * infact[b] % MOD * infact[a-b] % MOD;
+        cout<<ans<<endl;
+    }
     return 0;
 }
 ```
