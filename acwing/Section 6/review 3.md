@@ -163,3 +163,88 @@ int main(){
     return 0;
 }
 ```
+
+##### 5. 排队打水
+
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+const int N = 100010;
+int times[N];
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        scanf("%d", &times[i]);
+    }
+    sort(times, times+n);
+    long long ans = 0;
+    for(int i=0; i<n; i++){
+        ans += (n-i-1) * times[i];
+    }
+    cout<<ans<<endl;
+    return 0;
+}
+```
+
+##### 6. 货仓选址 - 中位数贪心
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+const int N = 100010;
+int stores[N];
+int main(){
+    for(int i=0; i<n; i++){
+        scanf("%d", &stores[i]);
+    }
+    sort(stores, stores+n);
+    long long ans = 0;
+    int base = stores[n/2];
+    for(int i=0; i<n; i++){
+        ans += abs(stores[i]-base);
+    }
+    cout<<ans<<endl;
+    return 0;
+}
+```
+
+##### 7. 耍杂技的牛
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+#include <limits.h>
+using namespace std;
+
+typedef pair<int,int> PII;
+
+const int N = 50010;
+PII cows[N];
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        int w, s;
+        scanf("%d %d", &w, &s);
+        cows[i] = {w+s, w};
+    }
+    sort(cows, cows+n);
+    int ans = INT_MIN;    // 最大危险值
+    int sumWeight = 0;
+    for(int i=0; i<n; i++){
+        int w = cows[i].second;
+        int s = cows[i].first - w;
+        ans = max(ans, sumWeight-s);
+        sumWeight += cows[i].second;
+    }
+    cout<<ans<<endl;
+    return 0;
+}
+```
