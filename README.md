@@ -7,8 +7,8 @@
 |KEYWORD|   |`双指针`|`math`|`枚举` `substr`<br/>枚举的一种思路->重复key|`math`|`stack`<br/>`表达式`|`string`|`双指针`<br/>`固定尺寸滑动窗口`<br/>`heap`|
 |TOPIC  |[816. 模糊坐标🧡](/workspace/816.%E6%A8%A1%E7%B3%8A%E5%9D%90%E6%A0%87.cpp)<br/>[📌LC79. 矩阵中的路径🧡](/markdown/LC79.%20%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2.md)|[~~1684. 统计一致字符串的数目💚~~](https://leetcode.cn/problems/count-the-number-of-consistent-strings/)<br/>[50. Pow(x,n)🧡](/workspace/50.pow-x-n.cpp)|[📌764. 最大加号标志🧡](/workspace/764.%E6%9C%80%E5%A4%A7%E5%8A%A0%E5%8F%B7%E6%A0%87%E5%BF%97.cpp)|💔cv<br/>[946. 验证栈序列🧡](/workspace/946.%E9%AA%8C%E8%AF%81%E6%A0%88%E5%BA%8F%E5%88%97.cpp)|[~~1704. 判断字符串的两半是否相似💚~~](https://leetcode.cn/problems/determine-if-string-halves-are-alike/)|[📌790. 多米诺和托米诺平铺🧡](/workspace/790.%E5%A4%9A%E7%B1%B3%E8%AF%BA%E5%92%8C%E6%89%98%E7%B1%B3%E8%AF%BA%E5%B9%B3%E9%93%BA.cpp)<br/>[113. 路径总和III🧡](/workspace/113.%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C-ii.cpp)<br/>[Offer33. 二叉搜索树的后序遍历序列🧡](/workspace/Offer%2033.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97.cpp)|[791. 自定义字符串排序🧡](/workspace/791.%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F.cpp)[🍬**双周赛1**](/record/Nov-Biweek-1.md)<br/>[🍬**周赛2**](/record/Nov-Weekly-2.md)|
 |KEYWORD|`string` `枚举`<br/>`回溯法`|`math`|`dp` `matrix`|`stack`|`string`|`dp`<br/>`回溯法`<br/>`递归`|`sort`<br/>`最大公倍数`<br/>`BFS`+`置换环`<br/>`dp`|
-|TOPIC  |cv💔|[1710. 卡车上的最大单元数💚](/workspace/1710.%E5%8D%A1%E8%BD%A6%E4%B8%8A%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8D%95%E5%85%83%E6%95%B0.cpp)|[775. 全局倒置与局部倒置🧡](/workspace/775.%E5%85%A8%E5%B1%80%E5%80%92%E7%BD%AE%E4%B8%8E%E5%B1%80%E9%83%A8%E5%80%92%E7%BD%AE.cpp)|
-|KEYWORD|   |`贪心`|`前缀最大值`|
+|TOPIC  |cv💔|[1710. 卡车上的最大单元数💚](/workspace/1710.%E5%8D%A1%E8%BD%A6%E4%B8%8A%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8D%95%E5%85%83%E6%95%B0.cpp)|[775. 全局倒置与局部倒置🧡](/workspace/775.%E5%85%A8%E5%B1%80%E5%80%92%E7%BD%AE%E4%B8%8E%E5%B1%80%E9%83%A8%E5%80%92%E7%BD%AE.cpp)|[792. 匹配子序列的单词数🧡](/workspace/792.%E5%8C%B9%E9%85%8D%E5%AD%90%E5%BA%8F%E5%88%97%E7%9A%84%E5%8D%95%E8%AF%8D%E6%95%B0.cpp)|
+|KEYWORD|   |`贪心`|`前缀最大值`|`字符串匹配` `分桶` `二分`|
 
 
 > ⭐ start index
@@ -30,7 +30,7 @@
 |NOTE   |复习[区间](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|   |复习[math](/acwing/Section%204/review%201.md)|[review 1](/acwing/Section%204/review%201.md)<br/>todo: 复习[多重背包的二进制优化](/acwing/Section%204/1_%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85_%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BC%98%E5%8C%96.cpp)|  |[review 2](/acwing/Section%204/review%202.md)|
 |TOPIC  |   |[高精度](/acwing/Section%201/acwing%20-%20%E9%AB%98%E7%B2%BE%E5%BA%A6.md)|[两两合并专题](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%B8%A4%E4%B8%A4%E5%90%88%E5%B9%B6.md)|
 |KEYWORD|   |`高精度`<br/>`math`|`Huffman`<br/>`dp` `前缀和`|
-|NOTE   |[review 3](/acwing/Section%204/review%203.md)|   |[复习贪心](/acwing/Section%206/review%203.md)|[复习排序](/acwing/Section%201/review%206.md)|
+|NOTE   |[review 3](/acwing/Section%204/review%203.md)|   |[复习贪心](/acwing/Section%206/review%203.md)|[复习Section1](/acwing/Section%201/review%206.md)|
 
 > ⭐ start index : 11/1
 > 
