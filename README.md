@@ -29,8 +29,8 @@
 |KEYWORD|`贪心`<br/>`Huffman`<br/>`中位数贪心`|`math`<br/>`质数`<br/>`约数`|`math`<br/>`质数`<br/>`约数`|`容斥原理`|`快速幂`|`组合数`<br/>`dp`|
 |NOTE   |复习[区间](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8C%BA%E9%97%B4.md)|   |复习[math](/acwing/Section%204/review%201.md)|[review 1](/acwing/Section%204/review%201.md)<br/>todo: 复习[多重背包的二进制优化](/acwing/Section%204/1_%E5%A4%9A%E9%87%8D%E8%83%8C%E5%8C%85_%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BC%98%E5%8C%96.cpp)|  |[review 2](/acwing/Section%204/review%202.md)|
 |TOPIC  |   |[高精度](/acwing/Section%201/acwing%20-%20%E9%AB%98%E7%B2%BE%E5%BA%A6.md)|[两两合并专题](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%B8%A4%E4%B8%A4%E5%90%88%E5%B9%B6.md)|
-|KEYWORD|   |`高精度`<br/>`math`|`Huffman`<br/>`dp` `前缀和`|
-|NOTE   |[review 3](/acwing/Section%204/review%203.md)|   |[复习贪心](/acwing/Section%206/review%203.md)|[复习Section1](/acwing/Section%201/review%206.md)|
+|KEYWORD|   |`高精度`<br/>`math`|`Huffman`<br/>`dp` `前缀和`|   |📅|   |
+|NOTE   |[review 3](/acwing/Section%204/review%203.md)|   |[复习贪心](/acwing/Section%206/review%203.md)|[复习S1](/acwing/Section%201/review%206.md)|   |继续[复习S1](/acwing/Section%201/review%207.md)|   |
 
 > ⭐ start index : 11/1
 > 

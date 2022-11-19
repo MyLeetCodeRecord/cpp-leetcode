@@ -637,3 +637,48 @@ int main(){
     return 0;
 }
 ```
+
+##### 19. 区间合并
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+typedef pair<int, int> PII;
+
+vector<PII> intervals;
+
+vector<PII> intervalMerge(vector<PII> &intervals){
+    vector<PII> ans;
+    PII curInterval = intervals[0];
+    for(int i=1; i<intervals.size(); i++){
+        if(intervals[i].first > curInterval.second){
+            ans.push_back(curInterval);
+            curInterval = intervals[i];
+        }
+        else{
+            // 注意这里是更新为更大值, 而不是无脑更新成intervals[i].second
+            curInterval.second = max(curInterval.second, intervals[i].second);
+        }
+    }
+    ans.push_back(curInterval);
+    return ans;
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        int st, ed;
+        scanf("%d %d", &st, &ed);
+        intervals.push_back({st, ed});
+    }
+    // 按开始时间排序
+    sort(intervals.begin(), intervals.end());
+    vector<PII> ans = intervalMerge(intervals);
+    cout<<ans.size()<<endl; 
+    return 0;
+}
+```
+
