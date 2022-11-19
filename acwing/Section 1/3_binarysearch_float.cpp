@@ -2,14 +2,12 @@
 #include <iostream>
 using namespace std;
 
-double n;
-
 // 二分法模板の浮点数二分, 唯一需要改变的是check()函数
-double binary_search(double n, double l, double r){
+double binary_search(double target, double l, double r){
     while(r-l > 1e-8){  // 多取几位
         double mid = (l+r)/2;
         // 体会一下"纯搜索", 不用+1 or +1e(-x)处理边界
-        if(mid*mid*mid >= n)
+        if(mid*mid*mid >= target)
             r = mid;
         else
             l = mid;
@@ -21,7 +19,8 @@ double binary_search(double n, double l, double r){
 // 解决方法是初始化起始的r=max(1,n), 或者直接取数据边界(e.g. 10000)也可以
 // 求奇数方根时, 负数并不影响代码运行(不影响在二分数轴上左右的归属)
 int main(){
-    cin>>n;
+    double n;
+    scanf("%lf", &n);
     printf("%lf\n", binary_search(n, -10000.0, 10000.0));
     return 0;
 }

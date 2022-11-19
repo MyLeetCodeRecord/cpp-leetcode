@@ -6,6 +6,7 @@ const int N = 100010;
 int n, m;
 int a[N], prefixSum[N];
 
+// 数组a[]可以省略
 int main(){
     scanf("%d %d", &n, &m);
     for(int i=0; i<n; i++){

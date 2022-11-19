@@ -1,4 +1,4 @@
-// 双指针做法
+// 双指针做法: 两个数组都是升序的, 可以保证两个指针向中间移动不漏掉任何可能答案  133ms
 #include <cstdio>
 #include <iostream>
 using namespace std;
@@ -24,7 +24,7 @@ int main(){
     return 0;
 }
 
-/* // map映射做法
+/* // map映射做法: 没有有效利用升序的特点  503ms
 #include <cstdio>
 #include <iostream>
 #include <unordered_map>
