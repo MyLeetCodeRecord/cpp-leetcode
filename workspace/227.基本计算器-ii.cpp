@@ -11,7 +11,7 @@ private:
     stack<char> symbolSk;
     unordered_map<char, int> priority{{'+',1},{'-',1},{'*',2},{'/',2}};
 public:
-    void eval(){
+    void calc_eval(){
         int b = numSk.top();  numSk.pop();
         int a = numSk.top();  numSk.pop();
         char op = symbolSk.top();  symbolSk.pop();
@@ -43,12 +43,12 @@ public:
             }
             else{
                 while(!symbolSk.empty() && priority[symbolSk.top()] >= priority[c])
-                    eval();
+                    calc_eval();
                 symbolSk.push(c);
             }
         }
         while(!symbolSk.empty())
-            eval();
+            calc_eval();
         return numSk.top();
     }
 };
