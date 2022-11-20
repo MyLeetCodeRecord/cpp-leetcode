@@ -47,11 +47,14 @@
 > 
 > 🎶&nbsp; [情非首尔](https://c.y.qq.com/base/fcgi-bin/u?__=hXqx6EE) &emsp; 像南北般分开...哈哈哈哈哈哈
 > 
+> 🎵&nbsp; [红绿灯](https://c.y.qq.com/base/fcgi-bin/u?__=EUOC3I) &emsp; 对面马路如此吸引
+> 
+> 🎶&nbsp; [有泪多好](https://c.y.qq.com/base/fcgi-bin/u?__=QgKLm43) &emsp; 原来我眼睛需要倾出泪
 
 <br/>
 
 #### HISTORY
-1`##### [LEETCODE DAILY 5️⃣](/record/2022-05.md)
+##### [LEETCODE DAILY 5️⃣](/record/2022-05.md)
 
 ##### [LEETCODE DAILY 6️⃣](/record/2022-06.md)
 
