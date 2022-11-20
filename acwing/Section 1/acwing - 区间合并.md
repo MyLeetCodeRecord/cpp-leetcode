@@ -26,21 +26,20 @@ bool cmp(pair<int,int> l, pair<int,int> r){
     return l.first < r.first;
 }
 vector<PII> intervalMerge(vector<PII> intervals){
-    sort(intervals.begin(), intervals.end(), cmp);  // 默认排序也可以
+    sort(intervals.begin(), intervals.end(), cmp);  // PII的默认排序就可以
     PII curInterval = intervals[0]; // curInterval当前维护区间, 也可以初始化为(-∞,-∞)
     for(int i=0; i<intervals.size(); i++){
         // 当前区间维护结束
         if(curInterval.second < intervals[i].first){
             ans.push_back(curInterval);
             curInterval = intervals[i];
-            continue;
         }
-        // 继续维护当前区间
+        // 继续维护当前区间, 注意这里是取最大值, 不是直接更新为新区间的right
         else{
             curInterval.second = max(curInterval.second, intervals[i].second);
         }
     }
-    // 最后一个区间
+    // 最后一个区间无法通过"与后续区间断开"而结束, 需要单独加入
     ans.push_back(curInterval);
     return ans;
 }
