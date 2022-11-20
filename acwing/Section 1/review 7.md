@@ -638,7 +638,78 @@ int main(){
 }
 ```
 
-##### 19. 区间合并
+##### 19. 区间和 - 离散化
+> 如果数轴范围比较小($10^{5}$), 使用前缀和即可
+> 
+> 当数轴无限长, 但操作个数(涉及的坐标数量)有限时, 可以用离散化
+
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+vector<int> alls;
+vector<PII> add, query;
+
+int a[N];
+int prefixSum[N];
+
+int find(int x){
+    int l = 0;
+    int r = alls.size()-1;
+    while(l < r){
+        int mid = (l+r)/2;
+        if(alls[mid] < x)
+            l = mid+1;
+        else
+            r = mid;
+    }
+    return l;
+}
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++){
+        int x, c;
+        scanf("%d %d", &x, &c);
+        alls.push_back(x);
+        add.push_back({x, c});
+    }
+    for(int i=0; i<m; i++){
+        int l, r;
+        scanf("%d %d", &l, &r);
+        alls.push_back(l);
+        alls.push_back(r);
+        query.push_back({l, r});
+    }
+    sort(alls.begin(), alls.end());
+    alls.erase(unique(alls.begin(), alls.end()), alls.end());
+    // 构建离散化数组a[], 为了方便计算前缀和, 从下标1开始存
+    for(auto pii: add){
+        int x = find(pii.first)+1;
+        a[x] += pii.second;
+    }
+    // 构建前缀和
+    for(int i=1; i<=alls.size(); i++){
+        prefixSum[i] = prefixSum[i-1] + a[i];
+    }
+    // 查询前缀和
+    for(auto op: query){
+        int i = find(op.first)+1;
+        int j = find(op.second)+1;
+        cout<<prefixSum[j] - prefixSum[i-1]<<endl;
+    }
+    return 0;
+}
+```
+
+##### 20. 区间合并
 ```CPP
 #include <cstdio>
 #include <iostream>
