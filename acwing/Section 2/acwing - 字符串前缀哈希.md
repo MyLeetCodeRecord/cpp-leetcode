@@ -1,10 +1,11 @@
 #### 字符串(前缀)哈希法
-> 题目: 
+
+> **题目**: 
 > 
 > [LC2430. 对字母串可执行的最大删除数](https://leetcode.cn/problems/maximum-deletions-on-a-string/): [Oct Weekly 1](/record/Oct-Weekly-1.md)第四题, (频繁)比较子串是否相等
 
 ```CPP
-str = "ABCABCDEFG"`
+str = "ABCABCDEFG"
 h[0] = 0
 h[1] = "A"的hash值
 h[2] = "AB"的hash值
@@ -17,7 +18,7 @@ h[3] = "ABC"的hash值
 > `"ABCD" = (1234)p = (1*p^3 + 2*p^2 + 3*p^1 + 4*p^0)`
 > 
 > - 字符串对应的**P进制数**可能很大, 因此要`mod Q`映射回较小范围 => 可能发生冲突(但字符串哈希中不处理冲突)
-> - 字母对应关系应该**从 1 开始**, 否则`A`, `AA`, `AAA`会重复映射到同一个数组
+> - 字母对应关系应该**从 1 开始**, 否则`A`, `AA`, `AAA`会重复映射到同一个数字
 
 [Acwing841. 字符串哈希](https://www.acwing.com/problem/content/843/)
 ```CPP
@@ -25,14 +26,14 @@ h[3] = "ABC"的hash值
 #include <iostream>
 using namespace std;
 
-typedef unsigned long long ULL;
+typedef unsigned long long ULL; // mod 2^64
 
 const int N = 100010 , P=131;
 char str[N];
 ULL h[N], p[N];
 
 ULL getHash(int l, int r){
-    return h[r] - h[l-1]*p[r-l+1];
+    return h[r] - h[l-1]*p[r-l+1];  // 因为左侧是高位, 所以将h[l]左移(r-l+1)位对齐
 }
 int main(){
     int n, m;
@@ -56,4 +57,4 @@ int main(){
 }
 ```
 
-> 目前还没做过应用题, 但是`字符串前缀哈希`相比`map`的优势应该是, 可以用差值求子串?
+> 还没做过应用题, 和`字符串前缀哈希`相比`map`的优势应该是, 可以用差值求子串?

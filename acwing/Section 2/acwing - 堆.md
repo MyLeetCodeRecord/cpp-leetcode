@@ -40,6 +40,7 @@ void heap_swap(int a, int b){
 
 **向下调整 Down**
 > 以小顶堆为例, 当前元素与`leftchild`和`rightchild`比较, 如果存在更小的, 与**最小的**交换, 即选择三个节点中最小的作为`father`
+
 ```CPP
 void down(int k){
     int smaller = k;
@@ -53,14 +54,26 @@ void down(int k){
     }
 }
 ```
+
 **向上调整 Up**
 > 如果当前节点比`father`更小, 则进行交换
+
 ```CPP
 void up(int k){
     if(k>1 && heap[k]<heap[k/2]){
         swap(heap[k], heap[k/2]);
         up(k/2);
     }
+}
+```
+
+##### 0. 初始化
+> 现将所有数字存入`heap[]`数组中, 然后对`n/2~1`的数组元素进行`down(i)`操作, 即可用`O(n)`的复杂度完成堆的初始化
+
+```CPP
+// 初始化
+for(int i=n/2; i>=1; i--){
+    down(i);
 }
 ```
 

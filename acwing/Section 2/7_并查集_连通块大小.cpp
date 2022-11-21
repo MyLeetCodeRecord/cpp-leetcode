@@ -5,6 +5,7 @@ using namespace std;
 const int N = 100010;
 int father[N];
 int sizeList[N];
+
 void init_ufs(int n){
     for(int i=1; i<=n; i++){
         father[i] = i;
