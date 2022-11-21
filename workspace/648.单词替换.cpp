@@ -28,7 +28,7 @@ public:
     string search(string word, TrieNode* trie){
         TrieNode* t = trie;
         for(char ch: word){
-            // 不存在词根直接返回
+            // 如果在miss之前没有找到词根, 则说明没有词根, 直接返回
             if(t->child[ch-'a']==NULL){
                 return word;
             }

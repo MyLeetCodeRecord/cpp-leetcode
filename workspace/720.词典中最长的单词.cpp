@@ -41,6 +41,7 @@ public:
     }
     string longestWord(vector<string>& words) {
         // 先排序, 满足题目字典序要求, 并且insert和search可以在一个循环内完成
+        // 先插入短的, 保证插入长的单词时, 它的前缀已经被加入了(如果有)
         sort(words.begin(), words.end());
         trie = new TrieNode();
         string ans = "";
