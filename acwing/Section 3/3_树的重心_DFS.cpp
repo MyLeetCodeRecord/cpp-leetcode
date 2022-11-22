@@ -38,6 +38,7 @@ int DFS(int u){
 int main(){
     memset(h, -1, sizeof h);    
     cin>>n;
+    // n个节点的树有n-1条边
     for(int i=0; i<n-1; i++){
         int a, b;
         scanf("%d %d", &a, &b);

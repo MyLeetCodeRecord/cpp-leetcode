@@ -12,6 +12,7 @@ using namespace std;
 int direction[4][2] = {{-1,0}, {0,-1}, {1,0}, {0,1}};
 
 int BFS(string start, string dest){
+    // map存储距离
     unordered_map<string, int> d;  // state -> dest
     d[start] = 0;
     
@@ -24,12 +25,13 @@ int BFS(string start, string dest){
         // 到达dest
         if(cur==dest)
             return d[cur];
-        // 映射回二维坐标(x,y)
+        // 映射回二维坐标(x, y)
         int k = cur.find('x');
         int x = k / 3;
         int y = k % 3;
         // 四个可能的下一步, 放入BFS的queue中
         for(int i=0; i<4; i++){
+            // X的下一个位置可以表示为 nextX*3 + nextY
             int nextX = x + direction[i][0];
             int nextY = y + direction[i][1];
             if(nextX>=0 && nextX<3 && nextY>=0 && nextY<3){
@@ -45,7 +47,6 @@ int BFS(string start, string dest){
     }
     return -1;
 }
-
 int main(){
     string start = "";
     string dest = "12345678x";

@@ -37,6 +37,7 @@ void TopoSeq(){
         for(int i=h[cur]; i!=-1; i=nxt[i]){
             int j = e[i];
             indegree[j]--;
+            // 度为0的点入队
             if(indegree[j] == 0){
                 q.push(j);
             }

@@ -127,3 +127,39 @@ int main(){
     return 0;
 }
 ```
+
+##### [LC878. 第n个神奇数字](/workspace/878.%E7%AC%AC-n-%E4%B8%AA%E7%A5%9E%E5%A5%87%E6%95%B0%E5%AD%97.cpp): `gcd`, `lcm`, `容斥原理`, `二分查找`
+
+> - 容斥原理求 x 范围内的神奇数个数
+> 
+>   - 能被 a 或 b 整除 = 被 a 整除 + 被 b 整除 - 既能被 a 又能被 b 整除
+> 
+>   - x 中被 a 整除的正整数 = x // a
+> 
+> -"第n个" --> `二分查找` (target不唯一, 左边界模板)
+
+```CPP
+typedef long long LL;
+
+int gcd(int a, int b){
+    if(a % b == 0)
+        return b;
+    return gcd(b, a % b);   // "%"而不是"-"
+}
+int nthMagicalNumber(int n, int a, int b) {
+    // [大上周周赛]最小公倍数 = a*b/gcd(a,b)
+    LL lcm_ab = a / gcd(max(a, b), min(a, b)) * b;
+    
+    LL l = min(a, b);
+    LL r = (LL) n * min(a, b);
+    while(l < r){
+        LL mid = (l+r)/2;
+        LL magic = mid/a + mid/b - mid/lcm_ab;  // 容斥原理
+        if (magic < n)
+            l = mid+1;
+        else
+            r = mid;
+    }
+    return l % 1000000007;
+}
+```
