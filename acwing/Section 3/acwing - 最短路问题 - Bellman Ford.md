@@ -14,9 +14,10 @@
 
 ##### (1) 算法原理
 > ![BF算法](/appendix/acwing-%E6%9C%80%E7%9F%AD%E8%B7%AF-BF%E7%AE%97%E6%B3%95.png)
+> 
 > 外层循环`n`次, 内层循环所有边`{a, b, w}`, 更新距离`dist[b] = min(dist[b], dist[a] + W_ab)`
 >
-> 显而易见, 算法复杂度为O(nm)
+> 显而易见, 算法复杂度为`O(nm)`
 > 
 > 对于存在**负权环路**的图, `BF算法`可能无法求得最短路径(**负权无环是可以的, 或者限制边的数量不超过K**)
 > 
@@ -26,7 +27,6 @@
 struct Edge{
     int a, b, w;
 };
-
 const int N = 510, M = 10010;
 Edge edges[M];
 int dist[N], backup[N];
@@ -34,7 +34,8 @@ int dist[N], backup[N];
 
 
 ##### (2) N次更新
-> 防止用当前轮次新更新的`dist[e.a]`更新`dist[e.b]`, 
+> 防止用当前轮次新更新的`dist[e.a]`更新`dist[e.b]`
+
 ```CPP
 for(int i=0; i<n; i++){
     memcpy(backup, dist, sizeof dist);
@@ -66,9 +67,11 @@ int n, m, k;
 void BellmanFord(){
     memset(dist, 0x3f, sizeof dist);
     dist[1] = 0;
-    // 边数限制
+    // 边数限制, K次循环
     for(int i=0; i<k;i++){
+        // 备份, 避免串联
         memcpy(backup, dist, sizeof dist);
+        // 遍历所有边
         for(int j=0; j<m; j++){
             auto e = edges[j];
             dist[e.b] = min(dist[e.b], backup[e.a]+e.w);
@@ -79,7 +82,6 @@ void BellmanFord(){
     else
         printf("%d", dist[n]);
 }
-
 int main(){
     scanf("%d %d %d", &n, &m, &k);
     for(int i=0; i<m; i++){

@@ -2,10 +2,10 @@
 #include <iostream>
 #include <cstring>
 #include <queue>
-#include <vector>
 using namespace std;
 
-typedef pair<int, int> PII; // {距离, 结点编号}, 从而令优先队列使用距离排序
+/* Dijkstra - 稀疏图 - 邻接表 */
+typedef pair<int, int> PII;  // {距离, 结点编号}, 从而令优先队列使用距离排序
 
 const int N = 150010;  // 稀疏图 => 邻接表
 int n, m;
@@ -21,9 +21,7 @@ void insert(int a, int b, int d){
 }
 int Dijkstra(){
     memset(dist, 0x3f, sizeof dist);    // memset: 将每个字节替换为某个数值
-    
     dist[1] = 0;
-    
     priority_queue<PII, vector<PII>, greater<PII> > pq;
     pq.push({0, 1});
     

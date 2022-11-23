@@ -1,6 +1,6 @@
 ### 最短路问题
 - 第一类: 单源最短路
-  - 所有边权都是正数
+  - 所有边权都是正数, **不能有负权边**
       - 朴素Dijkstra算法(稠密图)  `O(n^2)`
       - 堆优化Dijkstra算法(稀疏图)  `O(mlogn)`
   - 存在负权边
@@ -75,7 +75,7 @@ void Dijkstra(){
 }
 ```
 
-##### `朴素Dijkstra`-[Acwing849. Dijkstra求最短路](/acwing/)完整实现
+##### `朴素Dijkstra`-[Acwing849. Dijkstra求最短路](/acwing/Section%203/6_%E6%9C%B4%E7%B4%A0Dijkstra%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF.cpp)完整实现
 
 ```CPP
 #include <cstdio>
@@ -137,11 +137,66 @@ int main(){
 #### 2. 堆优化Dijkstra算法
 > 稀疏图 => 邻接表
 > 
-> 用`heap`/`priority_queue`可以用`O(logn)`找到当前最近的点
+> 用`heap`(`priority_queue`)优化"找到当前最近的点"这一步, 复杂度从`O(n)`变为`O(logn)`
 > 
 > 整体复杂度`O(mlogn)`
 
-##### `堆优化Dijkstra`-[]()
-```CPP
+##### `堆优化Dijkstra`-[Acwing850. Dijkstra求最短路II](/acwing/Section%203/6_%E5%A0%86%E4%BC%98%E5%8C%96Dijkstra%E6%B1%82%E6%9C%80%E7%9F%AD%E8%B7%AF.cpp)完整实现
 
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <cstring>
+#include <queue>
+using namespace std;
+
+typedef pair<int, int> PII;
+const int N = 150010;
+int h[N], e[N], w[N], nxt[N], idx=0;
+int d[N];
+bool st[N];
+int n, m;
+
+void insert(int a, int b, int d){
+    e[idx] = b;
+    nxt[idx] = h[a];
+    w[idx] = d;
+    h[a] = idx++;
+}
+int Dijkstra(){
+    priority_queue<PII, vector<PII>, greater<PII>> pq;  // 小顶堆, 维护当前最小dist[]及其编号
+    pq.push({0, 1});    // 1号节点, 距离是0, 编号是1
+
+    memset(d, 0x3f, sizeof d);
+    d[1] = 0;
+
+    while(!pq.empty()){
+        PII cur = pq.top();
+        pq.pop();
+        if(st[cur.second])
+            continue;
+        st[cur.second] = true;
+        for(int i=h[cur.second]; i!=-1; i=nxt[i]){
+            int j = e[i];
+            if(d[j] > cur.first + w[i]){
+                d[j] = cur.first + w[i];
+                pq.push({d[j], j});     // 并不是更新, 而是冗余存储
+            }
+        }
+    }
+    if(d[n] == 0x3f3f3f3f)
+        return -1;
+    return d[n];
+}
+int main(){
+    memset(h, -1, sizeof h);
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<m; i++){
+        int a, b, d;
+        scanf("%d %d %d", &a, &b, &d);
+        insert(a, b, d);
+    }
+    cout<<Dijkstra()<<endl;
+    return 0;
+}
 ```

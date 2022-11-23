@@ -3,7 +3,7 @@
 #include <cstring>
 using namespace std;
 
-/* Dijkstra 邻接矩阵 */
+/* Dijkstra - 稠密图 - 邻接矩阵 */
 const int INF = 1e6;
 const int N = 510;
 int n, m;
@@ -16,7 +16,7 @@ int Dijkstra(){
     dist[1] = 0;
     for(int i=0; i<n; i++){         // 迭代n次
         int t = -1;
-        for(int u=1; u<=n; u++){    // 找当前dist[][]最小
+        for(int u=1; u<=n; u++){    // 找当前dist[]最小
             if(!st[u] && (t==-1 || dist[u]<dist[t])){
                 t = u;
             }
