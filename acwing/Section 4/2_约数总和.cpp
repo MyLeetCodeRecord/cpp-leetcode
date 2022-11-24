@@ -7,7 +7,7 @@ long long getOneItem(int p, int a){
     int i = 0;
     long long ans = 1;
     while(i<a){
-        ans = p*ans + 1;
+        ans = p * ans + 1;
         ans %= 1000000007;
         i++;
     }

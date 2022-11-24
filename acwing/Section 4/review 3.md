@@ -236,7 +236,7 @@ int main(){
         for(int j=2; j<=x/j; j++){
             if(x % j == 0){
                 ans = ans / j * (j-1);
-                while(x % j == 0)
+                while(x % j == 0)   // 记录后除尽
                     x /= j;
             }
         }
@@ -328,6 +328,7 @@ int main(){
         int cnt = 0;        // 二进制状态 i 中 1 的个数
         long long t = 1;    // 乘积 = 容斥原理中的交集
         for(int j=0; j<m; j++){
+            // 如果第j位为1, 说明当前是prime[j]的倍数
             if(i >> j & 1){
                 cnt++;
                 t *= prime[j];
