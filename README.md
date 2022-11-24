@@ -9,8 +9,8 @@
 |KEYWORD|`string` `枚举`<br/>`回溯法`|`math`|`dp` `matrix`|`stack`|`string`|`dp`<br/>`回溯法`<br/>`递归`|`sort`<br/>`最大公倍数`<br/>`BFS`+`置换环`<br/>`dp`|
 |TOPIC  |cv卡💔|[1710. 卡车上的最大单元数💚](/workspace/1710.%E5%8D%A1%E8%BD%A6%E4%B8%8A%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8D%95%E5%85%83%E6%95%B0.cpp)|[775. 全局倒置与局部倒置🧡](/workspace/775.%E5%85%A8%E5%B1%80%E5%80%92%E7%BD%AE%E4%B8%8E%E5%B1%80%E9%83%A8%E5%80%92%E7%BD%AE.cpp)|[📌792. 匹配子序列的单词数🧡](/workspace/792.%E5%8C%B9%E9%85%8D%E5%AD%90%E5%BA%8F%E5%88%97%E7%9A%84%E5%8D%95%E8%AF%8D%E6%95%B0.cpp)|cv卡💔|~~[1732. 找到最高海拔💚](https://leetcode.cn/problems/find-the-highest-altitude/)~~|[📌799. 香槟塔🧡](/workspace/799.%E9%A6%99%E6%A7%9F%E5%A1%94.cpp)<br/>[🍬周赛](/record/Nov-Weekly-3.md)|
 |KEYWORD|   |`贪心`|`前缀最大值`|`字符串匹配`<br/>`分桶` `二分`|   |`前缀和`|`dp`|
-|TOPIC  |cv|[📌878. 第n个神奇数字💔](/workspace/878.%E7%AC%AC-n-%E4%B8%AA%E7%A5%9E%E5%A5%87%E6%95%B0%E5%AD%97.cpp)|
-|KEYWORD|   |`容斥原理`<br/>`二分法`<br/>`gcd & lcm`|
+|TOPIC  |cv|[📌878. 第n个神奇数字❤️](/workspace/878.%E7%AC%AC-n-%E4%B8%AA%E7%A5%9E%E5%A5%87%E6%95%B0%E5%AD%97.cpp)|~~[1742. 盒子中小球的最大数量💚](https://leetcode.cn/problems/maximum-number-of-balls-in-a-box/)~~|[📌795. 区间子数组个数🧡](/workspace/795.%E5%8C%BA%E9%97%B4%E5%AD%90%E6%95%B0%E7%BB%84%E4%B8%AA%E6%95%B0.cpp)<br/>[📌2444. 统计定界子数组的数目💔](/workspace/2444.%20%E7%BB%9F%E8%AE%A1%E5%AE%9A%E7%95%8C%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%95%B0%E7%9B%AE.cpp)|
+|KEYWORD|   |`容斥原理`<br/>`二分法`<br/>`gcd & lcm`|`map`|`一次遍历`|
 
 
 > ⭐ start index
@@ -33,9 +33,9 @@
 |TOPIC  |   |[高精度](/acwing/Section%201/acwing%20-%20%E9%AB%98%E7%B2%BE%E5%BA%A6.md)|[两两合并专题](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%B8%A4%E4%B8%A4%E5%90%88%E5%B9%B6.md)|   |   |   |[单调栈](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8D%95%E8%B0%83%E6%A0%88.md)|
 |KEYWORD|   |`高精度`<br/>`math`|`Huffman`<br/>`dp` `前缀和`|   |📅|   |`单调栈`|
 |NOTE   |[review 3](/acwing/Section%204/review%203.md)|   |[复习贪心](/acwing/Section%206/review%203.md)|[复习S1](/acwing/Section%201/review%206.md)|   |继续[复习S1](/acwing/Section%201/review%207.md)|[复习S2](/acwing/Section%202/review%202.md)|
-|TOPIC  |复习[Trie](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md)<br/>[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|复习[DFS&BFS](/acwing/Section%203/review%203.md)
-|KEYWORD|`Trie`<br/>`并查集`|`DFS` `BFS`<br/>`拓扑序列`|
-|NOTE   |[复习S2](/acwing/Section%202/review%203.md)|[复习S3](/acwing/Section%203/review%203.md)
+|TOPIC  |复习[Trie](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md)<br/>[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|复习[DFS&BFS](/acwing/Section%203/review%203.md)|复习[最短路](/acwing/Section%203/acwing%20-%20%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98%20-%20Dijkstra.md)|  |
+|KEYWORD|`Trie`<br/>`并查集`|`DFS` `BFS`<br/>`拓扑序列`|`Dijkstra` `BellmanFord`|
+|NOTE   |[复习S2](/acwing/Section%202/review%203.md)|[复习S3](/acwing/Section%203/review%203.md)|[复习S3](/acwing/Section%203/review%203.md)|
 
 > ⭐ start index : 11/1
 > 
@@ -55,6 +55,8 @@
 > 🎵&nbsp; [红绿灯](https://c.y.qq.com/base/fcgi-bin/u?__=EUOC3I) &emsp; 对面马路如此吸引
 > 
 > 🎶&nbsp; [有泪多好](https://c.y.qq.com/base/fcgi-bin/u?__=QgKLm43) &emsp; 原来我眼睛需要倾出泪
+>
+> 🎵&nbsp; [我会挂念你](https://c.y.qq.com/base/fcgi-bin/u?__=EUOC3I) &emsp; 一起向日出光线
 
 <br/>
 
