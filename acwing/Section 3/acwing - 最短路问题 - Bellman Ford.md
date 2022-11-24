@@ -68,7 +68,7 @@ void BellmanFord(){
     memset(dist, 0x3f, sizeof dist);
     dist[1] = 0;
     // 边数限制, K次循环
-    for(int i=0; i<k;i++){
+    for(int i=0; i<k; i++){
         // 备份, 避免串联
         memcpy(backup, dist, sizeof dist);
         // 遍历所有边

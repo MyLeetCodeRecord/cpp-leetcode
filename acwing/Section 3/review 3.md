@@ -375,3 +375,153 @@ int main(){
     return 0;
 }
 ```
+
+##### 8. 朴素Dijkstra - 图存储
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+const int N = 510, M = 100010;
+int g[N][N];
+int d[N];
+bool st[N];
+int n, m;
+
+int Dijkstra(){
+    memset(d, 0x3f, sizeof d);
+    d[1] = 0;
+    for(int i=0; i<n; i++){
+        int t = -1;
+        for(int u=1; u<=n; u++){
+            if(!st[u] && (t==-1 || d[u]<d[t]))
+                t = u;
+        }
+        st[u] = true;
+        for(int v=1; v<=n; v++){
+            if(g[t][v]<0x3f3f3f3f && !st[v] && d[t]+g[t][v]<d[v]){
+                d[v] = d[t] + g[t][v];
+            }
+        }
+    }
+    return d[n];
+}
+int main(){
+    scanf("%d %d", &n, &m);
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            if(i==j)
+                g[i][j] = 0;
+            else
+                g[i][j] = 0x3f3f3f3f;
+        }
+    }
+    for(int i=0; i<m; i++){
+        int a, b, d;
+        scanf("%d %d %d", &a, &b, &d);
+        g[a][b] = min(g[a][b], d);      // 重边只需要保留最短的, 自环要忽略掉
+    }
+    cout<<Dijkstra()<<endl;
+    return 0;
+}
+```
+
+##### 9. 堆优化的Dijkstra - 邻接表存储
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <queue>
+#include <cstring>
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 150010;
+int h[N], e[N], w[N], nxt[N], idx=0;
+int d[N];
+bool st[N];
+int n, m;
+
+void insert(int a, int b, int d){
+    e[idx] = b;
+    w[idx] = d;
+    nxt[idx] = h[a];
+    h[a] = idx++;
+}
+int Dijkstra(){
+    memset(d, 0x3f, sizeof d);
+    d[1] = 0;
+    priority_queue<PII, vector<PII>, greater<PII>> pq;  // <当前距离, 节点id>
+    pq.push({0, 1});
+
+    while(!pq.empty()){
+        PII cur = pq.top();
+        pq.pop();
+        if(st[cur.second]==true)
+            continue;
+        st[cur.second] = true;
+        for(int i=h[cur.second]; i!=-1; i=nxt[i]){
+            int j = e[i];
+            if(!st[j] && d[j] > cur.first + w[i]){
+                d[j] = cur.first + w[i];
+                pq.push({d[j], j});
+            }
+        }
+    }
+    if(d[n] < 0x3f3f3f3f)
+        return d[n];
+    return -1;
+}
+int main(){
+    memset(h, -1, sizeof h);
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<m; i++){
+        int a, b, d;
+        scanf("%d %d %d", &a, &b, &d);
+        insert(a, b, d);
+    }
+    cout<<Dijkstra()<<endl;
+    return 0;
+}
+```
+
+##### 10. 有边数限制堆最短路
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+struct Edge{
+    int a, b, w;
+};
+const int N = 510, M = 10010;
+Edge edges[M];
+int d[N], backup[N];
+int n, m, k;
+
+int BellmanFord(){
+    memset(d, 0x3f, sizeof d);
+    d[1] = 0;
+    // 循环次数限制
+    for(int i=0; i<k; i++){
+        memcpy(backup, d, sizeof d);
+        for(int i=0; i<m; i++){
+            Edge cur = edges[i];
+            d[cur.b] = min(d[cur.b], backup[cur.a] + cur.w);
+        }
+    }
+    if(d[n] > 0x3f3f3f3f - N*M)
+        return -1;
+    return d[n];
+}
+int main(){
+    scanf("%d %d %d", &n, &m, &k);
+    for(int i=0; i<m; i++){
+        scanf("%d %d %d", &edges[i].a, &edges[i].b, &edges[i].w);
+    }
+    cout<<BellmanFord()<<endl;
+    return 0;
+}
+```

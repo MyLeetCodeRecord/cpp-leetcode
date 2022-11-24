@@ -1,10 +1,10 @@
 #include <cstdio>
 #include <iostream>
 #include <cstring>
-#include <algorithm>
 #include <queue>
 using namespace std;
 
+/* 没有边权的最短路用BFS即可 */
 const int N = 100010;
 int n, m;
 int h[N], e[N], nxt[N], idx=0;
