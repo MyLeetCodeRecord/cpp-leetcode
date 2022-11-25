@@ -35,7 +35,7 @@ int main(){
         long long t = 1;    // 乘积 = 容斥原理中的交集
         for(int j=0; j<m; j++){
             if(i >> j & 1){
-                cnt++;
+                cnt+
                 t *= prime[j];
                 if(t > n){  // 大于n的数不能被n整除, 退出即可
                     t = -1;

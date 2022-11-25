@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-const int N = 1000010;
+const int N = 100010;
 const int MOD = 1000000007;
 int fact[N], infact[N];
 
