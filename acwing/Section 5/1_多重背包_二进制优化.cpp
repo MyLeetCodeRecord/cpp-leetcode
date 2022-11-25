@@ -20,7 +20,7 @@ int main(){
         scanf("%d %d %d", &w[i], &v[i], &s[i]);
     }
     vector<pair<int, int> > goods;
-    // 这里只是在"表示 / 重新组织"items, 没有capacity的事情
+    // 这里只是在"表示 / 重新组织"items, 与capacity无关
     for(int i=0; i<n; i++){
         for(int k=1; k<=s[i]; k*=2){
             s[i] -= k;
