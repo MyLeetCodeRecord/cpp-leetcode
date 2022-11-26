@@ -87,12 +87,12 @@ int main(){
             mp[x]++;
     }
     // 约数总和公式
-    long long sum = 1;
+    long long ans = 1;
     for(unordered_map<int, int>::iterator it=mp.begin(); it!=mp.end(); it++){
-        sum *= getOneItem(it->first, it->second);
-        sum %= 1000000007;
+        ans *= getOneItem(it->first, it->second);
+        ans %= 1000000007;
     }
-    cout<<sum<<endl;
+    cout<<ans<<endl;
     return 0;
 }
 ```

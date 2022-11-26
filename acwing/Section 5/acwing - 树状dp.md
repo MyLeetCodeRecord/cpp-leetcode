@@ -42,34 +42,36 @@ using namespace std;
 
 const int N = 6010;
 int happy[N];
-int h[N], e[N], nxt[N], idx=0;
+bool has_father[n+1];
 int dp[N][2];
 
+// 邻接表存储树
+int h[N], e[N], nxt[N], idx=0;
 void insert(int a, int b){
     e[idx] = b;
     nxt[idx] = h[a];
     h[a] = idx++;
 }
-void DFS(int root){
+void DFS(int u){
     // 基础项
-    dp[root][0] = 0;
-    dp[root][1] = happy[root];
+    dp[u][0] = 0;           // 不选当前
+    dp[u][1] = happy[u];    // 选当前
     // 状态转移
-    for(int i=h[root]; i!=-1; i=nxt[i]){
+    for(int i=h[u]; i!=-1; i=nxt[i]){
         int j = e[i];
         DFS(j);
-        dp[root][0] += max(dp[j][0], dp[j][1]);
-        dp[root][1] += dp[j][0];
+        dp[u][0] += max(dp[j][0], dp[j][1]);
+        dp[u][1] += dp[j][0];
     }
 }
 int main(){
     memset(h, -1, sizeof h);
     int n;
     scanf("%d", &n);
-    for(int i=1; i<=n; i++)
+    // 注意编号从1 ~ n
+    for(int i=1; i<=n; i++){
         scanf("%d", &happy[i]);
-    bool has_father[n+1];
-    memset(has_father, false, sizeof has_father);
+    }
     // tree的边数=节点数-1
     for(int i=0; i<n-1; i++){
         int a, b;
@@ -77,12 +79,13 @@ int main(){
         insert(b, a);
         has_father[a] = true;
     }
+    // 找到树的root
     int root = 1;
     while(has_father[root]){
         root++;
     }
     DFS(root);
-    printf("%d\n", max(dp[root][0], dp[root][1]));
+    cout<<max(dp[root][0], dp[root][1])<<endl;
     return 0;
 }
 ```

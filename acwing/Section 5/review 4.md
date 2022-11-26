@@ -360,7 +360,7 @@ int main(){
 }
 ```
 
-##### 2. 蒙德里安的梦想
+##### 12. 蒙德里安的梦想
 ```CPP
 #include <cstdio>
 #include <iostream>
@@ -409,7 +409,7 @@ int main(){
 }
 ```
 
-##### 3. 最短Hamilton路径
+##### 13. 最短Hamilton路径
 > `dp[state][j]`: 已经走过的节点存在`state`中, 目前位于节点`j`, 这一状态下的最短路径
 
 ```CPP
@@ -449,8 +449,7 @@ int main(){
 }
 ```
 
-
-##### 4. 没有上司的舞会 - 树状dp
+##### 14. 没有上司的舞会 - 树状dp
 ```CPP
 #include <cstdio>
 #include <iostream>
@@ -505,6 +504,58 @@ int main(){
     // 3. DFS
     DFS(root);
     cout<<max(dp[root][0], dp[root][1])<<endl;
+    return 0;
+}
+```
+
+##### 15. 滑雪
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+const int N = 310;
+int g[N][N];
+int dp[N][N];
+int r, c;
+
+int directions[4][2] = {{0,1}, {1,0}, {0,-1}, {-1,0}};
+
+// 记忆化搜索: 对于相同的子问题不重复求解
+int dp_func(int x, int y){
+    if(dp[x][y] != 0){
+        return dp[x][y];
+    }
+    dp[x][y] = 1;    // !!!
+    for(int d=0; d<4; d++){
+        int nextX = x+directions[d][0];
+        int nextY = y+directions[d][1];
+        if(nextX>=0 && nextX<r && nextY>=0 && nextY<c){
+            // 只能通往更低点 => 可以避免成环
+            if(g[nextX][nextY] < g[x][y])
+                dp[x][y] = max(dp[x][y], dp_func(nextX, nextY) + 1);
+        }
+    }
+    return dp[x][y];
+}
+int main(){
+    scanf("%d %d", &r, &c);
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            scanf("%d", &g[i][j]);
+        }
+    }
+    // 初始化dp数组, 区分遍历过和没遍历过
+    memset(dp, 0, sizeof dp);
+    // 枚举DFS的起点
+    int ans = 1;
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            ans = max(ans, dp_func(i, j));
+        }
+    }
+    cout<<ans<<endl;
     return 0;
 }
 ```
