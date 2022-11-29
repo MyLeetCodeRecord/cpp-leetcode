@@ -11,8 +11,8 @@
 |KEYWORD|   |`贪心`|`前缀最大值`|`字符串匹配`<br/>`分桶` `二分`|   |`前缀和`|`dp`|
 |TOPIC  |cv|[📌878. 第n个神奇数字❤️](/workspace/878.%E7%AC%AC-n-%E4%B8%AA%E7%A5%9E%E5%A5%87%E6%95%B0%E5%AD%97.cpp)|~~[1742. 盒子中小球的最大数量💚](https://leetcode.cn/problems/maximum-number-of-balls-in-a-box/)~~|[📌795. 区间子数组个数🧡](/workspace/795.%E5%8C%BA%E9%97%B4%E5%AD%90%E6%95%B0%E7%BB%84%E4%B8%AA%E6%95%B0.cpp)<br/>[一次遍历专题](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%B8%80%E6%AC%A1%E9%81%8D%E5%8E%86.md)|[📌809. 情感丰富的文字🧡](/markdown/LC809.%20%E6%83%85%E6%84%9F%E4%B8%B0%E5%AF%8C%E7%9A%84%E6%96%87%E5%AD%97.md)|[📌1752. 检查数组是否经排序和轮转得到💚](/markdown/LC1752.%20%E6%A3%80%E6%9F%A5%E6%95%B0%E7%BB%84%E6%98%AF%E5%90%A6%E7%BB%8F%E6%8E%92%E5%BA%8F%E5%92%8C%E8%BD%AE%E8%BD%AC%E5%BE%97%E5%88%B0.md)|
 |KEYWORD|   |`容斥原理`<br/>`二分法`<br/>`gcd & lcm`|`map`|`一次遍历`|`双指针`|`循环数组`<br/>`双指针`|
-|TOPIC  |[813. 最大平均值和的分组🧡](/workspace/813.%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E5%80%BC%E5%92%8C%E7%9A%84%E5%88%86%E7%BB%84.cpp)|
-|KEYWORD|`dp`|
+|TOPIC  |[813. 最大平均值和的分组🧡](/workspace/813.%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E5%80%BC%E5%92%8C%E7%9A%84%E5%88%86%E7%BB%84.cpp)|[1758. 生成交替二进制字符串的最少操作数💚](/workspace/1758.%E7%94%9F%E6%88%90%E4%BA%A4%E6%9B%BF%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%91%E6%93%8D%E4%BD%9C%E6%95%B0.cpp)|
+|KEYWORD|`dp`|`string`|
 
 
 > ⭐ start index
@@ -38,6 +38,7 @@
 |TOPIC  |复习[Trie](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md)<br/>[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|复习[DFS&BFS](/acwing/Section%203/review%203.md)|复习[最短路](/acwing/Section%203/acwing%20-%20%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98%20-%20Dijkstra.md)|[快速幂](/acwing/Section%204/Acwing%20-%20%E5%BF%AB%E9%80%9F%E5%B9%82.md)<br/>[组合数](/acwing/Section%204/Acwing%20-%20%E7%BB%84%E5%90%88%E6%95%B0.md)|[最长上升子序列(LIS)](/acwing/Section%205/2_%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97II.cpp)|[记忆化搜索](/acwing/Section%205/acwing%20-%20%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2.md)|   |
 |KEYWORD|`Trie`<br/>`并查集`|`DFS` `BFS`<br/>`拓扑序列`|`Dijkstra`<br>`BF算法`|`math`|`dp`|`dp`|
 |NOTE   |[复习S2](/acwing/Section%202/review%203.md)|[复习S3](/acwing/Section%203/review%203.md)|[复习S3](/acwing/Section%203/review%203.md)|[复习S4](/acwing/Section%204/review%204.md)|[复习S5](/acwing/Section%205/review%204.md)|[复习S5](/acwing/Section%205/review%204.md)|  |
+|NOTE   |
 
 > ⭐ start index : 11/1
 > 
