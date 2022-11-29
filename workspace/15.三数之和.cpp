@@ -14,7 +14,7 @@ public:
             int left = i+1;
             int right = nums.size()-1;
             while(left < right){
-                int sum = nums[left]+nums[right]+nums[i];   // 减少重复计算
+                int sum = nums[left] + nums[right] + nums[i];   // 减少重复计算
                 if(sum == 0){
                     ans.push_back({nums[i], nums[left], nums[right]});
                     while(left<right && nums[left]==nums[left+1])   // 去重

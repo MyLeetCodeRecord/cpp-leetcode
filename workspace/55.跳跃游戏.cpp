@@ -14,9 +14,7 @@ public:
             // 到达最后一个下标
             if(cover >= nums.size()-1)
                 return true;
-            if(cover < i + nums[i]){
-                cover = i + nums[i];
-            }
+            cover = max(cover, i+nums[i]);
         }
         return false;
     }

@@ -38,7 +38,9 @@
 |TOPIC  |复习[Trie](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md)<br/>[并查集](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|复习[DFS&BFS](/acwing/Section%203/review%203.md)|复习[最短路](/acwing/Section%203/acwing%20-%20%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98%20-%20Dijkstra.md)|[快速幂](/acwing/Section%204/Acwing%20-%20%E5%BF%AB%E9%80%9F%E5%B9%82.md)<br/>[组合数](/acwing/Section%204/Acwing%20-%20%E7%BB%84%E5%90%88%E6%95%B0.md)|[最长上升子序列(LIS)](/acwing/Section%205/2_%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97II.cpp)|[记忆化搜索](/acwing/Section%205/acwing%20-%20%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2.md)|   |
 |KEYWORD|`Trie`<br/>`并查集`|`DFS` `BFS`<br/>`拓扑序列`|`Dijkstra`<br>`BF算法`|`math`|`dp`|`dp`|
 |NOTE   |[复习S2](/acwing/Section%202/review%203.md)|[复习S3](/acwing/Section%203/review%203.md)|[复习S3](/acwing/Section%203/review%203.md)|[复习S4](/acwing/Section%204/review%204.md)|[复习S5](/acwing/Section%205/review%204.md)|[复习S5](/acwing/Section%205/review%204.md)|  |
-|NOTE   |
+|TOPIC  |   |   |
+|KEYWORD|📅|`区间` `贪心`|
+|NOTE   |   |[复习贪心](/acwing/Section%206/review%204.md)|
 
 > ⭐ start index : 11/1
 > 
