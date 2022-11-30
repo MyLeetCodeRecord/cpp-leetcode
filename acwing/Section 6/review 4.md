@@ -407,3 +407,39 @@ long long minCost(vector<int>& nums, vector<int>& cost) {
     return 0;
 }
 ```
+
+##### 8. 耍杂技的牛
+```CPP
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+#include <limits.h>
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 50010;
+PII cows[N];
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        int w, s;
+        scanf("%d %d", &w, &s);
+        cows[i] = {w+s, w};
+    }
+    sort(cows, cows+n);
+    long long ans = INT_MIN;
+    long long cumW = 0;
+    // 从顶部开始遍历
+    for(int i=0; i<n; i++){
+        int w = cows[i].second;
+        int s = cows[i].first - w;
+        ans = max(ans, cumW-s);
+        cumW += w;
+    }
+    cout<<ans<<endl;
+    return 0;
+}
+```
