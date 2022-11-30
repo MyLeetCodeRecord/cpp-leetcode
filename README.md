@@ -1,5 +1,8 @@
 # cpp-leetcode
 
+#### MySQL
+> [SQL入门](/markdown/mysql.md)
+
 #### LEETCODE DAILY 🔟➕1️⃣
 |       |MON|TUE⭐|WED|THU|FRI|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
