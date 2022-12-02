@@ -18,13 +18,12 @@
 #### 剑指OFFER 🤺
 |       |MON|TUE|WED|THU⭐|FRI|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC  |
-|KEYWORD|
-|NOTE   |
+|KEYWORD|   |   |   |   |`链表`|
+|NOTE   |   |   |   |   |   |
 
 > ⭐ start index
 > 
-> 📌 hard for me
+> 📌 hard for me ➡️ `1`
 > 
 > 💚🧡💔 difficulty
 
@@ -33,9 +32,9 @@
 #### ACWING BASIC 「REVIEW」 🦄
 |       |MON|TUE|WED|THU⭐|FRI|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC  |
-|KEYWORD|
-|NOTE   |
+|TOPIC  |   |   |   |   |   |   |   |
+|KEYWORD|   |   |   |   |   |   |   |
+|NOTE   |   |   |   |   |   |   |   |
 
 > ⭐ start index : 12/1
 > 
