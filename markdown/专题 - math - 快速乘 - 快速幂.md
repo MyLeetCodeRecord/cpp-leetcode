@@ -1,5 +1,22 @@
 #### 快速幂
 
+#### 快速乘
+> [offer1.整数除法](/剑指offer/1.%20整数除法.md)中需要不能用`*`, 只能用`+`求乘法
+
+```CPP
+long long mul(long long a, long long k) {
+    long long ans = 0;
+    while (k > 0) {
+        if ((k & 1) == 1)
+            ans += a;
+        k >>= 1;
+        a += a;
+    }
+    return ans;
+}
+```
+
+##### 快速幂
 > 快速幂能够使用`O(logn)`的时间复杂度计算乘方
 > 
 > ![快速幂](/appendix/acwing-%E5%BF%AB%E9%80%9F%E5%B9%82.png)
@@ -12,7 +29,7 @@
 > 
 > **Step 2**: 将指数处理成二进制形式, e.g. `26=11010` ➡️ $a^{26} = a^{2^1} * a^{2^3} * a^{2^5}$
 
-##### 1. 迭代写法
+###### 1. 迭代写法
 ```CPP
 // 非递归方式实现快速幂
 int quickPow(int a, int n){
@@ -27,7 +44,7 @@ int quickPow(int a, int n){
 }
 ```
 
-##### 2. 递归写法
+###### 2. 递归写法
 ```CPP
 // 递归方式计算快速幂 (不考虑mod大素数)
 int quickPow(int a, int n){
