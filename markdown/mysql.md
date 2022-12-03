@@ -20,3 +20,6 @@
 |`select`|[1965. 丢失信息的雇员](https://leetcode.cn/problems/employees-with-missing-information/)|`union all`<br/>`group by`➕`having`<br/>`not in`|
 |`select`|[608. 树节点](https://leetcode.cn/problems/tree-node/)|`case when...then...else...end`|
 |`select`|[172. 第二高的薪水](https://leetcode.cn/problems/second-highest-salary/)|`order by`+`limit`<br/>`ifnull(case, value)`<br/>`max(field)`|
+|`select`|[175. 组合两个表](https://leetcode.cn/problems/combine-two-tables/)|`left join (on)`|
+|`select`|[1581. 进店却未进行过交易的顾客](https://leetcode.cn/problems/customer-who-visited-but-did-not-make-any-transactions/)|`left join`<br/>`not_in` `count`|
+|`select`|[1148. 文章浏览I](https://leetcode.cn/problems/article-views-i/)|`select [distinct] field`<br/>`group by field`|

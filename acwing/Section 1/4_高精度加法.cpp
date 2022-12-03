@@ -9,6 +9,7 @@ vector<int> A, B;
 vector<int> bigAdd(vector<int> A, vector<int> B){
     vector<int> ans;
     int t = 0;
+    // 这里可以用while(i<m || i<m || carry!=0)
     for(int i=0; i<A.size() || i<B.size(); i++){
         if(i<A.size())
             t += A[i];
