@@ -23,3 +23,5 @@
 |`select`|[175. 组合两个表](https://leetcode.cn/problems/combine-two-tables/)|`left join (on)`|
 |`select`|[1581. 进店却未进行过交易的顾客](https://leetcode.cn/problems/customer-who-visited-but-did-not-make-any-transactions/)|`left join`<br/>`not_in` `count`|
 |`select`|[1148. 文章浏览I](https://leetcode.cn/problems/article-views-i/)|`select [distinct] field`<br/>`group by field`|
+|`select`|[197. 上升的温度](https://leetcode.cn/problems/rising-temperature/)|`join` `datediff(d1, d2)`|
+|`select`|[607. 销售员](https://leetcode.cn/problems/sales-person/)|`嵌套查询` `not in`|
