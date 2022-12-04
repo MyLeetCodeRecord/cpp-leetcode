@@ -17,8 +17,8 @@
 #### 剑指OFFER 🤺
 |       |MON|TUE|WED|THU⭐|FRI|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|KEYWORD|   |   |   |   |`链表`|`位运算`<br/>`滑动窗口`|`固定尺寸滑动窗口`|
-|NOTE   |   |   |   |   |   |[位运算](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%BD%8D%E8%BF%90%E7%AE%97.md)<br/>[滑动窗口](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)|[固定尺寸滑动窗口](/%E5%89%91%E6%8C%87offer/14.%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8F%98%E4%BD%8D%E8%AF%8D.md)|
+|KEYWORD|   |   |   |   |`链表`|`位运算`<br/>`滑动窗口`|`滑动窗口`|
+|NOTE   |   |   |   |   |   |[位运算](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%BD%8D%E8%BF%90%E7%AE%97.md)<br/>[滑动窗口](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)|[固定尺寸滑窗](/%E5%89%91%E6%8C%87offer/14.%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8F%98%E4%BD%8D%E8%AF%8D.md)|
 
 > ⭐ start index
 > 

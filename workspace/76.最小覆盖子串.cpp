@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 private:
-    map<char, int> t_mp;    // 如果不作为去全局变量, 放在check的参数列表中会出现超时
+    map<char, int> t_mp;    // 如果不作为全局变量, 放在check的参数列表中会出现超时
     map<char, int> s_mp;
 public:
     bool check(){
