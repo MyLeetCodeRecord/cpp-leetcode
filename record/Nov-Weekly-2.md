@@ -3,7 +3,7 @@
 ##### 1. [温度转换](https://leetcode.cn/problems/convert-the-temperature/): 加减法
 
 
-##### 2. [6234. 最小公倍数为 K 的子数组数目](https://leetcode.cn/problems/number-of-subarrays-with-lcm-equal-to-k/)
+##### 2. [最小公倍数为 K 的子数组数目](https://leetcode.cn/problems/number-of-subarrays-with-lcm-equal-to-k/)
 
 > 这题的数据范围`1000`, 看起来就能`暴力`
 > 
