@@ -2,8 +2,10 @@
 `vi.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
 `v1==v2`: `==`已经重载过, 如果是内置类型的数据, 比如int, char, 可以直接用`v1==v2`来判断
 
+
 ##### string
 `substr(start)`: 从`start`截取到末尾
+
 
 ##### queue
 `que.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
@@ -27,3 +29,10 @@
 > 找到上一个迭代器
 > 
 > [示例](https://leetcode.cn/problems/design-a-text-editor/solution/lian-biao-mo-ni-pythonjavacgo-by-endless-egw4/)
+
+
+##### `algorithm`
+
+> 多个值找最值 ➡️ `min({a, b, c})`
+>
+> 加大括号表示传入一个容器
