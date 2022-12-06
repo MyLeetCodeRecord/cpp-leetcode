@@ -7,8 +7,6 @@
 > 搞了个`break`, 罚时罚时👿
 > 
 > 第一题为什么要搞break
-> 
-> 浩翔哥先写用例再做题, 真是个好习惯
 
 ```CPP
 bool strongPasswordCheckerII(string password) {
