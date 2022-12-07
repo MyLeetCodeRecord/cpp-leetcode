@@ -7,23 +7,27 @@
 // @lc code=start
 class Solution {
 public:
-    // nums1是nums2的子集, 说明nums1可以看作是一个查询列表, 只需要建立一个map在nums2中找到对应位置即可
-    stack<int> sk;
-    map<int, int> mp;
+    // nums1是nums2的子集, 说明nums1可以看作是一个query列表, 只需要建立一个map在nums2中找到对应位置即可
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
-        vector<int> bigger(nums2.size(), -1);
-        for(int i=0; i<nums2.size(); i++){
+        int m = nums1.size();
+        int n = nums2.size();
+        unordered_map<int, int> mp;
+        for(int i=0; i<n; i++){
             mp[nums2[i]] = i;
-            while(!sk.empty() && nums2[i] > nums2[sk.top()]){
-                bigger[sk.top()] = i;
+        }
+        stack<int> sk;
+        vector<int> bigger(n, -1);
+        for(int i=0; i<n; i++){
+            int cur = nums2[i];
+            while(!sk.empty() && cur>nums2[sk.top()]){
+                bigger[sk.top()] = cur;
                 sk.pop();
             }
             sk.push(i);
         }
-        vector<int> ans(nums1.size(), -1);
-        for(int i=0; i<nums1.size(); i++){
-            if(bigger[mp[nums1[i]]]!=-1)
-                ans[i] = nums2[bigger[mp[nums1[i]]]];
+        vector<int> ans(m, -1);
+        for(int i=0; i<m; i++){
+            ans[i] = bigger[mp[nums1[i]]];
         }
         return ans;
     }
