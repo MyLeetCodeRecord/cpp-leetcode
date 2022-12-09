@@ -13,7 +13,7 @@
 |`select`|[183. 从不订购的客户](https://leetcode.cn/problems/customers-who-never-order/comments/)|`not in`子查询<br/>`left join` `is null`|
 |`select`|[1873. 计算特殊奖金](https://leetcode.cn/problems/calculate-special-bonus/)|`union`<br/>`if(case, t, f)`<br/>`case when...then...else...end`<br>`模糊查询` `left(str, length)`|
 |`update`|[627. 变更性别](https://leetcode.cn/problems/swap-salary/)|`if(case, t, f)`<br/>`case when...then...else...end`|
-|`delete`|[196. 删除重复的电子邮箱](https://leetcode.cn/problems/delete-duplicate-emails/)|`min` `groupby`<br/>`去重delete`|
+|`delete`|[📌196. 删除重复的电子邮箱](https://leetcode.cn/problems/delete-duplicate-emails/)|`min` `groupby`<br/>`去重delete`|
 |`select`|[1667. 修复表中的名字](https://leetcode.cn/problems/fix-names-in-a-table/)|`left(str, length)`<br/>`substr(str, start)`<br/>`concat(str1, str2)`|
 |`select`|[1484. 按日期分组销售产品](https://leetcode.cn/problems/group-sold-products-by-the-date/)|`count(distinct field)`<br/>`group_concat([distinct] field [order by field]separator ',')`|
 |`select`|[1527. 患某种疾病的患者](https://leetcode.cn/problems/patients-with-a-condition/)|`locate(keyword, str)`<br/>`left(str, length)`<br/>`like`|
@@ -32,3 +32,10 @@
 |`select`|[511. 游戏玩法分析](https://leetcode.cn/problems/game-play-analysis-i/?envType=study-plan&id=sql-beginner&plan=sql&plan_progress=11c2z63)|`group by`➕`min(field)`|
 |`select`|[1890. 2020年最后一次登录](https://leetcode.cn/problems/the-latest-login-in-2020/)|`group by`➕`max(field)`<br/>`year(timestamp)`|
 |`select`|[1741. 查找每个员工花费的总时间](https://leetcode.cn/problems/find-total-time-spent-by-each-employee/)|`group by {fields}`➕`sum(field)`|
+|`select`|[1393. 股票的资本损益](https://leetcode.cn/problems/capital-gainloss/)|`group by`➕`sum(if(case, t, f))`|
+|`select`|[1407. 排名靠前的旅行者](https://leetcode.cn/problems/market-analysis-i/?envType=study-plan&id=sql-beginner&plan=sql&plan_progress=11c2z63)|`left join` `ifnull(field, default)`<br/>`group by`➕`sum`|
+|`select`|[1158. 市场分析I](https://leetcode.cn/problems/market-analysis-i/?envType=study-plan&id=sql-beginner&plan=sql&plan_progress=11c2z63)|`left join`<br/>`group by`➕`sum(if(case, 0, 1))➡️计数`|
+|`select`|[182. 查找重复的电子邮箱](https://leetcode.cn/problems/duplicate-emails/?envType=study-plan&id=sql-beginner&plan=sql&plan_progress=ynevlgr)|`group by`➕`having`|
+|`select`|[1050. 合作过至少三次的演员和导演](https://leetcode.cn/problems/actors-and-directors-who-cooperated-at-least-three-times/)|`group by`➕`having`|
+|`select`|[1587. 银行账户概要 II](https://leetcode.cn/problems/bank-account-summary-ii/)|`group by`➕`having`<br/>`left join`|
+|`select`|[1084. 销售分析III](https://leetcode.cn/problems/sales-analysis-iii/)|`in() and not in()`<br/>`group by`➕`having`|
