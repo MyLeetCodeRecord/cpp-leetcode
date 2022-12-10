@@ -6,9 +6,9 @@
 #### 图解mysql
 > https://xiaolincoding.com/mysql/
 
-#### leetcode - SQL
-| |题目|KEYWORD|
-|  ---  |:-:|:-:|
+#### leetcode - SQL入门
+|       |  题目  |KEYWORD|
+|  ---  |  :-:  |  :-:  |
 |`select`|[584. 寻找用户推荐人](https://leetcode.cn/problems/find-customer-referee/?envType=study-plan&id=sql-beginner&plan=sql&plan_progress=11c2z63)|`ifnull(col_name, default_val)`|
 |`select`|[183. 从不订购的客户](https://leetcode.cn/problems/customers-who-never-order/comments/)|`not in`子查询<br/>`left join` `is null`|
 |`select`|[1873. 计算特殊奖金](https://leetcode.cn/problems/calculate-special-bonus/)|`union`<br/>`if(case, t, f)`<br/>`case when...then...else...end`<br>`模糊查询` `left(str, length)`|
@@ -39,3 +39,16 @@
 |`select`|[1050. 合作过至少三次的演员和导演](https://leetcode.cn/problems/actors-and-directors-who-cooperated-at-least-three-times/)|`group by`➕`having`|
 |`select`|[1587. 银行账户概要 II](https://leetcode.cn/problems/bank-account-summary-ii/)|`group by`➕`having`<br/>`left join`|
 |`select`|[1084. 销售分析III](https://leetcode.cn/problems/sales-analysis-iii/)|`in() and not in()`<br/>`group by`➕`having`|
+
+
+#### leetcode - SQL基础
+|       |  题目  |KEYWORD|
+|  ---  |  :-:  |  :-:  |
+|`数值处理函数`|[1699. 两人之间的通话次数](https://leetcode.cn/problems/number-of-calls-between-two-persons/?envType=study-plan&id=sql-basic&plan=sql&plan_progress=yv14rf5)|`if(case, t, f)用于交换`<br/>`group by`➕`count()`/`sum()`|
+|            |[1251. 平均售价](https://leetcode.cn/problems/average-selling-price/)|`sum(price*units)/sum(units)`➡️均值<br/>`round(decimal, n)`|
+|            |[1571. 仓库经理](https://leetcode.cn/problems/warehouse-manager/)|`group by`➕`sum(func\(field1, ...))`|
+|            |[1445. 苹果和桔子](https://leetcode.cn/problems/apples-oranges/)|`group by`➕`sum(if(case, t, f))分情况讨论`|
+|            |[1193. 每月交易I](https://leetcode.cn/problems/monthly-transactions-i/)|`group by`➕`sum(if(case, t, f))`|
+|            |[1633. 各赛事的用户注册率](https://leetcode.cn/problems/percentage-of-users-attended-a-contest/)|`数字结果直接当常数使用` or `数字结果作为表的一列`<br/>`round(decimal, n)`|
+|            |[1173. 即时食物配送I](https://leetcode.cn/problems/immediate-food-delivery-i/)|不分组也能用`sum()` `count(*)`<br/>`sum(布尔表达式)`等价于`sum(if(exp, 1, 0)`|
+|            |[1211. 查询结果的质量和占比](https://leetcode.cn/problems/queries-quality-and-percentage/)|`group by`➕`count()` `sum()`
