@@ -51,4 +51,4 @@
 |            |[1193. 每月交易I](https://leetcode.cn/problems/monthly-transactions-i/)|`group by`➕`sum(if(case, t, f))`|
 |            |[1633. 各赛事的用户注册率](https://leetcode.cn/problems/percentage-of-users-attended-a-contest/)|`数字结果直接当常数使用` or `数字结果作为表的一列`<br/>`round(decimal, n)`|
 |            |[1173. 即时食物配送I](https://leetcode.cn/problems/immediate-food-delivery-i/)|不分组也能用`sum()` `count(*)`<br/>`sum(布尔表达式)`等价于`sum(if(exp, 1, 0)`|
-|            |[1211. 查询结果的质量和占比](https://leetcode.cn/problems/queries-quality-and-percentage/)|`group by`➕`count()` `sum()`
+|            |[1211. 查询结果的质量和占比](https://leetcode.cn/problems/queries-quality-and-percentage/)|`group by`➕`count()` `sum()`|
