@@ -80,13 +80,13 @@ int longestSquareStreak(vector<int>& nums) {
 ```
 
 ##### 3. [设计内存分配器](https://leetcode.cn/problems/design-memory-allocator/)
-> 第三题一直没移指针(`i = j`), 导致做了半天没弄清楚为什么超时, 还写的是费时的`map`记录`intervals(PII)`的实现方式
+> 第三题一直没移指针(`i = j`), 导致做了半天没弄清楚为什么超时, 还写的是用`map`记录`intervals(PII)`的实现方式
 > 
 > 其实如果不考虑运行时间, 这道题的数据范围使用纯暴力就可以解决, 如果再大一些, 用`map`来记录`mID`对应的所有`PII interval`, 会更省时间一些
 > 
 > 另外, `vector`可以使用`fill(vi.begin()+start, vi.begin()+end, default_value)`来用默认值填充数组某一段
 > 
-> ![](/appendix/LC6259.png)
+> ![LC6259](/appendix/LC6259.png)
 
 ```CPP
 typedef pair<int, int> PII;
@@ -135,3 +135,6 @@ int free(int mID) {
     return ans;
 }
 ```
+
+##### 4. 矩阵查询可获得的最大分数
+> todo

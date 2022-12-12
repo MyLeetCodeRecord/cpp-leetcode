@@ -1,10 +1,18 @@
 ##### vector
-`vi.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
+> `vi.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
 
-`v1==v2`: `==`已经重载过, 如果是内置类型的数据, 比如int, char, 可以直接用`v1==v2`来判断
+> `v1==v2`: `==`已经重载过, 如果是内置类型的数据, 比如int, char, 可以直接用`v1==v2`来判断
 
-`accumulate(vi.begin(), vi.end(), 0)`: 第三个参数为**初值**
+> `accumulate(vi.begin(), vi.end(), 0)`: 第三个参数为**初值**
 
+> 想对某个数组排序, 但不丢失每个元素的原始位置信息, 可以用`pair<int, int>`的形式来保存`{val, idx}`, 然后再`sort()`
+> 
+> 或者可以单独开一个`vector<int> pos`, 然后定义`sort`的`cmp`方式
+```CPP
+sort(pos.begin(), pos.end(), [&](int a, int b){
+    return vi[a] < vi[b];
+})
+```
 
 ##### string
 `substr(start)`: 从`start`截取到末尾
@@ -24,7 +32,7 @@
 
 <img src="https://img2018.cnblogs.com/blog/1169804/201903/1169804-20190310232157215-1540369555.png">
 
-<img src="../appendix/list.png">
+<img src="/appendix/list.png">
 
 
 ##### `prev(iterator)` & `next(iterator)`
