@@ -60,3 +60,11 @@
 |            |[1264. 页面推荐](https://leetcode.cn/problems/page-recommendations/)|`distinct` `in/not in`<br/>`join` `case when`|
 |            |[570. 至少有5名直接下属的经理](https://leetcode.cn/problems/managers-with-at-least-5-direct-reports/)|`group by ... having ...`<br/>`join`|
 |            |[1303. 求团队人数](https://leetcode.cn/problems/find-the-team-size/)|`group by ... having`<br/>`left join on ...`|
+|            |[1280. 学生们参加各科测试的次数](https://leetcode.cn/problems/students-and-examinations/)|`join` `left join`<br/>`ifnull`|
+|            |[1501. 可以放心投资的国家](https://leetcode.cn/problems/countries-you-can-safely-invest-in/)|`全连接 where ...`|
+|            |[184. 部门工资最高的员工](https://leetcode.cn/problems/department-highest-salary/)|`join` `全连接`|
+|            |[580. 统计各专业学生人数](https://leetcode.cn/problems/count-student-number-in-departments/)|`left join ... on ...`<br/>注意`group by`应该使用要保留的表的id|
+|            |[1294. 不同国家的天气类型](https://leetcode.cn/problems/weather-type-in-each-country/)|`left join`|
+|            |[626. 换座位](https://leetcode.cn/problems/exchange-seats/)|`case when ... then ...`|
+|            |[1783. 大满贯数量](https://leetcode.cn/problems/grand-slam-titles/)|`全连接`<br/>`group by`➕`having`|
+|            |[1164. 指定日期的产品价格](https://leetcode.cn/problems/product-price-at-a-given-date/)|`union两个不相交集合`<br/>`(field1, field2) in (select ...)`|
