@@ -55,8 +55,13 @@ int deleteGreatestValue(vector<vector<int>>& grid) {
 ```
 
 
-##### 2. [数组中最长的方波](https://leetcode.cn/problems/longest-square-streak-in-an-array/): 
-> 不考虑位置(因为可以排序), 
+##### 2. [数组中最长的方波](https://leetcode.cn/problems/longest-square-streak-in-an-array/): `math`
+> 不考虑位置(因为可以排序), 所以只需要判断数组中是否存在 ➡️ 用`map`存储
+> 
+> 子数组长度至少为2, 并且 $10^5$ 大约是 $317^2$, 也就是说, 如果枚举「基数」, 只需要从`2`枚举到`sqrt(100010)`
+> 
+> 对于每个基数`x`, 不断翻倍`x*=x`, 计数直到数组中找不到`x`为止
+
 ```CPP
 int longestSquareStreak(vector<int>& nums) {
     // 子序列且可以排序 => 判断是否出现过即可

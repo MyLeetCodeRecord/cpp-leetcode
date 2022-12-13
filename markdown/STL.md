@@ -15,17 +15,17 @@ sort(pos.begin(), pos.end(), [&](int a, int b){
 ```
 
 ##### string
-`substr(start)`: 从`start`截取到末尾
+> `substr(start)`: 从`start`截取到末尾
 
 
 ##### queue
-`que.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
+> `que.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
 
 
 ##### map
-`iterator lower_bound(const key_type &key)`: 返回一个迭代器, 指向键值 >=key 的第一个元素
+> `iterator lower_bound(const key_type &key)`: 返回一个迭代器, 指向键值 >=key 的第一个元素
 
-`iterator upper_bound(const key_type &key)`: 返回一个迭代器, 指向键值 > key 的第一个元素
+> `iterator upper_bound(const key_type &key)`: 返回一个迭代器, 指向键值 > key 的第一个元素
 
 
 ##### list 双向链表
@@ -47,3 +47,16 @@ sort(pos.begin(), pos.end(), [&](int a, int b){
 > 多个值找最值 ➡️ `min({a, b, c})`
 >
 > 加大括号表示传入一个容器
+
+
+##### `multiset`
+
+>`set`和`multiset`都可以应用`lower_bound()`, 寻找第一个大于等于某个值的迭代器, 找不到就返回`st.end()`
+
+> `multiset`打破了`set`的互异性, 可以存放多个相同的元素
+> 
+> - `insert`: 允许集合内存在相同元素
+> 
+> - `erase`
+>   - `erase(val)`: 值删除, 允许删除该值的所有元素
+>   - `erase(iterator)`: 迭代器删除, 只删除迭代器对应的一个元素
