@@ -5,11 +5,33 @@
  */
 
 // @lc code=start
+// set + 二分查找(lower_bound)
+typedef pair<int, int> PII;
+const int INF = 1e9+10;
 class MyCalendar {
-private:
+public:
+    set<PII> st;
+    MyCalendar() {}
+    bool overlap(PII l, PII r){
+        if(l.second<=r.first || r.second<=l.first)
+            return false;
+        return true;
+    }
+    bool book(int start, int end) {
+        st.insert({INF, 0});
+        st.insert({-INF, 0});
+        auto it = st.lower_bound({start, -INF});
+        PII cur = {start, end};
+        if(overlap(*it, cur) || overlap(*(--it), cur))
+            return false;
+        st.insert(cur);
+        return true;
+    }
+};
+
+/* 暴力法
     vector<pair<int, int>> booked;
 public:
-    // 先写个暴力占坑, TreeMap不会
     bool book(int start, int end) {
         for (auto &[l, r] : booked) {
             if (l < end && start < r) {
@@ -19,11 +41,6 @@ public:
         booked.emplace_back(start, end);
         return true;
     }
-};
-/**
- * Your MyCalendar object will be instantiated and called as such:
- * MyCalendar* obj = new MyCalendar();
- * bool param_1 = obj->book(start,end);
- */
+*/
 // @lc code=end
 
