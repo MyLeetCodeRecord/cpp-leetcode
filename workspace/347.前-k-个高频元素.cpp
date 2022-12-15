@@ -13,7 +13,7 @@ public:
         for(int x: nums){
             mp[x]++;
         }
-        priority_queue<PII> pq;
+        priority_queue<PII, vector<PII>, greater<PII>> pq;
         for(unordered_map<int, int>::iterator it=mp.begin(); it!=mp.end(); it++){
             pq.push({it->second, it->first});
         }
