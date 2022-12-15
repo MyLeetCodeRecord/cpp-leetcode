@@ -26,7 +26,7 @@
 |KEYWORD|`滑动窗口`<br/>`回文` `双指针`|`LRU`<br/>`map` `sort`|`stack`<br/>`单调栈`|`完全二叉树`<br/>`BFS`|`递归` `DFS`|
 |NOTE   |[统计字符数量的滑窗(16,17)](/%E5%89%91%E6%8C%87offer/17.%20%E5%90%AB%E6%9C%89%E6%89%80%E6%9C%89%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E5%AD%97%E7%AC%A6%E4%B8%B2.md)|[LRU(31)](/%E5%89%91%E6%8C%87offer/31.%20%E6%9C%80%E8%BF%91%E6%9C%80%E5%B0%91%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98(LRU).md)|[单调栈](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8D%95%E8%B0%83%E6%A0%88.md)|[完全二叉树-43](/%E5%89%91%E6%8C%87offer/43.%20%E5%BE%80%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9.md)|[DFS/递归(49,50)](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%A0%91%E4%B8%8A%E7%9A%84%E8%B7%AF%E5%BE%84.md)|
 |KEYWORD|[二叉树迭代遍历](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86.md)<br/>[中序遍历(52,53,54)](/%E5%89%91%E6%8C%87offer/54.%20%E6%89%80%E6%9C%89%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E8%8A%82%E7%82%B9%E7%9A%84%E5%80%BC%E4%B9%8B%E5%92%8C.md)|
-|NOTE   |`BST`<br/>`inorder`|`set`<br/>`lower_bound`
+|NOTE   |`BST`<br/>`inorder`|`set`<br/>`lower_bound`|`多路归并`|
 
 
 > ⭐ start index
