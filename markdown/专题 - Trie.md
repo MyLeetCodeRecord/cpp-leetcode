@@ -24,5 +24,12 @@
 ###### [LC616. 给字符串添加加粗标签](/workspace/616.%E7%BB%99%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B7%BB%E5%8A%A0%E5%8A%A0%E7%B2%97%E6%A0%87%E7%AD%BE.cpp)
 > 在`LC758`的基础上优化了`lenList`, 减少重复search, 另外注意要对`lenList`排序
 
-###### [LC676. 实现一个魔法字典](/workspace/676.%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%AD%94%E6%B3%95%E5%AD%97%E5%85%B8.cpp)
+###### [LC676. 实现一个魔法字典](/workspace/676.%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%AD%94%E6%B3%95%E5%AD%97%E5%85%B8.cpp) - `DFS`
 > `search`要用`DFS`实现, 类似**使用通配符的Trie**, 对26个child都依情况(changed次数)进行`DFS`
+
+###### [LC820. 最短的单词编码](/workspace/820.%E5%8D%95%E8%AF%8D%E7%9A%84%E5%8E%8B%E7%BC%A9%E7%BC%96%E7%A0%81.cpp)
+> 对单词逆序得到后缀(time->emit), 将后缀插入`Trie`中
+> 
+> 如果是新插入的叶节点(更长后缀)则将单词插入`Trie`中
+> 
+> 先放长单词(emit), 再放短单词(em), 这样才能不重复计数
