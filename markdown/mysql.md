@@ -59,8 +59,8 @@
 |            |[1440. 计算布尔表达式的值](https://leetcode.cn/problems/evaluate-boolean-expression/)|`case when` `全连接`|
 |            |[1264. 页面推荐](https://leetcode.cn/problems/page-recommendations/)|`distinct` `in/not in`<br/>`join` `case when`|
 |            |[570. 至少有5名直接下属的经理](https://leetcode.cn/problems/managers-with-at-least-5-direct-reports/)|`group by ... having ...`<br/>`join`|
-|            |[1303. 求团队人数](https://leetcode.cn/problems/find-the-team-size/)|`group by ... having`<br/>`left join on ...`|
-|            |[1280. 学生们参加各科测试的次数](https://leetcode.cn/problems/students-and-examinations/)|`join` `left join`<br/>`ifnull`|
+|            |[1303. 求团队人数](https://leetcode.cn/problems/find-the-team-size/)|`全连接 where`<br/>`left join on ...`|
+|            |[1280. 学生们参加各科测试的次数](https://leetcode.cn/problems/students-and-examinations/)|`join` `left join`<br/>`ifnull`<br/>`sum(布尔表达式)`➡️计数|
 |            |[1501. 可以放心投资的国家](https://leetcode.cn/problems/countries-you-can-safely-invest-in/)|`全连接 where ...`|
 |            |[184. 部门工资最高的员工](https://leetcode.cn/problems/department-highest-salary/)|`join` `全连接`|
 |            |[580. 统计各专业学生人数](https://leetcode.cn/problems/count-student-number-in-departments/)|`left join ... on ...`<br/>注意`group by`应该使用要保留的表的id|
