@@ -7,11 +7,9 @@
 |[LC2509. 查询树中环的长度]()|`完全二叉树`
 
 ##### 1. 递归
-**[LC236. 二叉树的最近公共祖先](/workspace/236.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.cpp)**: `递归`
-
-> ![LCA1](/appendix/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84LCA.png)
-> 
-> ![LCA2](/appendix/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84LCA-2.png)
+###### [LC236. 二叉树的最近公共祖先](/workspace/236.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.cpp): `递归`
+ 
+> ![LCA](/appendix/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84LCA-2.png)
 
 ```CPP
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
@@ -32,7 +30,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 ```
 
 
-**[LC235. 二叉搜索树的最近公共祖先](/workspace/235.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.cpp)**: `BST` `递归`
+###### [LC235. 二叉搜索树的最近公共祖先](/workspace/235.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.cpp): `BST` `递归`
 
 > ![BST-LCA](/appendix/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84LCA.png)
 
@@ -53,7 +51,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 
 
 ##### 2. 完全二叉树的LCA
-**[LC2509. 查询树中环的长度](https://leetcode.cn/problems/cycle-length-queries-in-a-tree/)**: `最近公共祖先LCA` `完全二叉树`
+###### [LC2509. 查询树中环的长度](https://leetcode.cn/problems/cycle-length-queries-in-a-tree/): `最近公共祖先LCA` `完全二叉树`
 
 > [12月周赛](/record/Dec-Weekly-3.md)第四题 - `LCA`问题, `len = dist(a, lca) + dist(b, lca) + 1`
 > 
