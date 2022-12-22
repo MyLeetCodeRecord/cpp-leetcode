@@ -15,13 +15,12 @@ bool cmp(pair<int,int> l, pair<int,int> r){
 vector<PII> intervalMerge(vector<PII> intervals){
     vector<PII> ans;
     sort(intervals.begin(), intervals.end(), cmp);  // 默认排序也可以
-    PII curInterval = intervals[0]; // curInterval当前维护区间, 也可以初始化为(-∞,-∞)
+    PII curInterval = intervals[0];  // curInterval当前维护区间, 也可以初始化为(-∞,-∞)
     for(int i=0; i<intervals.size(); i++){
         // 当前区间维护结束
         if(curInterval.second < intervals[i].first){
             ans.push_back(curInterval);
             curInterval = intervals[i];
-            continue;
         }
         // 继续维护当前区间
         else{
