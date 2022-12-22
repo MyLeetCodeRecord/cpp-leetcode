@@ -6,24 +6,22 @@
 
 // @lc code=start
 class Solution {
-private:
-    int m, n;
 public:
-    bool search(vector<vector<int> >& matrix, int startRow, int endCol, int target){
-        if(startRow >= m || endCol < 0)
-            return false;
-        int cur = matrix[startRow][endCol];
-        if(cur == target)
-            return true;
-        if(cur > target)
-            return search(matrix, startRow, endCol-1, target);
-        else
-            return search(matrix, startRow+1, endCol, target);
-    }
+    // 从右上角开始搜索, 最坏复杂度O(m+n)
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        m = matrix.size();
-        n = matrix[0].size();
-        return search(matrix, 0, n-1, target);
+        int m = matrix.size();
+        int n = matrix[0].size();
+        int i = 0;
+        int j = n-1;
+        while(i<m && j>=0){
+            if(matrix[i][j] == target)
+                return true;
+            else if(matrix[i][j]>target)
+                j--;
+            else
+                i++;
+        }
+        return false;
     }
 };
 // @lc code=end

@@ -17,11 +17,11 @@ public:
             int minVal = min(ugly[i]*2, min(ugly[j]*3, ugly[k]*5));
             ugly.push_back(minVal);
             // 指针是在丑数数组上移动的, 所以是++, 而不是翻倍
-            if(i<ugly.size() && ugly[i]*2==minVal)
+            if(ugly[i]*2==minVal)
                 i++;
-            if(j<ugly.size() && ugly[j]*3==minVal)
+            if(ugly[j]*3==minVal)
                 j++;
-            if(k<ugly.size() && ugly[k]*5==minVal)
+            if(ugly[k]*5==minVal)
                 k++;
         }
         return ugly.back();

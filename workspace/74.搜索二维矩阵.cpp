@@ -7,29 +7,27 @@
 // @lc code=start
 class Solution {
 public:
-    // 原地 二分法
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int m = matrix.size();
-        int n = matrix[0].size();
-        int left = 0;
-        int right = m*n;
-        while(left < right){
-            int mid = (right-left)/2 + left;
+        int m = matrix.size();      // 3
+        int n = matrix[0].size();   // 4
+        int l = 0;
+        int r = m*n-1;
+        while(l < r){
+            int mid = (l+r)/2;
+            // 1d -> 2d
             int row = mid / n;
             int col = mid % n;
-            // cout<<mid <<" => ("<<row<<","<<col<<") => "<<matrix[row][col]<<endl;
-            int cur = matrix[row][col];
-            if(cur == target){
+            if(matrix[row][col] == target)
                 return true;
-            }
-            else if(cur < target){
-                left = mid+1;
-            }
-            else{
-                right = mid;
-            }
+            else if(matrix[row][col] < target)
+                l = mid + 1;
+            else
+                r = mid;
         }
-        return false;
+        // 有可能没进去上面的循环 e.g. [[1]]  1
+        int row = l / n;
+        int col = l % n;
+        return matrix[row][col]==target;
     }
 };
 // @lc code=end
