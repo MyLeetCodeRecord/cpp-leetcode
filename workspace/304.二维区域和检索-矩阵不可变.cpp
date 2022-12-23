@@ -8,11 +8,10 @@
 class NumMatrix {
 private:
     vector<vector<int> > preSum;
-    int m, n;
 public:
     NumMatrix(vector<vector<int>>& matrix) {
-        m = matrix.size();
-        n = matrix[0].size();
+        int m = matrix.size();
+        int n = matrix[0].size();
         vector<vector<int> > prefixSum(m+1, vector<int>(n+1, 0));
         for(int i=1; i<=m; i++){
             for(int j=1; j<=n; j++){

@@ -6,11 +6,6 @@ using namespace std;
 
 vector<int> A, B;
 
-bool compareBig(string A, string B){
-    if(A.size() == B.size())
-        return A >= B;
-    return A.size() > B.size();
-}
 vector<int> bigMinus(vector<int> A, vector<int> B){
     vector<int> ans;
     int t = 0;
@@ -24,6 +19,7 @@ vector<int> bigMinus(vector<int> A, vector<int> B){
         else
             t = 0;
     }
+    // 注意ans为0的情况, 至少保留一位
     while(ans.size()>1 && ans.back()==0)
         ans.pop_back();
     return ans;
@@ -31,13 +27,8 @@ vector<int> bigMinus(vector<int> A, vector<int> B){
 int main(){
     string s1, s2;
     cin>>s1>>s2;
-    // 去除前导0, 因为减法前需要比较大小
-    // 这里最好用指针找位置, 别一直substr
-    while(s1.size()>1 && s1[0]=='0')
-        s1 = s1.substr(1, s1.size()-1);
-    while(s2.size()>1 && s2[0]=='0')
-        s2 = s2.substr(1, s2.size()-1);
-    if(compareBig(s1, s2)==false){
+    // 比较大小, 令s1更大
+    if(s1.size() < s2.size() || (s1.size()==s2.size() && s1<s2)){
         swap(s1, s2);
         printf("-");
     }

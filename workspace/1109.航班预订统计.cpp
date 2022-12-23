@@ -18,12 +18,12 @@ public:
         for(vector<int> book: bookings){
             diff_operation(diff, book[0]-1, book[1]-1, book[2]);
         }
-        vector<int> ans(n);
-        ans[0] = diff[0];
+        vector<int> prefixSum(n);
+        prefixSum[0] = diff[0];
         for(int i=1; i<n; i++){
-            ans[i] = diff[i] + ans[i-1];
+            prefixSum[i] = diff[i] + prefixSum[i-1];
         }
-        return ans;
+        return prefixSum;
     }
 };
 // @lc code=end
