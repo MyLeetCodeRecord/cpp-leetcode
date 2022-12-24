@@ -55,7 +55,6 @@ int find(int pos){
 ##### 完整实现
 ```CPP
 #include <cstdio>
-#include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;

@@ -7,36 +7,32 @@
 // @lc code=start
 class Solution {
 public:
+    // 思路: 可以随便添加")", 只要保证"(">=")"
     vector<string> ans;
     string path;
-    
-    void backtrack(int left, int right) {   // left, right是剩下的左、右括号个数
-        // return条件1: 左、右括号都分配结束
-        if(left==0 && right==0){
-            ans.push_back(path);
+    // left: path中的"("数量, need: 尚未配对的"("数量or需要的")"最大数量
+    void backtrack(int n, int left, int need){
+        if(path.size()==n*2){
+            if(left==n)
+                ans.push_back(path);
             return ;
         }
-        // return条件2: 左侧字符串已经不合法, 提前返回
-        if(left > right)
-            return ;
-        // 左括号随意分配
-        if(left > 0){
+        string tmp = path;
+        if(left <= n){      // 剪枝, 让left不要超过n个
             path += "(";
-            backtrack(left-1, right);
-            path = path.substr(0, path.size()-1);
+            backtrack(n, left+1, need+1);
+            path = tmp;
         }
-        // 右括号当right剩余更多时, 可以分配
-        if(right > left){
+        if(need > 0){
             path += ")";
-            backtrack(left, right-1);
-            path = path.substr(0, path.size()-1);
+            backtrack(n, left, need-1);
+            path = tmp;
         }
     }
     vector<string> generateParenthesis(int n) {
-        backtrack(n, n);
+        backtrack(n, 0, 0);
         return ans;
     }
 };
-
 // @lc code=end
 

@@ -7,25 +7,25 @@
 // @lc code=start
 class Solution {
 public:
-    vector<vector<int> > ans;
+    vector<vector<int>> ans;
     vector<int> path;
-    int sum = 0;
-    void backtrack(vector<int>& candidates, int target, int cur){
-        if(sum==target){
+    // "允许重复选择", 也就是backtrack时继续使用当前i作为startIndex
+    void backtrack(vector<int>&nums, int sum, int startIndex, int target){
+        if(sum == target){
             ans.push_back(path);
+            return ;
         }
-        for(int i=cur; i<candidates.size(); i++){
-            sum += candidates[i];
-            if(sum <= target){
-                path.push_back(candidates[i]);
-                backtrack(candidates, target, i);
-                path.pop_back();
-            }
-            sum -= candidates[i];
+        for(int i=startIndex; i<nums.size(); i++){
+            path.push_back(nums[i]);
+            sum += nums[i];
+            if(sum <= target)
+                backtrack(nums, sum, i, target);
+            path.pop_back();
+            sum -= nums[i];
         }
     }
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-        backtrack(candidates, target, 0);
+        backtrack(candidates, 0, 0, target);
         return ans;
     }
 };

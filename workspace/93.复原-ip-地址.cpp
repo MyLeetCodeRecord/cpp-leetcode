@@ -10,9 +10,7 @@ public:
     bool isLegal(string sub){
         if(sub.size()>1 && sub[0]=='0')   // 不能有前导零
             return false;
-        if(stoi(sub)>255)
-            return false;
-        return true;
+        return stoi(sub)<=255;
     }
     vector<string> ans;
     vector<string> path;
