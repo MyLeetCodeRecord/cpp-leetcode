@@ -9,7 +9,7 @@ class Solution {
 public:
     int minCostClimbingStairs(vector<int>& cost) {
         // dp[i]: 爬到第i层的最低花费
-        vector<int> dp(cost.size()+1);
+        vector<int> dp(cost.size()+1, 1e6);  // 注意dp数组下标比cost数组下标大1位
         dp[0] = 0;
         dp[1] = cost[0];
         for(int i=2; i<=cost.size(); i++){

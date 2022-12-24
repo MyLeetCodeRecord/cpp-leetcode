@@ -27,10 +27,11 @@
 |NOTE   |   |   |   |   |[26. 重排链表](/%E5%89%91%E6%8C%87offer/26.%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8.md)|[位运算](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%BD%8D%E8%BF%90%E7%AE%97.md)<br/>[滑动窗口](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3.md)|[固定尺寸滑窗](/%E5%89%91%E6%8C%87offer/14.%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8F%98%E4%BD%8D%E8%AF%8D.md)|
 |KEYWORD|`滑动窗口`<br/>`回文` `双指针`|`LRU`<br/>`map` `sort`|`stack`<br/>`单调栈`|`完全二叉树`<br/>`BFS`|`递归` `DFS`|
 |NOTE   |[统计字符数量的滑窗(16,17)](/%E5%89%91%E6%8C%87offer/17.%20%E5%90%AB%E6%9C%89%E6%89%80%E6%9C%89%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E7%9F%AD%E5%AD%97%E7%AC%A6%E4%B8%B2.md)|[LRU(31)](/%E5%89%91%E6%8C%87offer/31.%20%E6%9C%80%E8%BF%91%E6%9C%80%E5%B0%91%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98(LRU).md)|[单调栈](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%8D%95%E8%B0%83%E6%A0%88.md)|[完全二叉树-43](/%E5%89%91%E6%8C%87offer/43.%20%E5%BE%80%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9.md)|[DFS/递归(49,50)](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%A0%91%E4%B8%8A%E7%9A%84%E8%B7%AF%E5%BE%84.md)|
-|KEYWORD|[二叉树迭代遍历](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86.md)<br/>[中序遍历(52,53,54)](/%E5%89%91%E6%8C%87offer/54.%20%E6%89%80%E6%9C%89%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E8%8A%82%E7%82%B9%E7%9A%84%E5%80%BC%E4%B9%8B%E5%92%8C.md)|[multiset(57)](/%E5%89%91%E6%8C%87offer/57.%20%E5%80%BC%E5%92%8C%E4%B8%8B%E6%A0%87%E4%B9%8B%E5%B7%AE%E9%83%BD%E5%9C%A8%E7%BB%99%E5%AE%9A%E7%9A%84%E8%8C%83%E5%9B%B4%E5%86%85.md)|[优先队列(59,60,61)](/markdown/%E4%B8%93%E9%A2%98%20-%20topK.md)<br/>[计数排序(60)](/%E5%89%91%E6%8C%87offer/60.%20%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%9C%80%E9%AB%98%E7%9A%84k%E4%B8%AA%E6%95%B0%E5%AD%97.md)<br/>[多路归并(61)](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%A4%9A%E8%B7%AF%E5%BD%92%E5%B9%B6.md)|[Trie(62~67)](/workspace/677.%E9%94%AE%E5%80%BC%E6%98%A0%E5%B0%84.cpp)<br/>[异或实现成对比较](/%E5%89%91%E6%8C%87offer/70.%20%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97.md)|[二分法](/acwing/Section%201/acwing%20-%20%E4%BA%8C%E5%88%86%E6%B3%95.md)|
-|NOTE   |`BST`<br/>`inorder`|`set`<br/>`lower_bound`|`多路归并`<br/>`priority_queue`|`Trie`|`二分法`|
-|KEYWORD|  |  |[区间合并-74]()|复习[多路归并](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%A4%9A%E8%B7%AF%E5%BD%92%E5%B9%B6.md)<br/>复习[排序](/acwing/Section%201)|
-|NOTE   |
+|KEYWORD|`BST`<br/>`inorder`|`set`<br/>`lower_bound`|`多路归并`<br/>`priority_queue`|`Trie`|`二分法`|  |  |
+|NOTE   |[二叉树迭代遍历](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86.md)<br/>[中序遍历(52,53,54)](/%E5%89%91%E6%8C%87offer/54.%20%E6%89%80%E6%9C%89%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E%E8%8A%82%E7%82%B9%E7%9A%84%E5%80%BC%E4%B9%8B%E5%92%8C.md)|[multiset(57)](/%E5%89%91%E6%8C%87offer/57.%20%E5%80%BC%E5%92%8C%E4%B8%8B%E6%A0%87%E4%B9%8B%E5%B7%AE%E9%83%BD%E5%9C%A8%E7%BB%99%E5%AE%9A%E7%9A%84%E8%8C%83%E5%9B%B4%E5%86%85.md)|[优先队列(59,60,61)](/markdown/%E4%B8%93%E9%A2%98%20-%20topK.md)<br/>[计数排序(60)](/%E5%89%91%E6%8C%87offer/60.%20%E5%87%BA%E7%8E%B0%E9%A2%91%E7%8E%87%E6%9C%80%E9%AB%98%E7%9A%84k%E4%B8%AA%E6%95%B0%E5%AD%97.md)<br/>[多路归并(61)](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%A4%9A%E8%B7%AF%E5%BD%92%E5%B9%B6.md)|[Trie(62~67)](/workspace/677.%E9%94%AE%E5%80%BC%E6%98%A0%E5%B0%84.cpp)<br/>[异或实现成对比较](/%E5%89%91%E6%8C%87offer/70.%20%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97.md)|[二分法](/acwing/Section%201/acwing%20-%20%E4%BA%8C%E5%88%86%E6%B3%95.md)|
+|KEYWORD|  |  |`贪心` `区间`|`排序`<br/>`多路归并`|`高精度`|`归并排序`<br/>`回溯`|`dp`|
+|NOTE   |  |  |[区间合并-74](/%E5%89%91%E6%8C%87offer/74.%20%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.md)|复习[排序](/acwing/Section%201)<br/>[多路归并](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%A4%9A%E8%B7%AF%E5%BD%92%E5%B9%B6.md)|[高精度计算](/acwing/Section%201/acwing%20-%20%E9%AB%98%E7%B2%BE%E5%BA%A6.md)<br>[位运算](/markdown/%E4%B8%93%E9%A2%98%20-%20%E4%BD%8D%E8%BF%90%E7%AE%97.md)<br/>[前缀和](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%89%8D%E7%BC%80%E5%92%8C.md)与[差分](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%B7%AE%E5%88%86.md)|[链表归并排序](/%E5%89%91%E6%8C%87offer/77.%20%E9%93%BE%E8%A1%A8%E6%8E%92%E5%BA%8F.md)<br/>[回溯(79~87)](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%9B%9E%E6%BA%AF%E6%B3%95.md)|[打家劫舍](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E5%BC%BA%E7%9B%97%E9%97%AE%E9%A2%98.md)|
+
 
 
 > ⭐ start index
@@ -48,7 +49,9 @@
 > 
 > 🎵&nbsp; [任我行](https://c.y.qq.com/base/fcgi-bin/u?__=ixBDr) &emsp; 其实尝尽真正自由, 但又觉得没趣
 >
-> 🎶&nbsp; [今日](https://c.y.qq.com/base/fcgi-bin/u?__=3AwmRp) &emsp; 
+> 🎶&nbsp; [今日](https://c.y.qq.com/base/fcgi-bin/u?__=3AwmRp) &emsp; 抬头吧 相信爱你便能飞🍋
+>
+> 🎵&nbsp; [黄金时代](https://c.y.qq.com/base/fcgi-bin/u?__=SCu9Sc) &emsp; 我的快乐时代💿
 
 <br/>
 
