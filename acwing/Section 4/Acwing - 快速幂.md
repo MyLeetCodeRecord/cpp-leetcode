@@ -14,7 +14,7 @@
 
 ##### 1. 迭代写法
 ```CPP
-// 非递归方式实现快速幂
+// 非递归方式实现快速幂 (没考虑mod)
 int quickPow(int a, int n){
     long long ans = 1;
     while(n != 0){
@@ -70,7 +70,7 @@ int main(){
     for(int i=0; i<n; i++){
         int a, b, p;
         scanf("%d %d %d", &a, &b, &p);
-        cout<<quickPow(a, b, p)<<endl;
+        printf("%d\n", quickPow(a, b, p));
     }
     return 0;
 }
