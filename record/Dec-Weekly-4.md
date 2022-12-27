@@ -1,4 +1,4 @@
-#### Weekly 4
+#### Weekly 4 - ✅✅❌
 
 ##### 1. [到目标字符串的最短距离](https://leetcode.cn/problems/shortest-distance-to-target-string-in-a-circular-array/): `一次遍历` `环形数组`
 > 两个角度, 遍历找到每个target, 或者遍历每个元素

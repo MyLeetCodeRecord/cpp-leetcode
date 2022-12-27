@@ -1,4 +1,4 @@
-#### Biweek 2 - ✅✅❌✅ -> 1779
+#### Biweek 2 - ✅✅❌✅
 
 ##### 1. [最多可以摧毁的敌人城堡数目](https://leetcode.cn/problems/maximum-enemy-forts-that-can-be-captured/): `模拟`
 > 对每个`1`, 遇到`0`继续走, 直到找到第一个`-1`, 保证路径必须为`0`以及终点必须为`-1`
