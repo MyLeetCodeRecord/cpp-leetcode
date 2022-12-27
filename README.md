@@ -9,8 +9,10 @@
 |KEYWORD|   |`map` `双指针`|`math` `哈希`|`matrix`|`math` `位运算`|   |`math` <br/>`interval` `双指针`|
 |TOPIC  |[1781. 所有子字符串美丽值之和🧡](/workspace/1781.%E6%89%80%E6%9C%89%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BE%8E%E4%B8%BD%E5%80%BC%E4%B9%8B%E5%92%8C.cpp)|~~[1832. 判断句子是否为全字母句💚](https://leetcode.cn/problems/check-if-the-sentence-is-pangram/)~~|   |[1945. 字符串转化后的各位数字之和](https://leetcode.cn/problems/sum-of-digits-of-string-after-convert/)|~~[1785. 构成特定和需要添加的最少元素🧡](https://leetcode.cn/problems/minimum-elements-to-add-to-form-a-given-sum/)~~||[🍬周赛3](/record/Dec-Weekly-3.md)|
 |KEYWORD|`双指针`<br/>`vector模拟map`|`hash`|   |`string`|`math`|   |`分类讨论`<br/>`完全二叉树`<br/>`最近公共祖先(LCA)`|
-|TOPIC  |   |   |[1753. 移除石子的最大得分🧡](/workspace/1753.%E7%A7%BB%E9%99%A4%E7%9F%B3%E5%AD%90%E7%9A%84%E6%9C%80%E5%A4%A7%E5%BE%97%E5%88%86.cpp)<br/>[专题-LCA](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88(LCA).md)|   |~~[2011. 执行操作后的变量值💚](https://leetcode.cn/problems/final-value-of-variable-after-performing-operations/)~~|[1754. 构造字典序最大的合并字符串🧡](/appendix/LC1754.png)|
+|TOPIC  |   |   |[1753. 移除石子的最大得分🧡](/workspace/1753.%E7%A7%BB%E9%99%A4%E7%9F%B3%E5%AD%90%E7%9A%84%E6%9C%80%E5%A4%A7%E5%BE%97%E5%88%86.cpp)<br/>[专题-LCA](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88(LCA).md)|   |~~[2011. 执行操作后的变量值💚](https://leetcode.cn/problems/final-value-of-variable-after-performing-operations/)~~|[1754. 构造字典序最大的合并字符串🧡](/appendix/LC1754.png)|[🍬周赛4](/record/Dec-Weekly-4.md)|
 |KEYWORD|   |   |`分情况讨论`<br/>`最近公共祖先(LCA)`|   |`模拟`|`双指针`<br/>`递归`|
+|TOPIC  |~~[1759. 统计同构子字符串的数目🧡](https://leetcode.cn/problems/count-number-of-homogenous-substrings/)~~|~~[2027. 转换字符串的最少操作次数💚](https://leetcode.cn/problems/minimum-moves-to-convert-string/)~~|
+|KEYWORD|``|`指针`|
 
 > ⭐ start index
 > 

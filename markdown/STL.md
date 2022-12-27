@@ -62,3 +62,17 @@ sort(pos.begin(), pos.end(), [&](int a, int b){
 > - `erase`
 >   - `erase(val)`: 值删除, 允许删除该值的所有元素
 >   - `erase(iterator)`: 迭代器删除, 只删除迭代器对应的一个元素
+
+
+##### accumulate(st, ed, initial)
+> - `st`: 起始迭代器
+> - `ed`: 终止迭代器
+> - `initial`: 初始值, e.g. `0` or `0L`
+````CPP
+#include <vector>
+#include <numeric>
+using namespace std;
+
+vector<int> arr{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int sum = accumulate(arr.begin(), arr.end(), 0);
+```

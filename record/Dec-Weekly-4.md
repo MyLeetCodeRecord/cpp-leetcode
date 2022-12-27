@@ -54,7 +54,7 @@ int takeCharacters(string s, int k) {
 }
 ```
 
-###### (2) `计数前缀和`➡️双0⃣️做法
+###### (2) `计数前缀和` ➡️ 双0⃣️做法
 > 和第`92`场双周赛第三题: [LC2483. 商店的最少代价](/workspace/2483.%20%E5%95%86%E5%BA%97%E7%9A%84%E6%9C%80%E5%B0%91%E4%BB%A3%E4%BB%B7.cpp)差不多
 >
 > 求计数前缀和`prefixSum[n+1][3]`的同时, 另外用三个`map`, 记录字符`a / b / c`出现`i`次的最左位置
@@ -79,7 +79,7 @@ int takeCharacters(string s, int k) {
 > - `gap`越大, 能选的糖果越少
 >
 > 由于具有**单调性**, 可以用`二分`([right模板](/acwing/Section%201/acwing%20-%20%E4%BA%8C%E5%88%86%E6%B3%95.md#%E5%8F%B3%E4%BE%A7%E7%AB%AF%E7%82%B9)), `check(mid)`的条件就是能选的糖果数量是否大于等于`K`
-
+> 
 > **贪心**
 > 
 > `check(mid)`中, 已知`price[]`(有序)和`gap`
@@ -118,4 +118,53 @@ bool check(vector<int>& price, int gap, int k){
 ```
 
 
-##### 4. [好分区的数目](https://leetcode.cn/problems/number-of-great-partitions/): `0-1背包`
+##### 4. [好分区的数目](https://leetcode.cn/problems/number-of-great-partitions/): `逆向思维` `0-1背包`
+> 这道题不用去重吧, 毕竟每个元素是独一无二的
+> 
+> e.g. `nums = [6,6], k = 2`, 好分区的情况是`([6], [6])`和`([6], [6])`
+>
+> 分为两组, 两组都是「好分区」, 反过来想, 「所有好分区的补集」就是至少有一组是坏分组 (和小于`k`), 并且由于元素的唯一性, 将这样的集合个数 * 2即为「坏分组数量」
+>
+> 所有分组方案的数量应该是`2^n`, 并且要取模, 可以用[快速幂](/acwing/Section%204/Acwing%20-%20%E5%BF%AB%E9%80%9F%E5%B9%82.md)来做 (也可以在求解`0-1背包`的循环中做)
+>
+> 剩下的问题就是「求解坏分组的个数」了, 可以用`0-1背包`解决, 原问题转化为「和小于等于`k-1`的`0-1`背包问题」, `dp[j]`表示容量`j`下的方案数
+>
+> 状态转移方程: `dp[j] = (LL)(dp[j] + dp[j-nums[i]]) % MOD;`
+>
+> ⚠️ 最后计算`ans = ans - 2*sum(dp[j])`时, 由于`ans`已经是取模过的值, 应该补上`2*MOD`才能避免负数情况
+
+```CPP
+int quickPow(int a, int n, int mod){
+    long long ans = 1;
+    while(n != 0){
+        if(n & 1){
+            ans = (long long)ans * a % mod;
+        }
+        a = (long long)a * a % mod;
+        n>>=1;
+    }
+    return ans % mod;
+}
+int countPartitions(vector<int>& nums, int k) {
+    if(accumulate(nums.begin(), nums.end(), 0L) < k * 2) 
+        return 0;
+    int MOD = 1000000007;
+    int n = nums.size();
+    int C = k-1;
+    vector<int> dp(C+1, 0);
+    dp[0] = 1;
+    // long long ans = 1;  // 用于在求2^n的过程中取模
+    for(int i=0; i<nums.size(); i++){
+        // ans = (ans*2) % MOD;
+        for(int j=C; j>=nums[i]; j--){
+            dp[j] = (long long)(dp[j]+dp[j-nums[i]]) % MOD;
+        }
+    }
+    long long ans = quickPow(2, n, MOD);
+    for(int j=0; j<=C; j++){
+        // 这里要补回被截掉的MOD倍数部分, 防止出现负数
+        ans = (ans - 2*dp[j] + 2*MOD) % MOD;
+    }
+    return ans;
+}
+```
