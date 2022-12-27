@@ -53,7 +53,7 @@ int main(){
 ```
 
 
-##### 3. 多重背包 - 朴素做法 - 展开为01背包
+##### 3. 多重背包 - 朴素做法 - 展开为0-1背包
 ```CPP
 #include <cstdio>
 #include <iostream>

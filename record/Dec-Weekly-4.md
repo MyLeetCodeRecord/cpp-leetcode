@@ -116,3 +116,6 @@ bool check(vector<int>& price, int gap, int k){
     return cnt >= k;
 }
 ```
+
+
+##### 4. [好分区的数目](https://leetcode.cn/problems/number-of-great-partitions/): `0-1背包`

@@ -1,4 +1,4 @@
-#### Biweek 2
+#### Biweek 2 - ✅✅❌✅ -> 1779
 
 ##### 1. [最多可以摧毁的敌人城堡数目](https://leetcode.cn/problems/maximum-enemy-forts-that-can-be-captured/): `模拟`
 > 对每个`1`, 遇到`0`继续走, 直到找到第一个`-1`, 保证路径必须为`0`以及终点必须为`-1`
@@ -146,4 +146,87 @@ public:
 };
 ```
 
-##### 3. 
+
+##### 3. [最小化两个数组中的最大值](https://leetcode.cn/problems/minimize-the-maximum-of-two-arrays/)
+
+> todo
+
+
+##### 4. [统计同位异构字符串数目](https://leetcode.cn/problems/count-anagrams/): `math` `组合数` `排列`
+> 第一次做出来第四题, 果然是粘模板代码...
+> 
+> 公式比较容易分析, 对于每个`word[i]`, 统计每个字母出现的次数, 然后求组合数即可, 即`word_ans *= C(rest_pos, cnt[i])`, `i∈[0,26)`
+>
+> 难点在于求较大范围内(`1e5`)的组合数, 可以参考[Acwing - S4 - 组合数II](/acwing/Section%204/5_%E6%B1%82%E7%BB%84%E5%90%88%E6%95%B0II.cpp)
+
+> 由于力扣和Acwing的执行方式不一样, 力扣是每个case调用一次函数, 所以最好不要在每个函数内都求`1e5`范围内的所有`fact[]`和`infact[]`
+> 
+> 更好的方式是截取所有单词, 这样就不需要完整计算`N`范围内所有的`fact[]`和`infact[]`了
+
+```CPP
+const int N = 100010, MOD = 1e9+7;
+int fact[N], infact[N];
+
+int MOD = 1e9+7;
+int quickPow(int a, int n, int p){
+    long long ans = 1;
+    while(n != 0){
+        if(n & 1){
+            ans *= a;
+            ans %= p;
+        }
+        a = (long long)a * a % p;
+        n >>= 1;
+    }
+    return ans;
+}
+void prepareFacts(int n){
+    fact[0] = 1;
+    infact[0] = 1;
+    for(int i=1; i<n; i++){
+        fact[i] = (long long)fact[i-1] * i % MOD;
+        infact[i] = (long long)infact[i-1] * quickPow(i, MOD-2, MOD) % MOD;
+    }
+}
+long long getCombination(int a, int b){
+    int ans = (long long)fact[a] * infact[a-b] % MOD * infact[b] % MOD;
+    return ans;
+}
+int countAnagrams(string s) {
+    s += " ";
+    vector<string> wordList;
+    int maxLen = 0;
+    // 双指针截取单词 => wordList
+    for(int i=0; i<s.size(); i++){
+        int j = i;
+        while(j<s.size() && s[j]!=' ')
+            j++;
+        string word = s.substr(i, j-i);
+        wordList.push_back(word);
+        maxLen = max(maxLen, (int)word.size());
+        i = j;
+    }
+    // 准备fact[]和infact[]两个数组, N取「最大单词长度+1」
+    prepareFacts(maxLen + 1);
+    long long ans = 1;
+    for(string word: wordList){
+        // 对于每个单词, 根据cnt[]计算「异构字符串」数量
+        // e.g. too => cnt['o'-'a']=2, cnt['t'-'a']=1 => C(3, 2) * C(1, 1)
+        int n = word.size();    // n:「剩余位置」
+        long long word_ans = 1;
+        int cnt[26] = {0};
+        for(char ch: word){
+            cnt[ch-'a']++;
+        }
+        for(int i=0; i<26; i++){
+            if(cnt[i] != 0){
+                word_ans *= getCombination(n, cnt[i]);
+                n -= cnt[i];    // 记得更新「剩余位置」
+                word_ans %= MOD;
+            }
+        }
+        ans = ans * word_ans % MOD;
+    }
+    return ans;
+}
+```
