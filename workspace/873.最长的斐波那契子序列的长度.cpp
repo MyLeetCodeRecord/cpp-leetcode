@@ -22,8 +22,8 @@ public:
                 dp[i][j] = 2;
                 if(mp.find(arr[j]-arr[i])!=mp.end()){
                     int k = mp[arr[j] - arr[i]];
-                    if(k < i)
-                        dp[i][j] = max(dp[i][j], dp[k][i] + 1);
+                    if(k < i)   // k必须是「倒数第三个」
+                        dp[i][j] = dp[k][i] + 1;
                 }
                 ans = max(ans, dp[i][j]);
             }
