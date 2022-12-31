@@ -10,7 +10,7 @@ public:
     int uniquePaths(int m, int n) {
         // dp[i][j]: 到(i, j)位置的路径数, 不需要错位
         vector<vector<int> > dp(m, vector<int>(n));
-        dp[0][0] = 0;
+        dp[0][0] = 1;
         for(int j=1; j<n; j++)
             dp[0][j] = 1;
         for(int i=1; i<m; i++)

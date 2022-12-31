@@ -8,17 +8,18 @@
 class Solution {
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
+        reverse(triangle.begin(), triangle.end());
         int n = triangle.size();
-        vector<vector<int> > dp(n, vector<int>(n, 0));
+        vector<vector<int>> dp(n, vector<int>(n, 0));
         for(int j=0; j<n; j++){
-            dp[n-1][j] = triangle.back()[j];
+            dp[0][j] = triangle[0][j];
         }
-        for(int i=n-2; i>=0; i--){
-            for(int j=0; j<=i; j++){
-                dp[i][j] = min(dp[i+1][j], dp[i+1][j+1]) + triangle[i][j];
+        for(int i=1; i<n; i++){
+            for(int j=0; j<n-i; j++){
+                dp[i][j] = min(dp[i-1][j], dp[i-1][j+1]) + triangle[i][j];
             }
         }
-        return dp[0][0];
+        return dp[n-1][0];
     }
 };
 // @lc code=end

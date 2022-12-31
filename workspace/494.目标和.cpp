@@ -13,8 +13,8 @@ public:
             sum += n;
         if(sum<target || (sum-target)%2!=0)
             return 0;
-        // (sum-C) - C = target <= 从复杂度的角度讲也要选小的一侧作为容量C
-        int C = (sum-target)/2;
+        // C-(sum-C) = target
+        int C = (sum+target)/2;
         vector<int> dp(C+1, 0);
         dp[0] = 1;
         for(int i=0; i<nums.size(); i++){

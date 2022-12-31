@@ -16,10 +16,10 @@ public:
         // 外层遍历容量, 内层遍历字典, 因为可能是"W1-W2-W1"
         for(int j=1; j<=s.size(); j++){
             for(int i=0; i<wordDict.size(); i++){
-                if(j>=wordDict[i].size()){
-                    int len = wordDict[i].size();
+                int len = wordDict[i].size();
+                if(j >= len){
                     if(s.substr(j-len, len)==wordDict[i] && dp[j-len]==true)
-                            dp[j] = true;
+                        dp[j] = true;
                 }
             }
         }

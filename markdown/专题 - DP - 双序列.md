@@ -179,7 +179,7 @@ bool isInterleave(string s1, string s2, string s3) {
 
 > 题目描述: https://leetcode.cn/problems/distinct-subsequences/
 > 
-> `dp[i][j]`表示`s[:i]`的子序列中等于`t[:j]`的个数
+> `dp[i][j]`表示`s[:i-1]`的子序列中等于`t[:j-1]`的个数
 > - 如果`s[i-1]==t[j-1]`, `dp[i][j] = dp[i-1][j-1] + dp[i-1][j]`
 > - 如果`s[i-1]!=t[j-1]`, `dp[i][j] = dp[i-1][j]`
 
@@ -189,7 +189,7 @@ for(int i=0; i<=m; i++){
     dp[i][0] = 1;
 }
 for(int i=1; i<=m; i++){
-    for(int j=1; j<=n; j++){
+    for(int j=1; j<=n && j<=i; j++){
         if(s[i-1] == t[j-1])
             dp[i][j] = dp[i-1][j-1] + dp[i-1][j];
         else

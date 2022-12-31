@@ -14,13 +14,14 @@
 ##### [LC62. 不同路径](/workspace/62.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.cpp)
 > 题目描述: https://leetcode.cn/problems/unique-paths
 > 
-> 初始化`row 0`和`col 0`, 然后进行状态转移
+> 如果不选择错位, 初始化`row 0`和`col 0`, 然后进行状态转移
 
 
 ##### [LC63. 不同路径Ⅱ](/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
 > 题目描述: https://leetcode.cn/problems/unique-paths-ii
 > 
 > 注意对第0行和第0列的初始化, 可能无法通过
+
 
 ##### [LC6203. 矩阵中和能被 K 整除的路径](/record/Oct-Weekly-2.md): `路径和`和`路径数目`都有
 > [周赛第四题](/record/Oct-Weekly-2.md)
@@ -58,7 +59,7 @@
 > 
 > 与[LC120. 三角形最小路径和](/workspace/120.%E4%B8%89%E8%A7%92%E5%BD%A2%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C.cpp)类似, 不同点在于形状为矩阵, 且状态转移时有三个候选
 > 
-> 为了让`matrix`和`dp`有直接对应关系, 可以先将`matrix`上下翻转
+> 为了让`matrix`和`dp`有直接对应关系, 可以先将`matrix`上下翻转, 让下标更容易理解
 > 
 > ```CPP
 > reverse(matrix.begin(), matrix.end());

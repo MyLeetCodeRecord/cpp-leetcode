@@ -8,9 +8,10 @@
 class Solution {
 public:
     int change(int amount, vector<int>& coins) {
-        // dp[i]: 凑成面额 i 的组合数量
+        // dp[i]: 凑成面额 i 的方案数量 (组合数量)
         vector<int> dp(amount+1, 0);
         dp[0] = 1;
+        // 组合数量: 外层物品, 内层容量
         for(int i=0; i<coins.size(); i++){
             for(int j=coins[i]; j<=amount; j++){
                 dp[j] += dp[j-coins[i]];    // 组合数量
