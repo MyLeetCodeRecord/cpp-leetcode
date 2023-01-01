@@ -32,6 +32,8 @@ int getPrimes(int n){
 > `n`只会被它的**最小质因子**筛选掉, 不会重复筛选
 
 ```CPP
+int prime[N], idx = 0;
+bool state[N];
 void getPrimes_linear(int n){
     for(int i=2; i<=n; i++){
         if(!state[i])
@@ -42,12 +44,5 @@ void getPrimes_linear(int n){
                 break;
         }
     }
-}
-int main(){
-    int n;
-    scanf("%d", &n);
-    getPrimes_linear(n);
-    printf("%d", idx);
-    return 0;
 }
 ```

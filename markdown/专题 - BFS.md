@@ -5,7 +5,7 @@
 
 
 ##### 2. 图的单源BFS
-> <img src="https://pic.leetcode-cn.com/a3f28eeb94837d510ad7360e756881059e65ca78489d4d9bae6973884b9870bb-%E5%8D%95%E6%BA%90BFS.gif">
+> <img src="https://pic.leetcode-cn.com/a3f28eeb94837d510ad7360e756881059e65ca78489d4d9bae6973884b9870bb-%E5%8D%95%E6%BA%90BFS.gif">2
 
 ###### [LC433. 最小基因变化](/markdown/LC433.%20%E6%9C%80%E5%B0%8F%E5%9F%BA%E5%9B%A0%E5%8F%98%E5%8C%96.md)
 
