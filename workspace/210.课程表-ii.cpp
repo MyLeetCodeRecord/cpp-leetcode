@@ -19,14 +19,13 @@ public:
                 q.push(i);
         }
         while(!q.empty()){
-            int cur = q.front();
+            int u = q.front();
             q.pop();
-            ans.push_back(cur);
-            for(int i=0; i<edges[cur].size(); i++){
-                indegree[edges[cur][i]]--;
-                if(indegree[edges[cur][i]]==0){
-                    q.push(edges[cur][i]);
-                }
+            ans.push_back(u);
+            for(int v: edges[u]){
+                indegree[v]--;
+                if(indegree[v]==0)
+                    q.push(v);
             }
         }
         if(ans.size()==edges.size())
@@ -34,6 +33,7 @@ public:
         return {};
     }
     vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+        // 邻接表存储, 并记录indegree[]数组
         vector<vector<int>> edges(numCourses);
         vector<int> indegree(numCourses, 0);
         for(vector<int> pre: prerequisites){

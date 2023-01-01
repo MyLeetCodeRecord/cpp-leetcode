@@ -29,7 +29,7 @@ int BFS(){
                 }
                 if(nextX>=0 && nextX<n && nextY>=0 && nextY<m && g[nextX][nextY]==0){
                     q.push({nextX, nextY});
-                    g[nextX][nextY] = -1;
+                    g[nextX][nextY] = -1;  // 标记已访问会减少重复搜索, 并且可以避免没有答案的情况
                 }
             }
         }
