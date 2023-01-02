@@ -1,8 +1,8 @@
-#### Weekly 326
-
-> 元旦福利场之第一次ak
+#### Weekly 326 - 元旦福利场之第一次ak
 
 ##### 1. [统计能整除数字的位数](https://leetcode.cn/problems/count-the-digits-that-divide-a-number/): `十进制数`
+
+> tips: 十进制逐位处理, 可以直接转为字符串
 
 ```CPP
 int countDigits(int num) {
@@ -44,7 +44,7 @@ int distinctPrimeFactors(vector<int>& nums) {
 
 ##### 3. [将字符串分割成值不超过 K 的子字符串](https://leetcode.cn/problems/partition-string-into-substrings-with-values-at-most-k/): `dp`
 
-> 当一道题连0都没有, 它可真是一道大水题
+> 当一道题连`0`都没有, 它可真是一道大水题
 > 
 > `dp[i]`: 将`s[:i]`分割成值不超过`K`的子串的最少个数
 > 
@@ -72,6 +72,8 @@ int minimumPartition(string s, int k) {
 
 
 ##### 4. [范围内最接近的两个质数](https://leetcode.cn/problems/closest-prime-numbers-in-range/): `math` `质数筛法`
+
+- [x] 复习`素数筛法`
 
 ###### 方法一: 埃式筛法 - `O(nloglogn)`
 > 朴素筛法: 从小到大, 把每个数的倍数筛掉, 剩下的数没有因数, 所以是质数

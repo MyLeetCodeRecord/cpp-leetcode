@@ -65,7 +65,7 @@ public:
 > 
 > 注意`总开销ans`,`中位数mid`和`找中位数的计数下标idx`都要用`long long`
 
-> 相关题目: [LC462. 最小操作次数使数组元素相等II](/workspace/462.%E6%9C%80%E5%B0%91%E7%A7%BB%E5%8A%A8%E6%AC%A1%E6%95%B0%E4%BD%BF%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89-ii.cpp), [五月](/record/2022-05.md)的一道每日一题呢...
+> 相关题目: [LC462. 最小操作次数使数组元素相等II](/workspace/462.%E6%9C%80%E5%B0%91%E7%A7%BB%E5%8A%A8%E6%AC%A1%E6%95%B0%E4%BD%BF%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89-ii.cpp), [五月](/record/2022/2022-05.md)的一道每日一题呢...
 
 ```CPP
 long long minCost(vector<int>& nums, vector<int>& cost) {

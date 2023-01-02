@@ -53,7 +53,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 ##### 2. 完全二叉树的LCA
 ###### [LC2509. 查询树中环的长度](https://leetcode.cn/problems/cycle-length-queries-in-a-tree/): `最近公共祖先LCA` `完全二叉树`
 
-> [12月周赛](/record/Dec-Weekly-3.md)第四题 - `LCA`问题, `len = dist(a, lca) + dist(b, lca) + 1`
+> [12月周赛](/record/2022/Dec-Weekly-3.md)第四题 - `LCA`问题, `len = dist(a, lca) + dist(b, lca) + 1`
 > 
 > y总 ➡️ 爬山法: **先调到同一层**, 然后共同向上查找公共祖先, 向上爬升的过程就是遍历环的过程, 额外加一条`<a, b>`
 > 
