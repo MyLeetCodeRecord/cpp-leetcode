@@ -1,4 +1,8 @@
-#### Weekly 326 - 元旦福利场之第一次ak
+#### Weekly 326
+
+> 元旦福利场之第一次ak
+>
+> 打扰了, t4被rej了...
 
 ##### 1. [统计能整除数字的位数](https://leetcode.cn/problems/count-the-digits-that-divide-a-number/): `十进制数`
 
@@ -121,4 +125,54 @@ void getPrimes_linear(int n){
     }
 }
 getPrimes_linear(n);
+```
+
+> `rej`没过的原因: 如果`[L, R]`范围内没有质数, 也要返回`{-1, -1}`
+
+```CPP
+class Solution {
+private:
+
+public:
+    int idx = 0;
+    void getPrimes(vector<int> &prime, vector<bool> &state, int n){
+        for(int i=2; i<=n; i++){
+            // 当前数 i 未被标记为非质数, 那说明它是质数
+            if(!state[i]){
+                prime[idx++] = i;
+                // 埃氏筛法: 只标记“质数”的倍数
+                for(int j=2*i; j<=n; j+=i){
+                    state[j] = true;
+                }
+            }
+        }
+    }
+    vector<int> closestPrimes(int left, int right) {
+        vector<int> prime(1000010, 0);
+        vector<bool> state(1000010, false);
+        getPrimes(prime, state, 1000010);
+        int startIndex = -1;
+        for(int i=0; prime[i]<=right; i++){
+            if(prime[i]>=left){
+                startIndex = i;
+                break;
+            }
+        }
+        // rej: 没有质数也要返回{-1, -1}
+        if(startIndex == -1)
+            return {-1, -1};
+        int ans = right-left+1;
+        vector<int> pii = {-1, -1};
+        for(int i=startIndex; prime[i]<=right; i++){
+            if(prime[i+1] <= right){
+                if(prime[i+1]-prime[i] < ans){
+                    pii[0] = prime[i];
+                    pii[1] = prime[i+1];
+                    ans = prime[i+1]-prime[i];
+                }
+            }
+        }
+        return pii;
+    }
+};
 ```
