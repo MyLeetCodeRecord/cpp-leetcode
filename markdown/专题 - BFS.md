@@ -9,7 +9,18 @@
 
 ###### [LC433. 最小基因变化](/markdown/LC433.%20%E6%9C%80%E5%B0%8F%E5%9F%BA%E5%9B%A0%E5%8F%98%E5%8C%96.md)
 
-##### 3. 多源BFS
+
+##### 3. 双向BFS
+> 双向BFS和单向BFS是等价的
+>
+> ![双向BFS](/appendix/%E5%8F%8C%E5%90%91BFS.png)
+> 
+> ![双向BFS-2](/appendix/%E5%8F%8C%E5%90%91BFS-2.png)
+
+###### [LC127. 单词接龙](/workspace/127.%E5%8D%95%E8%AF%8D%E6%8E%A5%E9%BE%99.cpp)
+
+
+##### 4. 多源BFS
 > <img src="https://pic.leetcode-cn.com/be6bdff2b8d983d2135e5d2675b4dae750fef16104c904e462d9b1d64ef6d8ed-%E5%A4%9A%E6%BA%90BFS.gif">
 > 
 > <img src="https://assets.leetcode-cn.com/solution-static/542/fig1.PNG">

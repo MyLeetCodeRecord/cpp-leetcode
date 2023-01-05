@@ -143,3 +143,7 @@ long long totalCost(vector<int>& costs, int k, int candidates) {
     return ans;
 }
 ```
+
+
+##### 4. [最小移动总距离](https://leetcode.cn/problems/minimum-total-distance-traveled/)
+> todo
