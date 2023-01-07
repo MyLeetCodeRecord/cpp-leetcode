@@ -3,10 +3,10 @@
 #### LEETCODE DAILY 1️⃣
 |       |MON|TUE|WED|THU|FRI|SAT|SUN⭐|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC  |   |   |   |   |   |   |~~[2351. 第一个出现两次的字母](https://leetcode.cn/problems/first-letter-to-appear-twice/)~~|
+|TOPIC  |   |   |   |   |   |   |~~[2351. 第一个出现两次的字母💚](https://leetcode.cn/problems/first-letter-to-appear-twice/)~~|
 |KEYWORD|   |   |   |   |   |   |`(位运算)hash`|
-|TOPIC  |[1801. 积压订单中的订单总数🧡](/workspace/1801.%E7%A7%AF%E5%8E%8B%E8%AE%A2%E5%8D%95%E4%B8%AD%E7%9A%84%E8%AE%A2%E5%8D%95%E6%80%BB%E6%95%B0.cpp)|~~[2042. 检查句子中的数字是否递增💚](/workspace/2042.%E6%A3%80%E6%9F%A5%E5%8F%A5%E5%AD%90%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%97%E6%98%AF%E5%90%A6%E9%80%92%E5%A2%9E.cpp)~~|[1802. 有界数组中指定下标处的最大值🧡](/workspace/1802.%E6%9C%89%E7%95%8C%E6%95%B0%E7%BB%84%E4%B8%AD%E6%8C%87%E5%AE%9A%E4%B8%8B%E6%A0%87%E5%A4%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC.cpp)|   |~~[2180. 统计各位数字之和为偶数的整数个数💚](https://leetcode.cn/problems/count-integers-with-even-digit-sum/)~~|
-|KEYWORD|`priority_queue`|`双指针`|`二分`<br/>`贪心`<br/>`矩形面积`|   |`十进制数`|
+|TOPIC  |[1801. 积压订单中的订单总数🧡](/workspace/1801.%E7%A7%AF%E5%8E%8B%E8%AE%A2%E5%8D%95%E4%B8%AD%E7%9A%84%E8%AE%A2%E5%8D%95%E6%80%BB%E6%95%B0.cpp)|~~[2042. 检查句子中的数字是否递增💚](/workspace/2042.%E6%A3%80%E6%9F%A5%E5%8F%A5%E5%AD%90%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%97%E6%98%AF%E5%90%A6%E9%80%92%E5%A2%9E.cpp)~~|[1802. 有界数组中指定下标处的最大值🧡](/workspace/1802.%E6%9C%89%E7%95%8C%E6%95%B0%E7%BB%84%E4%B8%AD%E6%8C%87%E5%AE%9A%E4%B8%8B%E6%A0%87%E5%A4%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC.cpp)|   |~~[2180. 统计各位数字之和为偶数的整数个数💚](https://leetcode.cn/problems/count-integers-with-even-digit-sum/)~~|[1658. 将x减到0的最小操作数🧡](/workspace/1658.%E5%B0%86-x-%E5%87%8F%E5%88%B0-0-%E7%9A%84%E6%9C%80%E5%B0%8F%E6%93%8D%E4%BD%9C%E6%95%B0.cpp)|
+|KEYWORD|`priority_queue`|`双指针`|`二分`<br/>`贪心`<br/>`矩形面积`|   |`十进制数`|`逆向思维` `滑动窗口`|
 
 > ⭐ start index
 > 

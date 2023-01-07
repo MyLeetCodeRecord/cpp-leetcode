@@ -7,6 +7,28 @@
 // @lc code=start
 class Solution {
 public:
+    // 相向双指针: 空间复杂度 O(1)
+    int trap(vector<int>& height) {
+        int n = height.size();
+        int ans = 0;
+        int l = 0, r = n-1;
+        int prefix = 0, suffix = 0;
+        while(l < r){
+            prefix = max(prefix, height[l]);
+            suffix = max(suffix, height[r]);
+            if(prefix < suffix){
+                ans += min(prefix, suffix) - height[l];
+                l++;
+            }
+            else{
+                ans += min(prefix, suffix) - height[r];
+                r--;
+            }
+        }
+        return ans;
+    }
+    /*
+    // 单调栈
     int trap(vector<int>& height) {
         stack<int> sk;  // 栈顶更小的单调栈
         int ans = 0;
@@ -31,24 +53,26 @@ public:
         }
         return ans;
     }
+    */
+    /*
     // 动态规划 - 按列求: 左边的最高 & 右边的最高
-    // int trap(vector<int>& height) {
-    //     vector<int> lHighest(height.size(), height[0]);
-    //     vector<int> rHighest(height.size(), height.back());
-    //     for(int i=1; i<height.size(); i++){
-    //         lHighest[i] = max(height[i-1], lHighest[i-1]);
-    //     }
-    //     for(int i=height.size()-2; i>=0; i--){
-    //         rHighest[i] = max(height[i+1], rHighest[i+1]);
-    //     }
-    //     int ans = 0;
-    //     for(int i=1; i<height.size()-1; i++){
-    //         if(lHighest[i] > height[i] && rHighest[i] > height[i]){
-    //             ans += min(lHighest[i], rHighest[i]) - height[i];
-    //         }
-    //     }
-    //     return ans;
-    // }
+    int trap(vector<int>& height) {
+        int n = height.size();
+        vector<int> lHighest(n, height[0]);
+        vector<int> rHighest(n, height.back());
+        for(int i=1; i<n; i++){
+            lHighest[i] = max(lHighest[i-1], height[i]);
+        }
+        for(int j=n-2; j>=0; j--){
+            rHighest[j] = max(rHighest[j+1], height[j]);
+        }
+        int ans = 0;
+        for(int i=0; i<n; i++){
+            ans += min(lHighest[i], rHighest[i]) - height[i];
+        }
+        return ans;
+    }
+    */
 };
 // @lc code=end
 

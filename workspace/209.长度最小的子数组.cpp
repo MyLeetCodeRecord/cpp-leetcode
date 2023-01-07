@@ -14,7 +14,7 @@ public:
         int sum = 0;
         while(right < nums.size()){
             sum += nums[right++];
-            while(sum >= target){
+            while(left<right && sum >= target){
                 ans = min(ans, right-left);
                 sum -= nums[left++];
             }

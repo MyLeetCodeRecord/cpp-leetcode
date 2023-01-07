@@ -7,22 +7,19 @@
 // @lc code=start
 class Solution {
 public:
-    // 子数组是连续的, 并且每个值为整数, 因此还是可以用滑动窗口
+    // 子数组是连续的, 并且每个值为正数, 因此还是可以用滑动窗口
     int numSubarrayProductLessThanK(vector<int>& nums, int k) {
-        int left = 0;
-        int right = 0;
-        int product = 1;
-        int ans = 0;
-        while(right<nums.size()){
-            // 无脑右移
-            product *= nums[right++];
-            // 收缩左边界(严格小于 k)
-            while(left<right && product>=k){
-                product /= nums[left++];
+        long long product = 1;
+        int l = 0, r = 0;
+        int cnt = 0;
+        while(r < nums.size()){
+            product *= nums[r++];
+            while(l<r && product>=k){
+                product /= nums[l++];
             }
-            ans += (right-left);    // 只要固定right, 任选left即可得到所有子数组
+            cnt += r-l;     // 固定right, 枚举left
         }
-        return ans;
+        return cnt;
     }
 };
 // @lc code=end

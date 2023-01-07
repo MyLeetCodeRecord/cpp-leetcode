@@ -9,8 +9,10 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         sort(nums.begin(), nums.end());
-        vector<vector<int> > ans;
+        vector<vector<int>> ans;
+        // 枚举最左侧一个元素
         for(int i=0; i+2<nums.size(); i++){
+            // 相向双指针
             int left = i+1;
             int right = nums.size()-1;
             while(left < right){
