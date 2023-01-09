@@ -10,7 +10,7 @@ public:
     // 「子序列」可以不连续
     int longestPalindromeSubseq(string s) {
         int n = s.size();
-        // dp[i][j]: 字符串[i:j]中, 删除某些或不删除字符形成的最大序列长度
+        // dp[i][j]: s[i:j]中, 最大回文子序列长度
         int dp[n][n];
         memset(dp, 0, sizeof dp);
         for(int i=0; i<n; i++){

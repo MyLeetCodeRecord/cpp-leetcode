@@ -12,7 +12,7 @@ public:
         int dp[len][len];
         memset(dp, 0, sizeof(dp));
         // 初始化
-        // ans记录最大长度, start记录一个可能的起始位置, 从而减少频繁substr()的开销
+        // 记录最长回文子串「长度」和「起始位置」, 可以避免频繁substr
         int ans = 1;
         int start = 0;
         for(int i=0;i<len;i++){

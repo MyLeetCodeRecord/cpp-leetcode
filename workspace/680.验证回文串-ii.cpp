@@ -21,10 +21,7 @@ public:
             if(s[i]!=s[n-i-1]){
                 string first = s.substr(0, i) + s.substr(i+1);
                 string second = s.substr(0, n-i-1) + s.substr(n-i);
-                if(standardPalindrome(first) || standardPalindrome(second))
-                    return true;
-                else
-                    return false;
+                return standardPalindrome(first) || standardPalindrome(second);
             }
         }
         return true;    // 没有不相等字符对的情况

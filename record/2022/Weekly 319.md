@@ -1,4 +1,4 @@
-#### Weekly 2 - No. 317 - `3*, rank 1321`
+#### Weekly 319
 
 ##### 1. [温度转换](https://leetcode.cn/problems/convert-the-temperature/): 加减法
 
@@ -68,98 +68,76 @@ int subarrayLCM(vector<int>& nums, int k) {
 
 ###### 直接交换
 
-> 读一遍题就可以发现上**每次遍历一整个layer**的`层序遍历(BFS)`
+> 读一遍题就可以发现是**每次遍历一整个layer**的`层序遍历(BFS)`
 > 
 > 遇到不匹配的, 交换一次放到指定位置, 直到指针扫完整个列表, **需要注意的是发生交换的话, 指针不能后移**
 > 
-> 看了灵神和y总的视频, 都是`置换环/环图`来求最小交换次数, 具体实现可以用并查集...但做周赛的时候用的是"直接交换回正确位置"的做法, 也都过了
+> 看了灵神和y总的视频, 都是`置换环/环图`来求最小交换次数`ans = n - #loop`...但做周赛的时候用的是"直接交换回正确位置"的做法, 也都过了
 > 
 > 其实, 交换只发生在每个组(一个环里的所有节点作为一个组)当中, 交换次数还是等于`circle_size-1`...所以两种方法应该是**等价的**
+>
+> ⬆️ 不推荐
 
-```CPP
-// 交换代码: 不匹配则交换, 使数组有序
-for(int i=0; i<layer.size(); ){
-    // layer[i]在ta应该在的位置上, 移动指针 i
-    if(i == mp[layer[i]]){
-        i++;
-        continue;
-    }
-    // 不在正确位置, 与正确位置(mp[layer[i]])上的元素交换, 指针 i 不移动
-    else{
-        swap(layer[i], layer[mp[layer[i]]]);
-        cnt++;
-    }
-}
-```
+###### [置换环](/markdown/%E4%B8%93%E9%A2%98%20-%20%E7%BD%AE%E6%8D%A2%E7%8E%AF.md) ✅
 
-> 另一个问题是, **应该在的正确位置**怎么求?
+> ![置换环](/appendix/%E7%BD%AE%E6%8D%A2%E7%8E%AF-1.png)
 > 
-> **保存`key`**: 借助`map`的有序性, 将数组第i个元素以`<layer[i], ->`的形式保存, 就自动按`key(元素值)`排序了
+> 因此, `ans = ∑(cycle_size-1)`
+>
+> 同时, 每个节点元素之出现一个环路中, 共有`N`个元素, 则`ans = N-(#cycle)`
 > 
-> **更新`value`**: 然后遍历`map`, 由于`map`的迭代器是按`key`(数组元素值)递增的, 只需要把`it->second`更新成一个从0开始的自增`idx++`, `mp[layer[i]]`就可以表示`layer[i]`应该在的正确位置了
-```CPP
-map<int, int> mp;
+> ![置换环-cn](/appendix/%E7%BD%AE%E6%8D%A2%E7%8E%AF.png)
 
-int idx = 0;
-for(map<int, int>::iterator it=mp.begin(); it!=mp.end(); it++){
-    it->second = idx++;
+```CPP
+int minSwap(vector<int>& arr){
+    int n = arr.size();
+    // map存储的是元素应该放在的正确位置
+    vector<int> copy = arr;
+    sort(copy.begin(), copy.end());
+    unordered_map<int, int> mp;
+    for(int i=0; i<n; i++){
+        mp[copy[i]] = i;
+    }
+    // 找到所有环路
+    vector<bool> visited(n, false);
+    int loopNum = 0;
+    for(int i=0; i<n; i++){
+        if(!visited[i]){
+            // 遍历一个环, 标记所有节点为visited=true
+            int j = i;
+            while(!visited[j]){
+                visited[j] = true;
+                j = mp[arr[j]];
+            }
+            loopNum++;
+        }
+    }
+    return n - loopNum;
 }
-```
-
-> **直接交换(模拟交换过程)的完整实现**
-```CPP
-int layerOrder(TreeNode* root){
+int BFS(TreeNode* root){
     int ans = 0;
     queue<TreeNode*> q;
     q.push(root);
     while(!q.empty()){
-        int fixsize = q.size();
         vector<int> layer;
-        for(int i=0; i<fixsize; i++){
+        int _size = q.size();
+        for(int i=0; i<_size; i++){
             TreeNode* cur = q.front();
-            layer.push_back(cur->val);
             q.pop();
-            if(cur->left!=NULL)
+            layer.push_back(cur->val);
+            if(cur->left != NULL)
                 q.push(cur->left);
-            if(cur->right!=NULL)
+            if(cur->right != NULL)
                 q.push(cur->right);
         }
-        map<int, int> mp;
-        // 这里只是把key加进去, val后面还会更新
-        for(int i=0; i<layer.size(); i++){
-            mp[layer[i]] = i;
-        }
-        // 更新value为"layer[i]应在的正确位置"
-        int idx = 0;
-        for(map<int, int>::iterator it=mp.begin(); it!=mp.end(); it++){
-            it->second = idx++;
-        }
-        int cnt = 0;
-        for(int i=0; i<layer.size(); ){
-            if(i == mp[layer[i]]){
-                i++;
-                continue;
-            }
-            else{
-                swap(layer[i], layer[mp[layer[i]]]);
-                cnt++;
-            }
-        }
-        ans += cnt;
+        ans += minSwap(layer);
     }
     return ans;
 }
 int minimumOperations(TreeNode* root) {
-    return layerOrder(root);
+    return BFS(root);
 }
 ```
-
-###### 置换环 - 并查集记录环的大小
-> ![置换环](/appendix/%E7%BD%AE%E6%8D%A2%E7%8E%AF.jpg)
-> 
-> 使用`并查集`求得每个集合的`cnt`, `cnt-1`即为本集合中所需的交换次数
-> 
-> todo吧 摆烂
 
 
 ##### 4. [不重叠回文子字符串的最大数目](https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings/)
@@ -183,6 +161,7 @@ vector<int> dp(n+1);
 for(int i=1; i<=n; i++){
     dp[i] = dp[i-1];
     for(int j=i-k; j>0; j--){
+        // 如果s[j+1, i]是回文, 则dp[i]可以从dp[j]转移过来
         if(isHW[j+1][i])
             dp[i] = max(dp[i], dp[j] + 1);
     }
@@ -192,21 +171,30 @@ return dp[n];
 
 ###### 完整实现
 ```CPP
-int maxPalindromes(string s, int k) {
+// 二维dp预处理出所有子串是否为回文, 为了方便从1开始
+vector<vector<bool>> initSubstr(string s){
     int n = s.size();
-    vector<vector<bool> > isHW(n+1, vector<bool>(n+1, false));
-    for(int len=1; len<=n; len++){
+    vector<vector<bool>> dp(n+1, vector<bool>(n+1, false));
+    for(int i=1; i<=n; i++){
+        dp[i][i] = true;
+        if(i != n)
+            dp[i][i+1] = (s[i-1]==s[i]);
+    }
+    for(int len=3; len<=n; len++){
         for(int i=1; i+len-1<=n; i++){
-            int j = i + len - 1;
-            if(len == 1)
-                isHW[i][j] = true;
-            else if(s[i-1]==s[j-1] && (len==2 || isHW[i+1][j-1]))
-                isHW[i][j] = true;
+            int j = i+len-1;
+            if(s[i-1]==s[j-1])
+                dp[i][j] = dp[i+1][j-1];
         }
     }
+    return dp;
+}
+int maxPalindromes(string s, int k) {
+    int n = s.size();
+    vector<vector<bool> > isHW = initSubstr(s);
     vector<int> dp(n+1, 0);
-    for(int i=1; i<=n; i++){
-        dp[i] = dp[i-1];
+    for(int i=k; i<=n; i++){
+        dp[i] = dp[i-1];        // !!!
         for(int j=i-k; j>=0; j--){
             if(isHW[j+1][i]==true)
                 dp[i] = max(dp[i], dp[j] + 1);
