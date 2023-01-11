@@ -24,8 +24,8 @@
 |KEYWORD|`dp_left/dp_right`|`十进制数`|`math` `约数`|   |`sort`|
 |TOPIC  |[选数异或](/acwing/Winter%20Vacation/D6_4645.%20%E9%80%89%E6%95%B0%E5%BC%82%E6%88%96.md)|[求和](/acwing/Winter%20Vacation/D7_4633.%20%E6%B1%82%E5%92%8C.md)|[数位排序](/acwing/Winter%20Vacation/D8_4653.%20%E6%95%B0%E4%BD%8D%E6%8E%92%E5%BA%8F.md)|[重新排序](/acwing/Winter%20Vacation/D9_4655.%20%E9%87%8D%E6%96%B0%E6%8E%92%E5%BA%8F.md)|~~[纸张尺寸](/acwing/Winter%20Vacation/D10_4652.%20%E7%BA%B8%E5%BC%A0%E5%B0%BA%E5%AF%B8.md)~~
 |KEYWORD|`hash` `dp`|`math` `归纳`<br/>`前缀和`|`快速排序`|`前缀和` `差分`|   |
-|TOPIC  | |~~[未初始化警告](/acwing/Winter%20Vacation/D12_4454.%20%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AD%A6%E5%91%8A.md)~~|[归一化处理](/acwing/Winter%20Vacation)|
-|KEYWORD| |`阅读理解`|
+|TOPIC  |[技能升级](/acwing/Winter%20Vacation/D11_4656.%20%E6%8A%80%E8%83%BD%E5%8D%87%E7%BA%A7.md)|~~[未初始化警告](/acwing/Winter%20Vacation/D12_4454.%20%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AD%A6%E5%91%8A.md)~~|[归一化处理](/acwing/Winter%20Vacation/D12_4454.%20%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AD%A6%E5%91%8A.md)|
+|KEYWORD|`多路归并` `二分`<br/>`等差数列`|`阅读理解`|
 
 <br/>
 
