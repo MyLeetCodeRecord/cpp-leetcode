@@ -12,7 +12,7 @@ public:
         int n = matrix.size();
         int l = INT_MIN;
         int r = INT_MAX;
-        while(l<r){
+        while(l < r){
             int mid = (long long)l+r>>1;
             // 统计小于等于mid的元素个数
             int cnt = 0;
