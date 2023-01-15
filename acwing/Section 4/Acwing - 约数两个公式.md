@@ -36,6 +36,7 @@ int main(){
         if(x > 1)
             mp[x]++;
     }
+    // 公式: (a0+1)*(a1+1)...(ak+1)
     long long ans = 1;
     for(unordered_map<int,int>::iterator it=mp.begin(); it!=mp.end(); it++){
         ans = ans*(1+it->second);
