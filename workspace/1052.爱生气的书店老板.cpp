@@ -7,26 +7,27 @@
 // @lc code=start
 class Solution {
 public:
-    // 想复杂了xd, 这是个固定窗口的问题, ans是原始的sum+因为buff窗口而新增的顾客的最大值
-    // 如果不分解问题, 不固定窗口大小, 难度就来到 “维护最左和最右1” 这边
+    // 固定尺寸滑动窗口
     int maxSatisfied(vector<int>& customers, vector<int>& grumpy, int k) {
-        int ans = 0;
-        int sum = 0;
-        int left = 0;
-        int right = 0;
-        for(int i=0; i<customers.size(); i++){
-            sum += (grumpy[i]==0) ? customers[i] : 0;
+        int n = customers.size();
+        int satisfied = 0;
+        for(int i=0; i<n; i++){
+            if(grumpy[i] == 0)
+                satisfied += customers[i];
         }
-        while(right < customers.size()){
-            // 扩大右窗口
-            sum += ((grumpy[right]==1) ? customers[right] : 0);
-            right++;
-            // 收缩左窗口
-            if(right-left == k){
-                ans = max(ans, sum);
-                sum -= ((grumpy[left]==1) ? customers[left] : 0);
-                left++;
-            }
+        // 初始化窗口在[0,k-1]
+        for(int i=0; i<k; i++){
+            if(grumpy[i] == 1)
+                satisfied += customers[i];
+        }
+        int ans = satisfied;
+        // 逐个位置枚举右端点, 每次右端点和左端点都移动一个位置, 维持窗口大小为k
+        for(int i=k; i<n; i++){
+            if(grumpy[i] == 1)
+                satisfied += customers[i];
+            if(grumpy[i-k] == 1)
+                satisfied -= customers[i-k];
+            ans = max(ans, satisfied);
         }
         return ans;
     }

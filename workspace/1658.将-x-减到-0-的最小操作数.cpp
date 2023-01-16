@@ -9,24 +9,27 @@ class Solution {
 public:
     // 逆向思维转化为lc209
     int minOperations(vector<int>& nums, int x) {
-        int target = 0;
-        for(int i=0; i<nums.size(); i++)
-            target += nums[i];
-        target -= x;
-        // 找到「和=target」的最长的连续子数组
+        int n = nums.size();
+        int all = 0;
+        for(int i=0; i<n; i++){
+            all += nums[i];
+        }
+        int target = all - x;
         int ans = -1;
+        int l = 0, r = 0;
         int sum = 0;
-        for(int l=0, r=0; r<nums.size(); r++){
+        while(r < n){
             // 扩大右边界
-            sum += nums[r];
-            // 缩小左边界
-            while(l<=r && sum>target){
+            sum += nums[r++];
+            // 收缩左边界
+            while(l<r && sum>target){
                 sum -= nums[l++];
             }
+            // 找到「和=target」的最长的连续子数组
             if(sum == target)
-                ans = max(ans, r-l+1);
+                ans = max(ans, r-l);
         }
-        return (ans==-1) ? -1 : nums.size()-ans;
+        return (ans==-1) ? -1 : (n-ans);
     }
 };
 // @lc code=end
