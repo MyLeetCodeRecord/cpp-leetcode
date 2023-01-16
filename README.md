@@ -35,10 +35,12 @@
 <br/>
 
 #### PLAYLIST
-> 🎵&nbsp; &emsp;
+> 🎵&nbsp; [暗涌](https://c.y.qq.com/base/fcgi-bin/u?__=gCZKO9) &emsp; 1997❓❗️
 > 
-> 🎶&nbsp; &emsp;
-
+> 🎶&nbsp; [世界真细小](https://c.y.qq.com/base/fcgi-bin/u?__=5yUZXfA) &emsp; Joey和谁合唱都好好听🤩..听着听着就忘了我没跑车😵
+>
+> 🎵&nbsp; [活着多好](https://c.y.qq.com/base/fcgi-bin/u?__=cCRTNq) &emsp; 
+仍然在呼吸都应该要庆贺
 
 <br/>
 
