@@ -8,19 +8,18 @@
 class Solution {
 public:
     // 保持窗口内最多有k个0, 问这样的数组最长长度是多少?
+    // 滑动窗口
     int longestOnes(vector<int>& nums, int k) {
-        int ans = min(k, (int)nums.size());
-        int left = 0;
-        int right = 0;
-        int zeroNum = 0;
-        while(right < nums.size()){
-            // 扩大右边界
-            zeroNum += (nums[right++]==0);
-            // 收缩左边界
-            while(zeroNum > k){
-                zeroNum -= (nums[left++]==0);
+        int n = nums.size();
+        int ans = 0;
+        int l = 0, r = 0;
+        int zeroCnt = 0;
+        while(r < n){
+            zeroCnt += (nums[r++]==0);
+            while(zeroCnt > k){
+                zeroCnt -= (nums[l++]==0);
             }
-            ans = max(ans, right-left);
+            ans = max(ans, r-l);
         }
         return ans;
     }

@@ -26,7 +26,7 @@ public:
             // left收缩的条件: 1. 其它字符  2. 个数超额的字符
             // 这里必须判断left范围, e.g. s="a" t="b"
             // 代码里没有cnt--, 因为一旦某个字符个数够了, 那left就不会左移使这个条件被破坏
-            while(left<s.size() && mp_t.find(s[left])==mp_t.end() || mp_s[s[left]] > mp_t[s[left]]){
+            while(left<right && mp_t.find(s[left])==mp_t.end() || mp_s[s[left]] > mp_t[s[left]]){
                 mp_s[s[left++]]--;
             }
             if(cnt == mp_t.size()){

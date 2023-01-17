@@ -7,21 +7,20 @@
 // @lc code=start
 class Solution {
 public:
-    // s和t是对齐的两个字符串, 所以一个滑动窗口, 控制窗口内不同的字符差值不超过maxCost即可
+    // 滑动窗口: 控制窗口内不同的字符差值不超过maxCost即可
     int equalSubstring(string s, string t, int maxCost) {
-        int left = 0;
-        int right = 0;
+        int m = s.size();
+        int n = t.size();
         int ans = 0;
-        while(right<s.size()){
-            // 扩大右窗口
-            maxCost -= abs(s[right] - t[right]);    // 如果不同, 花费一个cost
-            right++;
-            // 收缩左窗口
-            while(maxCost < 0){
-                maxCost += abs(s[left] - t[left]);  // 释放一个cost
-                left++;
+        int l=0, r=0;
+        int cost = 0;
+        while(r < n){
+            cost += abs(s[r]-t[r++]);
+            while(cost > maxCost){
+                cost -= abs(s[l]-t[l++]);
             }
-            ans = max(ans, right-left);
+            // 长度为r-l+1, 删除一个元素后长度为r-l
+            ans = max(ans, r-l);
         }
         return ans;
     }
