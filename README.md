@@ -29,8 +29,8 @@
 |KEYWORD|`hash` `dp`|`math` `归纳`<br/>`前缀和`|`快速排序`|`前缀和` `差分`|   |
 |TOPIC  |[技能升级](/acwing/Winter%20Vacation/D11_4656.%20%E6%8A%80%E8%83%BD%E5%8D%87%E7%BA%A7.md)|~~[未初始化警告](/acwing/Winter%20Vacation/D12_4454.%20%E6%9C%AA%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AD%A6%E5%91%8A.md)~~|~~[归一化处理](/acwing/Winter%20Vacation/D13_%204509.%20%E5%BD%92%E4%B8%80%E5%8C%96%E5%A4%84%E7%90%86.md)~~|[如此编码](/acwing/Winter%20Vacation/D14_4699.%20%E5%A6%82%E6%AD%A4%E7%BC%96%E7%A0%81.md)|[何以包邮](/acwing/Winter%20Vacation/D15_4700.%20%E4%BD%95%E4%BB%A5%E5%8C%85%E9%82%AE.md)|
 |KEYWORD|`多路归并` `二分`<br/>`等差数列`|`阅读理解`|`阅读理解`|`math`|`01背包`|
-|TOPIC  |[出行计划](/acwing/Winter%20Vacation/D16_4455.%20%E5%87%BA%E8%A1%8C%E8%AE%A1%E5%88%92.md)|
-|KEYWORD|`(一维)差分`|
+|TOPIC  |[出行计划](/acwing/Winter%20Vacation/D16_4455.%20%E5%87%BA%E8%A1%8C%E8%AE%A1%E5%88%92.md)|[寻宝大冒险](/acwing/Winter%20Vacation/D17_4510.%20%E5%AF%BB%E5%AE%9D%E5%A4%A7%E5%86%92%E9%99%A9.md)|[左孩子右兄弟](/acwing/Winter%20Vacation/D18_3422.%20%E5%B7%A6%E5%AD%A9%E5%AD%90%E5%8F%B3%E5%85%84%E5%BC%9F.md)|[乘方](/acwing/Winter%20Vacation/D19_4728.%20%E4%B9%98%E6%96%B9.md)|
+|KEYWORD|`(一维)差分`|`矩阵` `坐标转换`|`贪心` `DFS`<br/>`邻接表存储`|`quickPow`|
 
 <br/>
 
