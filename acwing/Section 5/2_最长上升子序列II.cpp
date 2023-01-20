@@ -13,28 +13,25 @@ using namespace std;
 
 const int N = 100010;
 int a[N];
-int dp[N];  // 递增的, 在该数组上进行二分查找
+int dp[N], len=0;   // dp是一个大小为len的递增数组, 在上面进行二分查找
 
 int main(){
     int n;
     scanf("%d", &n);
     for(int i=0; i<n; i++){
         scanf("%d", &a[i]);
-    }
-    int len = 0;
-    for(int i=0; i<n; i++){
-        // 在dp[]中二分出第一个小于a[i]的数
+        // 二分查找: 找到dp[]中比a[i]小的最大位置
         int l = 0;
         int r = len;
         while(l < r){
             int mid = (l+r+1)/2;
-            if(dp[mid] < a[i])
-                l = mid;
-            else
+            if(dp[mid] >= a[i]) // 严格递增 => 小于a[i]的最大位置 => 等于a[i]不是答案
                 r = mid-1;
+            else
+                l = mid;
         }
-        len = max(len, r+1);
-        dp[r+1] = a[i];
+        len = max(len, l+1);
+        dp[l+1] = a[i];     // 更新l+1的最小值, 因为二分查找的就是更小值, 所以不会出现原dp[l+1]<a[i]的情况
     }
     cout<<len<<endl;
     return 0;

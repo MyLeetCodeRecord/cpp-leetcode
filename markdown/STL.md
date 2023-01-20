@@ -20,8 +20,8 @@ sort(pos.begin(), pos.end(), [&](int a, int b){
 ##### string
 > `s.substr(start)`: 从`start`截取到末尾
 >
-> `s.find(ch, start)`: 从`start`开始查找第一次出现位置
-> 
+> `s.find(ch, start)`: 从`start`开始查找第一次出现位置, 如果找不到返回`s.npos`
+
 
 ##### queue
 > `que.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
