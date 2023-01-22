@@ -48,3 +48,6 @@
 - [x] [Weekly 326](/record/2023/Weekly%20326.md)
 - [x] [Biweek 95](/record/2023/Biweekly%2095.md)
 - [x] [Weekly 327](/record/2023/Weekly%20327.md)
+- [x] [Weekly 328](/record/2023/Weekly%20328.md): 补
+- [ ] [BiWeek 96](/record/2023/): 补
+- [x] [Weekly 329](/record/2023/Weekly%20329.md)
