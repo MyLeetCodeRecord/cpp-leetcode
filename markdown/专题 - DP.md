@@ -2,11 +2,14 @@
 
 #### 1. 一维DP
 ##### [LC746. 使用最小花费爬楼梯](/workspace/746.%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF.cpp)
+
 > 题目描述: https://leetcode.cn/problems/min-cost-climbing-stairs
 > 
 > <img src="https://img-blog.csdnimg.cn/2021010621363669.png">
 
+
 ##### [LC343. 整数拆分](/workspace/343.%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.cpp)
+
 > 题目描述: https://leetcode.cn/problems/min-cost-climbing-stairs
 > 
 > `dp[i]`是拆分 i 能得到的最大乘积, **至少切分一次**
@@ -15,7 +18,9 @@
 > 
 > 每个 j 作为分界点的最大乘积 `max(j*(i-j), j*dp[i-j])` 作为dp[i]的一个候选
 
+
 ##### [LC2266. 统计打字方案数](/markdown/LC6058.%20%E7%BB%9F%E8%AE%A1%E6%89%93%E5%AD%97%E6%96%B9%E6%A1%88%E6%95%B0.md)
+
 > 周赛第三题: https://leetcode.cn/problems/count-number-of-texts
 >
 > 为`{7,9}`和`others`设计两个递推公式
@@ -30,7 +35,9 @@
 > 
 > [7 ... 7] **7  7  7**
 
+
 ##### [LC91. 解码方法](/workspace/91.%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95.cpp)
+
 > 题目描述: https://leetcode.cn/problems/decode-ways
 > 
 > 第一道坎是选择`dp`还是`backtrack`
@@ -41,20 +48,60 @@
 > 
 > 如果使用`dp`, 区分`单个字符映射字母`和`与前一个字符组合一起映射字母`两种情况即可
 
+##### [LC467. 环绕字符串中唯一的子字符串](/workspace/467.%E7%8E%AF%E7%BB%95%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E5%94%AF%E4%B8%80%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)
+
+> 题解: https://leetcode.cn/problems/unique-substrings-in-wraparound-string/solution/by-fuxuemingzhu-ixas/
+>
+> ![LC467-1](/appendix/LC467.png)
+>
+> 将`dp[x]`定义为「字符串`p`中, 以字符`x`作为结尾的、符合中字典序的最长连续子串长度」, 答案为对所有`dp[x]`求和
+> 
+> 注意这里的`x`不是`p`中的下标, 而是对应第`x`个小写字母
+> 
+> 如何保证**不重复**❓
+>
+> `dp[x] = max(dp[x], len)`
+> 
+> ![LC467-2](/appendix/LC467-2.png)
+
+```CPP
+int findSubstringInWraproundString(string p) {
+    int n = p.size();
+    // dp[x] 表示 p 中以字符 x 结尾且在 s 中的子串的最长长度
+    vector<int> dp(26, 0);
+    dp[p[0]-'a'] = 1;
+    int len = 1;
+    for(int i=1; i<n; i++){
+        if((p[i]+26-p[i-1]) % 26 == 1)
+            len++;
+        else
+            len = 1;
+        dp[p[i]-'a'] = max(dp[p[i]-'a'], len);
+    }
+    int ans = 0;
+    for(int i=0; i<26; i++){
+        ans += dp[i];
+    }
+    return ans;
+}
+```
 
 
 #### 2. 矩阵DP / 路径问题
+
 ##### [LC62. 不同路径](/workspace/62.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.cpp)
 > 题目描述: https://leetcode.cn/problems/decode-ways
 > 
 > ![LC62](/appendix/LC62.png)
 
 ##### [LC63. 不同路径Ⅱ](/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
+
 > 题目描述: https://leetcode.cn/problems/unique-paths-ii
 > 
 > 注意对第0行和第0列的初始化
 > 
 > <img src="https://img-blog.csdnimg.cn/20210104114513928.png">
+
 
 ##### [LC64. 最小路径和](/workspace/64.%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C.cpp)
 > 题目描述: https://leetcode.cn/problems/minimum-path-sum
@@ -63,6 +110,7 @@
 #### 3. 二维DP
 
 ##### [剑指offer91. 粉刷房子](https://leetcode.cn/problems/JEj789/)
+
 ```CPP
 // 可以直接用costs作为dp数组, 不用其它空间
 int minCost(vector<vector<int>>& costs) {
@@ -85,14 +133,17 @@ int minCost(vector<vector<int>>& costs) {
 
 ##### [股票问题](/markdown/%E4%B8%93%E9%A2%98%20-%20DP%20-%20%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98.md)
 
+
 ##### [LC376. 摆动序列](/workspace/376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.cpp)
+
 > 题目描述: https://leetcode.cn/problems/wiggle-subsequence
 > 
 > ![LC376](/appendix/LC376.png)
 
 
 ##### [LC790. 多米诺和托米诺平铺](/workspace/790.%E5%A4%9A%E7%B1%B3%E8%AF%BA%E5%92%8C%E6%89%98%E7%B1%B3%E8%AF%BA%E5%B9%B3%E9%93%BA.cpp)
-> 官方题解这个图画的挺好的, 状态要想全, `00`和`11`是两种情况
+
+> 官方题解这个图画的很好, 状态要想全, `00`和`11`是两种情况
 > 
 > ![LC790](/appendix/LC790.png)
 > 
