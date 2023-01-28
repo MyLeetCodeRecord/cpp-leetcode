@@ -6,60 +6,77 @@
 
 // @lc code=start
 // CV
-struct UnionFind {
-    vector <int> ancestor;
-    UnionFind(int n) {
-        ancestor.resize(n);
-        for (int i = 0; i < n; ++i) {
-            ancestor[i] = i;
-        }
-    }
-    int find(int index) {
-        return index == ancestor[index] ? index : ancestor[index] = find(ancestor[index]);
-    }
-    void merge(int u, int v) {
-        ancestor[find(u)] = find(v);
-    }
-};
 
 class Solution {
+private:
+    vector<int> father;
+    int n; // 边的数量
+    void init(int n) {
+        father.resize(n+1);
+        for (int i = 1; i <= n; ++i) {
+            father[i] = i;
+        }
+    }
+    int find(int u) {
+        if(u != father[u])
+            father[u] = find(father[u]);
+        return father[u];
+    }
+    void union2(int u, int v) {
+        u = find(u);
+        v = find(v);
+        if (u != v)
+            father[v] = u;
+    }
+    // 判断 u 和 v是否找到同一个根
+    bool inSame(int u, int v) {
+        int fu = find(u);
+        int fv = find(v);
+        return fu == fv;
+    }
+    // 在有向图里找到删除的那条边, 即找到使图中存在环的边
+    vector<int> getRemoveEdge(const vector<vector<int>>& edges) {
+        init(n); // 初始化并查集
+        for (int i = 0; i < n; i++) {
+            if (inSame(edges[i][0], edges[i][1]))  // 构成有向环了，就是要删除的边
+                return edges[i];
+            union2(edges[i][0], edges[i][1]);
+        }
+        return {};
+    }
+    // 判断删一条边之后判断是不是树
+    bool isTreeAfterRemoveEdge(const vector<vector<int>>& edges, int deleteEdge) {
+        init(n); // 初始化并查集
+        for (int i = 0; i < n; i++) {
+            if (i == deleteEdge) continue;
+            if (inSame(edges[i][0], edges[i][1])) { // 构成有向环了，一定不是树
+                return false;
+            }
+            union2(edges[i][0], edges[i][1]);
+        }
+        return true;
+    }
 public:
     vector<int> findRedundantDirectedConnection(vector<vector<int>>& edges) {
-        int n = edges.size();
-        UnionFind uf = UnionFind(n + 1);
-        auto parent = vector<int>(n + 1);
-        for (int i = 1; i <= n; ++i) {
-            parent[i] = i;
+        n = edges.size();
+        vector<int> inDegree(n+1, 0);
+        for (int i = 0; i < n; i++) {
+            inDegree[edges[i][1]]++; // 统计入度
         }
-        int conflict = -1;
-        int cycle = -1;
-        for (int i = 0; i < n; ++i) {
-            auto edge = edges[i];
-            int node1 = edge[0], node2 = edge[1];
-            if (parent[node2] != node2) {
-                conflict = i;
-            } else {
-                parent[node2] = node1;
-                if (uf.find(node1) == uf.find(node2)) {
-                    cycle = i;
-                } else {
-                    uf.merge(node1, node2);
-                }
-            }
+        // case1: 如果有入度为2的节点,那么一定是两条边里删一个, 看删哪个可以构成树
+        vector<int> twoEdges; // 记录入度为2的边（如果有的话就两条边）
+        for(int i = n - 1; i >= 0; i--) {  // 注意要倒序
+            if(inDegree[edges[i][1]] == 2)
+                twoEdges.push_back(i);
         }
-        if (conflict < 0) {
-            auto redundant = vector<int> {edges[cycle][0], edges[cycle][1]};
-            return redundant;
-        } else {
-            auto conflictEdge = edges[conflict];
-            if (cycle >= 0) {
-                auto redundant = vector<int> {parent[conflictEdge[1]], conflictEdge[1]};
-                return redundant;
-            } else {
-                auto redundant = vector<int> {conflictEdge[0], conflictEdge[1]};
-                return redundant;
-            }
+        if(twoEdges.size() > 0){
+            if(isTreeAfterRemoveEdge(edges, twoEdges[0]))
+                return edges[twoEdges[0]];
+            else
+                return edges[twoEdges[1]];
         }
+        // case2: 没有入度为2的情况, 那么一定有有向环, 找到构成环的边返回就可以了
+        return getRemoveEdge(edges);
     }
 };
 // @lc code=end

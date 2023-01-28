@@ -1,10 +1,13 @@
 #### 有向图的拓扑序列 (BFS)
+
 > 相关题目:
 > - [LC207. 课程表](/workspace/207.%E8%AF%BE%E7%A8%8B%E8%A1%A8.cpp): 检查存在性, 即`ans.size()==n`
 > 
 > - [LC210. 课程表II](/workspace/210.%E8%AF%BE%E7%A8%8B%E8%A1%A8-ii.cpp): 返回可能的拓扑序列, 即`ans`本身
+>
+> - [LC1136. 并行课程](/workspace/1136.%20%E5%B9%B6%E8%A1%8C%E8%AF%BE%E7%A8%8B.cpp): 统计拓扑序列中的数量, 以及最长拓扑序列的长度(BFS的层数)
 > 
-> 补充: Leetcode中的邻接表
+> - [LC802. 找到最终的安全状态](/workspace/802.%E6%89%BE%E5%88%B0%E6%9C%80%E7%BB%88%E7%9A%84%E5%AE%89%E5%85%A8%E7%8A%B6%E6%80%81.cpp): 反向图+拓扑序列, 拓扑序列「遇到环路」会停下
 
 ##### 1. 思路
 > 有向图的拓扑序列是[`BFS`](/acwing/Section%203/4_%E5%9B%BE%E4%B8%AD%E7%82%B9%E7%9A%84%E5%B1%82%E6%AC%A1_BFS.cpp)的一个应用

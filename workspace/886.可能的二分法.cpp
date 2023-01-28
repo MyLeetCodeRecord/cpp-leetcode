@@ -6,45 +6,40 @@
 
 // @lc code=start
 class Solution {
-private:
-    vector<int> father;
 public:
-    void init_ufs(int n){
-        father.resize(n);
-        for(int i=0; i<n; i++){
-            father[i] = -1;
-        }
+    vector<int> father;
+    void init(int n){
+        father.resize(n+1);
+        for(int i=1; i<=n; i++)
+            father[i] = i;
     }
     int find(int u){
-        return (u==father[u]) ? u : find(father[u]);
+        if(u != father[u])
+            father[u] = find(father[u]);
+        return father[u];
     }
-    int find2(int u){
-        while(u!=father[u]){
-            u = father[u];
-        }
-        return u;
-    }
-    void union_ufs(int u, int v){
-        int pu = find(u);
-        int pv = find(v);
-        father[pu] = pv;
+    void union2(int u, int v){
+        int fu = find(u);
+        int fv = find(v);
+        father[fu] = fv;
     }
     bool inSame(int u, int v){
-        return find(u) == find(v)
+        int fu = find(u);
+        int fv = find(v);
+        return fu==fv;
     }
     bool possibleBipartition(int n, vector<vector<int>>& dislikes) {
-        init_ufs();
-        vector<vector<int>> g(n + 1);
-        for (auto& p : dislikes) {
-            g[p[0]].push_back(p[1]);
-            g[p[1]].push_back(p[0]);
+        init(n);
+        vector<vector<int>> hates(n+1);
+        for(vector<int> &e: dislikes){
+            hates[e[1]].push_back(e[0]);
+            hates[e[0]].push_back(e[1]);
         }
-        for (int i=1; i<=n; i++) {
-            for (int j=0; j<g[i].size(); j++) {
-                union_ufs(g[i][0], g[i][j]);
-                if(inSame(i, g[i][j])) {
+        for(int i=1; i<=n; i++){
+            for(int j=0; j<hates[i].size(); j++){
+                union2(hates[i][0], hates[i][j]);
+                if(inSame(i, hates[i][j]))
                     return false;
-                }
             }
         }
         return true;
