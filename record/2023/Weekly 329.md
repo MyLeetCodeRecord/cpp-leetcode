@@ -1,4 +1,4 @@
-#### Weekly 326
+#### Weekly 329
 
 ##### 1. [交替数字和](https://leetcode.cn/problems/alternating-digit-sum/): `十进制数` ➡️ `string`
 
