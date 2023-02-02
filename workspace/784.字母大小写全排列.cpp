@@ -9,29 +9,25 @@ class Solution {
 public:
     vector<string> ans;
     string path;
-    void backtrack(string& s, int cur){
-        if(cur==s.size()){
+    void backtrack(string s, vector<int> &pos, int cur){
+        if(cur == pos.size()){
             ans.push_back(path);
             return ;
         }
-        if(isdigit(s[cur])){
-            path.push_back(s[cur]);
-            backtrack(s, cur+1);
-            path.pop_back();
-        }
-        else{
-            // 改变大小写
-            path.push_back(s[cur]^32);
-            backtrack(s, cur+1);
-            path.pop_back();
-            // 不改变大小写
-            path.push_back(s[cur]);
-            backtrack(s, cur+1);
-            path.pop_back();
-        }
+        path[pos[cur]] = tolower(s[pos[cur]]);
+        backtrack(s, pos, cur+1);
+        path[pos[cur]] = toupper(s[pos[cur]]);
+        backtrack(s, pos, cur+1);
     }
     vector<string> letterCasePermutation(string s) {
-        backtrack(s, 0);
+        vector<int> pos;
+        for(int i=0; i<s.size(); i++){
+            if(s[i]>='0' && s[i]<='9')
+                continue;
+            pos.push_back(i);
+        }
+        path = s;
+        backtrack(s, pos, 0);
         return ans;
     }
 };

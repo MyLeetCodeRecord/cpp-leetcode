@@ -7,32 +7,53 @@
 // @lc code=start
 class Solution {
 public:
-    // 思路: 可以随便添加")", 只要保证"(">=")"
+    // 回溯法
     vector<string> ans;
     string path;
-    // left: path中的"("数量, need: 尚未配对的"("数量or需要的")"最大数量
-    void backtrack(int n, int left, int need){
-        if(path.size()==n*2){
-            if(left==n)
+    void backtrack(int n, int cur, int left, int right){
+        if(cur == 2*n){
+            if(left == right)
                 ans.push_back(path);
             return ;
         }
         string tmp = path;
-        if(left <= n){      // 剪枝, 让left不要超过n个
+        if(left < n){
             path += "(";
-            backtrack(n, left+1, need+1);
+            backtrack(n, cur+1, left+1, right);
             path = tmp;
         }
-        if(need > 0){
+        if(left>right){
             path += ")";
-            backtrack(n, left, need-1);
-            path = tmp;
+            backtrack(n, cur+1, left, right+1);
         }
     }
     vector<string> generateParenthesis(int n) {
-        backtrack(n, 0, 0);
+        backtrack(n, 0, 0, 0);
         return ans;
     }
+    /* 
+    // DFS
+    vector<string> generateParenthesis(int n) {
+        vector<string> ans;
+        if(n==0)
+            return {""};
+        if(n==1)
+            return {"()"};
+        for(int l=0; l<=n-1; l++){
+            int r = n - l - 1;
+            vector<string> left = generateParenthesis(l);
+            vector<string> right = generateParenthesis(r);
+            for(string str_L: left){
+                str_L = "(" + str_L + ")";
+                for(string str_R: right){
+                    ans.push_back(str_L+str_R);
+                }
+            }
+        }
+        return ans;
+    }
+    */
+
 };
 // @lc code=end
 

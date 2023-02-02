@@ -27,9 +27,7 @@
 **[LC1254. 统计封闭岛屿的数目](/workspace/1254.%E7%BB%9F%E8%AE%A1%E5%B0%81%E9%97%AD%E5%B2%9B%E5%B1%BF%E7%9A%84%E6%95%B0%E7%9B%AE.cpp)**
 
 
-##### 3. 回溯
-
-> 代码随想录上的不列举了
+##### 3. [回溯法](/markdown/%E4%B8%93%E9%A2%98%20-%20%E5%9B%9E%E6%BA%AF%E6%B3%95.md)
 
 **[LC79. 单词回溯](/markdown/LC79.%20%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2.md)**
 > Leetbook: https://leetcode.cn/leetbook/read/dfs/eqpew7/
