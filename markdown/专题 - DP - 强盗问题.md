@@ -1,11 +1,11 @@
 #### 强盗问题
 
 ##### [LC198. 打家劫舍](/workspace/198.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D.cpp)
-> dp[i]表示第 i 家为止, 能获得的最大金额
+> `dp[i]`表示第 i 家为止, 能获得的最大金额
 > 
-> 对于dp[i]有抢or不抢nums[i]两种情况
+> 对于`dp[i]`有抢or不抢`nums[i]`两种情况
 > 
-> dp[i] = max(dp[i-1], dp[i-2]+nums[i])
+> `dp[i] = max(dp[i-1], dp[i-2]+nums[i])`
 
 ##### [LC213. 打家劫舍II](/workspace/213.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D-ii.cpp)
 > ![LC213](/appendix/LC213.png)
