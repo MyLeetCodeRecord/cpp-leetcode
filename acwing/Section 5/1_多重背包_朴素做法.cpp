@@ -7,7 +7,7 @@ using namespace std;
  * foreach i in items:
  *     foreach j in C reverse:
  *         dp[j] = max(dp[j], dp[j-w[i]] + v[i], dp[j-2*w[i]] + 2*v[i] ... , dp[j-s[i]*w[i]] + s[i]*v[i] )
- * 相当于在0-1背包的最内层多加一层对num[i]的遍历
+ * 相当于在0-1背包的中间层 or 最内层多加一层对s[i]的遍历
  */
 
 const int N = 110;

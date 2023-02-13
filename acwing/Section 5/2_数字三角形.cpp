@@ -4,7 +4,7 @@ using namespace std;
 
 const int N = 510;
 int triangle[N][N];
-int dp[N][N];       // 只依赖上一层, 但[j]的计算依赖[j]和[j+1], 所以不能压缩为一维
+int dp[N][N];       // 只依赖上一层, 但[j]的计算依赖[j]和[j+1], 不管j从前向后or从后向前构造, 都不能压缩为一维
 
 int main(){
     int n;

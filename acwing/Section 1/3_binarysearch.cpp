@@ -23,7 +23,7 @@ int binary_search_left(int q[], int l, int r, int target){
 }
 // 右侧端点 (这里的+1可以用[1,1]+target=1来进行判断)
 int binary_search_right(int q[], int l, int r, int target){
-    while(l<r){
+    while(l < r){
         int mid = (l+r+1)/2;
         if(q[mid] > target)
             r = mid-1;

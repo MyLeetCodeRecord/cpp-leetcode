@@ -89,7 +89,9 @@ int maximizeWin(vector<int>& Pos, int k) {
 ##### 4. [二进制矩阵中翻转最多一次使路径不连通](https://leetcode.cn/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/): `思维题` `DFS`
 
 > 基本思路: 两次`DFS`找到上轮廓和下轮廓, 两者如果相交则返回true, 否则返回`false`
->
+> 
+> ![LC2556](/appendix/LC2556.png)
+> 
 > - 第一次**下轮廓`DFS`**, 并将路径标记为不可达`-1`, 如果不可达直接返回`true`
 > - 第二次**任意`DFS`**(不需要上轮廓`DFS`), 如果不可达说明两条路径有交集, 返回`true`
 

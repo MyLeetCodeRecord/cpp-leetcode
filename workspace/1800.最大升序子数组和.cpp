@@ -11,12 +11,12 @@ public:
         int ans = 0;
         int sum = 0;
         int i = 0;
-        while(i<nums.size()){
+        // 不需要用动态规划, 每个求和子数组是单调递增的, 破坏递增后重置sum
+        for(int i=0; i<nums.size(); i++){
             if(i==0 || nums[i]>nums[i-1])
                 sum += nums[i];
             else
                 sum = nums[i];
-            i++;
             ans = max(ans, sum);
         }
         return ans;
