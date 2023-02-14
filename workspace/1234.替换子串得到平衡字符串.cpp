@@ -20,7 +20,7 @@ public:
         int l = 0, r = 0;
         int ans = n;
         while(r < n){
-            mp[s[r++]]--;
+            mp[s[r++]]--;   // 注意mp维护的是外部字符数量
             while(mp['Q']<=m && mp['W']<=m && mp['E']<=m && mp['R']<=m){
                 ans = min(ans, r-l);
                 mp[s[l++]]++;
