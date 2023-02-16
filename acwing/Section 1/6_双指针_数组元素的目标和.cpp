@@ -1,26 +1,28 @@
-// 双指针做法: 两个数组都是升序的, 可以保证两个指针向中间移动不漏掉任何可能答案  133ms
+// 相向双指针: 两个数组都是升序的, 可以保证两个指针向中间移动不漏掉任何可能答案  133ms
 #include <cstdio>
 #include <iostream>
 using namespace std;
 
 const int N = 100010;
-int A[N], B[N], n, m, x;
+int a[N], b[N], n, m, x;
 
 int main(){
     scanf("%d %d %d", &n, &m, &x);
     for(int i=0; i<n; i++)
-        scanf("%d", &A[i]);
+        scanf("%d", &a[i]);
     for(int j=0; j<m; j++)
-        scanf("%d", &B[j]);
-    for(int i=0, j=m-1; i<n, j>=0; i++){
-        while(j>=0 && A[i]+B[j]>x){
-            j--;
-        }
-        if(A[i]+B[j]==x){
-            printf("%d %d", i, j);
+        scanf("%d", &b[j]);
+    int l = 0, r = m - 1;    // 相向双指针
+    while(l<n && r>=0){
+        int sum = a[l] + b[r];
+        if(sum == x)
             break;
-        }
+        else if(sum > x)
+            r--;
+        else if(sum < x)
+            l++;
     }
+    cout<<l<<" "<<r<<endl;
     return 0;
 }
 
