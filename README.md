@@ -20,7 +20,7 @@
 
 |       |MON⭐|TUE|WED|THU|FRI|
 |  ---  |:-:|:-:|:-:|:-:|:-:|
-|KEYWORD|[前缀和](/acwing/Spring/D1_%E5%89%8D%E7%BC%80%E5%92%8C.md)|[差分](/acwing/Spring/D2_%E5%B7%AE%E5%88%86.md)|[二分查找](/acwing/Spring/D3_%E4%BA%8C%E5%88%86.md)|[双指针](/acwing/Spring/D4_%E5%8F%8C%E6%8C%87%E9%92%88.md)|
+|KEYWORD|[前缀和](/acwing/Spring/D1_%E5%89%8D%E7%BC%80%E5%92%8C.md)|[差分](/acwing/Spring/D2_%E5%B7%AE%E5%88%86.md)|[二分查找](/acwing/Spring/D3_%E4%BA%8C%E5%88%86.md)|[双指针](/acwing/Spring/D4_%E5%8F%8C%E6%8C%87%E9%92%88.md)|[递推](/acwing/Spring/D5_%E9%80%92%E6%8E%A8.md)|
 
 
 <br/>
@@ -30,7 +30,7 @@
 >
 > 🎶&nbsp; [深爱着你](https://c.y.qq.com/base/fcgi-bin/u?__=bKlkfp) &emsp; 
 >
-> 🎵[全世界失眠](https://c.y.qq.com/base/fcgi-bin/u?__=N7Fo1J) &emsp; 全世界 有人醒有人睡🌒
+> 🎵&nbsp;[全世界失眠](https://c.y.qq.com/base/fcgi-bin/u?__=N7Fo1J) &emsp; 全世界 有人醒有人睡🌒
 
 
 <br/>
