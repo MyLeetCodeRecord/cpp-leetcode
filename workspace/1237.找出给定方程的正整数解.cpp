@@ -5,22 +5,23 @@
  */
 
 // @lc code=start
-/*
- * // This is the custom function interface.
- * // You should not implement it, or speculate about its implementation
- * class CustomFunction {
- * public:
- *     // Returns f(x, y) for any given positive integers x and y.
- *     // Note that f(x, y) is increasing with respect to both x and y.
- *     // i.e. f(x, y) < f(x + 1, y), f(x, y) < f(x, y + 1)
- *     int f(int x, int y);
- * };
- */
-
 class Solution {
 public:
-    vector<vector<int>> findSolution(CustomFunction& customfunction, int z) {
-        
+    // 递增 & 两数之和 => 相向双指针
+    // 注意边界不再是 l<r, 而是 l<=1000 && r>=1
+    vector<vector<int>> findSolution(CustomFunction& cf, int z) {
+        int l = 1, r = 1000;
+        vector<vector<int>> ans;
+        while(l<=1000 && r>=1){
+            int val = cf.f(l, r);
+            if(val == z)
+                ans.push_back({l++, r--});
+            else if(val < z)
+                l++;
+            else
+                r--;
+        }
+        return ans;
     }
 };
 // @lc code=end
