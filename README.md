@@ -46,3 +46,5 @@
 - [x] [Biweek 97](/record/2023/Biweekly%2097.md): 补
 - [x] [Weekly 331](/record/2023/Weekly%20331.md)
 - [ ] [Weekly 332](/record/2023/Weekly%20332.md): 第四题还没看
+- [x] [Biweek 98](/record/2023/Biweekly%2098.md): 第四题线段树还没学过
+- [ ] [Weekly 333](/record/2023/Weekly%20333.md): 第三题todo
