@@ -9,7 +9,7 @@ vector<int> A, B;
 vector<int> bigMinus(vector<int> A, vector<int> B){
     vector<int> ans;
     int t = 0;
-    for(int i=0; i<A.size(); i++){
+    for(int i=0; i<A.size(); i++){  // 对每一位A[i]进行处理, 才能完全处理借位
         t += A[i];
         if(i<B.size())
             t -= B[i];

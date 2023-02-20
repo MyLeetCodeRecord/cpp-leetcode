@@ -25,6 +25,7 @@ vector<int> bigAdd(vector<int> A, vector<int> B){
 int main(){
     string str1, str2;
     cin>>str1>>str2;
+    // 从低位开始读入
     for(int i=str1.size()-1; i>=0; i--)
         A.push_back(str1[i]-'0');
     for(int i=str2.size()-1; i>=0; i--)
