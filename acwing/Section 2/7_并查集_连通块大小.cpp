@@ -20,8 +20,8 @@ int find_ufs(int u){
 void union_ufs(int u, int v){
     int fu = find_ufs(u);
     int fv = find_ufs(v);
-    // !!! u,v可能相等, 可能导致sizeList更新错误
-    if(fu!=fv){
+    // !!! u,v可能相等, 不判断更新会导致sizeList更新错误
+    if(fu != fv){
         father[fv] = fu;
         sizeList[fu] += sizeList[fv];
     }

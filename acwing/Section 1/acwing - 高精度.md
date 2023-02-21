@@ -185,3 +185,51 @@ int main(){
     return 0;
 }
 ```
+
+
+##### 5. 高精度自增 - [剑指offer17. 打印从1](https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
+
+> 两种解法: 全排列(回溯法) / 大整数加法
+
+
+```CPP
+// 回溯法: 把int类型的path换成string就可以了
+vector<int> ans;
+int path;
+void backtrack(int n, int cur, vector<bool>& visited){
+    if(cur == n){
+        if(path!=0)
+            ans.push_back(path);
+        return ;
+    }
+    for(int i=0; i<=9; i++){
+        path = path*10 + i;
+        backtrack(n, cur+1, visited);
+        path /= 10;
+    }
+}
+vector<int> printNumbers(int n) {
+    vector<bool> visited(10, false);
+    backtrack(n, 0, visited);
+    return ans;
+}
+```
+
+```CPP
+// 大整数加法, 在循环中调用bigAdd, 直到到达「9...9」为止
+vector<int> bigAdd(vector<int> A){
+    int carry = 0;
+    int i = 0;
+    do {
+        carry = (A[i] + 1);
+        A[i] = carry % 10;
+        carry /= 10;
+        i++;
+    } while(i<A.size() && carry != 0);
+    if(carry != 0){
+        cout<<":>L"<<endl;
+        A.push_back(carry);
+    }
+    return A;
+}
+```

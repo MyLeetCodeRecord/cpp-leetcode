@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-/* 欧拉函数: 用公式做*/
+/* 欧拉函数: 用公式做 */
 int main(){
     int n;
     scanf("%d", &n);

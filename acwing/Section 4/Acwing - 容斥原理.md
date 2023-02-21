@@ -17,7 +17,7 @@
 > 
 > - 用`M`位二进制表示满足哪几个集合的性质(第`j`位为`1`表示能整除`primes[j]`, 为`0`表示不能整除`primes[j]`)
 >
-> - 从`1`开始枚举`1<<M - 1`个状态, 解构`M`个状态位, 同时用`t`记录当前状态`i`下, 为`1`的位置对应的`primes[j]`的乘积, 表示第`i`个状态项对应的集合具有「能被这些`primes[j]`整除」的性质, 集合元素数量 = `n/t`
+> - 从`1`开始枚举`(1<<M) - 1`个状态, 解构`M`个状态位, 同时用`t`记录当前状态`i`下, 为`1`的位置对应的`primes[j]`的乘积, 表示第`i`个状态项对应的集合具有「能被这些`primes[j]`整除」的性质, 集合元素数量 = `n/t`
 > 
 > - e.g. `primes[0]=2`, `primes[1]=3` => `M=2` => 对应`00 ~ 11`共`2^M-1=3`个状态
 >   - `M = 1 = (01)`时, 表示「能被`primes[0]=2`」整除的数的集合
@@ -95,6 +95,8 @@ int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, i
     return area;
 }
 ```
+https://leetcode.cn/problems/rectangle-area/
+
 
 ##### [Acwing873. 欧拉函数](/acwing/Section%204/3_%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0.cpp)的证明
 
@@ -144,6 +146,7 @@ int main(){
 }
 ```
 
+
 ##### [LC878. 第n个神奇数字](/workspace/878.%E7%AC%AC-n-%E4%B8%AA%E7%A5%9E%E5%A5%87%E6%95%B0%E5%AD%97.cpp): `gcd`, `lcm`, `容斥原理`, `二分查找`
 
 > - 容斥原理求`x`范围内的神奇数个数
@@ -152,7 +155,7 @@ int main(){
 > 
 >   - x 中被 a 整除的正整数 = x // a
 > 
-> - "第n个" --> `二分查找` (target不唯一, 左边界模板)
+> - 单调性 ➕ 第n个 ➡️ `二分查找` (target不唯一, 左边界模板)
 
 ```CPP
 typedef long long LL;
@@ -180,3 +183,4 @@ int nthMagicalNumber(int n, int a, int b) {
     return l % 1000000007;
 }
 ```
+https://leetcode.cn/problems/nth-magical-number/
