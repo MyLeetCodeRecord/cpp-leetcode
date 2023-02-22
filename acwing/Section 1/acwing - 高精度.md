@@ -187,7 +187,7 @@ int main(){
 ```
 
 
-##### 5. 高精度自增 - [剑指offer17. 打印从1](https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
+##### 5. 高精度自增 - [剑指offer17. 打印从1到最大的n位数](https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
 
 > 两种解法: 全排列(回溯法) / 大整数加法
 

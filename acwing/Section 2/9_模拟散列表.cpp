@@ -1,43 +1,40 @@
 #include <cstdio>
 #include <iostream>
-#include <cstring>  // sizeof
+#include <string>
+#include <cstring>
 using namespace std;
 
-/* 链表法 */
+/* 链表法: 这里的`hash函数`就是把`x`取余后映射到[0,100003]范围内 (100003是一个质数, 哈希性质更好) */
 const int N = 100003;
-int hash_table[N], e[N], nxt[N], idx;
+int h[N], e[N], nxt[N], idx=0;
 
-// 找到位置, 作为head插入
 void insert(int x){
-    int h = (x % N + N) % N;
+    int hashVal = (x % N + N) % N;
     e[idx] = x;
-    nxt[idx] = hash_table[h];  // 新插入节点作为链表的head
-    hash_table[h] = idx++;
+    nxt[idx] = h[hashVal];
+    h[hashVal] = idx++;
 }
-// 找到位置, 遍历链表
-bool find(int x){
-    int h = (x % N + N) % N;   //C++中(-10 % 3)=-1, 而不是2
-    int start = hash_table[h];
-    while(start!=-1){
-        if(e[start]==x)
+bool query(int x){
+    int hashVal = (x % N + N) % N;
+    for(int i=h[hashVal]; i!=-1; i=nxt[i]){
+        int j = e[i];
+        if(j == x)
             return true;
-        start = nxt[start];
     }
     return false;
 }
 int main(){
     int n;
     scanf("%d", &n);
-    // 初始化所有头节点为-1(与图的邻接表存储同理)
-    memset(hash_table, -1, sizeof hash_table);
+    memset(h, -1, sizeof h);
+    string op;
+    int x;
     for(int i=0; i<n; i++){
-        char op[2];
-        int x;
-        scanf("%s%d", op, &x);
-        if(*op == 'I')
+        cin>>op>>x;
+        if(op=="I")
             insert(x);
         else{
-            if(find(x))
+            if(query(x))
                 printf("Yes\n");
             else
                 printf("No\n");
