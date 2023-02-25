@@ -15,12 +15,13 @@ public:
             graph[eqs[i][0]].push_back({eqs[i][1], vals[i]});
             graph[eqs[i][1]].push_back({eqs[i][0], 1.0/vals[i]});
         }
+        // 应该先初始化好ans数组为-1, 否则找不到的路径将无法存到ans中
         vector<double> ans(queries.size(), -1.0);
         for(int i=0; i<queries.size(); i++){
             string st = queries[i][0];
             string ed = queries[i][1];
             // 非法节点, ans[i] = -1.0
-            if(graph.find(st)==graph.end() && graph.find(ed)==graph.end()){
+            if(graph.find(st)==graph.end() || graph.find(ed)==graph.end()){
                 ans[i] = -1.0;
                 continue;
             }
@@ -31,7 +32,7 @@ public:
             }
             // BFS
             queue<pair<string, double>> q;
-            q.push({st, 1});
+            q.push({st, 1.0});
             unordered_set<string> visited;
             visited.insert(st);
             while(!q.empty()){
