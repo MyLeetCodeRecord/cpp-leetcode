@@ -9,9 +9,8 @@
 |KEYWORD|`DFS`<br/>`postorder`|`map`(key有序)<br/>`sort`|
 |TOPIC  |[📌1234. 替换子串得到平衡字符串🧡](/workspace/1234.%E6%9B%BF%E6%8D%A2%E5%AD%90%E4%B8%B2%E5%BE%97%E5%88%B0%E5%B9%B3%E8%A1%A1%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)|[📌1124. 表现良好的最长时间🧡](/workspace/1124.%E8%A1%A8%E7%8E%B0%E8%89%AF%E5%A5%BD%E7%9A%84%E6%9C%80%E9%95%BF%E6%97%B6%E9%97%B4%E6%AE%B5.cpp)|    |~~[2341. 数组能形成多少数对💚](https://leetcode.cn/problems/maximum-number-of-pairs-in-array/)~~|  |[📌1237. 找出给定方程的正整数解🧡](/workspace/1237.%E6%89%BE%E5%87%BA%E7%BB%99%E5%AE%9A%E6%96%B9%E7%A8%8B%E7%9A%84%E6%AD%A3%E6%95%B4%E6%95%B0%E8%A7%A3.cpp)|[1792. 最大平均通过率🧡](/workspace/1792.%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E9%80%9A%E8%BF%87%E7%8E%87.cpp)|
 |KEYWORD|`滑动窗口`|`单调栈`|   |`hash`|    |`相向双指针`|`priority_queue`|
-|TOPIC  |~~[2347. 最好的扑克手牌💚](https://leetcode.cn/problems/best-poker-hand/)~~|   |   |[📌1238. 循环码排列🧡](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%A0%BC%E9%9B%B7%E7%A0%81.md)|~~[2357. 使数组中所有元素都等于零💚](https://leetcode.cn/problems/make-array-zero-by-subtracting-equal-amounts/)~~|[📌1247. 交换字符使得字符串相同🧡](/workspace/1247.%E4%BA%A4%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%BD%BF%E5%BE%97%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%90%8C.cpp)|    |
-|KEYWORD|`分类讨论`|    |   |`格雷码`|`set`|`找规律`<br/>`分类讨论`|   |
-
+|TOPIC  |~~[2347. 最好的扑克手牌💚](https://leetcode.cn/problems/best-poker-hand/)~~|   |   |[📌1238. 循环码排列🧡](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%A0%BC%E9%9B%B7%E7%A0%81.md)|~~[2357. 使数组中所有元素都等于零💚](https://leetcode.cn/problems/make-array-zero-by-subtracting-equal-amounts/)~~|[📌1247. 交换字符使得字符串相同🧡](/workspace/1247.%E4%BA%A4%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%BD%BF%E5%BE%97%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%90%8C.cpp)|[📌1255. 得分最高的单词集合💔](/workspace/1255.%E5%BE%97%E5%88%86%E6%9C%80%E9%AB%98%E7%9A%84%E5%8D%95%E8%AF%8D%E9%9B%86%E5%90%88.cpp)|
+|KEYWORD|`分类讨论`|    |   |`格雷码`|`set`|`找规律`<br/>`分类讨论`|`回溯`|
 
 > ⭐ start index
 > 
