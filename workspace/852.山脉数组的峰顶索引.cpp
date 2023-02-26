@@ -12,24 +12,19 @@ public:
     // (2) 山峰  3 - 5 - 4
     // (3) 下降  5 - 4 - 2
     int peakIndexInMountainArray(vector<int>& arr) {
-        // 否则要写「mid=(l+r+1)/2」, 不然会有「l=0, r=1」的case
-        int l = 1;
-        int r = arr.size()-2;
+        int n = arr.size();
+        int l = 1, r = n-2;
         while(l < r){
-            int mid = (l + r + 1) / 2;
-            if(arr[mid] > arr[mid-1])
-                l = mid;
+            int mid = (l+r)/2;
+            // peak
+            if(arr[mid-1] < arr[mid] && arr[mid] > arr[mid+1])
+                return mid;
+            // 上升区间
+            if(arr[mid-1] < arr[mid] && arr[mid] < arr[mid+1])
+                l = mid+1;
+            // 下降区间
             else
-                r = mid-1;
-            // // 山峰
-            // if(arr[mid]>arr[mid-1] && arr[mid]>arr[mid+1])
-            //     return mid;
-            // // 上升
-            // if(arr[mid]>arr[mid-1] && arr[mid]<arr[mid+1])
-            //     l = mid+1;
-            // // 下降
-            // else if(arr[mid]<arr[mid-1] && arr[mid]>arr[mid+1])
-            //     r = mid-1;
+                r = mid;
         }
         return l;
     }
