@@ -11,6 +11,8 @@
 |KEYWORD|`滑动窗口`|`单调栈`|   |`hash`|    |`相向双指针`|`priority_queue`|
 |TOPIC  |~~[2347. 最好的扑克手牌💚](https://leetcode.cn/problems/best-poker-hand/)~~|   |   |[📌1238. 循环码排列🧡](/markdown/%E4%B8%93%E9%A2%98%20-%20%E6%A0%BC%E9%9B%B7%E7%A0%81.md)|~~[2357. 使数组中所有元素都等于零💚](https://leetcode.cn/problems/make-array-zero-by-subtracting-equal-amounts/)~~|[📌1247. 交换字符使得字符串相同🧡](/workspace/1247.%E4%BA%A4%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%BD%BF%E5%BE%97%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%90%8C.cpp)|[📌1255. 得分最高的单词集合💔](/workspace/1255.%E5%BE%97%E5%88%86%E6%9C%80%E9%AB%98%E7%9A%84%E5%8D%95%E8%AF%8D%E9%9B%86%E5%90%88.cpp)|
 |KEYWORD|`分类讨论`|    |   |`格雷码`|`set`|`找规律`<br/>`分类讨论`|`回溯`|
+|TOPIC  |[1144. 递减元素使数组呈锯齿状🧡](/workspace/1144.%E9%80%92%E5%87%8F%E5%85%83%E7%B4%A0%E4%BD%BF%E6%95%B0%E7%BB%84%E5%91%88%E9%94%AF%E9%BD%BF%E7%8A%B6.cpp)
+|KEYWORD|`贪心`<br/>`分类讨论`|
 
 > ⭐ start index
 > 
@@ -23,7 +25,9 @@
 |       |MON⭐|TUE|WED|THU|FRI|
 |  ---  |:-:|:-:|:-:|:-:|:-:|
 |Week 1|[前缀和](/acwing/Spring/D1_%E5%89%8D%E7%BC%80%E5%92%8C.md)|[差分](/acwing/Spring/D2_%E5%B7%AE%E5%88%86.md)|[二分查找](/acwing/Spring/D3_%E4%BA%8C%E5%88%86.md)|[双指针](/acwing/Spring/D4_%E5%8F%8C%E6%8C%87%E9%92%88.md)|[递推](/acwing/Spring/D5_%E9%80%92%E6%8E%A8.md)|
-|Week 2|[递归](/acwing/Spring/D6_%E9%80%92%E5%BD%92.md)|[并查集](/acwing/Spring/D7_%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|
+|Week 2|[递归](/acwing/Spring/D6_%E9%80%92%E5%BD%92.md)|[并查集](/acwing/Spring/D7_%E5%B9%B6%E6%9F%A5%E9%9B%86.md)|[哈希](/acwing/Spring/D8_%E5%93%88%E5%B8%8C.md)|[单调栈](/acwing/Section%202/3_%E5%8D%95%E8%B0%83%E6%A0%88.cpp)<br/>[单调队列](/acwing/Section%202/4_%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97.cpp)| skip |
+|Week 3||
+
 
 <br/>
 
@@ -32,9 +36,11 @@
 >
 > 🎶&nbsp; [深爱着你](https://c.y.qq.com/base/fcgi-bin/u?__=bKlkfp) &emsp; 
 >
-> 🎵&nbsp;[全世界失眠](https://c.y.qq.com/base/fcgi-bin/u?__=N7Fo1J) &emsp; 全世界 有人醒有人睡🌒
+> 🎵&nbsp; [全世界失眠](https://c.y.qq.com/base/fcgi-bin/u?__=N7Fo1J) &emsp; 全世界 有人醒有人睡🌒
 >
 > 🎶&nbsp; [让我留着你身边](https://c.y.qq.com/base/fcgi-bin/u?__=WSDoh) &emsp; 都陪你度过
+>
+> 🎵&nbsp; [最爱是谁](https://c.y.qq.com/base/fcgi-bin/u?__=Xv50I3z) &emsp; 嘿嘿 好渣
 
 
 <br/>
