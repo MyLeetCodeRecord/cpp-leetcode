@@ -13,7 +13,7 @@ TrieNode* trie;
 
 void insert(int x){
     TrieNode* t = trie;
-    // 所有叶节点都在第32层
+    // 所有叶节点都在第31层
     for(int i=30; i>=0; i--){
         int cur = (x>>i) & 1;
         if(t->child[cur]==NULL)

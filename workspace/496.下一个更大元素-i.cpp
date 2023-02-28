@@ -9,25 +9,19 @@ class Solution {
 public:
     // nums1是nums2的子集, 说明nums1可以看作是一个query列表, 只需要建立一个map在nums2中找到对应位置即可
     vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
-        int m = nums1.size();
-        int n = nums2.size();
-        unordered_map<int, int> mp;
-        for(int i=0; i<n; i++){
-            mp[nums2[i]] = i;
-        }
+        unordered_map<int, int> greater;    // 存元素值即可
         stack<int> sk;
-        vector<int> bigger(n, -1);
-        for(int i=0; i<n; i++){
-            int cur = nums2[i];
-            while(!sk.empty() && cur>nums2[sk.top()]){
-                bigger[sk.top()] = cur;
+        for(int i=0; i<nums2.size(); i++){
+            while(!sk.empty() && sk.top()<nums2[i]){
+                greater[sk.top()] = nums2[i];
                 sk.pop();
             }
-            sk.push(i);
+            sk.push(nums2[i]);
         }
-        vector<int> ans(m, -1);
-        for(int i=0; i<m; i++){
-            ans[i] = bigger[mp[nums1[i]]];
+        vector<int> ans(nums1.size(), -1);
+        for(int i=0; i<nums1.size(); i++){
+            if(greater.find(nums1[i])!=greater.end())
+                ans[i] = greater[nums1[i]];
         }
         return ans;
     }

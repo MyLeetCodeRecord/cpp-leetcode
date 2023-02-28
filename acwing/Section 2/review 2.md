@@ -342,7 +342,7 @@ vector<int> dailyTemperatures(vector<int>& temperatures) {
 ##### LC496. 下一个更大元素I
 ```CPP
 vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
-    vector<int> bigger(nums2.size(), -1);   // 存元素值即可
+    vector<int> bigger(nums2.size(), -1);   // 存元素下标
     stack<int> sk;
     for(int i=0; i<nums2.size(); i++){
         while(!sk.empty() && nums2[i]>nums2[sk.top()]){
@@ -362,5 +362,3 @@ vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
     return ans;
 }
 ```
-
-##### LC
