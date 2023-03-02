@@ -1,6 +1,7 @@
 #### 有向图的拓扑序列 (BFS)
 
 > 相关题目:
+> 
 > - [LC207. 课程表](/workspace/207.%E8%AF%BE%E7%A8%8B%E8%A1%A8.cpp): 检查存在性, 即`ans.size()==n`
 > 
 > - [LC210. 课程表II](/workspace/210.%E8%AF%BE%E7%A8%8B%E8%A1%A8-ii.cpp): 返回可能的拓扑序列, 即`ans`本身
@@ -69,14 +70,13 @@ void TopoSeq(){
         for(int i=h[cur]; i!=-1; i=nxt[i]){
             int j = e[i];
             indegree[j]--;      // "删除"这条边
-            if(indegree[j] == 0){
+            if(indegree[j] == 0)
                 q.push(j);
-            }
         }
     }
 }
 int main(){
-    memset(h, -1, sizeof h);    // !!! 邻接表实现: 别忘了
+    memset(h, -1, sizeof h);    // !!! 别忘了
     scanf("%d %d", &n, &m);
     for(int i=0; i<m; i++){
         int a, b;
@@ -85,12 +85,12 @@ int main(){
     }
     TopoSeq();
     if(ans.size()==n){
-        for(int element: ans)
-            printf("%d ", element);
+        for(int x: ans)
+            printf("%d ", x);
         printf("\n");
     }
     else
-        printf("-1");
+        printf("-1");       // 注意序列长度<n则说明没有解
     return 0;
 }
 ```
