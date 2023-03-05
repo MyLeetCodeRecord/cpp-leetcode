@@ -11,7 +11,8 @@ vector<PII> intervals;
 bool cmp(pair<int,int> l, pair<int,int> r){
     return l.first < r.first;
 }
-// 区间合并
+// 区间合并 => 返回方案的写法
+// 如果不需要返回方案, 直接用int ed记录右边界即可, 不需要维护curInterval
 vector<PII> intervalMerge(vector<PII> intervals){
     vector<PII> ans;
     sort(intervals.begin(), intervals.end(), cmp);  // 默认排序也可以
