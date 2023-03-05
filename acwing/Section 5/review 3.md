@@ -73,7 +73,7 @@ int main(){
         for(int j=w[i]; j<=C; j++){
             for(int k=0; k<=s[i]; k++){
                 if(j >= k * w[i])
-                dp[j] = max(dp[j], dp[j-k*w[i]]+k*v[i]);
+                    dp[j] = max(dp[j], dp[j-k*w[i]]+k*v[i]);
             }
         }
     }

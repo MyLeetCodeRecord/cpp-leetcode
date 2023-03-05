@@ -3,8 +3,8 @@
 #### LEETCODE DAILY 2️⃣
 |       |MON|TUE|WED⭐|THU|FRI|SAT|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC  |   |   |   |[05.02. 二进制数转字符串](/workspace/%E9%9D%A2%E8%AF%95%E9%A2%9805.02%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)|[1487. 保证文件名唯一🧡]()|[982. 按位与为零的三元组](/markdown/LC982.%20%E6%8C%89%E4%BD%8D%E4%B8%8E%E4%B8%BA0%E7%9A%84%E4%B8%89%E5%85%83%E7%BB%84.md)||
-|KEYWORD|   |   |   |`math`|`map`<br/>`counter`|`bit` `子集枚举`|
+|TOPIC  |   |   |   |[05.02. 二进制数转字符串🧡](/workspace/%E9%9D%A2%E8%AF%95%E9%A2%9805.02%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)|[1487. 保证文件名唯一🧡](/workspace/1487.%E4%BF%9D%E8%AF%81%E6%96%87%E4%BB%B6%E5%90%8D%E5%94%AF%E4%B8%80.cpp)|[982. 按位与为零的三元组](/markdown/LC982.%20%E6%8C%89%E4%BD%8D%E4%B8%8E%E4%B8%BA0%E7%9A%84%E4%B8%89%E5%85%83%E7%BB%84.md)|[1599. 经营摩天轮的最大利润🧡](/workspace/1599.%E7%BB%8F%E8%90%A5%E6%91%A9%E5%A4%A9%E8%BD%AE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%88%A9%E6%B6%A6.cpp)|
+|KEYWORD|   |   |   |`math`|`map`<br/>`counter`|`bit` `子集枚举`|`模拟`|
 
 > ⭐ start index
 > 
