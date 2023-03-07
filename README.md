@@ -24,15 +24,9 @@
 <br/>
 
 #### PLAYLIST
-> 🎵&nbsp; [天梯](https://c.y.qq.com/base/fcgi-bin/u?__=mI1r1R) &emsp; 黑夜亦亮丽🗻
+> 🎵&nbsp; [最后今晚](https://c6.y.qq.com/base/fcgi-bin/u?__=2KqhcQ) &emsp; 
 >
-> 🎶&nbsp; [深爱着你](https://c.y.qq.com/base/fcgi-bin/u?__=bKlkfp) &emsp; 
->
-> 🎵&nbsp; [全世界失眠](https://c.y.qq.com/base/fcgi-bin/u?__=N7Fo1J) &emsp; 全世界 有人醒有人睡🌒
->
-> 🎶&nbsp; [让我留着你身边](https://c.y.qq.com/base/fcgi-bin/u?__=WSDoh) &emsp; 都陪你度过
->
-> 🎵&nbsp; [最爱是谁](https://c.y.qq.com/base/fcgi-bin/u?__=Xv50I3z) &emsp; 嘿嘿 好渣
+> 🎶&nbsp; 
 
 
 <br/>
@@ -51,3 +45,5 @@
 - [x] [Biweek 98](/record/2023/Biweekly%2098.md)
 - [ ] [Weekly 333](/record/2023/Weekly%20333.md): 第三题todo
 - [ ] [Weekly 334](/record/2023/Weekly%20334.md): 第四题todo
+- [ ] [Biweek 99](/record/2023/Biweekly%2099.md): 第四题todo
+- [x] [Weekly 335](/record/2023/Weekly%20335.md)
