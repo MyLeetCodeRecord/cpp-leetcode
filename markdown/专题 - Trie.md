@@ -4,7 +4,7 @@
 
 ###### [LC211. 添加与搜索单词](/markdown/LC211.%20%E6%B7%BB%E5%8A%A0%E4%B8%8E%E6%90%9C%E7%B4%A2%E5%8D%95%E8%AF%8D.md)
 
-###### [LC212. 单词搜索Ⅱ](/markdown/LC212.%20%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2%E2%85%A1.md)
+###### [LC212. 单词搜索II](/markdown/LC212.%20%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2%E2%85%A1.md)
 
 ###### [LC720. 词典中最长的单词](/markdown/LC720.%20%E8%AF%8D%E5%85%B8%E9%87%8C%E6%9C%80%E9%95%BF%E7%9A%84%E5%8D%95%E8%AF%8D.md)
 

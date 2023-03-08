@@ -2,7 +2,7 @@
 
 > 行使权力的`dp`问题, 分析有多少种状态(比如未行使/已经行使一次等), 然后用`dp[k][n]`解决
 
-##### [LC487. 最大连续1的个数Ⅱ](https://leetcode.cn/problems/max-consecutive-ones-ii/)
+##### [LC487. 最大连续1的个数II](https://leetcode.cn/problems/max-consecutive-ones-ii/)
 
 > ![LC487](/appendix/LC487-1.png)
 > 

@@ -95,7 +95,7 @@ int findSubstringInWraproundString(string p) {
 > 
 > ![LC62](/appendix/LC62.png)
 
-##### [LC63. 不同路径Ⅱ](/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
+##### [LC63. 不同路径II](/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
 
 > 题目描述: https://leetcode.cn/problems/unique-paths-ii
 > 

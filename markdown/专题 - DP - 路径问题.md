@@ -17,7 +17,7 @@
 > 如果不选择错位, 初始化`row 0`和`col 0`, 然后进行状态转移
 
 
-##### [LC63. 不同路径Ⅱ](/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
+##### [LC63. 不同路径II](/workspace/63.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-ii.cpp)
 > 题目描述: https://leetcode.cn/problems/unique-paths-ii
 > 
 > 注意对第0行和第0列的初始化, 可能无法通过
@@ -66,7 +66,7 @@
 > ```
 
 
-##### [1289. 下降路径最小和Ⅱ](/workspace/1289.%E4%B8%8B%E9%99%8D%E8%B7%AF%E5%BE%84%E6%9C%80%E5%B0%8F%E5%92%8C-ii.cpp)
+##### [1289. 下降路径最小和II](/workspace/1289.%E4%B8%8B%E9%99%8D%E8%B7%AF%E5%BE%84%E6%9C%80%E5%B0%8F%E5%92%8C-ii.cpp)
 > 题目描述: https://leetcode.cn/problems/minimum-falling-path-sum-ii/
 > 
 > ➡️[直接DP]((/workspace/1289.%E4%B8%8B%E9%99%8D%E8%B7%AF%E5%BE%84%E6%9C%80%E5%B0%8F%E5%92%8C-ii.cpp))

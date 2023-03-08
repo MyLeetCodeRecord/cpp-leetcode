@@ -27,7 +27,7 @@ string decodeMessage(string key, string message) {
 
 > [题目](https://leetcode.cn/problems/spiral-matrix-iv/) - `matrix`
 > 
-> 与[LC54. 螺旋矩阵](https://leetcode.cn/problems/spiral-matrix/)和[LC59. 螺旋矩阵Ⅱ](https://leetcode.cn/problems/spiral-matrix-ii)是同一道题, 熟能生巧...
+> 与[LC54. 螺旋矩阵](https://leetcode.cn/problems/spiral-matrix/)和[LC59. 螺旋矩阵II](https://leetcode.cn/problems/spiral-matrix-ii)是同一道题, 熟能生巧...
 >
 > 本题要对链表长度不足的情况提前终止
 

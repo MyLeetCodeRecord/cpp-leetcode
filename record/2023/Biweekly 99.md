@@ -2,6 +2,8 @@
 
 ##### 1. [最小和分割](https://leetcode.cn/problems/split-with-minimum-sum/): `贪心`
 
+> 将每个位置数字从小到大排序, 然后给两个人"发牌", 前导0不影响结果
+
 ```CPP
 int splitNum(int num) {
     string str = to_string(num);
