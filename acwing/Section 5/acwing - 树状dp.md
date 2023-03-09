@@ -28,7 +28,7 @@ dp[i][1] = happy[i] + sum{ dp[child][0] }
 
 ##### (2) 实现
 
-> 先复习一下[图的邻接表存储](https://github.com/MyLeetCodeRecord/cpp-leetcode/blob/master/acwing/Section%203/acwing%20-%20%E5%9B%BE%E7%9A%84%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%AD%98%E5%82%A8.md), 并注意边的方向是**上司指向下属**
+> 先复习一下[图的邻接表存储](/acwing/Section%203/acwing%20-%20%E5%9B%BE%E7%9A%84%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%AD%98%E5%82%A8.md), 并注意边的方向是**上司指向下属**
 >
 > 并且要注意区分使用`idx`和`value`
 
