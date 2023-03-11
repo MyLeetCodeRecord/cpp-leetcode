@@ -13,16 +13,21 @@
 
 #### 1. Bellman Ford算法
 
-##### (1) 算法原理
+##### (0) 算法原理
 > ![BF算法](/appendix/acwing-%E6%9C%80%E7%9F%AD%E8%B7%AF-BF%E7%AE%97%E6%B3%95.png)
 > 
 > 外层循环`n`次, 内层循环所有边`{a, b, w}`, 更新距离`dist[b] = min(dist[b], dist[a] + W_ab)`
 >
 > 显而易见, 算法复杂度为`O(nm)`
-> 
-> 对于存在**负权环路**的图, `BF算法`可能无法求得最短路径(**负权无环是可以的, 或者限制边的数量不超过K**)
-> 
-> 与`Dijkstra算法`相比, `BF算法`可以处理有负权边(但无环)的情况
+>
+> `Bellman-Ford`算法的使用场景
+> - 与`Dijkstra算法`相比, `BF算法`可以处理有负权边(但无环)的情况
+> - 对于存在**负权环路**的图, `BF算法`可能无法求得最短路径(**负权无环是可以的, 或者限制边的数量不超过K**)
+>
+> - 但对于这类问题: 存在负权环, 但是对最短路径的边数有要求, 比如航班更换次数不能超过K, 这能用`Bellman Ford`算法求解
+
+##### (1) 边的存储
+> `Bellman-Ford`算法可以用任何方式存储边, 这里使用最简单的结构体方式
 
 ```CPP
 struct Edge{
@@ -35,11 +40,11 @@ int dist[N], backup[N];
 
 
 ##### (2) N次更新
-> 防止用当前轮次新更新的`dist[e.a]`更新`dist[e.b]`
+> `backup数组`: 防止用当前轮次新更新的`dist[e.a]`更新`dist[e.b]`, 否则边数限制将会失效
 
 ```CPP
 for(int i=0; i<n; i++){
-    memcpy(backup, dist, sizeof dist);
+    memcpy(backup, dist, sizeof dist) ;
     for(int j=0; j<m; j++){
         auto e = edges[j];
         dist[e.b] = min(dist[e.b], backup[e.a]+e.w);
