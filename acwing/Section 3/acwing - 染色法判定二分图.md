@@ -1,7 +1,8 @@
 #### 染色法判定二分图 (DFS)
 
 ##### 1. [二分图的特性](https://baike.baidu.com/item/%E4%BA%8C%E5%88%86%E5%9B%BE/9089095?fr=aladdin)
-> - 无向图中, 顶点可分割为两个互不相交的子集`(A,B)`, 并且图中的每条边`(i，j)`所关联的两个顶点`i`和`j`分别属于这两个不同的顶点集
+
+> - 无向图中, 顶点可分割为两个互不相交的子集`(A,B)`, 并且图中每条边`(i，j)`所关联的两个顶点`i`和`j`分别属于这两个不同的顶点集
 > - 无向图为二分图的**充分必要条件**是, 图G至少有两个顶点, **图中所有回路的长度均为偶数**
 > 
 > ![二分图](/appendix/acwing-%E4%BA%8C%E5%88%86%E5%9B%BE.png)
@@ -19,7 +20,7 @@ bool DFS(int u, int c){
         // 染色冲突
         if(color[j] == c)
             return false;
-        // color[j]==0可以表示!visited
+        // color[j]==0可以表示!visited, 只有这样的节点才需要DFS继续染色
         if(color[j] == 0 && DFS(j, -c) == false)
             return false;
     }

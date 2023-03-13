@@ -5,8 +5,10 @@
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TOPIC  |   |   |   |[05.02. 二进制数转字符串🧡](/workspace/%E9%9D%A2%E8%AF%95%E9%A2%9805.02%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2.cpp)|[1487. 保证文件名唯一🧡](/workspace/1487.%E4%BF%9D%E8%AF%81%E6%96%87%E4%BB%B6%E5%90%8D%E5%94%AF%E4%B8%80.cpp)|[982. 按位与为零的三元组](/markdown/LC982.%20%E6%8C%89%E4%BD%8D%E4%B8%8E%E4%B8%BA0%E7%9A%84%E4%B8%89%E5%85%83%E7%BB%84.md)|[1599. 经营摩天轮的最大利润🧡](/workspace/1599.%E7%BB%8F%E8%90%A5%E6%91%A9%E5%A4%A9%E8%BD%AE%E7%9A%84%E6%9C%80%E5%A4%A7%E5%88%A9%E6%B6%A6.cpp)|
 |KEYWORD|   |   |   |`math`|`map`<br/>`counter`|`bit` `子集枚举`|`模拟`|
-|TOPIC  |   |   |[offer47. 礼物的最大价值](https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/)|[2379. 得到K个黑块的最少涂色次数](/workspace/2379.%E5%BE%97%E5%88%B0-k-%E4%B8%AA%E9%BB%91%E5%9D%97%E7%9A%84%E6%9C%80%E5%B0%91%E6%B6%82%E8%89%B2%E6%AC%A1%E6%95%B0.cpp)|  |   |[1590. 使数组和能被P整除](/workspace/1590.%E4%BD%BF%E6%95%B0%E7%BB%84%E5%92%8C%E8%83%BD%E8%A2%AB-p-%E6%95%B4%E9%99%A4.cpp)|[17.05. 字母与数字](/markdown/17.05.%20%E5%AD%97%E6%AF%8D%E4%B8%8E%E6%95%B0%E5%AD%97.md)|
+|TOPIC  |   |   |[offer47. 礼物的最大价值🧡](https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/)|[2379. 得到K个黑块的最少涂色次数💚](/workspace/2379.%E5%BE%97%E5%88%B0-k-%E4%B8%AA%E9%BB%91%E5%9D%97%E7%9A%84%E6%9C%80%E5%B0%91%E6%B6%82%E8%89%B2%E6%AC%A1%E6%95%B0.cpp)|[1590. 使数组和能被P整除🧡](/workspace/1590.%E4%BD%BF%E6%95%B0%E7%BB%84%E5%92%8C%E8%83%BD%E8%A2%AB-p-%E6%95%B4%E9%99%A4.cpp)|[17.05. 字母与数字🧡](/markdown/17.05.%20%E5%AD%97%E6%AF%8D%E4%B8%8E%E6%95%B0%E5%AD%97.md)|
 |KEYWORD|   |   |`dp`|`滑动窗口`|`前缀和`<br/>`hash`|`前缀和`<br/>`hash`|
+
+
 > ⭐ start index
 > 
 > 📌 hard for me
