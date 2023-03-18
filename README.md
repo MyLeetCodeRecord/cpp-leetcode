@@ -50,8 +50,11 @@
 - [ ] [Weekly 334](/record/2023/Weekly%20334.md): 第四题todo
 - [ ] [Biweek 99](/record/2023/Biweekly%2099.md): 第四题todo
 - [x] [Weekly 335](/record/2023/Weekly%20335.md)
+- [ ] [Weekly 335](): 没做
+- [x] [Biweek 100](https://leetcode.cn/contest/biweekly-contest-100): 麻烦被rej🙏
 
+<br/>
 
 #### 笔试
-- [x] 3/11 美团
-- [ ] 3/13 百度
+- [x] 3/11 美团  3.8/5
+- [x] 3/13 百度  2.0/3
