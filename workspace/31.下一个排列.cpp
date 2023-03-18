@@ -25,10 +25,7 @@ public:
             swap(nums[i], nums[j]); // nums[i]换成后面最小的更大值
         }
         // i 位置是最新被改变的值(变大为nums[j]), 将 i 位置后面按递增排序即可
-        vector<int>::iterator it = nums.begin();
-        for(int m=0;m<=i;m++)
-            it++;
-        sort(it,nums.end());
+        sort(nums.begin()+i+1, nums.end());
     }
 };
 // @lc code=end

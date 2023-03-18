@@ -7,25 +7,23 @@
 // @lc code=start
 class Solution {
 public:
-    // 二分法 - 折叠数组(无重复)
-    // 目标 => 找到折叠位置
+    // 二分法 - 折叠数组
     int findMin(vector<int>& nums) {
-        int left = 0;
-        int right = nums.size()-1;
-        while(left<=right){
-            int mid = (right-left)/2 + left;
-            // 无论如何right存在其它相等值, 可以直接忽略右端点
-            if(nums[mid] == nums[right]){
-                right--;
-            }
-            else if(nums[mid] < nums[right]){
-                right = mid;
-            }
-            else{
-                left = mid + 1;
-            }
+        int n = nums.size();
+        int l = 0, r = n-1;
+        while(l < r){
+            // 去重
+            while(l+1 < r && nums[l]==nums[l+1])
+                l++;
+            while(l < r-1 && nums[r]==nums[r-1])
+                r--;
+            int mid = (l+r)/2;
+            if(nums[mid] > nums[r])
+                l = mid+1;
+            else
+                r = mid;
         }
-        return nums[left];
+        return nums[l];
     }
 };
 // @lc code=end

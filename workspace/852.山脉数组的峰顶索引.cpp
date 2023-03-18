@@ -16,13 +16,8 @@ public:
         int l = 1, r = n-2;
         while(l < r){
             int mid = (l+r)/2;
-            // peak
-            if(arr[mid-1] < arr[mid] && arr[mid] > arr[mid+1])
-                return mid;
-            // 上升区间
             if(arr[mid-1] < arr[mid] && arr[mid] < arr[mid+1])
                 l = mid+1;
-            // 下降区间
             else
                 r = mid;
         }
