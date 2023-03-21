@@ -8,7 +8,6 @@
 |TOPIC  |   |   |[offer47. 礼物的最大价值🧡](https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/)|[2379. 得到K个黑块的最少涂色次数💚](/workspace/2379.%E5%BE%97%E5%88%B0-k-%E4%B8%AA%E9%BB%91%E5%9D%97%E7%9A%84%E6%9C%80%E5%B0%91%E6%B6%82%E8%89%B2%E6%AC%A1%E6%95%B0.cpp)|[1590. 使数组和能被P整除🧡](/workspace/1590.%E4%BD%BF%E6%95%B0%E7%BB%84%E5%92%8C%E8%83%BD%E8%A2%AB-p-%E6%95%B4%E9%99%A4.cpp)|[17.05. 字母与数字🧡](/markdown/17.05.%20%E5%AD%97%E6%AF%8D%E4%B8%8E%E6%95%B0%E5%AD%97.md)|
 |KEYWORD|   |   |`dp`|`滑动窗口`|`前缀和`<br/>`hash`|`前缀和`<br/>`hash`|
 
-
 > ⭐ start index
 > 
 > 📌 hard for me
@@ -17,6 +16,7 @@
 
 <br/>
 
+#### Acwing Spring 📅
 |       |MON⭐|TUE|WED|THU|FRI|
 |  ---  |:-:|:-:|:-:|:-:|:-:|
 |Week 1|[前缀和](/acwing/Spring/D1_%E5%89%8D%E7%BC%80%E5%92%8C.md)|[差分](/acwing/Spring/D2_%E5%B7%AE%E5%88%86.md)|[二分查找](/acwing/Spring/D3_%E4%BA%8C%E5%88%86.md)|[双指针](/acwing/Spring/D4_%E5%8F%8C%E6%8C%87%E9%92%88.md)|[递推](/acwing/Spring/D5_%E9%80%92%E6%8E%A8.md)|
@@ -29,8 +29,7 @@
 #### PLAYLIST
 > 🎵&nbsp; [最后今晚](https://c6.y.qq.com/base/fcgi-bin/u?__=2KqhcQ) &emsp; 
 >
-> 🎶&nbsp; 
-
+> 🎶&nbsp; [每一个明天](https://c6.y.qq.com/base/fcgi-bin/u?__=2meCbH)
 
 <br/>
 
@@ -50,11 +49,7 @@
 - [ ] [Weekly 334](/record/2023/Weekly%20334.md): 第四题todo
 - [ ] [Biweek 99](/record/2023/Biweekly%2099.md): 第四题todo
 - [x] [Weekly 335](/record/2023/Weekly%20335.md)
-- [ ] [Weekly 335](): 没做
-- [x] [Biweek 100](https://leetcode.cn/contest/biweekly-contest-100): 麻烦被rej🙏
+- [ ] [Weekly 336](https://leetcode.cn/contest/weekly-contest-336/): 没做
+- [x] [Biweek 100](https://leetcode.cn/contest/biweekly-contest-100): ak
+- [x] [Weekly 337](https://leetcode.cn/contest/weekly-contest-337/): ak
 
-<br/>
-
-#### 笔试
-- [x] 3/11 美团  3.8/5
-- [x] 3/13 百度  2.0/3
