@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // 递归 - 美团二面
     // 后序遍历结果: postLeft | postRight | root
     bool verify(vector<int> &post, int l, int r){
         if(l >= r)
