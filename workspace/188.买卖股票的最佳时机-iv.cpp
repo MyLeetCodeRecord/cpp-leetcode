@@ -8,29 +8,18 @@
 class Solution {
 public:
     int maxProfit(int k, vector<int>& prices) {
-        if(prices.size()<=1)
-            return 0;
-        vector<vector<int> > dp(2*k, vector<int>(prices.size()));
-        // 初始化
-        for(int i=0; i<k; i++)
-            dp[2*i][0] = -prices[0];
-        for(int i=0; i<k; i++)
-            dp[2*i+1][0] = 0;
-        int ans = 0;
-        for(int i=1; i<prices.size(); i++){
-            for(int a=0; a<k; a++){
-                if(a==0){
-                    dp[0][i] = max(-prices[i], dp[0][i-1]);
-                    dp[1][i] = max(dp[0][i-1]+prices[i], dp[1][i-1]);
-                }
-                else{
-                    dp[2*a][i] = max(dp[2*a-1][i-1]-prices[i], dp[2*a][i-1]);
-                    dp[2*a+1][i] = max(dp[2*a][i-1]+prices[i], dp[2*a+1][i-1]);
-                }
-                ans = max(ans, dp[2*a+1][i]);
+        int n = prices.size();
+        vector<vector<vector<int>>> dp(n+1, vector<vector<int>>(k+1, vector<int>(2, 0)));
+        for(int j=0; j<=k; j++){
+            dp[0][j][1] = -k*1000;  // n=0时状态1为不可能状态
+        }
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=k; j++){
+                dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j][1]+prices[i-1]);
+                dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j-1][0]-prices[i-1]);
             }
         }
-        return ans;
+        return dp[n][k][0];
     }
 };
 // @lc code=end
