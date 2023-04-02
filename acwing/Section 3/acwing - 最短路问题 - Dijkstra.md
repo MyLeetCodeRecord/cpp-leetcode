@@ -165,29 +165,26 @@ void insert(int a, int b, int d){
     h[a] = idx++;
 }
 int Dijkstra(){
-    priority_queue<PII, vector<PII>, greater<PII>> pq;  // 小顶堆, 维护当前最小dist[]及其编号
-    pq.push({0, 1});    // 1号节点, 距离是0, 编号是1
-
     memset(d, 0x3f, sizeof d);
     d[1] = 0;
-
+    priority_queue<PII, vector<PII>, greater<PII>> pq;  // 小顶堆, 维护当前最小dist[]及其编号
+    pq.push({0, 1});    // 1号节点, 距离是0, 编号是1
     while(!pq.empty()){
-        PII cur = pq.top();
+        int t = pq.top().second;
         pq.pop();
-        if(st[cur.second])
+        // 冗余存储, 可能有过期边
+        if(st[t] == true)
             continue;
-        st[cur.second] = true;
-        for(int i=h[cur.second]; i!=-1; i=nxt[i]){
+        st[ct] = true;
+        for(int i=h[t]; i!=-1; i=nxt[i]){
             int j = e[i];
-            if(d[j] > cur.first + w[i]){
-                d[j] = cur.first + w[i];
+            if(!st[j] && d[t] + w[i] < d[j]){
+                d[j] = d[t] + w[i];
                 pq.push({d[j], j});     // 并不是更新, 而是冗余存储
             }
         }
     }
-    if(d[n] == 0x3f3f3f3f)
-        return -1;
-    return d[n];
+    return (d[n]!=0x3f3f3f3f) ? d[n] : -1;
 }
 int main(){
     memset(h, -1, sizeof h);

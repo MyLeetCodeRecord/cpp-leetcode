@@ -24,20 +24,18 @@ int Dijkstra(){
     dist[1] = 0;
     priority_queue<PII, vector<PII>, greater<PII> > pq;
     pq.push({0, 1});
-    
+
     while(!pq.empty()){
-        PII cur = pq.top();
+        int t = pq.top().second;
         pq.pop();
-        int curDist = cur.first;
-        int curNode = cur.second;
-        if(st[curNode] == true)
+        if(st[t] == true)   // 冗余存储, 可能有过期边
             continue;
-        st[curNode] = true;
-        for(int i=h[curNode]; i!=-1; i=nxt[i]){
+        st[t] = true;
+        for(int i=h[t]; i!=-1; i=nxt[i]){
             int j = e[i];
-            if(curDist + w[i] < dist[j]){
-                dist[j] = curDist + w[i];
-                pq.push({dist[j], j});      // 不是修改而是添加节点, 可能冗余存储
+            if(!st[j] && dist[t]+w[i] < dist[j]){
+                dist[j] = dist[t] + w[i];
+                pq.push({dist[j], j});
             }
         }
     }
