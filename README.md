@@ -51,4 +51,4 @@
 - [x] [Weekly 337](/record/2023/Weekly%20337.md)
 - [ ] [Weekly 338](https://leetcode.cn/contest/weekly-contest-338/): t4 todo
 - [ ] [Biweek 101]()
-- [ ] [Weekly 338]()
+- [ ] [Weekly 339]()
