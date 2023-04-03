@@ -2,7 +2,7 @@
 
 > 灵神: https://www.bilibili.com/video/BV1Gs4y1E7EU
 
-##### [LC516. 最长回文子序列]()
+##### [LC516. 最长回文子序列](/workspace/516.%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E5%BA%8F%E5%88%97.cpp)
 > **朴素思路**: 求`s`和`reverse_s`的最长公共子序列
 >
 > **区间dp**
@@ -25,3 +25,5 @@ int longestPalindromeSubseq(string s) {
     return dp[0][n-1];
 }
 ```
+
+##### []()

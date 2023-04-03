@@ -3,8 +3,11 @@
 #### LEETCODE DAILY 
 |       |MON|TUE|WED|THU|FRI|SAT⭐|SUN|
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|TOPIC  |   |   |   |   |   |[831. 隐藏个人信息🧡](/workspace/831.%E9%9A%90%E8%97%8F%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF.cpp)|  |
-|KEYWORD|   |   |   |   |   |`模拟`|
+|TOPIC  |   |   |   |   |   |[831. 隐藏个人信息🧡](/workspace/831.%E9%9A%90%E8%97%8F%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF.cpp)|[📌1039. 多边形三角剖分的最低得分🧡](/workspace/1039.%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.cpp)|
+|KEYWORD|   |   |   |   |   |`模拟`|`区间dp`|
+|TOPIC  |
+|KEYWORD|
+
 > ⭐ start index
 > 
 > 📌 hard for me
@@ -22,11 +25,9 @@
 <br/>
 
 #### PLAYLIST
-> 🎵&nbsp; [最后今晚](https://c6.y.qq.com/base/fcgi-bin/u?__=2KqhcQ)
+> 🎵&nbsp;
 >
-> 🎶&nbsp; [每一个明天](https://c6.y.qq.com/base/fcgi-bin/u?__=2meCbH)
->
-> 🎵&nbsp; [致明日的舞](https://c6.y.qq.com/base/fcgi-bin/u?__=bs403yc)
+> 🎶&nbsp;
 
 <br/>
 
