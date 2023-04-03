@@ -68,6 +68,27 @@ int maxProfit(vector<int>& prices) {
 }
 ```
 
+<br/>
+
+##### [LC1911. 最大子序列交替和](/workspace/1911.%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E4%BA%A4%E6%9B%BF%E5%92%8C.cpp): `无限次`
+
+> 题目: https://leetcode.cn/problems/maximum-alternating-subsequence-sum/
+>
+> 与[122. 买卖股票的最佳时机II]()一样, 状态`0`表示奇数位做加法, 状态`1`表示偶数位做减法
+
+```CPP
+long long maxAlternatingSum(vector<int>& nums) {
+    int n = nums.size();
+    // 0: 奇数位(+) ; 1: 偶数位(-)
+    vector<vector<long long>> dp(n+1, vector<long long>(2, 0));
+    dp[0][0] = dp[0][1] = 0;
+    for(int i=1; i<=n; i++){
+        dp[i][0] = max(dp[i-1][0], dp[i-1][1] + nums[i-1]);
+        dp[i][1] = max(dp[i-1][1], dp[i-1][0] - nums[i-1]);
+    }
+    return dp[n][0];
+}
+```
 
 <br/>
 
@@ -191,6 +212,3 @@ int maxProfit(vector<int>& prices) {
     return max(dp[1].back(), dp[3].back());
 }
 ```
-
-<br/>
-
