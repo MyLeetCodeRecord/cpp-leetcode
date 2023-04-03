@@ -5,8 +5,8 @@
 |  ---  |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TOPIC  |   |   |   |   |   |[831. 隐藏个人信息🧡](/workspace/831.%E9%9A%90%E8%97%8F%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF.cpp)|[📌1039. 多边形三角剖分的最低得分🧡](/workspace/1039.%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%B8%89%E8%A7%92%E5%89%96%E5%88%86%E7%9A%84%E6%9C%80%E4%BD%8E%E5%BE%97%E5%88%86.cpp)|
 |KEYWORD|   |   |   |   |   |`模拟`|`区间dp`|
-|TOPIC  |
-|KEYWORD|
+|TOPIC  |[1053. 交换一次的先前排列🧡](/workspace/1053.%E4%BA%A4%E6%8D%A2%E4%B8%80%E6%AC%A1%E7%9A%84%E5%85%88%E5%89%8D%E6%8E%92%E5%88%97.cpp)|
+|KEYWORD|`贪心`<br/>`next_permutation`|
 
 > ⭐ start index
 > 
@@ -51,5 +51,5 @@
 - [x] [Biweek 100](/record/2023/Biweekly%20100.md)
 - [x] [Weekly 337](/record/2023/Weekly%20337.md)
 - [ ] [Weekly 338](https://leetcode.cn/contest/weekly-contest-338/): t4 todo
-- [ ] [Biweek 101]()
-- [ ] [Weekly 339]()
+- [x] [Biweek 101](/record/2023/Biweekly%20101.md)
+- [x] [Weekly 339](/record/2023/Weekly%20339.md): 第四题 pass
