@@ -30,10 +30,12 @@ public:
         t->word = word;
     }
     void dfs_search(TrieNode* t, vector<vector<char>>& board, int r, int c, unordered_set<string>& ans_set){
+        // 标记, 避免重复使用同一个格子
         char ch = board[r][c];
         // root没有值, 元素是用“边”表示和存储的
         if(t->child[ch-'a']==NULL)
             return ;
+        // 到达了一个完整单词 => 存入set
         if(t->child[ch-'a']->word.size() != 0){
             ans_set.insert(t->child[ch-'a']->word);
         }
@@ -48,6 +50,7 @@ public:
                 }
             }
         }
+        //回溯, 恢复现场
         board[r][c] = ch;
     }
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
@@ -59,13 +62,16 @@ public:
         // 使用set保存
         unordered_set<string> ans_set;
         // 设置在board上搜索的不同起点
-        for(int r=0; r<board.size(); r++)
-            for(int c=0; c<board[0].size(); c++)
+        for(int r=0; r<board.size(); r++){
+            for(int c=0; c<board[0].size(); c++){
                 dfs_search(trie, board, r, c, ans_set);
+            }
+        }
         // 转换成vector
         vector<string> ans;
-        for(string str: ans_set)
+        for(string str: ans_set){
             ans.push_back(str);
+        }
         return ans;
     }
 };

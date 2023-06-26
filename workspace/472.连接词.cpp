@@ -29,6 +29,9 @@ public:
         }
         t->isEnd = true;
     }
+    // 比如 cat, cats, dog, catsdog这个用例
+    // - 如果遇到cat就断开重新DFS, 其实是错误结果
+    // - 因此即使遇到cat为isEnd, 也要继续向下找, 继续本次DFS
     bool dfs(string word, int cur){
         if(word.size() == cur)
             return true;
