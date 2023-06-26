@@ -10,7 +10,8 @@ public:
     // LC962
     int getRemoteLarger(vector<int>& nums){
         int n = nums.size();
-        stack<int> sk;  // 存一个「严格单调递减」序列的「下标」
+        stack<int> sk;  // 存一个「工作时间严格单调递减」序列的「下标」
+        sk.push(0);
         for(int i=1; i<=n; i++){
             if(sk.empty() || nums[i]<nums[sk.top()])
                 sk.push(i);

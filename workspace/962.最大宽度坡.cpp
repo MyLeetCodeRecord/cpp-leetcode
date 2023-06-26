@@ -10,13 +10,14 @@ public:
     // 单调栈
     int maxWidthRamp(vector<int>& nums) {
         int n = nums.size();
-        stack<int> sk;
+        stack<int> sk;  // 栈内单调递减
         for(int i=0; i<n; i++){
             if(sk.empty() || nums[i]<nums[sk.top()]){
                 sk.push(i);
             }
         }
         int ans = 0;
+        // 从右向左, 因此相邻的两个值, 如果不能对栈顶元素产生影响, 则右边的一定是更优解
         for(int i=n-1; i>=0; i--){
             while(!sk.empty() && nums[i]>=nums[sk.top()]){
                 ans = max(ans, i-sk.top());

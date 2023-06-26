@@ -1,3 +1,52 @@
+// 整理一下
+#include <cstdio>
+#include <iostream>
+#include <queue>
+using namespace std;
+
+const int N = 1000010;
+int a[N];
+int n, k;
+
+void getSmall(){
+    int deque[N];
+    int h = 0, t = -1;
+    for(int i=0; i<n; i++){
+        if(i - deque[h] >= k)
+            h++;
+        while(t>=h && a[i] <= a[deque[t]])
+            t--;
+        deque[++t] = i;
+        if(i >= k-1)
+            printf("%d ", a[deque[h]]);
+    }
+}
+void getBig(){
+    int deque[N];
+    int h = 0, t = -1;
+    for(int i=0; i<n; i++){
+        if(i - deque[h] >= k)
+            h++;
+        while(t>=h && a[i] >= a[deque[t]])
+            t--;
+        deque[++t] = i;
+        if(i >= k-1)
+            printf("%d ", a[deque[h]]);
+    }
+}
+int main(){
+    scanf("%d %d", &n, &k);
+    for(int i=0; i<n; i++){
+        scanf("%d", &a[i]);
+    }
+    getSmall();
+    printf("\n");
+    getBig();
+    return 0;
+}
+
+/* ———————————————————————————————————————————————————— */
+
 #include <cstdio>
 #include <iostream>
 using namespace std;
