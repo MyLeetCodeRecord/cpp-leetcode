@@ -5,43 +5,48 @@
  */
 
 // @lc code=start
-struct Trie{
-    Trie* child[26];
-    Trie(){
+struct TrieNode{
+    TrieNode* child[26];
+    TrieNode(){
         for(int i=0; i<26; i++)
             child[i] = NULL;
     }
 };
 class Solution {
-private:
-    Trie* trie;
-    int cnt = 0;
 public:
-    bool static cmp(string l, string r){
-        return l.size() > r.size();
-    }
-    void insert(string word){
-        Trie* t = trie;
-        bool diff = false;
-        for(char ch: word){
-            if(t->child[ch-'a']==NULL){
-                t->child[ch-'a'] = new Trie();
-                diff = true;
-            }
-            t = t->child[ch-'a'];
+    TrieNode* trie = new TrieNode();
+    void insert(string &word){
+        TrieNode* t = trie;
+        for(int i=0; i<word.size(); i++){
+            if(t->child[word[i]-'a'] == NULL)
+                t->child[word[i]-'a'] = new TrieNode();
+            t = t->child[word[i]-'a']; 
         }
-        // 如果是新建立的叶节点, 则计数
-        if(diff)
-            cnt += word.size()+1;
+    }
+    bool search(string &word){
+        TrieNode* t = new TrieNode();
+        for(int i=0; i<word.size(); i++){
+            if(t->child[word[i]-'a'] == NULL)
+                return false;
+            t = t->child[word[i]-'a'];
+        }
+        return true;
     }
     int minimumLengthEncoding(vector<string>& words) {
-        trie = new Trie();
-        sort(words.begin(), words.end(), cmp);
-        for(string& word: words){
+        // 先放长的, 再放短的
+        sort(words.begin(), words.end(), [&](const string &l, const string &r){
+            return l.size() > r.size();
+        });
+        int ans = 0;
+        for(string word: words){
+            // 单词逆序
             reverse(word.begin(), word.end());
-            insert(word);
+            if(search(word)==false){
+                insert(word);
+                ans += word.size();
+            }
         }
-        return cnt;
+        return ans;
     }
 };
 // @lc code=end

@@ -5,60 +5,52 @@
  */
 
 // @lc code=start
-struct Trie{
-    Trie* child[26];
+struct TrieNode{
+    TrieNode* child[26];
     bool isEnd;
-    Trie(){
+    TrieNode(){
         for(int i=0; i<26; i++)
             child[i] = NULL;
         isEnd = false;
     }
 };
 class MagicDictionary {
-private:
-    Trie* trie;
+    TrieNode* trie;
 public:
     MagicDictionary() {
-        
     }
-    void add(string word){
-        Trie* t = trie;
-        for(char ch: word){
-            if(t->child[ch-'a']==NULL){
-                t->child[ch-'a'] = new Trie();
-            }
-            t = t->child[ch-'a'];
+    void insert(string &word){
+        TrieNode* t = trie;
+        for(int i=0; i<word.size(); i++){
+            if(t->child[word[i]-'a'] == NULL)
+                t->child[word[i]-'a'] = new TrieNode();
+            t = t->child[word[i]-'a'];
         }
         t->isEnd = true;
     }
-    // 类似“带通配符的search” - DFS
-    bool dfs_search(string word, int changed, int cur, Trie* t){
-        if(changed > 1 || t == NULL)
-            return false;
-        if(cur == word.size()){
-            return t->isEnd && changed==1;
-        }
+    bool dfs(TrieNode* t, string &word, int cur, int modify){
+        if(cur==word.size())
+            return t->isEnd && modify==1;
         for(int i=0; i<26; i++){
-            if(t->child[i] != NULL){
-                // 不修改
-                if(i==word[cur]-'a'){
-                    if(dfs_search(word, changed, cur+1, t->child[i]))
+            if(t->child[i]!=NULL){
+                if(word[cur]-'a' == i){
+                    if(dfs(t->child[i], word, cur+1, modify))
                         return true;
                 }
-                // 修改
-                else if(changed==0 && dfs_search(word, changed+1, cur+1, t->child[i]))
-                    return true;
+                else if(modify == 0)
+                    if(dfs(t->child[i], word, cur+1, modify+1))
+                        return true;
             }
         }
         return false;
     }
-    bool search(string searchWord) {
-        return dfs_search(searchWord, 0, 0, trie);
+    bool search(string word){
+        return dfs(trie, word, 0, 0);
     }
     void buildDict(vector<string> dictionary) {
-        trie = new Trie();
+        trie = new TrieNode();
         for(string word: dictionary){
-            add(word);
+            insert(word);
         }
     }
 };

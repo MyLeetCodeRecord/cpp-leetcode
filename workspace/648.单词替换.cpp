@@ -16,12 +16,13 @@ struct TrieNode{
 };
 class Solution {
 public:
-    void add(string word, TrieNode* trie){
+    TrieNode* trie;
+    void insert(string word){
         TrieNode* t = trie;
-        for(char ch: word){
-            if(t->child[ch-'a']==NULL)
-                t->child[ch-'a'] = new TrieNode();
-            t = t->child[ch-'a'];
+        for(int i=0; i<word.size(); i++){
+            if(t->child[word[i]-'a']==NULL)
+                t->child[word[i]-'a'] = new TrieNode();
+            t = t->child[word[i]-'a'];
         }
         t->word = word;
     }
@@ -41,28 +42,25 @@ public:
         return word;
     }
     string replaceWords(vector<string>& dictionary, string sentence) {
-        // 用词根表构建一棵树
-        TrieNode* trie = new TrieNode();
-        for(string word : dictionary){
-            add(word, trie);
+        trie = new TrieNode();
+        for(string word: dictionary){
+            insert(word);
         }
-        // 处理sentence, 使用left,right定位一个单词
+        int n = sentence.size();
         string ans = "";
-        int left = 0;
-        int right = 0;
-        sentence += " ";    // 方便从sentence截取word时统一处理
-        for(int i=0; i<sentence.size(); i++){
-            for(int j=i+1; j<sentence.size(); j++){
-                if(sentence[j] == ' '){
-                    // 截取单词, 到Trie中搜索, 返回值追加到ans
-                    string sub = sentence.substr(i, j-i);
-                    ans += search(sub, trie);
-                    ans += " ";
-                    i = j+1;
-                }
+        for(int i=0; i<n; i++){
+            // 截取一个单词
+            if(sentence[i]!=' '){
+                int j = i;
+                while(j<n && sentence[j]!=' ')
+                    j++;
+                string sub = sentence.substr(i, j-i);
+                ans += search(sub);
+                ans += " ";
+                i = j;
             }
         }
-        return ans.substr(0, ans.size()-1);
+        return ans.substr(0, ans.size()-1); 
     }
 };
 // @lc code=end

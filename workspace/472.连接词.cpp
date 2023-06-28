@@ -36,6 +36,7 @@ public:
         if(word.size() == cur)
             return true;
         Trie * t = trie;
+        // 注意这里 i 的起点, 以及dfs时候的开始位置为i+1 (而非cur+1)
         for (int i = cur; i < word.size(); i++){
             if(t->child[word[i]-'a'] == NULL)
                 return false;
@@ -53,8 +54,6 @@ public:
         vector<string> ans;
         for(int i=0; i<words.size(); i++){
             string word = words[i];
-            if(word.size() == 0)
-                continue;
             // 这里是if-else, 因为如果长的可以用多个短的表示, 则不需要长的加入Trie了
             if(search(word, 0))
                 ans.push_back(word);
