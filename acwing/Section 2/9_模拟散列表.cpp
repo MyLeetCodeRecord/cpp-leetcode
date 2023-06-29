@@ -4,7 +4,9 @@
 #include <cstring>
 using namespace std;
 
-/* 链表法: 这里的`hash函数`就是把`x`取余后映射到[0,100003]范围内 (100003是一个质数, 哈希性质更好) */
+/* 链表法: 这里的`hash函数`就是把`x`取余后映射到[0,100003]范围内 (100003是一个质数, 哈希性质更好)
+ * 注意负数hash值的计算, hashVal = (x%N+N)%N
+ */
 const int N = 100003;
 int h[N], e[N], nxt[N], idx=0;
 
