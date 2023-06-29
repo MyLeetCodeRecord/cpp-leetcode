@@ -20,7 +20,7 @@ int find_ufs(int u){
 void union_ufs(int u, int v){
     int fu = find_ufs(u);
     int fv = find_ufs(v);
-    // !!! u,v可能相等, 不判断更新会导致sizeList更新错误
+    // !!! 不同根节点才需要合并, 否则会导致sizeList被错误更新
     if(fu != fv){
         father[fv] = fu;
         sizeList[fu] += sizeList[fv];

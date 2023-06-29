@@ -19,7 +19,7 @@ void down(int k){
         smaller = 2*k+1;
     if(smaller != k){
         swap(heap[k], heap[smaller]);
-        down(smaller);
+        down(smaller);  // k和smaller都是下标, 所以这里的smaller指向的其实是移动后的输入元素所在位置, 不再具有smaller语义
     }
 }
 void up(int k){

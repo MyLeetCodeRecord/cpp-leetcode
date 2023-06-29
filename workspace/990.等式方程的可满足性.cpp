@@ -8,14 +8,11 @@
 class Solution {
 private:
     vector<int> father;
-    vector<int> sizeList;
 public:
     void init_ufs(int n){
         father.resize(n);
-        sizeList.resize(n);
         for(int i=0; i<n; i++){
             father[i] = i;
-            sizeList[i] = 1;
         }
     }
     int find(int u){
@@ -26,7 +23,6 @@ public:
         int pv = find(v);
         if(pu==pv)
             return ;
-        sizeList[pv] += sizeList[pu];
         father[pu] = pv;
     }
     bool inSame(int u, int v){

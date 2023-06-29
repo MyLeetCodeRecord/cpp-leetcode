@@ -31,6 +31,7 @@ public:
         for(vector<int> edge: connections){
             union2(edge[0], edge[1]);
         }
+        // 答案为集合数 - 1
         int cnt = 0;
         for(int i=0; i<n; i++){
             if(father[i] == i)
