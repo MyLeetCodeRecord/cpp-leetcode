@@ -57,7 +57,7 @@ int partitionArray(vector<int>& nums, int k) {
 
 > [题目](https://leetcode.cn/problems/replace-elements-in-an-array/)
 > 
-> <img src="../appendix/LC6092.png">
+> ![LC6092](/appendix/LC6092.png)
 > 
 > 题目保证元素互不相同, 使用`map`维护元素值出现的位置, 每次替换后更新`map`即可
 > 
