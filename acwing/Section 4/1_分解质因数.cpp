@@ -24,7 +24,7 @@ void divide(int n){
             printf("%d %d\n", i, times);
         }
     }
-    // 剩余的一个
+    // 剩余的一个(如果有大于 n/i 的质因子, 那么只能有一个, 就是此时剩余的 n)
     if(n > 1)
         printf("%d %d\n", n, 1);
     printf("\n");

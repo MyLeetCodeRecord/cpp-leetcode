@@ -4,7 +4,7 @@
 using namespace std;
 
 const int N = 1000010;
-int prime[N], idx = 0;
+int prime[100010], idx = 0;
 bool state[N];
 void getPrimes(int n){
     for(int i=2; i<=n; i++){
