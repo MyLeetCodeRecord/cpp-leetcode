@@ -7,28 +7,31 @@
 // @lc code=start
 class Solution {
 public:
-    vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+    int binary_search(vector<int>& arr, int target){
         int n = arr.size();
-        int l=0, r=n-1;
-        while(l < r){
+        int l = 0, r = n-1;
+        while(l<r){
             int mid = (l+r)/2;
-            if(arr[mid] < x)
+            if(arr[mid] < target)
                 l = mid+1;
             else
                 r = mid;
         }
+        return l;
+    }
+    vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+        int n = arr.size();
+        int j = binary_search(arr, x);
+        int i = j - 1;
+        cout<<i << " "<<j<<endl;
         vector<int> ans;
-        int i=l-1, j=l;
         while(ans.size() < k){
-            int minVal = INT_MAX;
-            if(i >= 0)
-                minVal = min(minVal, abs(arr[i]-x));
-            if(j < n)
-                minVal = min(minVal, abs(arr[j]-x));
-            if(i>=0 && minVal == abs(arr[i]-x))
+            if(i>=0 && (j>=n || x-arr[i] <= arr[j]-x)){
                 ans.push_back(arr[i--]);
-            else
+            }
+            else if(j<n && (i<0 || x-arr[i] > arr[j]-x)){
                 ans.push_back(arr[j++]);
+            }
         }
         sort(ans.begin(), ans.end());
         return ans;
