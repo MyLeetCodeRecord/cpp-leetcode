@@ -31,7 +31,7 @@ int quickPow(int a, int n){
 ```CPP
 // 递归方式计算快速幂 (不考虑mod大素数)
 int quickPow(int a, int n){
-    if(n==0)
+    if(n == 0)
         return 1;
     if(n % 2 == 1)
         return a * quickPow(a, n-1);
