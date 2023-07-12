@@ -18,11 +18,10 @@ void calcCombination(){
 }
 
 int main(){
-    int n;
+    int n, a, b;
     scanf("%d", &n);
     calcCombination(a, b);
     for(int i=0; i<n; i++){
-        int a, b;
         scanf("%d %d", &a, &b);
         printf("%d\n", dp[a][b]);
     }

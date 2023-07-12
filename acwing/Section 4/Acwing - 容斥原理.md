@@ -2,11 +2,11 @@
 
 > **韦恩图**
 > 
-> ![韦恩图](/appendix/acwing-%E9%9F%A6%E6%81%A9%E5%9B%BE.png)
+> ![韦恩图](../appendix/acwing-%E9%9F%A6%E6%81%A9%E5%9B%BE.png)
 
 > **容斥原理**
 > 
-> ![容斥原理公式](/appendix/acwing-%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86.png)
+> ![容斥原理公式](../appendix/acwing-%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86.png)
 >
 > **复杂度**: 假设`m`个集合, 则一共有`2^m-1`个项 (对应`2^m-1`种选法), 再乘上计算每一项的复杂度即可
 

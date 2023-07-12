@@ -3,33 +3,33 @@
 #include <unordered_map>
 using namespace std;
 
+unordered_map<int, int> mp;
+void dividePrimes(int n;){
+    for(int i=2; i<=x/i; i++){
+        // 分解质因数, 每次除尽
+        while(x%i==0){
+            mp[i]++;
+            x /= i;
+        }
+    }
+    if(x > 1)
+        mp[x]++;
+}
 long long getOneItem(int p, int a){
-    int i = 0;
     long long ans = 1;
-    while(i<a){
+    for(int i=0; i<a; i++){
         ans = p * ans + 1;
         ans %= 1000000007;
-        i++;
     }
     return ans;
 }
 
 int main(){
-    int n;
+    int n, x;
     scanf("%d", &n);
-    unordered_map<int, int> mp;  // prime2freq
     for(int i=0; i<n; i++){
-        int x;
         scanf("%d", &x);
-        for(int i=2; i<=x/i; i++){
-            // 分解质因数, 每次除尽
-            while(x%i==0){
-                mp[i]++;
-                x /= i;
-            }
-        }
-        if(x > 1)
-            mp[x]++;
+        dividePrimes(x);
     }
     // 约数总和公式
     long long sum = 1;
