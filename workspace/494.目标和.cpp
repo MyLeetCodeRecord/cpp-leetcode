@@ -11,10 +11,10 @@ public:
         int sum = 0;
         for(int n: nums)
             sum += n;
-        if(sum<target || (sum-target)%2!=0)
-            return 0;
         // C-(sum-C) = target
         int C = (sum+target)/2;
+        if((sum+target)%2==1 || C<0)
+            return 0;
         vector<int> dp(C+1, 0);
         dp[0] = 1;
         for(int i=0; i<nums.size(); i++){
