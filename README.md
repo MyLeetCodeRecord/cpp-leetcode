@@ -13,6 +13,9 @@
 - [x] [组合数](/acwing/Section%204/Acwing%20-%20%E7%BB%84%E5%90%88%E6%95%B0.md)
 - [x] [容斥定理](/acwing/Section%204/Acwing%20-%20%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86.md)
 
+#### Weekly
+- [ ] [Weekly352](/record/2023/Weekly%20352.md)
+- [x] [Weekly354](/record/2023/Weekly%20354.md)
 
 #### PLAYLIST
 > 🎵&nbsp;
