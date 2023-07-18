@@ -12,9 +12,10 @@
 - [x] [约数公式](/acwing/Section%204/Acwing%20-%20%E7%BA%A6%E6%95%B0%E4%B8%A4%E4%B8%AA%E5%85%AC%E5%BC%8F.md)
 - [x] [组合数](/acwing/Section%204/Acwing%20-%20%E7%BB%84%E5%90%88%E6%95%B0.md)
 - [x] [容斥定理](/acwing/Section%204/Acwing%20-%20%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86.md)
+- [x] [multiset](/markdown/%E4%B8%93%E9%A2%98%20-%20multiset.md)
 
 #### Weekly
-- [ ] [Weekly352](/record/2023/Weekly%20352.md)
+- [x] [Weekly352](/record/2023/Weekly%20352.md)
 - [x] [Weekly354](/record/2023/Weekly%20354.md)
 
 #### PLAYLIST

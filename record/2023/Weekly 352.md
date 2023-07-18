@@ -27,8 +27,11 @@ int longestAlternatingSubarray(vector<int>& nums, int threshold) {
 > 看到`n`的范围为`10^6` ➡️ [筛质数](/acwing/Section%204/Acwing%20-%20%E7%AD%9B%E8%B4%A8%E6%95%B0.md)
 >
 > 将质数放入`map`, 枚举小于等于`n/2`的`primes[i]`, 求`mp[n-primes[i]]`是否存在
+>
+> 进阶题目: [LC1438](/workspace/1438.%E7%BB%9D%E5%AF%B9%E5%B7%AE%E4%B8%8D%E8%B6%85%E8%BF%87%E9%99%90%E5%88%B6%E7%9A%84%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84.cpp)
 
 ```CPP
+// 埃式筛法 -> 筛质数
 vector<int> primes;
 vector<bool> state;
 void getPrime(int n){
@@ -57,31 +60,39 @@ vector<vector<int>> findPrimePairs(int n) {
 }
 ```
 
-##### 3. [不间断子数组](https://leetcode.cn/problems/continuous-subarrays/): `map`
+##### 3. [不间断子数组](https://leetcode.cn/problems/continuous-subarrays/): `multiset`/`map`
 > 很重要的一点是题意转换: 「任意两数差的绝对值 <= 2」➡️「最大值-最小值<=2」
 >
 > 也就是`滑动窗口`内, 必须满足「最大值-最小值<=2」的条件
 
 ```CPP
-unordered_map<int, int> mp;
-bool check(){
-    if(mp.size() > 3)
-        return false;
-    int mmin = INT_MAX;
-    int mmax = INT_MIN;
-    for(auto &[k,_]: mp){
-        mmin = min(mmin, k);
-        mmax = max(mmax, k);
-    }
-    return mmax-mmin<=2;
-}
+// multiset
 long long continuousSubarrays(vector<int>& nums) {
-    long long ans = 0;
+    multiset<int> st;
     int n = nums.size();
+    long long ans = 0;
+    int l = 0, r = 0;
+    while(r < n){
+        st.insert(nums[r++]);
+        while(*st.rbegin()-*st.begin() > 2){
+            st.erase(st.find(nums[l++]));
+        }
+        ans += r-l;
+    }
+    return ans;
+}
+```
+
+```CPP
+// 有序map
+long long continuousSubarrays(vector<int>& nums) {
+    map<int, int> mp;
+    int n = nums.size();
+    long long ans = 0;
     int l = 0, r = 0;
     while(r < n){
         mp[nums[r++]]++;
-        while(check()==false){
+        while(mp.rbegin()->first - mp.begin()->first > 2){
             mp[nums[l++]]--;
             if(mp[nums[l-1]]==0)
                 mp.erase(nums[l-1]);
@@ -91,5 +102,6 @@ long long continuousSubarrays(vector<int>& nums) {
     return ans;
 }
 ```
+
 
 ##### 4. [所有子数组中不平衡数字之和](https://leetcode.cn/problems/sum-of-imbalance-numbers-of-all-subarrays/)
