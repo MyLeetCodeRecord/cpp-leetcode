@@ -103,5 +103,44 @@ long long continuousSubarrays(vector<int>& nums) {
 }
 ```
 
-
 ##### 4. [所有子数组中不平衡数字之和](https://leetcode.cn/problems/sum-of-imbalance-numbers-of-all-subarrays/)
+
+> **方法一: 枚举** ➡️ `O(n^2)`
+>
+> 只有存在相同元素 / 差距为1的元素才会对答案有影响
+> 
+> 每加入一个元素, 继续维护`imbalance`作为新数组的不平衡度
+> 
+> - 如果`nums[j]`已经在数组中, 加入前后两个数组的不平衡度相同, 则`imbalance`保持不变
+>
+> - 如果`nums[j]`不在数组中, 检查`nums[j]+1`和`nums[j]-1`是否出现过
+>   - 两边都有 -> `imbalance-1`, `[2,4] <- 3`
+>   - 只有一边有 -> `imbalance`, `[2,5] <- 3`
+>   - 两边都没有 -> `imbalance+1` `[2,6] <- 4`
+>
+> `ans`为所有枚举子数组的不平衡度`imbalance`
+
+```CPP
+// 枚举左右端点, 检查是否x+1, x-1出现过
+int sumImbalanceNumbers(vector<int>& nums) {
+    int n = nums.size();
+    int ans = 0;
+    for(int i=0; i<n; i++){
+        vector<bool> visited(n+2, false);
+        visited[nums[i]] = true;
+        int imbalance = 0;
+        for(int j=i+1; j<n; j++){
+            if(!visited[nums[j]]){
+                imbalance += 1;
+                imbalance -= visited[nums[j]-1];
+                imbalance -= visited[nums[j]+1];
+            }
+            visited[nums[j]] = true;
+            ans += imbalance;
+        }
+    }
+    return ans;
+}
+```
+
+> **方法二: 贡献法**: todo

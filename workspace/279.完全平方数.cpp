@@ -14,7 +14,7 @@ public:
         for(int i=1; i*i<=n; i++){
             for(int j=i*i; j<=n; j++){
                 if(dp[j-i*i] != INT_MAX){
-                    dp[j] = min(dp[j-i*i]+1, dp[j]);
+                    dp[j] = min(dp[j], dp[j-i*i]+1);
                 }
             }
         }
