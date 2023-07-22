@@ -21,9 +21,8 @@ int main(){
         for(int j=1; j<=len2; j++){
             if(s1[i-1] == s2[j-1])
                 dp[i][j] = dp[i-1][j-1];
-            else{
+            else
                 dp[i][j] = min(min(dp[i-1][j], dp[i][j-1]), dp[i-1][j-1]) + 1;
-            }
         }
     }
     cout<<dp[len1][len2]<<endl;
