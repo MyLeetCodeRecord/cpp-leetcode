@@ -47,6 +47,5 @@ public:
         return root;
     }
 };
-
 // @lc code=end
 

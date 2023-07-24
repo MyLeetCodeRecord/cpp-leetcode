@@ -11,12 +11,14 @@ public:
     bool inorder(TreeNode* root){
         if(root==NULL)
             return true;
-        bool l = inorder(root->left);
-        if((long long)root->val <= pre)
+        if(inorder(root->left)==false)
+            return false;
+        if(root->val <= pre)
             return false;
         pre = root->val;
-        bool r = inorder(root->right);
-        return l && r;
+        if(inorder(root->right)==false)
+            return false;
+        return true;
     }
     bool isValidBST(TreeNode* root) {
         return inorder(root);

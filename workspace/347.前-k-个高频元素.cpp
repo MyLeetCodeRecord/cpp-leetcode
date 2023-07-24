@@ -13,15 +13,17 @@ public:
         for(int x: nums){
             mp[x]++;
         }
+        // 维护大小为k的小顶堆, 排序依据为「出现次数」
         priority_queue<PII, vector<PII>, greater<PII>> pq;
-        for(unordered_map<int, int>::iterator it=mp.begin(); it!=mp.end(); it++){
-            pq.push({it->second, it->first});
+        for(auto &[key, val]: mp){
+            pq.push({val, key});
+            if(pq.size() > k)
+                pq.pop();
         }
         vector<int> ans;
-        while(k > 0 && !pq.empty()){
+        while(!pq.empty()){
             ans.push_back(pq.top().second);
             pq.pop();
-            k--;
         }
         return ans;
     }
