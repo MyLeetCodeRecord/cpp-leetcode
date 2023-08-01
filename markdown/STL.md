@@ -80,11 +80,21 @@ sort(pos.begin(), pos.end(), [&](int a, int b){
 > - `st`: 起始迭代器
 > - `ed`: 终止迭代器
 > - `initial`: 初始值, e.g. `0` or `0L`
-````CPP
+```CPP
 #include <vector>
 #include <numeric>
 using namespace std;
 
-vector<int> arr{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 int sum = accumulate(arr.begin(), arr.end(), 0);
+```
+
+##### next_permutation(st, ed)
+> - `st`: 起始迭代器
+> - `ed`: 终止迭代器
+> - 会在原数组上更改顺序
+
+```CPP
+vector<string> arr = {"a", "b", "c"};
+next_permutation(arr.begin(), arr.end());
 ```
