@@ -7,6 +7,39 @@
 // @lc code=start
 class Solution {
 public:
+    // AA'BB'CC' -> 修改random -> 保留A'B'C'
+    Node* copyRandomList(Node* head) {
+        if(head == NULL)
+            return NULL;
+        // 复制AABBCC
+        Node* cur = head;
+        while(cur != NULL){
+            Node* copyCur = new Node(cur->val);
+            copyCur->next = cur->next;
+            cur->next = copyCur;
+            cur = copyCur->next;
+        }
+        // 修改Random
+        cur = head;
+        while(cur != NULL){
+            if(cur->random != NULL){
+                Node* copyCur = cur->next;
+                copyCur->random = cur->random->next;
+            }
+            cur = cur->next->next;
+        }
+        // 拆分链表
+        cur = head;
+        Node* ans = cur->next;
+        while(cur != NULL){
+            Node* copyCur = cur->next;
+            cur->next = cur->next->next;
+            cur = cur->next;
+            if(cur != NULL)
+                copyCur->next = copyCur->next->next;
+        }
+        return ans;
+    }
     /*
     // 深拷贝1: DFS+hash
     unordered_map<Node*, Node*> hash;
@@ -25,6 +58,7 @@ public:
         return DFS(head);
     }
     */
+    /*
     // 深拷贝2: 先复制节点, 并建立节点hash, 然后复制指针
     Node* copyRandomList(Node* head) {
         if(head==NULL)
@@ -47,6 +81,7 @@ public:
         // 返回复制后新的head
         return hash[head];
     }
+    */
 };
 // @lc code=end
 
