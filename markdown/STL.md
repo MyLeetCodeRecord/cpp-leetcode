@@ -27,6 +27,22 @@ sort(pos.begin(), pos.end(), [&](int a, int b){
 > `que.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
 
 
+##### deque
+> 可以在队列的两端进行元素的操作，并且可以高效地在队列的任意位置进行元素的插入和删除操作。
+>
+> push_back() / emplace_back()
+> 
+> push_front() / emplace_front()
+> 
+> pop_back() / pop_front()
+> 
+> back() / front()
+> 
+> insert()
+> 
+> erase()
+
+
 ##### map
 > `iterator lower_bound(const key_type &key)`: 返回一个迭代器, 指向键值 >=key 的第一个元素
 > 
@@ -39,7 +55,7 @@ sort(pos.begin(), pos.end(), [&](int a, int b){
 
 <img src="https://img2018.cnblogs.com/blog/1169804/201903/1169804-20190310232157215-1540369555.png">
 
-<img src="/appendix/list.png">
+<img src="../appendix/list.png">
 
 
 ##### `prev(iterator)` & `next(iterator)`
