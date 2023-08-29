@@ -14,6 +14,7 @@ public:
         int j = 0;  // popped中的指针
         for(int i=0; i<pushed.size(); i++){
             sk.push(pushed[i]);
+            // 持续弹出
             while(!sk.empty() && sk.top() == popped[j]){
                 sk.pop();
                 j++;
