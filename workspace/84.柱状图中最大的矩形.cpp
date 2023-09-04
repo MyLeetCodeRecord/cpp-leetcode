@@ -27,7 +27,7 @@ public:
             else if(heights[i] > heights[sk.top()]){
                 sk.push(i);
             }
-            // cur更低 => 
+            // cur更低 => pop & push
             else{
                 while(!sk.empty() && heights[i]<heights[sk.top()]){
                     int mid = sk.top();

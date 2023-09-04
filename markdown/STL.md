@@ -23,6 +23,29 @@ sort(pos.begin(), pos.end(), [&](int a, int b){
 > `s.find(ch, start)`: 从`start`开始查找第一次出现位置, 如果找不到返回`s.npos`
 
 
+##### stringstream字符串拆分
+
+> 按空格分割字符串
+```CPP
+string s = "I'm a sentence"
+string word;
+stringstream ss(s);
+while(ss >> word){
+    // ...
+}
+```
+
+> 按分隔符划分字符串
+```CPP
+string s = "haha_ha_ha"
+string word;
+stringstream ss(s);
+while(getline(ss, word, "_")){
+    // ...
+}
+```
+
+
 ##### queue
 > `que.insert(it, val)`: 在指定位置loc前插入值为val的元素, 返回指向这个元素的迭代器
 
