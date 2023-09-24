@@ -4,7 +4,7 @@
 using namespace std;
 
 unordered_map<int, int> mp;
-void dividePrimes(int n;){
+void dividePrimes(int x){
     for(int i=2; i<=x/i; i++){
         // 分解质因数, 每次除尽
         while(x%i==0){
@@ -16,8 +16,8 @@ void dividePrimes(int n;){
         mp[x]++;
 }
 long long getOneItem(int p, int a){
-    long long ans = 1;
-    for(int i=0; i<a; i++){
+    long long ans = 0;
+    for(int i=0; i<=a; i++){
         ans = p * ans + 1;
         ans %= 1000000007;
     }

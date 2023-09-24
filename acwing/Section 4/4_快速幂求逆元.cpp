@@ -8,10 +8,10 @@ using namespace std;
  */
 
 int quickPow(int a, int n, int mod){
-    long long ans = 1;
+    int ans = 1;
     while(n != 0){
         if(n & 1){
-            ans = ans * a % mod;
+            ans = (long long)ans * a % mod;
         }
         a = (long long)a * a % mod;
         n >>= 1;

@@ -21,7 +21,7 @@ int main(){
             }
         }
         if(x > 1)
-            ans = ans / x *(x-1);
+            ans = ans / x * (x-1);
         cout<<ans<<endl;
     }
     return 0;

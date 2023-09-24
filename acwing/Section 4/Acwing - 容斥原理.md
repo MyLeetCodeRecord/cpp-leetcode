@@ -189,7 +189,6 @@ https://leetcode.cn/problems/nth-magical-number/
 
 ##### [1267. 统计参与通信的服务器](/workspace/1267.%E7%BB%9F%E8%AE%A1%E5%8F%82%E4%B8%8E%E9%80%9A%E4%BF%A1%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8.cpp)
 
-
 ```CPP
 int countServers(vector<vector<int>>& grid) {
     int m = grid.size();
