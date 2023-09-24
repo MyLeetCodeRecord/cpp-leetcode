@@ -10,25 +10,24 @@ public:
     // 回溯法
     vector<string> ans;
     string path;
-    void backtrack(int n, int cur, int left, int right){
-        if(cur == 2*n){
-            if(left == right)
-                ans.push_back(path);
+    void backtrack(int n, int leftL, int leftR){    // leftL, leftR表示剩余要分配的左/右括号数量
+        if(leftL==0 && leftR==0){
+            ans.push_back(path);
             return ;
         }
-        string tmp = path;
-        if(left < n){
+        if(leftL > 0){
             path += "(";
-            backtrack(n, cur+1, left+1, right);
-            path = tmp;
+            backtrack(n, leftL-1, leftR);
+            path = path.substr(0, path.size()-1);
         }
-        if(left>right){
+        if(leftR > leftL && leftR > 0){
             path += ")";
-            backtrack(n, cur+1, left, right+1);
+            backtrack(n, leftL, leftR-1);
+            path = path.substr(0, path.size()-1);
         }
     }
     vector<string> generateParenthesis(int n) {
-        backtrack(n, 0, 0, 0);
+        backtrack(n, n, n);
         return ans;
     }
     /* 

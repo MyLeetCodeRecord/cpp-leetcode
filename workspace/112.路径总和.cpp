@@ -9,7 +9,7 @@ class Solution {
 public:
     bool ans = false;
     int sum = 0;
-    void backtracking(TreeNode* root, int targetSum){
+    void backtrack(TreeNode* root, int targetSum){
         // 可能有负数, 不要用sum来做剪枝或者作为return条件
         if(root->left==NULL && root->right==NULL){
             if(targetSum==sum){
@@ -32,7 +32,7 @@ public:
         if(root==NULL)
             return false;
         sum += root->val;
-        backtracking(root, targetSum);
+        backtrack(root, targetSum);
         return ans;
     }
 };
