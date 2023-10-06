@@ -6,10 +6,10 @@
 
 // @lc code=start
 class Solution {
+    vector<string> dict = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 public:
     vector<string> ans;
     string path;
-    vector<string> dict;
     void backtrack(string digits, int cur){
         if(cur==digits.size()){
             ans.push_back(path);
@@ -25,15 +25,6 @@ public:
     vector<string> letterCombinations(string digits) {
         if(digits.size()==0)
             return ans;
-        dict.resize(10);
-        dict[2] = "abc";
-        dict[3] = "def";
-        dict[4] = "ghi";
-        dict[5] = "jkl";
-        dict[6] = "mno";
-        dict[7] = "pqrs";
-        dict[8] = "tuv";
-        dict[9] = "wxyz";
         backtrack(digits, 0);
         return ans;
     }

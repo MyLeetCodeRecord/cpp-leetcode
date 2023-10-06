@@ -26,7 +26,7 @@ public:
                     left++;
                     right--;
                 }
-                // 这里不去重也可以保证正确性, 但是运行时间会慢很多
+                // 这里不去重也可以保证正确性
                 else if(sum > 0){
                     while(left<right && nums[right]==nums[right-1]) // 去重
                         right--;

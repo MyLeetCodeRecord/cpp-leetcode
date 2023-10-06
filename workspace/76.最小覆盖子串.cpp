@@ -20,7 +20,7 @@ public:
         int left = 0;
         for(int right=0; right<s.size(); right++){
             mp_s[s[right]]++;
-            // 如果t中的字符s[right]已经够了, 记录cnt
+            // 如果t中的字符s[right]刚好够了, 记录cnt
             if(mp_t.find(s[right])!=mp_t.end() && mp_s[s[right]] == mp_t[s[right]])
                 cnt++;
             // left收缩的条件: 1. 其它字符  2. 个数超额的字符
