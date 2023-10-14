@@ -12,8 +12,8 @@ public:
      * Acwing: https://www.acwing.com/activity/content/code/content/4433750/
      */
     
-    bool Topo_BFS(vector<vector<int> > edges, vector<int> indegree){
-        vector<int> ans;    // 出队顺序就是拓扑序
+    bool Topo_BFS(vector<vector<int>> &edges, vector<int> &indegree){
+        vector<int> ans;    // 出队顺序就是一种可能的拓扑序
         queue<int> q;
         for(int i=0; i<edges.size(); i++){
             if(indegree[i]==0)
@@ -22,15 +22,15 @@ public:
         while(!q.empty()){
             int cur = q.front();
             q.pop();
-            ans.push_back(cur);
-            for(int i=0; i<edges[cur].size(); i++){
-                indegree[edges[cur][i]]--;
-                if(indegree[edges[cur][i]]==0){
-                    q.push(edges[cur][i]);
+            for(int a: edges[cur]){
+                indegree[a]--;
+                if(indegree[a] == 0){
+                    q.push(a);
+                    cnt++;
                 }
             }
         }
-        return ans.size()==edges.size();
+        return ans.size()==indegree.size();
     }
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
         // vector<vector<int> > 组织的邻接表
