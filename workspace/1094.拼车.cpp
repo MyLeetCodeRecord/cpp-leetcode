@@ -7,26 +7,20 @@
 // @lc code=start
 class Solution {
 public:
-    // [numPassengers, from, to] => (一维)差分中的[c, l, r]
-    void diff_operation(vector<int>& diff, int l, int r, int c){
-        diff[l] += c;
-        diff[r+1] -= c;
-    }
     bool carPooling(vector<vector<int>>& trips, int capacity) {
-        int N = 1010;
-        vector<int> a(N, 0);        // preSum[], 可以简化成两个cumSum
-        vector<int> diff(N, 0);     // 计算差分(Index 从 0 开始)
-
-        for(vector<int> trip: trips)
-            diff_operation(diff, trip[1], trip[2]-1, trip[0]);
-
-        if(diff[0]>capacity)        // 对0位置特判
-            return false;
-        a[0] = diff[0];
-
-        for(int i=1; i<1010; i++){  // 求前缀和, 这里可以通过记录最远距离(出现过的最大trip[2])来减少遍历距离
-            a[i] = diff[i] + a[i-1];
-            if(a[i] > capacity)
+        vector<int> diff(1001, 0);
+        int maxReach = 0;
+        for(vector<int> &trip: trips){
+            int c = trip[0], l = trip[1], r = trip[2];
+            diff[l] += c;
+            diff[r] -= c;
+            maxReach = max(maxReach, r);
+        }
+        int preSum = 0;
+        for(int i=0; i<=maxReach; i++){
+            preSum += diff[i];
+            printf("%d ", preSum);
+            if(preSum > capacity)
                 return false;
         }
         return true;
