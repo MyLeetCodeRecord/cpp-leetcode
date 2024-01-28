@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 方法二: 四个一组
+    // 方法二: 四个一组交换
     void rotate(vector<vector<int>>& matrix) {
         int n = matrix.size();
         // 圈数
@@ -22,7 +22,7 @@ public:
             }
         }
     }
-    // 方法一: 一次水平 + 一次镜像
+    // 方法一: 一次水平翻转(上 <-> 下) + 一次镜像翻转(左上 <-> 右下)
     // void updown(vector<vector<int> >& matrix) {    // 上下水平翻转
     //     int n = matrix.size();
     //     int tmp = 0;

@@ -8,6 +8,7 @@
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
+        // unordered_set(基于哈希表)的查找、插入和删除操作平均时间复杂度为O(1)
         unordered_set<int> st;
         for(const int& num : nums){
             st.insert(num);

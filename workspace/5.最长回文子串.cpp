@@ -33,7 +33,7 @@ public:
                 }
             }
         }
-        return s.substr(start,ans);
+        return s.substr(start, ans);
     }
 };
 // @lc code=end

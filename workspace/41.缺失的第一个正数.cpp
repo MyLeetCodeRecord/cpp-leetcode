@@ -20,7 +20,6 @@ public:
         }
         // 遍历整理过的nums[i], nums[i]!=i+1的就是缺失的第一个正数
         for(int i=0; i<n; i++){
-            cout<<nums[i]<<" ";
             if(nums[i] != i+1)
                 return i+1;
         }

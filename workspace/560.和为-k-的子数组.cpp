@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 前缀和
+    // 前缀和 + map
     int subarraySum(vector<int>& nums, int k) {
         int ans = 0;
         int n = nums.size();
